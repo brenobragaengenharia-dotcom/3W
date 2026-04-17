@@ -30,7 +30,7 @@ export const metadata = {
     siteName: '3W Entretenimento',
     title: '3W Entretenimento | Seu Universo de Entretenimento',
     description: 'Descubra o melhor do entretenimento: filmes, séries, música, jogos e eventos.',
-    images: [{ url: '/images/og-default.jpg', width: 1200, height: 630, alt: '3W Entretenimento' }],
+    images: [{ url: '/images/og-default.svg', width: 1200, height: 630, alt: '3W Entretenimento' }],
   },
 
   // Twitter Card
@@ -40,7 +40,7 @@ export const metadata = {
     creator: '@3wentretenimento',
     title: '3W Entretenimento | Seu Universo de Entretenimento',
     description: 'Descubra o melhor do entretenimento: filmes, séries, música, jogos e eventos.',
-    images: ['/images/og-default.jpg'],
+    images: ['/images/og-default.svg'],
   },
 
   // Robots
@@ -64,7 +64,7 @@ export const metadata = {
 
   // Verificações de propriedade (preencha com seus tokens)
   verification: {
-    google: 'SEU_GOOGLE_SITE_VERIFICATION_TOKEN',
+    google: 'Lq9TgmBSqEGN-GZeWvKh5t2LgzNYT8itC0Bob7WtIH8',
     // bing: 'SEU_BING_VERIFICATION_TOKEN',
   },
 };
