@@ -1,4 +1,4 @@
-import { FILMES, SERIES, MUSICA, JOGOS, NOTICIAS, EVENTOS } from '@/lib/mock-data';
+import { FILMES, SERIES, MUSICA, JOGOS, NOTICIAS, NOTICIAS_ESPORTES, COMICS, EVENTOS } from '@/lib/mock-data';
 
 const BASE_URL = 'https://3w-entretenimento.com';
 
@@ -13,7 +13,9 @@ export default function sitemap() {
     { url: `${BASE_URL}/musica`,  lastModified: now, changeFrequency: 'daily',   priority: 0.9 },
     { url: `${BASE_URL}/jogos`,   lastModified: now, changeFrequency: 'daily',   priority: 0.9 },
     { url: `${BASE_URL}/eventos`, lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
-    { url: `${BASE_URL}/noticias`,lastModified: now, changeFrequency: 'daily',   priority: 0.9 },
+    { url: `${BASE_URL}/noticias`, lastModified: now, changeFrequency: 'daily',   priority: 0.9 },
+    { url: `${BASE_URL}/comics`,  lastModified: now, changeFrequency: 'daily',   priority: 0.9 },
+    { url: `${BASE_URL}/esportes`,lastModified: now, changeFrequency: 'daily',   priority: 0.9 },
     { url: `${BASE_URL}/busca`,   lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/sobre`,   lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/contato`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },

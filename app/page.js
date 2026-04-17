@@ -4,7 +4,7 @@ import CategoriesGrid from '@/components/CategoriesGrid';
 import ContentRow from '@/components/ContentRow';
 import NewsGrid from '@/components/NewsGrid';
 import NewsletterBanner from '@/components/NewsletterBanner';
-import { FILMES, SERIES, MUSICA, JOGOS } from '@/lib/mock-data';
+import { FILMES, SERIES, MUSICA, JOGOS, COMICS } from '@/lib/mock-data';
 
 export const metadata = {
   title: '3W Entretenimento | Seu Universo de Entretenimento',
@@ -18,11 +18,12 @@ export default function HomePage() {
       <HeroSection />
       <TrendingSection />
       <CategoriesGrid />
-      <ContentRow title="Filmes em Cartaz"  items={FILMES}  basePath="/filmes"  tipo="vertical" />
-      <ContentRow title="Séries Imperdíveis" items={SERIES}  basePath="/series"  tipo="vertical" />
+      <ContentRow title="Filmes em Cartaz"    items={FILMES}  basePath="/filmes"   tipo="vertical" />
+      <ContentRow title="Séries Imperdíveis" items={SERIES}  basePath="/series"   tipo="vertical" />
+      <ContentRow title="Comics em Destaque" items={COMICS}  basePath="/comics"   tipo="vertical" />
       <NewsGrid limit={6} />
-      <ContentRow title="Música em Alta"    items={MUSICA}  basePath="/musica"  tipo="vertical" />
-      <ContentRow title="Jogos do Momento"  items={JOGOS}   basePath="/jogos"   tipo="vertical" />
+      <ContentRow title="Música em Alta"     items={MUSICA}  basePath="/musica"   tipo="vertical" />
+      <ContentRow title="Jogos do Momento"   items={JOGOS}   basePath="/jogos"    tipo="vertical" />
       <NewsletterBanner />
     </>
   );

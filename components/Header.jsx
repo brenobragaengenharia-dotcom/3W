@@ -7,9 +7,10 @@ import { usePathname } from 'next/navigation';
 const NAV_LINKS = [
   { href: '/filmes',   label: 'Filmes' },
   { href: '/series',   label: 'Séries' },
+  { href: '/comics',   label: 'Comics' },
+  { href: '/esportes', label: 'Esportes' },
   { href: '/musica',   label: 'Música' },
   { href: '/jogos',    label: 'Jogos' },
-  { href: '/eventos',  label: 'Eventos' },
   { href: '/noticias', label: 'Notícias' },
 ];
 

@@ -2,12 +2,13 @@ import Link from 'next/link';
 
 const HERO_ITEMS = [
   {
-    titulo: 'The Last of Us — Temporada 2',
-    descricao: 'Joel e Ellie continuam sua jornada brutal num mundo devastado, onde sobreviver significa enfrentar monstros de todos os tipos.',
-    categoria: 'Série em Alta',
-    url: '/series/the-last-of-us-s2',
-    nota: 9.2,
-    bg: 'from-[#0d1117] via-[#1a2332] to-transparent',
+    titulo: 'Avengers: Doomsday',
+    descricao: 'O MCU chega ao seu ponto mais ambicioso: o Doutor Destino reúne os heróis mais poderosos do universo num confronto épico que vai redefinir tudo que você conhece.',
+    categoria: '🔥 Em Alta — @3worlds_entertainment',
+    url: '/filmes/avengers-doomsday',
+    nota: 9.1,
+    badge: 'Mais comentado agora',
+    bg: 'from-[#1a0505] via-[#2a0a0a] to-transparent',
   },
 ];
 
@@ -19,9 +20,9 @@ export default function HeroSection() {
       aria-label="Conteúdo em destaque"
       className="relative min-h-[480px] md:min-h-[560px] flex items-end overflow-hidden bg-[#141414]"
     >
-      {/* Placeholder da imagem de fundo */}
+      {/* Fundo com gradiente temático */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-[#0d1117] via-[#1a2332]/80 to-[#e50914]/10"
+        className="absolute inset-0 bg-gradient-to-r from-[#1a0505] via-[#2a0a0a]/90 to-[#e50914]/10"
         aria-hidden="true"
       />
 
