@@ -4,6 +4,7 @@ import './globals.css';
 import { schemaOrganization, schemaWebSite } from '@/lib/structured-data';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Analytics from '@/components/Analytics';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
@@ -92,6 +93,9 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebSite) }}
         />
+
+        {/* GA4 + Meta Pixel — só carregam se as env vars estiverem definidas */}
+        <Analytics />
 
         {/* Script Elfsight — carregado uma vez, ativa todos os widgets */}
         <Script

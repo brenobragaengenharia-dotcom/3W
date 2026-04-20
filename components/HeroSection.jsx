@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const HERO_ITEMS = [
   {
@@ -23,13 +24,13 @@ export default function HeroSection() {
     >
       {/* Imagem de fundo */}
       {item.imagem && (
-        <img
+        <Image
           src={item.imagem}
-          alt=""
-          aria-hidden="true"
-          fetchpriority="high"
-          decoding="async"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          alt={item.titulo}
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 object-cover object-center"
         />
       )}
 

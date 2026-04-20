@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { SERIES } from '@/lib/mock-data';
-import { schemaBreadcrumb } from '@/lib/structured-data';
+import { schemaBreadcrumb, schemaTVSeries } from '@/lib/structured-data';
 import content from '@/lib/content.json';
 
 export async function generateStaticParams() {
@@ -31,6 +31,20 @@ export default async function SeriePage({ params }) {
   if (!serie) notFound();
 
   const g = content.series?.[slug];
+  const seriesSchema = schemaTVSeries({
+    name:             serie.titulo,
+    description:      g?.sinopse_pt ?? serie.titulo,
+    image:            g?.poster ?? serie.imagem,
+    url:              `/series/${slug}`,
+    creators:         g?.criadores ? [g.criadores] : [],
+    actors:           g?.elenco?.map(e => e?.nome).filter(Boolean) ?? [],
+    genre:            g?.generos ?? (serie.categoria ? [serie.categoria] : []),
+    datePublished:    g?.estreia ?? (serie.ano ? `${serie.ano}-01-01` : undefined),
+    numberOfSeasons:  g?.temporadas,
+    numberOfEpisodes: g?.episodios,
+    ratingValue:      serie.nota ?? g?.nota_tmdb,
+    ratingCount:      1,
+  });
   const breadcrumb = schemaBreadcrumb([
     { name: 'Home',            url: '/' },
     { name: 'Filmes e Séries', url: '/filmes-e-series' },
@@ -40,6 +54,7 @@ export default async function SeriePage({ params }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(seriesSchema) }} />
 
       {/* Hero backdrop */}
       <div className="relative w-full h-64 md:h-96 overflow-hidden bg-[#141414]">

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { HQS_PANINI, LIVROS_PANINI, PANINI_AFFILIATE_URL } from '@/lib/mock-data';
+import AffiliateLink from '@/components/AffiliateLink';
 
 // Exibe os primeiros N itens de cada lista
 const HQS_DESTAQUE   = HQS_PANINI.slice(0, 9);
@@ -53,17 +54,18 @@ export default function PaniniPromo() {
             </p>
           </div>
 
-          <a
+          <AffiliateLink
             href={PANINI_AFFILIATE_URL}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
+            partner="Panini"
+            label="Comprar na Panini"
+            section="panini-promo-cta"
             className="inline-flex items-center gap-2 bg-[#FF6600] hover:bg-[#e65c00] active:bg-[#cc5200] text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm whitespace-nowrap self-start sm:self-auto"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.5 6M17 13l1.5 6M9 19a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z"/>
             </svg>
             Comprar na Panini
-          </a>
+          </AffiliateLink>
         </div>
 
         {/* HQs */}

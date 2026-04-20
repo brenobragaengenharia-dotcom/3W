@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FILMES, INGRESSO_URL } from '@/lib/mock-data';
+import AffiliateLink from '@/components/AffiliateLink';
 
 function FilmeCard({ filme }) {
   return (
@@ -57,10 +58,11 @@ export default function IngressoPromo() {
             </p>
           </div>
 
-          <a
+          <AffiliateLink
             href={INGRESSO_URL}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
+            partner="Ingresso.com"
+            label="Comprar Ingressos"
+            section="ingresso-promo-cta"
             className="inline-flex items-center gap-2 bg-[#e11d48] hover:bg-[#be123c] active:bg-[#9f1239] text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm whitespace-nowrap self-start sm:self-auto"
           >
             {/* Ícone de ticket */}
@@ -68,7 +70,7 @@ export default function IngressoPromo() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/>
             </svg>
             Comprar Ingressos
-          </a>
+          </AffiliateLink>
         </div>
 
         {/* Scroll de filmes */}
