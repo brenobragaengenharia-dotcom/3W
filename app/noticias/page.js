@@ -4,13 +4,13 @@ import { schemaBreadcrumb } from '@/lib/structured-data';
 
 export const metadata = {
   title: 'Notícias',
-  description: 'As últimas notícias do mundo do entretenimento: cinema, séries, música, jogos e eventos.',
+  description: 'As últimas notícias do mundo do entretenimento: cinema, séries, comics e esportes.',
   alternates: { canonical: 'https://3w-entretenimento.com/noticias' },
 };
 
 const CATEGORIA_COLORS = {
   Cinema:  'text-red-400', Séries: 'text-blue-400',
-  Música:  'text-purple-400', Jogos: 'text-green-400', Eventos: 'text-yellow-400',
+  Comics: 'text-yellow-400', Esportes: 'text-green-400',
 };
 
 export default function NoticiasPage() {
@@ -43,7 +43,7 @@ export default function NoticiasPage() {
                     <span className="text-[#2a2a2a]" aria-hidden="true">·</span>
                     <time dateTime={n.data} className="text-xs text-[#737373]">{new Date(n.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' })}</time>
                   </div>
-                  <h2 className="text-white font-bold text-sm leading-snug mb-2 line-clamp-2 hover:text-[#e50914] transition-colors">{n.titulo}</h2>
+                  <h2 className="text-white font-bold text-sm leading-snug mb-2 line-clamp-2 hover:text-[#FF6600] transition-colors">{n.titulo}</h2>
                   <p className="text-[#737373] text-xs line-clamp-2">{n.descricao}</p>
                   <p className="text-[#737373] text-xs mt-2">{n.autor} · {n.tempo_leitura} min</p>
                 </div>

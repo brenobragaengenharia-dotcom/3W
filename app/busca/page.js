@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import Link from 'next/link';
-import { FILMES, SERIES, MUSICA, JOGOS, NOTICIAS } from '@/lib/mock-data';
+import { FILMES, SERIES, NOTICIAS } from '@/lib/mock-data';
 
 function BuscaResultados() {
   const searchParams = useSearchParams();
@@ -22,8 +22,6 @@ function BuscaResultados() {
   const todos = [
     ...FILMES.map(i => ({ ...i, tipo: 'Filme', url: `/filmes/${i.slug}` })),
     ...SERIES.map(i => ({ ...i, tipo: 'Série', url: `/series/${i.slug}` })),
-    ...MUSICA.map(i => ({ ...i, tipo: 'Música', url: `/musica/${i.slug}` })),
-    ...JOGOS.map(i => ({ ...i, tipo: 'Jogo', url: `/jogos/${i.slug}` })),
     ...NOTICIAS.map(i => ({ ...i, tipo: 'Notícia', url: `/noticias/${i.slug}`, titulo: i.titulo })),
   ];
 

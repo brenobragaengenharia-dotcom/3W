@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function ContentRow({ title, items = [], basePath, tipo = 'vertical' }) {
+export default function ContentRow({ title, items = [], basePath, viewAllPath, tipo = 'vertical' }) {
   if (!items.length) return null;
 
   return (
@@ -16,10 +16,10 @@ export default function ContentRow({ title, items = [], basePath, tipo = 'vertic
           >
             {title}
           </h2>
-          {basePath && (
+          {(viewAllPath || basePath) && (
             <Link
-              href={basePath}
-              className="text-sm text-[#737373] hover:text-[#e50914] transition-colors flex items-center gap-1"
+              href={viewAllPath || basePath}
+              className="text-sm text-[#737373] hover:text-[#FF6600] transition-colors flex items-center gap-1"
               aria-label={`Ver tudo em ${title}`}
             >
               Ver tudo

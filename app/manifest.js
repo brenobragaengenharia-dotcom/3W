@@ -8,7 +8,7 @@ export default function manifest() {
     display: 'standalone',
     orientation: 'portrait-primary',
     background_color: '#0d0d0d',
-    theme_color: '#e50914',
+    theme_color: '#FF6600',
     lang: 'pt-BR',
     categories: ['entertainment', 'news', 'music'],
     icons: [

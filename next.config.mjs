@@ -6,6 +6,12 @@ const nextConfig = {
       { protocol: 'https', hostname: 'image.tmdb.org' },
       { protocol: 'https', hostname: 'i.scdn.co' },
       { protocol: 'https', hostname: '**.3w-entretenimento.com' },
+      { protocol: 'https', hostname: 'cdn.marvel.com' },
+      { protocol: 'https', hostname: 'static.dc.com' },
+      { protocol: 'https', hostname: 'cdn.imagecomics.com' },
+      { protocol: 'https', hostname: 'www.coverbrowser.com' },
+      { protocol: 'https', hostname: 'upload.wikimedia.org' },
+      { protocol: 'https', hostname: 'covers.openlibrary.org' },
     ],
     formats: ['image/avif', 'image/webp'],
   },
@@ -37,14 +43,14 @@ const nextConfig = {
   // Redirects úteis para SEO
   async redirects() {
     return [
-      { source: '/home',    destination: '/',         permanent: true },
-      { source: '/inicio',  destination: '/',         permanent: true },
-      { source: '/movies',  destination: '/filmes',   permanent: true },
-      { source: '/series',  destination: '/series',   permanent: false },
+      { source: '/home',    destination: '/',                  permanent: true },
+      { source: '/inicio',  destination: '/',                  permanent: true },
+      { source: '/filmes',  destination: '/filmes-e-series',   permanent: true },
+      { source: '/series',  destination: '/filmes-e-series',   permanent: true },
+      { source: '/movies',  destination: '/filmes-e-series',   permanent: true },
       { source: '/music',   destination: '/musica',   permanent: true },
       { source: '/games',   destination: '/jogos',    permanent: true },
       { source: '/news',    destination: '/noticias', permanent: true },
-      { source: '/events',  destination: '/eventos',  permanent: true },
     ];
   },
 };

@@ -45,21 +45,21 @@ export default function ContatoPage() {
         <form onSubmit={handleSubmit} className="space-y-4" noValidate>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="nome" className="block text-sm font-medium text-[#b3b3b3] mb-1">Nome <span aria-hidden="true" className="text-[#e50914]">*</span></label>
+              <label htmlFor="nome" className="block text-sm font-medium text-[#b3b3b3] mb-1">Nome <span aria-hidden="true" className="text-[#FF6600]">*</span></label>
               <input id="nome" name="nome" type="text" required value={form.nome} onChange={handleChange}
-                className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#e50914] focus:outline-none" />
+                className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#FF6600] focus:outline-none" />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-[#b3b3b3] mb-1">E-mail <span aria-hidden="true" className="text-[#e50914]">*</span></label>
+              <label htmlFor="email" className="block text-sm font-medium text-[#b3b3b3] mb-1">E-mail <span aria-hidden="true" className="text-[#FF6600]">*</span></label>
               <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} autoComplete="email"
-                className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#e50914] focus:outline-none" />
+                className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#FF6600] focus:outline-none" />
             </div>
           </div>
 
           <div>
-            <label htmlFor="assunto" className="block text-sm font-medium text-[#b3b3b3] mb-1">Assunto <span aria-hidden="true" className="text-[#e50914]">*</span></label>
+            <label htmlFor="assunto" className="block text-sm font-medium text-[#b3b3b3] mb-1">Assunto <span aria-hidden="true" className="text-[#FF6600]">*</span></label>
             <select id="assunto" name="assunto" required value={form.assunto} onChange={handleChange}
-              className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white text-sm focus:border-[#e50914] focus:outline-none">
+              className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white text-sm focus:border-[#FF6600] focus:outline-none">
               <option value="">Selecione um assunto</option>
               <option value="duvida">Dúvida geral</option>
               <option value="sugestao">Sugestão de conteúdo</option>
@@ -70,14 +70,14 @@ export default function ContatoPage() {
           </div>
 
           <div>
-            <label htmlFor="mensagem" className="block text-sm font-medium text-[#b3b3b3] mb-1">Mensagem <span aria-hidden="true" className="text-[#e50914]">*</span></label>
+            <label htmlFor="mensagem" className="block text-sm font-medium text-[#b3b3b3] mb-1">Mensagem <span aria-hidden="true" className="text-[#FF6600]">*</span></label>
             <textarea id="mensagem" name="mensagem" required rows={5} value={form.mensagem} onChange={handleChange}
               placeholder="Escreva sua mensagem aqui..."
-              className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#e50914] focus:outline-none resize-none" />
+              className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#FF6600] focus:outline-none resize-none" />
           </div>
 
           <button type="submit" disabled={status === 'loading'}
-            className="w-full bg-[#e50914] hover:bg-[#b30710] disabled:opacity-60 text-white font-bold py-3 rounded-lg transition-colors text-sm">
+            className="w-full bg-[#FF6600] hover:bg-[#cc5200] disabled:opacity-60 text-white font-bold py-3 rounded-lg transition-colors text-sm">
             {status === 'loading' ? 'Enviando...' : 'Enviar mensagem'}
           </button>
         </form>

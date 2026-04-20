@@ -20,7 +20,7 @@ export default function NewsGrid({ limit = 6 }) {
           <h2 id="noticias-title" className="text-lg md:text-xl font-bold text-white">
             Últimas Notícias
           </h2>
-          <Link href="/noticias" className="text-sm text-[#737373] hover:text-[#e50914] transition-colors flex items-center gap-1">
+          <Link href="/noticias" className="text-sm text-[#737373] hover:text-[#FF6600] transition-colors flex items-center gap-1">
             Ver todas
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
@@ -55,7 +55,7 @@ export default function NewsGrid({ limit = 6 }) {
                     </time>
                   </div>
 
-                  <h3 className="text-white font-bold text-sm leading-snug mb-2 line-clamp-2 hover:text-[#e50914] transition-colors">
+                  <h3 className="text-white font-bold text-sm leading-snug mb-2 line-clamp-2 hover:text-[#FF6600] transition-colors">
                     {noticia.titulo}
                   </h3>
 

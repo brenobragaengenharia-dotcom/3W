@@ -1,16 +1,22 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { NOTICIAS } from '@/lib/mock-data';
+import { NOTICIAS, NOTICIAS_ESPORTES } from '@/lib/mock-data';
 import { schemaBreadcrumb, schemaNewsArticle } from '@/lib/structured-data';
+import content from '@/lib/content.json';
+
+// Todas as notícias (gerais + esportes) compartilham este template de página
+const TODAS_NOTICIAS = [...NOTICIAS, ...NOTICIAS_ESPORTES];
 
 export async function generateStaticParams() {
-  return NOTICIAS.map(n => ({ slug: n.slug }));
+  return TODAS_NOTICIAS.map(n => ({ slug: n.slug }));
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const noticia = NOTICIAS.find(n => n.slug === slug);
+  const noticia = TODAS_NOTICIAS.find(n => n.slug === slug);
   if (!noticia) return {};
+
+  const g = content.noticias?.[slug] ?? content.esportes?.[slug];
 
   return {
     title: noticia.titulo,
@@ -19,7 +25,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       type: 'article',
       title: noticia.titulo,
-      description: noticia.descricao,
+      description: g?.paragrafos?.[0] ?? noticia.descricao,
       images: [{ url: noticia.imagem, width: 1200, height: 630 }],
       publishedTime: noticia.data,
       authors: [noticia.autor],
@@ -30,14 +36,17 @@ export async function generateMetadata({ params }) {
 
 const CATEGORIA_COLORS = {
   Cinema: 'text-red-400', Séries: 'text-blue-400',
-  Música: 'text-purple-400', Jogos: 'text-green-400', Eventos: 'text-yellow-400',
+  Comics: 'text-yellow-400', Esportes: 'text-green-400',
+  Futebol: 'text-green-400', NBA: 'text-orange-400', 'Fórmula 1': 'text-red-400',
 };
 
 export default async function NoticiaPage({ params }) {
   const { slug } = await params;
-  const noticia = NOTICIAS.find(n => n.slug === slug);
-
+  const noticia = TODAS_NOTICIAS.find(n => n.slug === slug);
   if (!noticia) notFound();
+
+  // Busca conteúdo gerado — pode estar em noticias ou esportes
+  const g = content.noticias?.[slug] ?? content.esportes?.[slug];
 
   const breadcrumb = schemaBreadcrumb([
     { name: 'Home', url: '/' },
@@ -55,8 +64,11 @@ export default async function NoticiaPage({ params }) {
     section: noticia.categoria,
   });
 
-  // Relacionadas (excluindo a atual)
-  const relacionadas = NOTICIAS.filter(n => n.id !== noticia.id).slice(0, 3);
+  // Notícias relacionadas (mesma categoria, excluindo a atual)
+  const relacionadas = TODAS_NOTICIAS
+    .filter(n => n.slug !== slug)
+    .sort((a, b) => (a.categoria === noticia.categoria ? -1 : 1))
+    .slice(0, 3);
 
   return (
     <>
@@ -89,11 +101,11 @@ export default async function NoticiaPage({ params }) {
 
           {/* Título */}
           <h1 itemProp="headline" className="text-3xl md:text-4xl font-black text-white leading-tight mb-4">
-            {noticia.titulo}
+            {g?.manchete ?? noticia.titulo}
           </h1>
 
-          {/* Descrição (lead) */}
-          <p itemProp="description" className="text-[#b3b3b3] text-lg leading-relaxed mb-6 border-l-2 border-[#e50914] pl-4">
+          {/* Lead */}
+          <p itemProp="description" className="text-[#b3b3b3] text-lg leading-relaxed mb-6 border-l-2 border-[#FF6600] pl-4">
             {noticia.descricao}
           </p>
 
@@ -116,17 +128,40 @@ export default async function NoticiaPage({ params }) {
             />
           </figure>
 
-          {/* Conteúdo do artigo (placeholder) */}
-          <div itemProp="articleBody" className="prose prose-invert max-w-none">
-            <p className="text-[#b3b3b3] leading-relaxed mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-            </p>
-            <p className="text-[#b3b3b3] leading-relaxed mb-4">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p className="text-[#b3b3b3] leading-relaxed">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            </p>
+          {/* Corpo do artigo */}
+          <div itemProp="articleBody" className="space-y-5">
+            {g?.paragrafos?.length > 0 ? (
+              <>
+                {g.paragrafos.slice(0, 2).map((p, i) => (
+                  <p key={i} className="text-[#b3b3b3] leading-relaxed">{p}</p>
+                ))}
+
+                {/* Pull quote */}
+                {g.frase_destaque && (
+                  <blockquote className="border-l-4 border-[#FF6600] pl-5 py-2 my-6">
+                    <p className="text-white font-semibold text-lg italic">"{g.frase_destaque}"</p>
+                  </blockquote>
+                )}
+
+                {g.paragrafos.slice(2).map((p, i) => (
+                  <p key={`b${i}`} className="text-[#b3b3b3] leading-relaxed">{p}</p>
+                ))}
+
+                {/* Conclusão */}
+                {g.conclusao && (
+                  <p className="text-[#b3b3b3] leading-relaxed border-t border-[#2a2a2a] pt-5 mt-5">
+                    {g.conclusao}
+                  </p>
+                )}
+              </>
+            ) : (
+              <div className="bg-[#141414] border border-[#2a2a2a] rounded-xl p-6 text-center">
+                <p className="text-[#737373] text-sm">
+                  Conteúdo sendo preparado. Execute{' '}
+                  <code className="text-[#FF6600]">npm run update-content</code> para gerar.
+                </p>
+              </div>
+            )}
           </div>
         </article>
 
@@ -142,7 +177,8 @@ export default async function NoticiaPage({ params }) {
                       <img src={r.imagem} alt={r.titulo} loading="lazy" className="w-full h-full object-cover" />
                     </div>
                     <div className="p-3">
-                      <h3 className="text-white text-xs font-semibold line-clamp-2 hover:text-[#e50914] transition-colors">{r.titulo}</h3>
+                      <span className={`text-xs font-semibold ${CATEGORIA_COLORS[r.categoria] || 'text-[#737373]'}`}>{r.categoria}</span>
+                      <h3 className="text-white text-xs font-semibold line-clamp-2 mt-1 hover:text-[#FF6600] transition-colors">{r.titulo}</h3>
                     </div>
                   </Link>
                 </article>

@@ -20,7 +20,7 @@ export default function NewsletterBanner() {
   return (
     <section
       aria-labelledby="newsletter-title"
-      className="py-12 bg-gradient-to-r from-[#e50914]/10 via-[#141414] to-[#e50914]/5 border-y border-[#e50914]/10"
+      className="py-12 bg-gradient-to-r from-[#FF6600]/10 via-[#141414] to-[#FF6600]/5 border-y border-[#FF6600]/10"
     >
       <div className="max-w-2xl mx-auto px-4 text-center">
         <span className="text-2xl block mb-3" role="img" aria-label="Sino de notificação">🔔</span>
@@ -51,12 +51,12 @@ export default function NewsletterBanner() {
               required
               autoComplete="email"
               disabled={status === 'loading'}
-              className="flex-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#e50914] focus:outline-none disabled:opacity-50"
+              className="flex-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#FF6600] focus:outline-none disabled:opacity-50"
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="bg-[#e50914] hover:bg-[#b30710] disabled:opacity-60 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm whitespace-nowrap"
+              className="bg-[#FF6600] hover:bg-[#cc5200] disabled:opacity-60 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm whitespace-nowrap"
             >
               {status === 'loading' ? 'Aguarde...' : 'Quero receber!'}
             </button>

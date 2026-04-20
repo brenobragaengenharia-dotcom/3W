@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { schemaOrganization, schemaWebSite } from '@/lib/structured-data';
 import Header from '@/components/Header';
@@ -90,6 +91,12 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebSite) }}
+        />
+
+        {/* Script Elfsight — carregado uma vez, ativa todos os widgets */}
+        <Script
+          src="https://elfsightcdn.com/platform.js"
+          strategy="lazyOnload"
         />
 
         <Header />

@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "update-content": "node --experimental-vm-modules scripts/update-content.js",
+    "update-content:force": "node --experimental-vm-modules scripts/update-content.js --force",
+    "sync-cartaz": "node --experimental-vm-modules scripts/update-content.js --sync-cartaz",
+    "sync-series": "node --experimental-vm-modules scripts/update-content.js --sync-series",
+    "sync-all": "node --experimental-vm-modules scripts/update-content.js --sync-cartaz --sync-series",
+    "atualiza-os-filmes": "node --experimental-vm-modules scripts/update-content.js --sync-cartaz --sync-series"
   },
   "dependencies": {
     "next": "16.2.4",
