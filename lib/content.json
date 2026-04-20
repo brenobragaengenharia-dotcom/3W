@@ -4132,6 +4132,26 @@
     }
   },
   "esportes": {
+    "fia-regulamento-f1-2026-miami": {
+      "titulo": "FIA anuncia mudanças no regulamento da F1 2026 a partir do GP de Miami",
+      "descricao": "Pacote de alterações em qualificação, corrida, largadas e pista molhada entra em vigor antes do GP de Miami, em 3 de maio, após votação do WMSC.",
+      "categoria": "Fórmula 1",
+      "autor": "Redação 3W Esportes",
+      "data": "2026-04-20",
+      "imagem": "/images/noticias/fia-f1-2026-miami.jpg",
+      "tempo_leitura": 7,
+      "manchete": "FIA anuncia mudanças no regulamento da F1 2026 a partir do GP de Miami",
+      "paragrafos": [
+        "A FIA apresentou um pacote final de ajustes no regulamento técnico e esportivo da Fórmula 1 2026 que entra em vigor já a partir do GP de Miami, marcado para o dia 3 de maio. As propostas buscam refinar a era dos novos motores híbridos, equilibrando gestão de energia, segurança nas largadas e desempenho em pista molhada, sem alterar a filosofia da categoria introduzida nesta temporada.",
+        "Classificação (Quali): a FIA ajustou os parâmetros de gerenciamento de energia, com redução da recarga máxima permitida de 8 MJ para 7 MJ, visando conter o consumo excessivo e incentivar uma pilotagem mais consistente em velocidade máxima — com a duração do superclipping reduzida para 2 a 4 segundos por volta. A potência máxima do superclipping sobe de 250 kW para 350 kW, encurtando o tempo de recarga e a carga de gestão de energia do piloto (alteração que também vale em corrida). O número de eventos em que limites alternativos de energia mais baixos podem ser aplicados aumentou de 8 para 12 corridas, permitindo maior adaptação às características de cada circuito.",
+        "Corridas: a potência máxima disponível via boost em condições de corrida fica limitada a 150 kW (ou ao nível de potência atual do carro no momento da ativação, se for superior), evitando diferenças bruscas de desempenho. O MGU-K mantém os 350 kW nas principais zonas de aceleração — da saída da curva até o ponto de frenagem, incluindo as zonas de ultrapassagem —, mas fica limitado a 250 kW em outras partes da volta. O conjunto busca reduzir velocidades de aproximação excessivas sem comprometer as oportunidades de ultrapassagem.",
+        "Largadas: foi desenvolvido o Low Power Start Detection, um sistema que identifica carros com aceleração anormalmente baixa logo após a liberação da embreagem. Nesses casos, o acionamento automático do MGU-K é ativado para garantir um nível mínimo de aceleração e mitigar riscos, sem introduzir qualquer vantagem esportiva. Um sistema de alerta visual associado aciona luzes intermitentes traseiras e laterais nos veículos afetados, avisando os pilotos que vêm atrás. Também foi implementado um reset do contador de energia no início da volta de formação, corrigindo uma inconsistência previamente identificada.",
+        "Pista molhada: as temperaturas das mantas térmicas dos pneus intermediários foram aumentadas com base no feedback dos pilotos, para melhorar a aderência inicial e o desempenho em piso molhado. A implantação máxima do ERS será reduzida, limitando o torque e melhorando o controle do carro em baixa aderência. Os sistemas de iluminação traseira foram simplificados, com sinais visuais mais claros e consistentes para aumentar visibilidade e tempo de reação dos pilotos que venham atrás em condições adversas."
+      ],
+      "frase_destaque": "A partir do GP de Miami, a F1 entra numa nova fase de gestão de energia, segurança nas largadas e controle em pista molhada.",
+      "conclusao": "Essas propostas finais serão submetidas a uma votação eletrônica do WMSC da FIA, com vista à implementação antes do GP de Miami, no dia 3 de maio — com exceção das alterações relativas às largadas, que serão testadas e analisadas durante o próprio fim de semana em Miami antes de ganhar aplicação definitiva. Fique ligado no @3wesports para acompanhar o desdobramento de cada detalhe do novo pacote regulatório.",
+      "gerado_em": "2026-04-20T00:00:00.000Z"
+    },
     "brasileirao-2026-rodada-1": {
       "titulo": "Brasileirão 2026: Resultados e destaques da 1ª rodada",
       "descricao": "Confira todos os gols, lances e análises da abertura do Campeonato Brasileiro.",
