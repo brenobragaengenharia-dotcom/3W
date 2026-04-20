@@ -42,3 +42,6 @@ next-env.d.ts
 
 .vercel
 .env.local
+
+# Exceção: o exemplo de configuração entra no repo
+!.env.local.example

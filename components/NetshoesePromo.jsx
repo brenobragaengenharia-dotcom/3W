@@ -1,4 +1,5 @@
 import { PRODUTOS_NETSHOES, NETSHOES_AFFILIATE_URL } from '@/lib/mock-data';
+import AffiliateLink from '@/components/AffiliateLink';
 
 const CATEGORIA_BADGE = {
   'Futebol':  'bg-green-600/20 border-green-600/40 text-green-400',
@@ -35,27 +36,29 @@ export default function NetshoesePromo() {
             </p>
           </div>
 
-          <a
+          <AffiliateLink
             href={NETSHOES_AFFILIATE_URL}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
+            partner="Netshoes"
+            label="Ver na Netshoes"
+            section="netshoes-promo-cta"
             className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 active:bg-green-700 text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm whitespace-nowrap self-start sm:self-auto"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.5 6M17 13l1.5 6M9 19a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z"/>
             </svg>
             Ver na Netshoes
-          </a>
+          </AffiliateLink>
         </div>
 
         {/* Grid de produtos */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {PRODUTOS_NETSHOES.map(produto => (
             <article key={produto.id} className="card-hover">
-              <a
+              <AffiliateLink
                 href={produto.link_compra}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
+                partner="Netshoes"
+                label={produto.titulo}
+                section="netshoes-product-card"
                 className="block"
               >
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-[#1a1a1a] mb-2">
@@ -77,7 +80,7 @@ export default function NetshoesePromo() {
                   {produto.titulo}
                 </h3>
                 <span className="text-green-500 text-[10px] font-bold">Ver na Netshoes →</span>
-              </a>
+              </AffiliateLink>
             </article>
           ))}
         </div>

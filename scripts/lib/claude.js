@@ -6,6 +6,21 @@
 const ANTHROPIC_API = 'https://api.anthropic.com/v1/messages';
 const MODEL = 'claude-sonnet-4-6';
 
+// ─── DIRETRIZES EDITORIAIS (anti cara-de-IA) ─────────────────────────────────
+// Aplicadas em todos os prompts. Evita texto repetitivo e padronizado.
+const DIRETRIZES_EDITORIAIS = `
+DIRETRIZES DE ESCRITA (obrigatórias):
+1. NÃO use as palavras-muleta: "Descubra", "Explore", "Imperdível", "Imerja", "Mergulhe", "Embarque", "Surpreendente", "Revolucionário", "Único", "Imperdível", "Espetacular".
+2. NÃO comece parágrafos com "Em um mundo onde...", "Quando...", "Prepare-se para...", "Não é só mais um...".
+3. VARIE a abertura de cada parágrafo: alterne entre fato concreto, citação, comparação, pergunta retórica e cena específica.
+4. Use português do Brasil natural, com gírias moderadas e referências culturais brasileiras quando fizer sentido (ex: "esse aqui é coisa fina", "o final dá um nó na cabeça").
+5. Prefira frases curtas a períodos longos. Máximo 3 vírgulas por frase.
+6. Cite UM detalhe concreto (cena, personagem, decisão de roteiro) por parágrafo — não fique no abstrato.
+7. Tenha opinião. Não fique em cima do muro com "para alguns isso, para outros aquilo". Diga o que achou.
+8. Evite "vale a pena assistir/ler" como frase final. Termine com algo memorável.
+`;
+
+
 function getKey() {
   const key = process.env.ANTHROPIC_API_KEY;
   if (!key) throw new Error('ANTHROPIC_API_KEY não definida no .env.local');
@@ -22,7 +37,7 @@ async function callClaude(prompt) {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 1500,
+      max_tokens: 2000,
       messages: [{ role: 'user', content: prompt }],
     }),
   });
@@ -53,6 +68,8 @@ DADOS DO FILME:
 - Sinopse TMDB: ${movie.sinopse}
 - Nota TMDB: ${movie.nota_tmdb}/10
 - Duração: ${movie.duracao} minutos
+
+${DIRETRIZES_EDITORIAIS}
 
 RETORNE EXATAMENTE neste formato JSON (sem markdown, sem explicações):
 {
@@ -89,6 +106,8 @@ DADOS DA SÉRIE:
 - Sinopse TMDB: ${serie.sinopse}
 - Nota TMDB: ${serie.nota_tmdb}/10
 
+${DIRETRIZES_EDITORIAIS}
+
 RETORNE EXATAMENTE neste formato JSON (sem markdown, sem explicações):
 {
   "manchete": "frase de impacto de até 12 palavras sobre a série",
@@ -118,6 +137,8 @@ DADOS DA NOTÍCIA:
 - Categoria: ${noticia.categoria}
 - Data: ${noticia.data}
 - Autor: ${noticia.autor}
+
+${DIRETRIZES_EDITORIAIS}
 
 RETORNE EXATAMENTE neste formato JSON (sem markdown, sem explicações):
 {
@@ -155,6 +176,8 @@ DADOS DA NOTÍCIA:
 - Data: ${noticia.data}
 - Autor: ${noticia.autor}
 
+${DIRETRIZES_EDITORIAIS}
+
 RETORNE EXATAMENTE neste formato JSON (sem markdown, sem explicações):
 {
   "manchete": "título de impacto esportivo de até 12 palavras",
@@ -182,6 +205,8 @@ DADOS DO LIVRO:
 - Título: ${livro.titulo}
 - Autor: ${livro.autor}
 - Gênero: ${livro.genero}
+
+${DIRETRIZES_EDITORIAIS}
 
 RETORNE EXATAMENTE neste formato JSON (sem markdown, sem explicações):
 {
@@ -211,6 +236,8 @@ DADOS DA HQ:
 - Editora: ${comic.editora}
 - Ano: ${comic.ano}
 - Categoria: ${comic.categoria}
+
+${DIRETRIZES_EDITORIAIS}
 
 RETORNE EXATAMENTE neste formato JSON (sem markdown, sem explicações):
 {

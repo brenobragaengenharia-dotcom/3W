@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { COMICS, LIVROS_RECOMENDADOS, HQS_PANINI, LIVROS_PANINI } from '@/lib/mock-data';
-import { schemaBreadcrumb } from '@/lib/structured-data';
+import { schemaBreadcrumb, schemaBook, schemaProduct } from '@/lib/structured-data';
 import content from '@/lib/content.json';
 
 const TODOS_COMICS = [...COMICS, ...LIVROS_RECOMENDADOS, ...HQS_PANINI, ...LIVROS_PANINI];
@@ -33,6 +33,37 @@ export default async function ComicPage({ params }) {
   if (!item) notFound();
 
   const g = content.comics?.[slug];
+
+  // Decide o melhor schema disponível com base no tipo do item:
+  //   - HQ/livro com link de compra → Product (rich snippet de preço/loja)
+  //   - Livro tradicional → Book
+  let itemSchema;
+  if (item.link_compra) {
+    itemSchema = schemaProduct({
+      name:        item.titulo,
+      description: g?.sinopse_pt ?? item.titulo,
+      image:       item.imagem,
+      url:         `/comics/${slug}`,
+      brand:       item.editora,
+      sku:         String(item.id ?? slug),
+      offers: {
+        url:    item.link_compra,
+        seller: item.editora?.includes('Panini') ? 'Panini Brasil' : item.editora,
+      },
+    });
+  } else if (item.autor) {
+    itemSchema = schemaBook({
+      name:        item.titulo,
+      description: g?.sinopse_pt ?? item.titulo,
+      image:       item.imagem,
+      url:         `/comics/${slug}`,
+      author:      item.autor,
+      publisher:   item.editora,
+      datePublished: item.ano ? `${item.ano}-01-01` : undefined,
+      genre:       item.genero ? [item.genero] : (item.categoria ? [item.categoria] : []),
+    });
+  }
+
   const breadcrumb = schemaBreadcrumb([
     { name: 'Home',    url: '/' },
     { name: 'Comics',  url: '/comics' },
@@ -42,6 +73,7 @@ export default async function ComicPage({ params }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      {itemSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemSchema) }} />}
 
       <div className="max-w-4xl mx-auto px-4 py-8">
         <nav aria-label="Caminho de navegação" className="breadcrumb mb-6">
