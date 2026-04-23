@@ -22,9 +22,9 @@ permissions:
 
 jobs:
   atualiza:
-    name: Sync TMDB + fetch notícias + geração de conteúdo via Claude
+    name: Sync TMDB + fetch news + geração de conteúdo via Claude
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 30
 
     steps:
       - name: Checkout do repositório
@@ -54,12 +54,13 @@ jobs:
         run: npm run sync-all
         env:
           NODE_OPTIONS: '--no-warnings'
-
-      - name: Buscar e publicar notícias novas (RSS + GNews + Claude)
-        run: npm run fetch-news
         continue-on-error: true
+
+      - name: Buscar notícias novas (RSS + GNews + Claude)
+        run: npm run fetch-news
         env:
           NODE_OPTIONS: '--no-warnings'
+        continue-on-error: true
 
       - name: Gerar conteúdo editorial (Claude)
         run: |
@@ -70,6 +71,7 @@ jobs:
           fi
         env:
           NODE_OPTIONS: '--no-warnings'
+        continue-on-error: true
 
       - name: Limpar .env.local (paranoia — não fica em artefatos)
         if: always()
@@ -90,13 +92,13 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add lib/mock-data.js lib/content.json
-          git commit -m "chore(news): ingestão automática $(date +'%Y-%m-%d')"
+          git commit -m "chore(content): atualização automática diária $(date +'%Y-%m-%d %H:%M UTC')"
           git push origin HEAD:master
 
       - name: Resumo
         run: |
           if [ "${{ steps.diff.outputs.tem_mudancas }}" = "true" ]; then
-            echo "✅ Notícias e conteúdo atualizados e commitados. Vercel fará o redeploy automático." >> "$GITHUB_STEP_SUMMARY"
+            echo "✅ Conteúdo atualizado e commitado." >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "ℹ️ Nenhuma mudança hoje (feeds sem novidades ou Claude não gerou conteúdo novo)." >> "$GITHUB_STEP_SUMMARY"
+            echo "ℹ️ Nenhuma mudança hoje." >> "$GITHUB_STEP_SUMMARY"
           fi

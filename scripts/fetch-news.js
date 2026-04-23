@@ -2,11 +2,31 @@
 /**
  * fetch-news.js — Ingestão automática diária de notícias para o 3W Entretenimento
  *
+ * O que faz:
+ *   1. Busca itens em RSS (config/news-sources.json) + GNews (opcional)
+ *   2. Dedupe por URL normalizada, filtra idade/tamanho
+ *   3. Balanceia por categoria e limita por rodada
+ *   4. Para cada selecionada: pede ao Claude para reescrever no tom do portal
+ *      e devolver { entrada_mockdata, editorial }
+ *   5. Insere a entrada no array apropriado em `lib/mock-data.js`:
+ *        - categoria Futebol     → NOTICIAS_FUTEBOL
+ *        - categoria NBA         → NOTICIAS_NBA
+ *        - categoria Fórmula 1   → NOTICIAS_F1
+ *        - demais                → NOTICIAS
+ *   6. Insere o corpo editorial em `lib/content.json`:
+ *        - esportes (Futebol/NBA/F1)   → content.esportes[slug]
+ *        - demais                       → content.noticias[slug]
+ *   7. Opcionalmente poda os arrays mantendo só as N mais recentes.
+ *
  * Uso:
  *   node scripts/fetch-news.js                 → roda completo
  *   node scripts/fetch-news.js --dry-run       → só lista o que faria
  *   node scripts/fetch-news.js --skip-rewrite  → pula Claude (debug)
  *   node scripts/fetch-news.js --limit=5       → override do limite diário
+ *
+ * Pré-requisitos:
+ *   ANTHROPIC_API_KEY no .env.local (obrigatório, exceto com --skip-rewrite)
+ *   GNEWS_API_KEY     no .env.local (opcional — só RSS funciona sem)
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'fs';
@@ -23,9 +43,10 @@ const MOCK_DATA_PATH = join(ROOT, 'lib', 'mock-data.js');
 const CONTENT_PATH   = join(ROOT, 'lib', 'content.json');
 const CONFIG_PATH    = join(ROOT, 'config', 'news-sources.json');
 
+// ─── Env (mesmo loader do update-content.js) ─────────────────────────────────
 function loadEnv() {
   const envPath = join(ROOT, '.env.local');
-  if (!existsSync(envPath)) return;
+  if (!existsSync(envPath)) return; // em CI as envs já vêm do workflow
   for (const line of readFileSync(envPath, 'utf-8').split('\n')) {
     const [key, ...rest] = line.split('=');
     if (key?.trim() && !key.startsWith('#')) {
@@ -36,6 +57,7 @@ function loadEnv() {
 
 function log(emoji, msg) { console.log(`${emoji}  ${msg}`); }
 
+// ─── Utils ────────────────────────────────────────────────────────────────────
 function normalizeUrl(u) {
   if (!u) return '';
   try {
@@ -89,6 +111,7 @@ function balanceByCategory(items, maxPorCat, maxTotal) {
   return out;
 }
 
+// ─── Lê um array exportado do mock-data.js (mesma técnica do update-content.js) ──
 function extractArrayFromMockData(varName) {
   const src = readFileSync(MOCK_DATA_PATH, 'utf-8');
   const strConsts = [];
@@ -102,6 +125,7 @@ function extractArrayFromMockData(varName) {
   return eval(`${strConsts.join('\n')}\n${match[1]}`);
 }
 
+// ─── Serializa entrada no formato usado no mock-data.js ───────────────────────
 function formatEntry(entry) {
   const esc = (s) => String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
   return `  {
@@ -112,6 +136,7 @@ function formatEntry(entry) {
   }`;
 }
 
+// ─── Reescreve um array dentro de mock-data.js preservando o resto ────────────
 function updateMockDataArray(varName, novoArray) {
   const src = readFileSync(MOCK_DATA_PATH, 'utf-8');
   const linhas = novoArray.map(formatEntry);
@@ -124,13 +149,16 @@ function updateMockDataArray(varName, novoArray) {
   writeFileSync(MOCK_DATA_PATH, novoSrc, 'utf-8');
 }
 
+// ─── Atribui categoria a um array ─────────────────────────────────────────────
 function arrayKeyForCategory(categoria) {
   if (categoria === 'Futebol')   return { mock: 'NOTICIAS_FUTEBOL', content: 'esportes' };
   if (categoria === 'NBA')       return { mock: 'NOTICIAS_NBA',     content: 'esportes' };
   if (categoria === 'Fórmula 1') return { mock: 'NOTICIAS_F1',      content: 'esportes' };
+  if (categoria === 'Esportes')  return { mock: 'NOTICIAS',         content: 'noticias' };
   return { mock: 'NOTICIAS', content: 'noticias' };
 }
 
+// ─── Main ─────────────────────────────────────────────────────────────────────
 async function main() {
   loadEnv();
 
@@ -162,10 +190,12 @@ async function main() {
   let itens = dedupeByUrl([...rss, ...gnews]);
   log('♻️ ', `após dedupe: ${itens.length}`);
 
+  // Filtra os que já estão publicados (pelos slugs atuais nos arrays)
   const slugsExistentes = new Set();
   for (const arr of ['NOTICIAS', 'NOTICIAS_FUTEBOL', 'NOTICIAS_NBA', 'NOTICIAS_F1']) {
     for (const n of extractArrayFromMockData(arr)) slugsExistentes.add(n.slug);
   }
+  // Também filtra por URL guardada em content.json (para não repetir quando o slug mudou)
   let content = { filmes: {}, series: {}, comics: {}, noticias: {}, esportes: {} };
   if (existsSync(CONTENT_PATH)) {
     content = { ...content, ...JSON.parse(readFileSync(CONTENT_PATH, 'utf-8')) };
@@ -198,10 +228,12 @@ async function main() {
     return;
   }
 
+  // Descobre próximo ID: maior ID entre todos os arrays + 1
   const todosArrays = ['NOTICIAS', 'NOTICIAS_FUTEBOL', 'NOTICIAS_NBA', 'NOTICIAS_F1']
     .flatMap(extractArrayFromMockData);
   let nextId = (todosArrays.reduce((m, n) => Math.max(m, n.id || 0), 100)) + 1;
 
+  // Dedupe de slug contra os existentes
   function uniqSlug(base) {
     let s = base, i = 2;
     while (slugsExistentes.has(s)) { s = `${base}-${i++}`; }
@@ -209,6 +241,7 @@ async function main() {
     return s;
   }
 
+  // Agrupa updates por array para só reescrever o mock-data no fim
   const updates = { NOTICIAS: [], NOTICIAS_FUTEBOL: [], NOTICIAS_NBA: [], NOTICIAS_F1: [] };
   for (const arr of Object.keys(updates)) {
     updates[arr] = extractArrayFromMockData(arr);
@@ -223,7 +256,7 @@ async function main() {
       if (flags.skipRewrite) {
         const slugBase = raw.titulo
           .toLowerCase()
-          .normalize('NFD').replace(/[̀-ͯ]/g,'')
+          .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
           .replace(/[^\w\s-]/g,'').trim()
           .replace(/\s+/g,'-').replace(/-+/g,'-')
           .slice(0,60)
@@ -263,13 +296,15 @@ async function main() {
 
       const destino = arrayKeyForCategory(result.categoria);
       const entrada = { id: nextId++, ...result.entrada_mockdata };
-      updates[destino.mock].unshift(entrada);
+      updates[destino.mock].unshift(entrada); // inserir no topo (mais recente primeiro)
 
+      // Poda o array se ficar muito grande (evita mock-data.js crescer sem fim)
       const limArray = config.limites?.max_por_array ?? 40;
       if (updates[destino.mock].length > limArray) {
         updates[destino.mock] = updates[destino.mock].slice(0, limArray);
       }
 
+      // Content
       content[destino.content] ||= {};
       content[destino.content][entrada.slug] = {
         titulo: entrada.titulo,
@@ -286,8 +321,10 @@ async function main() {
       criadas++;
       log('✅', `${entrada.categoria} → ${entrada.slug}`);
 
+      // Salva content.json incrementalmente (resiliência contra crash no meio)
       writeFileSync(CONTENT_PATH, JSON.stringify(content, null, 2), 'utf-8');
 
+      // Rate limit anti-429
       await new Promise((r) => setTimeout(r, 500));
 
     } catch (err) {
@@ -295,8 +332,10 @@ async function main() {
     }
   }
 
+  // Persiste mock-data.js no fim (uma única reescrita por array)
   if (criadas > 0) {
     for (const arr of Object.keys(updates)) {
+      // Só reescreve se houve alguma mudança
       const atual = extractArrayFromMockData(arr);
       if (JSON.stringify(atual) !== JSON.stringify(updates[arr])) {
         updateMockDataArray(arr, updates[arr]);

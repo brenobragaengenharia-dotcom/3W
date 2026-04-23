@@ -1,4 +1,8 @@
 // scripts/lib/rss.js — parser RSS mínimo (sem dependências externas)
+// Usa DOMParser nativo do Node 22+ via @xmldom/xmldom? Não — aqui regex direto.
+// Trade-off: não é um parser XML "de verdade", mas cobre RSS 2.0 e Atom simples
+// que é o que todos esses portais usam. Se algum feed quebrar, substituir por rss-parser.
+
 const UA = '3W-Entretenimento NewsBot/1.0 (+https://3w-entretenimento.com)';
 
 function stripCdata(s = '') {
@@ -27,10 +31,13 @@ function attr(xml, name, attrName) {
 }
 
 function extractImage(item) {
+  // 1) enclosure
   let url = attr(item, 'enclosure', 'url');
   if (url) return url;
+  // 2) media:content / media:thumbnail
   url = attr(item, 'media:content', 'url') || attr(item, 'media:thumbnail', 'url');
   if (url) return url;
+  // 3) primeiro <img src=""> dentro do content:encoded ou description
   const content = tag(item, 'content:encoded') || tag(item, 'description');
   const m = content.match(/<img[^>]+src=["']([^"']+)["']/i);
   return m ? m[1] : null;
@@ -38,6 +45,7 @@ function extractImage(item) {
 
 function parseRss(xml) {
   const items = [];
+  // RSS 2.0: <item>...</item>    Atom: <entry>...</entry>
   const re = /<(item|entry)[^>]*>([\s\S]*?)<\/\1>/gi;
   let m;
   while ((m = re.exec(xml)) !== null) {

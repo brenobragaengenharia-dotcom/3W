@@ -1,4 +1,6 @@
 // scripts/lib/gnews.js — cliente GNews (gnews.io). Pula silenciosamente se GNEWS_API_KEY ausente.
+// Docs: https://gnews.io/docs
+
 export async function fetchGnews(config) {
   if (!config?.enabled) return [];
   const key = process.env.GNEWS_API_KEY;

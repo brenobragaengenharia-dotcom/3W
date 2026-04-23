@@ -7,7 +7,7 @@ export const metadata = {
   alternates: { canonical: 'https://3w-entretenimento.com/politica-de-privacidade' },
 };
 
-const LAST_UPDATED = '17 de abril de 2025';
+const LAST_UPDATED = '22 de abril de 2026';
 
 export default function PoliticaDePrivacidadePage() {
   const breadcrumb = schemaBreadcrumb([
@@ -18,19 +18,15 @@ export default function PoliticaDePrivacidadePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-
       <div className="max-w-3xl mx-auto px-4 py-12">
         <nav aria-label="Caminho de navegação" className="breadcrumb mb-6">
           <Link href="/">Home</Link>
           <span className="breadcrumb-sep" aria-hidden="true">/</span>
           <span aria-current="page">Política de Privacidade</span>
         </nav>
-
         <h1 className="text-4xl font-black text-white mb-2">Política de Privacidade</h1>
         <p className="text-[#737373] text-sm mb-10">Última atualização: {LAST_UPDATED}</p>
-
         <div className="space-y-8 text-[#b3b3b3] leading-relaxed">
-
           <section>
             <p>
               O <strong className="text-white">3W Entretenimento</strong> respeita
@@ -43,7 +39,6 @@ export default function PoliticaDePrivacidadePage() {
               enquanto titular de dados.
             </p>
           </section>
-
           <section>
             <h2 className="text-xl font-bold text-white mb-3">1. Informações que coletamos</h2>
             <p className="mb-3">Podemos coletar as seguintes categorias de dados:</p>
@@ -63,7 +58,6 @@ export default function PoliticaDePrivacidadePage() {
               </li>
             </ul>
           </section>
-
           <section>
             <h2 className="text-xl font-bold text-white mb-3">2. Como usamos seus dados</h2>
             <p className="mb-3">As informações coletadas são utilizadas para:</p>
@@ -75,20 +69,42 @@ export default function PoliticaDePrivacidadePage() {
               <li>Cumprir obrigações legais.</li>
             </ul>
           </section>
-
           <section>
-            <h2 className="text-xl font-bold text-white mb-3">3. Cookies</h2>
+            <h2 className="text-xl font-bold text-white mb-3">3. Cookies e Consentimento</h2>
             <p className="mb-3">
-              Utilizamos cookies essenciais para o funcionamento do site e cookies analíticos para entender
-              como os visitantes interagem com o conteúdo. Você pode configurar seu navegador para recusar
-              cookies, mas isso pode afetar algumas funcionalidades.
+              Utilizamos duas categorias de cookies:
+            </p>
+            <ul className="space-y-2 list-disc list-inside mb-3">
+              <li>
+                <strong className="text-white">Essenciais:</strong> necessários para o site funcionar
+                (manter sessão, lembrar preferências, exibir este aviso). Não podem ser desativados.
+              </li>
+              <li>
+                <strong className="text-white">Analíticos (opcionais):</strong> Google Analytics 4 e Meta
+                Pixel, usados para entender o comportamento agregado de visitantes. Só são ativados após
+                seu consentimento explícito no banner de cookies.
+              </li>
+            </ul>
+            <p className="mb-3">
+              Na sua primeira visita, um banner aparece no rodapé com três opções:
+              <em> Aceitar todos</em>, <em>Recusar opcionais</em> e <em>Personalizar</em>. Sua escolha é
+              registrada em um cookie próprio (<code className="text-[#FF6600]">3w_consent</code>) com
+              validade de 180 dias; ao expirar, o banner reaparece para revalidação. Enquanto você não
+              escolhe ou se escolhe recusar, nenhum cookie analítico é ativado — isso é feito via o
+              Consent Mode v2 do Google, conforme recomendação da ANPD.
+            </p>
+            <p className="mb-3">
+              Para revogar ou alterar seu consentimento a qualquer momento, apague o cookie{' '}
+              <code className="text-[#FF6600]">3w_consent</code> nas configurações do seu navegador; o
+              banner voltará na próxima visita. Você também pode configurar o navegador para recusar
+              todos os cookies, mas isso pode afetar algumas funcionalidades.
             </p>
             <p>
-              Widgets e integrações de terceiros (como feeds de redes sociais incorporados) podem definir
-              seus próprios cookies, sujeitos às políticas de privacidade dos respectivos fornecedores.
+              Widgets e integrações de terceiros (como feeds de redes sociais incorporados via Elfsight,
+              player do Instagram, etc.) podem definir seus próprios cookies, sujeitos às políticas de
+              privacidade dos respectivos fornecedores.
             </p>
           </section>
-
           <section>
             <h2 className="text-xl font-bold text-white mb-3">4. Compartilhamento de dados</h2>
             <p className="mb-3">
@@ -106,7 +122,6 @@ export default function PoliticaDePrivacidadePage() {
               </li>
             </ul>
           </section>
-
           <section>
             <h2 className="text-xl font-bold text-white mb-3">5. Serviços de terceiros</h2>
             <p>
@@ -114,7 +129,6 @@ export default function PoliticaDePrivacidadePage() {
               de cada plataforma, sobre as quais não temos controle.
             </p>
           </section>
-
           <section>
             <h2 className="text-xl font-bold text-white mb-3">6. Retenção de dados</h2>
             <p>
@@ -123,7 +137,6 @@ export default function PoliticaDePrivacidadePage() {
               relacionamento se mantiver ativo, podendo ser excluídos a qualquer momento mediante solicitação.
             </p>
           </section>
-
           <section>
             <h2 className="text-xl font-bold text-white mb-3">7. Seus direitos (LGPD)</h2>
             <p className="mb-3">
@@ -144,7 +157,6 @@ export default function PoliticaDePrivacidadePage() {
               </Link>.
             </p>
           </section>
-
           <section>
             <h2 className="text-xl font-bold text-white mb-3">8. Segurança</h2>
             <p>
@@ -153,7 +165,6 @@ export default function PoliticaDePrivacidadePage() {
               transmissão pela internet é 100% seguro, e não podemos garantir segurança absoluta.
             </p>
           </section>
-
           <section>
             <h2 className="text-xl font-bold text-white mb-3">9. Menores de idade</h2>
             <p>
@@ -162,16 +173,14 @@ export default function PoliticaDePrivacidadePage() {
               parental, os removeremos prontamente.
             </p>
           </section>
-
           <section>
             <h2 className="text-xl font-bold text-white mb-3">10. Alterações nesta Política</h2>
             <p>
-              Podemos atualizar esta Política periodicamente. A data de "última atualização" no topo
+              Podemos atualizar esta Política periodicamente. A data de &quot;última atualização&quot; no topo
               da página indicará quando a versão mais recente foi publicada. Recomendamos que você
               a revise regularmente.
             </p>
           </section>
-
           <section>
             <h2 className="text-xl font-bold text-white mb-3">11. Contato</h2>
             <p>
@@ -183,7 +192,6 @@ export default function PoliticaDePrivacidadePage() {
               . Responderemos no prazo de até 15 dias úteis.
             </p>
           </section>
-
           <div className="pt-4 border-t border-[#1a1a1a]">
             <Link
               href="/"

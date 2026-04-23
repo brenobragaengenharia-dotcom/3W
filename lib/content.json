@@ -4209,7 +4209,7 @@
       "categoria": "Esportes",
       "autor": "Redação 3W",
       "data": "2026-04-10",
-      "imagem": "https://static.sambafoot.com/wp/sites/2/Captura-de-tela-2025-11-19-141636-768x425.webp",
+      "imagem": "https://upload.wikimedia.org/wikipedia/pt/d/d7/Logo_copa_2026.png",
       "tempo_leitura": 6,
       "manchete": "Brasil no Grupo A da Copa 2026: análise completa dos adversários",
       "paragrafos": [
@@ -4372,7 +4372,7 @@
       "categoria": "Futebol",
       "autor": "Redação 3W Esportes",
       "data": "2026-04-10",
-      "imagem": "https://static.sambafoot.com/wp/sites/2/Captura-de-tela-2025-11-19-141636-768x425.webp",
+      "imagem": "https://upload.wikimedia.org/wikipedia/pt/d/d7/Logo_copa_2026.png",
       "tempo_leitura": 6,
       "manchete": "Brasil conhece grupo na Copa 2026 e mira o hexa",
       "paragrafos": [
@@ -4422,6 +4422,75 @@
       "frase_destaque": "Hamilton de vermelho contra Verstappen de azul: a F1 nunca precisou tanto de um herói.",
       "conclusao": "O encontro de Hamilton e Verstappen no mesmo grid, agora em equipes diferentes e com ambições máximas, representa um presente raro para o automobilismo mundial. Independentemente de quem erguer o troféu ao fim de 2026, a Fórmula 1 já saiu ganhando. Esta rivalidade tem tudo para se tornar um capítulo obrigatório nos livros de história do esporte a motor.",
       "gerado_em": "2026-04-17T21:54:23.309Z"
+    },
+    "neymar-bate-na-trave-e-santos-empata-sem-gols-com-coritiba-na-copa-do-brasil": {
+      "titulo": "Neymar bate na trave e Santos empata sem gols com Coritiba na Copa do Brasil",
+      "descricao": "O Santos estreou na Copa do Brasil com empate frustrante em 0 a 0 diante do Coritiba, na Vila Belmiro, chegando ao terceiro jogo seguido sem vencer em casa.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-04-23",
+      "imagem": "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0423%2Fr1647773_1296x729_16%2D9.jpg",
+      "tempo_leitura": 4,
+      "manchete": "Neymar para na trave e Santos tropeça mais uma vez em casa",
+      "paragrafos": [
+        "O retorno de Neymar ao Santos prometia virar o chaveamento da Copa do Brasil logo na estreia. Não foi o que aconteceu. Na Vila Belmiro, o Peixe ficou travado no 0 a 0 contra o Coritiba na noite desta quarta-feira e somou mais um resultado que decepciona a torcida que foi ao estádio esperando algo diferente. O time segue sem conseguir transformar presença de estrela em vitória dentro de casa.",
+        "O momento mais próximo do gol saiu dos pés do próprio camisa 10: Neymar carimbou a trave e viu a bola sair sem entrar. Foi a cena que resumiu a noite do Santos — chegadas, mas sem efetividade. Com esse resultado, o clube chega ao terceiro jogo consecutivo sem vencer atuando como mandante, um número que começa a pesar no ambiente do clube e levanta questões reais sobre o rendimento coletivo da equipe.",
+        "É difícil defender o desempenho do Santos nesse cenário. Ter Neymar em campo é um privilégio que poucos times brasileiros podem se dar, mas privilégio não converte chance em gol. A torcida santista tem tolerância limitada para empates em casa, especialmente na Copa do Brasil, competição onde o fator eliminatório torna cada tropeço mais caro. A pressão sobre o elenco e a comissão técnica aumenta a cada jogo sem vitória.",
+        "Segundo a ESPN Brasil, o empate na Vila Belmiro representa o terceiro jogo seguido sem triunfo como mandante para o Santos. O próximo compromisso da equipe será decisivo para saber se o time consegue se recuperar antes que o desgaste vire crise declarada. A Copa do Brasil segue com fase eliminatória, e um novo empate ou derrota pode complicar ainda mais a situação do Peixe na temporada."
+      ],
+      "frase_destaque": "Neymar bateu na trave, a torcida suspirou — e o placar continuou zerado.",
+      "conclusao": "Um empate sem gols na estreia de uma Copa do Brasil não é o fim do mundo, mas o contexto importa. Três jogos sem vencer em casa é um sinal que o Santos não pode ignorar. Com Neymar disponível e a Vila cheia de expectativa, o time precisará transformar potencial em resultado concreto antes que a paciência da torcida se esgote de vez.",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/copa-do-brasil/artigo/_/id/16611802/neymar-para-na-trave-santos-fica-no-0-a-0-com-coritiba-estreia-copa-do-brasil-chega-terceiro-jogo-sem-vitoria-vila-belmiro"
+      },
+      "gerado_em": "2026-04-23T07:53:08.171Z"
+    },
+    "flamengo-bate-vitoria-no-maracana-e-abre-vantagem-na-copa-do-brasil": {
+      "titulo": "Flamengo bate Vitória no Maracanã e abre vantagem na Copa do Brasil",
+      "descricao": "Com Evertton Araújo quebrando um jejum no ano, o Rubro-Negro saiu na frente na quinta fase da Copa do Brasil diante de sua torcida.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-04-23",
+      "imagem": "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0423%2Fr1647816_1236x696_16%2D9.jpg",
+      "tempo_leitura": 4,
+      "manchete": "Flamengo vence, Evertton desencanta e Copa do Brasil começa bem",
+      "paragrafos": [
+        "O Flamengo não teve uma noite tranquila no Maracanã. O Vitória assustou em algum momento da partida — o suficiente para deixar a torcida rubro-negra desconfortável — mas o time carioca conseguiu segurar o resultado e saiu com a vitória na quinta fase da Copa do Brasil. O triunfo coloca o Mengão em posição privilegiada para avançar à próxima etapa da competição. Quem passou em branco por boa parte do ano também foi às redes: Evertton Araújo.",
+        "Evertton Araújo havia passado um longo período sem balançar as redes em 2026. O gol marcado diante do Vitória representa não apenas um alívio pessoal para o jogador, mas também um sinal de que o meio-campo rubro-negro pode ter mais opções ofensivas daqui para frente. O Vitória, por sua vez, pintou uma jogada que acendeu o alerta no estádio — aquele tipo de lance que a torcida lembra durante dias. No fim, porém, o placar favoreceu o mandante.",
+        "Para quem acompanha o Flamengo de perto, a vitória tem dois lados. O resultado é positivo e a vantagem para o jogo de volta é real. Mas o 'susto' sofrido — como a própria ESPN Brasil descreveu — mostra que o Rubro-Negro ainda não está blindado defensivamente. Levar um lance bonito do adversário em casa, em mata-mata, é o tipo de detalhe que pode custar caro em fases mais avançadas. O time precisa ser mais consistente.",
+        "Agora o Flamengo joga pelo empate no confronto de volta para avançar na Copa do Brasil. A vantagem conquistada no Maracanã dá fôlego, mas não garante nada. Segundo a ESPN Brasil, que cobriu a partida com detalhes, Evertton Araújo foi um dos destaques da noite. A sequência da competição vai mostrar se essa versão do time — capaz de vencer mesmo sem jogar bem — é sustentável ao longo do torneio."
+      ],
+      "frase_destaque": "Evertton Araújo quebrou o jejum e o Flamengo saiu na frente quando mais precisava.",
+      "conclusao": "Uma vitória em mata-mata vale mais do que a estética do jogo. O Flamengo sabe disso e usou o Maracanã a seu favor. Com a vantagem no bolso e Evertton Araújo reencontrado com o gol, o Rubro-Negro chega ao confronto de volta em situação confortável — e a Copa do Brasil segue como uma das apostas mais sérias do clube na temporada.",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/copa-do-brasil/artigo/_/id/16612488/copa-do-brasil-flamengo-supera-susto-apos-pintura-vitoria-larga-na-frente-copa-do-brasil-evertton-araujo-desencanta"
+      },
+      "gerado_em": "2026-04-23T07:53:27.280Z"
+    },
+    "yamal-sofre-lesao-no-tendao-da-coxa-mas-deve-jogar-a-copa-do-mundo": {
+      "titulo": "Yamal sofre lesão no tendão da coxa, mas deve jogar a Copa do Mundo",
+      "descricao": "Astro do Barcelona e da seleção espanhola passou por exames iniciais após lesão e aguarda diagnóstico mais detalhado nos próximos dias.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-04-23",
+      "imagem": "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0422%2Fr1647717_1296x729_16%2D9.jpg",
+      "tempo_leitura": 4,
+      "manchete": "Yamal lesiona tendão da coxa, mas mira a Copa do Mundo",
+      "paragrafos": [
+        "Lamine Yamal, a maior joia do futebol europeu no momento, preocupou o Barcelona e a seleção espanhola após sofrer uma lesão no tendão da coxa. A boa notícia — se é que se pode chamar assim — é que os primeiros exames indicam que o jovem atacante tem condições de se recuperar antes da Copa do Mundo. O susto foi grande, mas o prognóstico inicial é menos catastrófico do que parecia nas primeiras horas.",
+        "Segundo a ESPN Brasil, um jornal espanhol afirma que Yamal 'rompeu o tendão da coxa', mas que o prazo de recuperação não inviabiliza sua participação no Mundial. O jogador já passou pelos exames iniciais, e novos testes, mais detalhados e precisos, estão previstos para os próximos dias. Só então o clube e a comissão técnica da Espanha terão um panorama real sobre o tempo de afastamento e os riscos de uma convocação.",
+        "A notícia movimentou torcedores e analistas nas redes sociais. Para muitos, qualquer risco com Yamal às vésperas de uma Copa do Mundo seria imprudência inaceitável. O jogador é peça central tanto no esquema do Barcelona quanto na seleção espanhola, que chega ao torneio como uma das favoritas. Jogar com uma lesão mal curada pode transformar um problema gerenciável em um dano definitivo para a carreira — e ninguém quer ver isso acontecer.",
+        "Os próximos dias serão decisivos. Os exames complementares vão definir o real tamanho do estrago e, principalmente, o protocolo de recuperação. A torcida do Barcelona e da Espanha torce para que os resultados confirmem o tom otimista das primeiras avaliações. Por ora, o cenário é de cautela — e de muita expectativa."
+      ],
+      "frase_destaque": "O prazo de recuperação não inviabiliza a participação de Yamal na Copa do Mundo.",
+      "conclusao": "Yamal é, hoje, um dos jogadores mais importantes do futebol mundial. Qualquer lesão que envolva seu nome ganha proporção imediata. O desfecho desta história importa não só para o Barcelona, mas para a seleção espanhola e para os fãs do futebol que querem vê-lo brilhar no maior palco do esporte.",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/barcelona/artigo/_/id/16611926/jornal-espanhol-diz-yamal-rompeu-tendao-coxa-recupera-tempo-copa-do-mundo"
+      },
+      "gerado_em": "2026-04-23T07:53:42.844Z"
     }
   }
 }

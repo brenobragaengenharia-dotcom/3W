@@ -1,0 +1,64 @@
+name: Fix dedup (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Dedup lib/mock-data.js e lib/content.json
+        run: |
+          node --input-type=module <<'EOF'
+          import fs from 'fs';
+          // mock-data.js
+          let mock = fs.readFileSync('lib/mock-data.js', 'utf8');
+          const header = '// Dados do portal 3W Entretenimento';
+          const i1 = mock.indexOf(header);
+          const i2 = mock.indexOf(header, i1 + 1);
+          if (i2 > 0) {
+            mock = mock.slice(0, i2).replace(/\s+$/, '') + '\n';
+            fs.writeFileSync('lib/mock-data.js', mock);
+            console.log('mock-data.js dedup OK:', mock.split('\n').length, 'lines');
+          }
+
+          // content.json
+          let raw = fs.readFileSync('lib/content.json', 'utf8');
+          let depth = 0, end = -1;
+          for (let i = 0; i < raw.length; i++) {
+            if (raw[i] === '{') depth++;
+            else if (raw[i] === '}') { depth--; if (depth === 0) { end = i + 1; break; } }
+          }
+          if (end > 0 && end < raw.length) {
+            const obj = JSON.parse(raw.slice(0, end));
+            // Remove 3 games entries
+            for (const slug of [
+              'xbox-game-pass-e-discord-preparam-nova-parceria-com-beneficios-para-assinantes',
+              'ubisoft-em-promocao-na-nuuvem-jogos-com-ate-85-de-desconto',
+              'nintendo-switch-2-com-mario-kart-world-tem-r100-de-desconto-no-mercado-livre'
+            ]) { if (obj.noticias?.[slug]) delete obj.noticias[slug]; }
+            fs.writeFileSync('lib/content.json', JSON.stringify(obj, null, 2) + '\n');
+            console.log('content.json dedup OK');
+          }
+          EOF
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet; then
+            git add lib/mock-data.js lib/content.json
+            git commit -m "fix: dedup mock-data.js e content.json + remove games"
+            git push origin HEAD:master
+            echo "FIXED ✓"
+          else
+            echo "Nothing to fix"
+          fi

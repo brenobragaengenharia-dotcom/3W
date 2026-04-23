@@ -1,5 +1,14 @@
 // scripts/lib/news-rewrite.js
 // Reescreve uma notícia crua (vinda de RSS/GNews) no schema usado pelo 3W.
+// Chama Claude via fetch direto (mesmo padrão de scripts/lib/claude.js).
+//
+// Retorna um objeto com DUAS partes para encaixar nos dois arquivos:
+//
+//   entrada_mockdata: { id, slug, titulo, descricao, categoria, autor,
+//                       data, imagem, tempo_leitura }  ← vai pro array em lib/mock-data.js
+//   editorial:        { manchete, paragrafos[4], frase_destaque, conclusao }
+//                                                     ← vai pra content.noticias[slug]
+//                                                       ou content.esportes[slug] em lib/content.json
 
 const ANTHROPIC_API = 'https://api.anthropic.com/v1/messages';
 const MODEL = 'claude-sonnet-4-6';
@@ -44,20 +53,20 @@ async function callClaude(prompt) {
 
   const data = await res.json();
   const text = data.content?.[0]?.text ?? '';
-  return text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/, '').trim();
+  return text.replace(/^\`\`\`(?:json)?\s*/i, '').replace(/\s*\`\`\`\s*$/, '').trim();
 }
 
 function slugify(str, fallback = '') {
   const s = String(str || '')
     .toLowerCase()
     .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
+    .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^\w\s-]/g, '')
     .trim()
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
     .slice(0, 80)
-    .replace(/^-+|-+$/g, '');
+    .replace(/^-+|-+$/g, ''); // remove hifens de borda (pós-slice)
   return s || (fallback ? `noticia-${fallback}` : 'noticia');
 }
 
@@ -71,6 +80,7 @@ function toIsoDate(d) {
 function normalizaCategoria(cat, fallback = 'Cultura Pop') {
   if (!cat) return fallback;
   const norm = String(cat).trim();
+  // match case-insensitive contra lista válida
   const hit = CATEGORIAS_VALIDAS.find((c) => c.toLowerCase() === norm.toLowerCase());
   return hit || fallback;
 }
@@ -114,6 +124,7 @@ RETORNE EXATAMENTE este JSON (sem markdown, sem explicações):
   try {
     parsed = JSON.parse(json);
   } catch (err) {
+    // tenta extrair { ... } balanceado
     const first = json.indexOf('{');
     const last = json.lastIndexOf('}');
     if (first >= 0 && last > first) {

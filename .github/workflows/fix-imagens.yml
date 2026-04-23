@@ -1,0 +1,77 @@
+name: Fix imagens (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Substituir URLs de imagem quebradas
+        run: |
+          node --input-type=module <<'EOF'
+          import fs from 'fs';
+
+          // slug -> nova URL de imagem
+          const map = {
+            'neymar-bate-na-trave-e-santos-empata-sem-gols-com-coritiba-na-copa-do-brasil':
+              'https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0423%2Fr1647773_1296x729_16%2D9.jpg',
+            'flamengo-bate-vitoria-no-maracana-e-abre-vantagem-na-copa-do-brasil':
+              'https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0423%2Fr1647816_1236x696_16%2D9.jpg',
+            'yamal-sofre-lesao-no-tendao-da-coxa-mas-deve-jogar-a-copa-do-mundo':
+              'https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0422%2Fr1647717_1296x729_16%2D9.jpg',
+            'copa-do-mundo-2026-grupos':
+              'https://upload.wikimedia.org/wikipedia/pt/d/d7/Logo_copa_2026.png',
+            'copa-do-mundo-2026-brasil':
+              'https://upload.wikimedia.org/wikipedia/pt/d/d7/Logo_copa_2026.png',
+          };
+
+          // 1. Atualizar mock-data.js — substituir imagem: por slug
+          let mock = fs.readFileSync('lib/mock-data.js', 'utf8');
+          let mockChanges = 0;
+          for (const [slug, newUrl] of Object.entries(map)) {
+            // Match entry: { ... slug: 'X', ... imagem: 'OLD', ... }
+            const entryRegex = new RegExp("(slug: '" + slug + "'[\\s\\S]*?imagem: ')[^']+(')", 'g');
+            const before = mock;
+            mock = mock.replace(entryRegex, (_, p1, p2) => p1 + newUrl + p2);
+            if (before !== mock) mockChanges++;
+          }
+          fs.writeFileSync('lib/mock-data.js', mock);
+          console.log('mock-data.js: ' + mockChanges + ' imagens atualizadas');
+
+          // 2. Atualizar content.json — substituir campo imagem em content.esportes[slug] e content.noticias[slug]
+          const content = JSON.parse(fs.readFileSync('lib/content.json', 'utf8'));
+          let contentChanges = 0;
+          for (const bucket of ['esportes', 'noticias']) {
+            if (!content[bucket]) continue;
+            for (const [slug, newUrl] of Object.entries(map)) {
+              if (content[bucket][slug]) {
+                content[bucket][slug].imagem = newUrl;
+                contentChanges++;
+              }
+            }
+          }
+          fs.writeFileSync('lib/content.json', JSON.stringify(content, null, 2) + '\n');
+          console.log('content.json: ' + contentChanges + ' imagens atualizadas');
+          EOF
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet; then
+            git add lib/mock-data.js lib/content.json
+            git commit -m "fix(imagens): substitui placeholders quebradas por og:image reais"
+            git push origin HEAD:master
+            echo "FIXED"
+          else
+            echo "Nothing to fix"
+          fi

@@ -15,17 +15,17 @@ export function AffiliateDisclosureFooter() {
       <div className="max-w-7xl mx-auto px-4 py-4">
         <p className="text-[11px] leading-relaxed text-[#737373]">
           <strong className="text-[#b3b3b3]">Transparência:</strong> Algumas páginas deste site contêm
-          links de afiliado (Amazon, Magalu, Mercado Livre, Shopee, Panini, Ingresso.com, Netshoes e outros).
+          links de afiliado.
           Quando você compra por esses links, o 3W pode receber uma comissão — sem custo adicional para você.
           Recomendamos só produtos que julgamos relevantes para nosso público. Conteúdo editorial, resenhas
           e notas são independentes e <strong className="text-[#b3b3b3]">não</strong> influenciados por
           parcerias comerciais. Publis e conteúdos patrocinados são sempre identificados com <em>#publi</em>{' '}
           ou <em>#parceria</em>. Dúvidas:{' '}
           <a
-            href="mailto:breno.bragaengenharia@gmail.com"
+            href="mailto:contato3www@gmail.com"
             className="underline decoration-[#FF6600] underline-offset-2 hover:text-[#FF6600] transition-colors"
           >
-            breno.bragaengenharia@gmail.com
+            contato3www@gmail.com
           </a>
           .
         </p>
