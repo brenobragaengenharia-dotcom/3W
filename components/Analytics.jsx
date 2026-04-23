@@ -1,14 +1,16 @@
 /**
- * Analytics.jsx — Carrega GA4 + Meta Pixel
+ * Analytics.jsx — Carrega GA4 + Meta Pixel em modo LGPD-compliant
  *
- * Renderizado uma vez em app/layout.js (Server Component).
- * Usa next/script com strategy="afterInteractive" para não bloquear LCP.
+ * ATUALIZADO em 22/abr/2026 (Fase 1):
+ *   - Consent Mode v2 do GA4 com DEFAULT = denied
+ *   - Nada é trackeado até o usuário consentir via <CookieBanner />
+ *   - O CookieBanner chama gtag('consent', 'update', ...) ao aceitar
  *
- * Variáveis (definir em .env.local e na Vercel):
+ * Renderizado uma vez em app/layout.js.
+ *
+ * Variáveis (.env.local e na Vercel):
  *   NEXT_PUBLIC_GA_ID         → ex: G-ABC123XYZ
  *   NEXT_PUBLIC_META_PIXEL_ID → ex: 1234567890123456
- *
- * Sem as variáveis preenchidas, NADA é renderizado (zero overhead).
  */
 
 import Script from 'next/script';
@@ -19,6 +21,27 @@ export default function Analytics() {
 
   return (
     <>
+      {/* ─── Consent Mode v2 (DEFAULT = denied) ─────────────────────────
+          Precisa vir ANTES de qualquer gtag('config'/'event').
+          O CookieBanner fará gtag('consent','update',...) quando o
+          usuário clicar Aceitar. */}
+      {(GA_ID || PIXEL_ID) && (
+        <Script id="consent-default" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              wait_for_update: 500,
+            });
+          `}
+        </Script>
+      )}
+
       {/* ─── Google Analytics 4 ────────────────────────────────────────── */}
       {GA_ID && (
         <>
@@ -28,9 +51,6 @@ export default function Analytics() {
           />
           <Script id="ga4-init" strategy="afterInteractive">
             {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              window.gtag = gtag;
               gtag('js', new Date());
               gtag('config', '${GA_ID}', {
                 anonymize_ip: true,
@@ -55,6 +75,7 @@ export default function Analytics() {
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('consent', 'revoke');
               fbq('init', '${PIXEL_ID}');
               fbq('track', 'PageView');
             `}

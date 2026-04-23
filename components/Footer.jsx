@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { AffiliateDisclosureFooter } from './AffiliateDisclosure';
 
 const CATEGORIAS = [
   { href: '/filmes-e-series', label: 'Filmes e Séries' },
@@ -99,6 +100,9 @@ export default function Footer() {
           </p>
         </div>
       </div>
+
+      {/* LGPD / CDC Art. 36 — disclosure de afiliado */}
+      <AffiliateDisclosureFooter />
     </footer>
   );
 }
