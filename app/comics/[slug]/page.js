@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { COMICS, LIVROS_RECOMENDADOS, HQS_PANINI, LIVROS_PANINI } from '@/lib/mock-data';
 import { schemaBreadcrumb, schemaBook, schemaProduct } from '@/lib/structured-data';
 import content from '@/lib/content.json';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 const TODOS_COMICS = [...COMICS, ...LIVROS_RECOMENDADOS, ...HQS_PANINI, ...LIVROS_PANINI];
 
@@ -173,6 +174,7 @@ export default async function ComicPage({ params }) {
           </Link>
         </div>
       </div>
+      <NewsletterBanner />
     </>
   );
 }

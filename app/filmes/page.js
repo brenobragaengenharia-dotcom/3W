@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FILMES, NOTICIAS } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 const NOTICIAS_CINEMA = NOTICIAS
   .filter((n) => n.categoria === 'Cinema')
@@ -94,6 +95,7 @@ export default function FilmesPage() {
           </section>
         )}
       </div>
+      <NewsletterBanner />
     </>
   );
 }

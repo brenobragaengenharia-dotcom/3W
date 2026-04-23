@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { HQS_PANINI, LIVROS_PANINI, NOTICIAS } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
 import ElfsightFeed, { ELFSIGHT_IDS } from '@/components/ElfsightFeed';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 export const metadata = {
   title: 'Comics',
@@ -138,6 +139,7 @@ export default function ComicsPage() {
         perfil="@3wcomics_"
         href="https://instagram.com/3wcomics_"
       />
+      <NewsletterBanner />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { JOGOS } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 export const metadata = {
   title: 'Jogos',
@@ -40,6 +41,7 @@ export default function JogosPage() {
           ))}
         </div>
       </div>
+      <NewsletterBanner />
     </>
   );
 }

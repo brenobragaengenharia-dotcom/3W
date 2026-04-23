@@ -3,6 +3,7 @@ import { NOTICIAS_FUTEBOL, NOTICIAS_NBA, NOTICIAS_F1 } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
 import ElfsightFeed, { ELFSIGHT_IDS } from '@/components/ElfsightFeed';
 import NetshoesePromo from '@/components/NetshoesePromo';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 export const metadata = {
   title: 'Esportes',

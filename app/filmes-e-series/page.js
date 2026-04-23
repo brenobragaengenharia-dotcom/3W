@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { FILMES, SERIES, NOTICIAS } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
 import ElfsightFeed, { ELFSIGHT_IDS } from '@/components/ElfsightFeed';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 const NOTICIAS_CINEMA = NOTICIAS
   .filter((n) => n.categoria === 'Cinema')
@@ -180,6 +181,7 @@ export default function FilmesESeriesPage() {
         perfil="@3worlds_entertainment"
         href="https://instagram.com/3worlds_entertainment"
       />
+      <NewsletterBanner />
     </>
   );
 }

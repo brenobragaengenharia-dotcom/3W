@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { NOTICIAS, NOTICIAS_ESPORTES } from '@/lib/mock-data';
 import { schemaBreadcrumb, schemaNewsArticle } from '@/lib/structured-data';
 import content from '@/lib/content.json';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 // Todas as notícias (gerais + esportes) compartilham este template de página
 const TODAS_NOTICIAS = [...NOTICIAS, ...NOTICIAS_ESPORTES];
@@ -187,6 +188,7 @@ export default async function NoticiaPage({ params }) {
           </aside>
         )}
       </div>
+      <NewsletterBanner />
     </>
   );
 }

@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import Link from 'next/link';
 import { FILMES, SERIES, NOTICIAS } from '@/lib/mock-data';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 function BuscaResultados() {
   const searchParams = useSearchParams();

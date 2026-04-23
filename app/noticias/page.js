@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { NOTICIAS, NOTICIAS_ESPORTES } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 export const metadata = {
   title: 'Notícias',
@@ -63,6 +64,7 @@ export default function NoticiasPage() {
           ))}
         </div>
       </div>
+      <NewsletterBanner />
     </>
   );
 }

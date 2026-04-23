@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SERIES, NOTICIAS } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 const NOTICIAS_SERIES = NOTICIAS
   .filter((n) => n.categoria === 'Séries')
@@ -79,6 +80,7 @@ export default function SeriesPage() {
           </section>
         )}
       </div>
+      <NewsletterBanner />
     </>
   );
 }

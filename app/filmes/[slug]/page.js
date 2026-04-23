@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { FILMES, INGRESSO_URL } from '@/lib/mock-data';
 import { schemaBreadcrumb, schemaMovie } from '@/lib/structured-data';
 import content from '@/lib/content.json';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 export async function generateStaticParams() {
   return FILMES.map(f => ({ slug: f.slug }));
@@ -193,6 +194,7 @@ export default async function FilmePage({ params }) {
           </Link>
         </div>
       </div>
+      <NewsletterBanner />
     </>
   );
 }

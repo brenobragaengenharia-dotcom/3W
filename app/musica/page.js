@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { MUSICA } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 export const metadata = {
   title: 'Música',
@@ -39,6 +40,7 @@ export default function MusicaPage() {
           ))}
         </div>
       </div>
+      <NewsletterBanner />
     </>
   );
 }

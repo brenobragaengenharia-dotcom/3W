@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { SERIES } from '@/lib/mock-data';
 import { schemaBreadcrumb, schemaTVSeries } from '@/lib/structured-data';
 import content from '@/lib/content.json';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 export async function generateStaticParams() {
   return SERIES.map(s => ({ slug: s.slug }));
@@ -182,6 +183,7 @@ export default async function SeriePage({ params }) {
           </Link>
         </div>
       </div>
+      <NewsletterBanner />
     </>
   );
 }

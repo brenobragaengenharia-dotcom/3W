@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { schemaBreadcrumb } from '@/lib/structured-data';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 export const metadata = {
   title: 'Política de Privacidade',
@@ -202,6 +203,7 @@ export default function PoliticaDePrivacidadePage() {
           </div>
         </div>
       </div>
+      <NewsletterBanner />
     </>
   );
 }

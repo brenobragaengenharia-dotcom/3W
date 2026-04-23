@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import NewsletterBanner from '@/components/NewsletterBanner';
 
 export default function ContatoPage() {
   const [form, setForm] = useState({ nome: '', email: '', assunto: '', mensagem: '' });
