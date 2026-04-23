@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "fetch-news": "node --experimental-vm-modules scripts/fetch-news.js",
+    "fetch-news:dry": "node --experimental-vm-modules scripts/fetch-news.js --dry-run",
     "update-content": "node --experimental-vm-modules scripts/update-content.js",
     "update-content:force": "node --experimental-vm-modules scripts/update-content.js --force",
     "sync-cartaz": "node --experimental-vm-modules scripts/update-content.js --sync-cartaz",
