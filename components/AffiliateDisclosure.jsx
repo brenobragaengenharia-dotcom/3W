@@ -22,10 +22,10 @@ export function AffiliateDisclosureFooter() {
           parcerias comerciais. Publis e conteúdos patrocinados são sempre identificados com <em>#publi</em>{' '}
           ou <em>#parceria</em>. Dúvidas:{' '}
           <a
-            href="mailto:breno.bragaengenharia@gmail.com"
+            href="mailto:contato3www@gmail.com"
             className="underline decoration-[#FF6600] underline-offset-2 hover:text-[#FF6600] transition-colors"
           >
-            breno.bragaengenharia@gmail.com
+            contato3www@gmail.com
           </a>
           .
         </p>
