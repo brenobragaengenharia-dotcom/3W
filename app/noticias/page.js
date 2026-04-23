@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { NOTICIAS } from '@/lib/mock-data';
+import { NOTICIAS, NOTICIAS_ESPORTES } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
 
 export const metadata = {
@@ -9,9 +9,20 @@ export const metadata = {
 };
 
 const CATEGORIA_COLORS = {
-  Cinema:  'text-red-400', Séries: 'text-blue-400',
-  Comics: 'text-yellow-400', Esportes: 'text-green-400',
+  Cinema:     'text-red-400',
+  Séries:     'text-blue-400',
+  Comics:     'text-yellow-400',
+  Esportes:   'text-green-400',
+  Futebol:    'text-green-400',
+  NBA:        'text-orange-400',
+  'Fórmula 1':'text-red-400',
+  Games:      'text-purple-400',
+  'Cultura Pop': 'text-pink-400',
 };
+
+// Rota para artigo: esportes ficam em /noticias/[slug] também (page [slug] usa TODAS_NOTICIAS)
+const ALL_NOTICIAS = [...NOTICIAS, ...NOTICIAS_ESPORTES]
+  .sort((a, b) => new Date(b.data) - new Date(a.data));
 
 export default function NoticiasPage() {
   const breadcrumb = schemaBreadcrumb([{ name: 'Home', url: '/' }, { name: 'Notícias', url: '/noticias' }]);
@@ -31,8 +42,8 @@ export default function NoticiasPage() {
         <p className="text-[#737373] mb-8">Fique por dentro de tudo que acontece no entretenimento.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {NOTICIAS.map((n) => (
-            <article key={n.id} className="card-hover rounded-xl overflow-hidden bg-[#141414] border border-[#2a2a2a]">
+          {ALL_NOTICIAS.map((n) => (
+            <article key={n.slug} className="card-hover rounded-xl overflow-hidden bg-[#141414] border border-[#2a2a2a]">
               <Link href={`/noticias/${n.slug}`} className="block">
                 <div className="aspect-video overflow-hidden bg-[#1a1a1a]">
                   <img src={n.imagem} alt={n.titulo} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />

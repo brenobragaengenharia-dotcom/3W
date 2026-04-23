@@ -12,7 +12,9 @@
     "sync-cartaz": "node --experimental-vm-modules scripts/update-content.js --sync-cartaz",
     "sync-series": "node --experimental-vm-modules scripts/update-content.js --sync-series",
     "sync-all": "node --experimental-vm-modules scripts/update-content.js --sync-cartaz --sync-series",
-    "atualiza-os-filmes": "node --experimental-vm-modules scripts/update-content.js --sync-cartaz --sync-series"
+    "atualiza-os-filmes": "node --experimental-vm-modules scripts/update-content.js --sync-cartaz --sync-series",
+    "fetch-news": "node --experimental-vm-modules scripts/fetch-news.js",
+    "fetch-news:dry": "node --experimental-vm-modules scripts/fetch-news.js --dry-run"
   },
   "dependencies": {
     "next": "16.2.4",

@@ -22,9 +22,9 @@ permissions:
 
 jobs:
   atualiza:
-    name: Sync TMDB + geração de conteúdo via Claude
+    name: Sync TMDB + fetch notícias + geração de conteúdo via Claude
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
 
     steps:
       - name: Checkout do repositório
@@ -47,10 +47,17 @@ jobs:
           cat > .env.local <<EOF
           TMDB_API_KEY=${{ secrets.TMDB_API_KEY }}
           ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          GNEWS_API_KEY=${{ secrets.GNEWS_API_KEY }}
           EOF
 
       - name: Sincronizar filmes em cartaz e séries populares (TMDB)
         run: npm run sync-all
+        env:
+          NODE_OPTIONS: '--no-warnings'
+
+      - name: Buscar e publicar notícias novas (RSS + GNews + Claude)
+        run: npm run fetch-news
+        continue-on-error: true
         env:
           NODE_OPTIONS: '--no-warnings'
 
@@ -83,13 +90,13 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add lib/mock-data.js lib/content.json
-          git commit -m "chore(content): atualização automática diária $(date +'%Y-%m-%d %H:%M UTC')"
+          git commit -m "chore(news): ingestão automática $(date +'%Y-%m-%d')"
           git push origin HEAD:master
 
       - name: Resumo
         run: |
           if [ "${{ steps.diff.outputs.tem_mudancas }}" = "true" ]; then
-            echo "✅ Conteúdo atualizado e commitado. Vercel deve fazer o redeploy automático." >> "$GITHUB_STEP_SUMMARY"
+            echo "✅ Notícias e conteúdo atualizados e commitados. Vercel fará o redeploy automático." >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "ℹ️ Nenhuma mudança hoje (TMDB sem novidades, Claude não gerou conteúdo novo)." >> "$GITHUB_STEP_SUMMARY"
+            echo "ℹ️ Nenhuma mudança hoje (feeds sem novidades ou Claude não gerou conteúdo novo)." >> "$GITHUB_STEP_SUMMARY"
           fi
