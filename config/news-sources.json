@@ -1,25 +1,25 @@
 {
-  "$doc": "Fontes para fetch-news.js — escopo: Entretenimento (cinema, séries, artistas), Comics (HQs, Marvel/DC, mangás) e Esportes (futebol, NBA, F1). Sem Games.",
+  "$doc": "Fontes para fetch-news.js. Escopo: entretenimento, comics, esportes.",
   "rss": [
-    { "nome": "Omelete",            "url": "https://www.omelete.com.br/feed",             "categoria_padrao": "Cinema",     "tags_hint": ["cinema","series","marvel","dc"] },
-    { "nome": "AdoroCinema",        "url": "https://www.adorocinema.com/rss/noticias/",   "categoria_padrao": "Cinema",     "tags_hint": ["cinema","filmes","lancamentos"] },
-    { "nome": "Legiao dos Herois",  "url": "https://legiaodosherois.uol.com.br/feed",     "categoria_padrao": "Cultura Pop","tags_hint": ["marvel","dc","series","filmes"] },
-    { "nome": "Jovem Nerd",         "url": "https://jovemnerd.com.br/feed/",              "categoria_padrao": "Cultura Pop","tags_hint": ["geek","series","filmes"] },
+    { "nome": "Omelete",            "url": "https://www.omelete.com.br/feed",             "categoria_padrao": "Cinema",     "tags_hint": ["cinema","series"] },
+    { "nome": "AdoroCinema",        "url": "https://www.adorocinema.com/rss/noticias/",   "categoria_padrao": "Cinema",     "tags_hint": ["cinema","filmes"] },
+    { "nome": "Legiao dos Herois",  "url": "https://legiaodosherois.uol.com.br/feed",     "categoria_padrao": "Cultura Pop","tags_hint": ["marvel","dc"] },
+    { "nome": "Jovem Nerd",         "url": "https://jovemnerd.com.br/feed/",              "categoria_padrao": "Cultura Pop","tags_hint": ["geek"] },
     { "nome": "Canaltech",          "url": "https://canaltech.com.br/entretenimento/rss/","categoria_padrao": "Séries",     "tags_hint": ["series","streaming"] },
-    { "nome": "Universo HQ",        "url": "https://www.universohq.com/feed/",            "categoria_padrao": "Comics",     "tags_hint": ["quadrinhos","marvel","dc","mangas"] },
+    { "nome": "Universo HQ",        "url": "https://www.universohq.com/feed/",            "categoria_padrao": "Comics",     "tags_hint": ["quadrinhos"] },
     { "nome": "ESPN Brasil",        "url": "https://www.espn.com.br/espn/rss/news",       "categoria_padrao": "Esportes",   "tags_hint": ["futebol","nba","f1"] },
-    { "nome": "Globo Esporte",      "url": "https://ge.globo.com/rss/ge.xml",             "categoria_padrao": "Esportes",   "tags_hint": ["futebol","brasileirao","copa"] },
-    { "nome": "Grande Prêmio F1",   "url": "https://www.grandepremio.com.br/feed",        "categoria_padrao": "Fórmula 1",  "tags_hint": ["f1","formula1"] }
+    { "nome": "Globo Esporte",      "url": "https://ge.globo.com/rss/ge.xml",              "categoria_padrao": "Esportes",   "tags_hint": ["futebol"] },
+    { "nome": "Grande Prêmio F1",   "url": "https://www.grandepremio.com.br/feed",        "categoria_padrao": "Fórmula 1",  "tags_hint": ["f1"] }
   ],
   "gnews": {
     "enabled": true,
     "queries": [
-      { "q": "Marvel OR DC OR \"Star Wars\" OR Pixar OR Disney+",          "categoria_padrao": "Cinema",     "max": 3 },
-      { "q": "Netflix OR HBO Max OR \"Prime Video\" OR \"Apple TV\"",    "categoria_padrao": "Séries",     "max": 3 },
-      { "q": "HQ OR quadrinhos OR mangá OR anime OR \"Marvel Comics\" OR \"DC Comics\"", "categoria_padrao": "Comics", "max": 2 },
-      { "q": "Brasileirão OR Champions OR \"seleção brasileira\" OR Libertadores","categoria_padrao": "Futebol","max": 3 },
-      { "q": "NBA OR LeBron OR Curry OR playoffs",                            "categoria_padrao": "NBA",        "max": 2 },
-      { "q": "\"Fórmula 1\" OR Verstappen OR Hamilton OR GP",                "categoria_padrao": "Fórmula 1",  "max": 2 }
+      { "q": "Marvel OR DC OR Pixar OR Disney+",                  "categoria_padrao": "Cinema",     "max": 3 },
+      { "q": "Netflix OR HBO Max OR Prime Video OR Apple TV",     "categoria_padrao": "Séries",     "max": 3 },
+      { "q": "HQ OR quadrinhos OR mangá OR anime",                "categoria_padrao": "Comics",     "max": 2 },
+      { "q": "Brasileirão OR Champions OR seleção brasileira",    "categoria_padrao": "Futebol",    "max": 3 },
+      { "q": "NBA OR LeBron OR Curry OR playoffs",                "categoria_padrao": "NBA",        "max": 2 },
+      { "q": "Fórmula 1 OR Verstappen OR Hamilton",               "categoria_padrao": "Fórmula 1",  "max": 2 }
     ]
   },
   "limites": {
@@ -30,33 +30,4 @@
     "idade_maxima_horas": 48
   },
   "categorias_aceitas": ["Cinema", "Séries", "Comics", "Cultura Pop", "Futebol", "NBA", "Fórmula 1", "Esportes"]
-}
-{
-  "$doc": "Fontes para o fetch-news.js. Edite livremente.",
-  "rss": [
-    { "nome": "Omelete",          "url": "https://www.omelete.com.br/rss/feed",         "categoria_padrao": "Cinema",     "tags_hint": ["cinema","series"] },
-    { "nome": "Legiao dos Herois","url": "https://legiaodosherois.uol.com.br/feed",     "categoria_padrao": "Cultura Pop","tags_hint": ["marvel","dc"] },
-    { "nome": "Jovem Nerd",       "url": "https://jovemnerd.com.br/feed/",              "categoria_padrao": "Cultura Pop","tags_hint": ["geek"] },
-    { "nome": "Adrenaline",       "url": "https://www.adrenaline.com.br/feed/",         "categoria_padrao": "Games",      "tags_hint": ["games"] },
-    { "nome": "IGN Brasil",       "url": "https://br.ign.com/feed.xml",                 "categoria_padrao": "Games",      "tags_hint": ["games"] },
-    { "nome": "ESPN Brasil",      "url": "https://www.espn.com.br/espn/rss/news",       "categoria_padrao": "Esportes",   "tags_hint": ["nba","f1","futebol"] },
-    { "nome": "Universo HQ",      "url": "https://www.universohq.com/feed/",            "categoria_padrao": "Comics",     "tags_hint": ["quadrinhos"] }
-  ],
-  "gnews": {
-    "enabled": true,
-    "queries": [
-      { "q": "Marvel OR DC OR Disney+",                        "categoria_padrao": "Cinema",     "max": 4 },
-      { "q": "PlayStation OR Xbox OR Nintendo OR Steam",       "categoria_padrao": "Games",      "max": 4 },
-      { "q": "Brasileirão OR Champions OR seleção brasileira", "categoria_padrao": "Futebol",    "max": 3 },
-      { "q": "NBA playoffs OR LeBron OR Curry",                "categoria_padrao": "NBA",        "max": 2 },
-      { "q": "\"Fórmula 1\" OR \"F1\" OR Verstappen OR Hamilton","categoria_padrao": "Fórmula 1","max": 2 }
-    ]
-  },
-  "limites": {
-    "max_noticias_por_rodada": 8,
-    "max_por_categoria": 3,
-    "max_por_array": 40,
-    "min_palavras_corpo_original": 30,
-    "idade_maxima_horas": 36
-  }
 }
