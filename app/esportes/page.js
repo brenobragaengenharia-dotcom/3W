@@ -107,6 +107,7 @@ export default function EsportesPage() {
         perfil="@3wesports"
         href="https://instagram.com/3wesports"
       />
+      <NewsletterBanner />
     </>
   );
 }
