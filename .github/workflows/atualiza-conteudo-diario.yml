@@ -22,9 +22,9 @@ permissions:
 
 jobs:
   atualiza:
-    name: Sync TMDB + geração de conteúdo via Claude
+    name: Sync TMDB + fetch news + geração de conteúdo via Claude
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
 
     steps:
       - name: Checkout do repositório
@@ -47,12 +47,19 @@ jobs:
           cat > .env.local <<EOF
           TMDB_API_KEY=${{ secrets.TMDB_API_KEY }}
           ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          GNEWS_API_KEY=${{ secrets.GNEWS_API_KEY }}
           EOF
 
       - name: Sincronizar filmes em cartaz e séries populares (TMDB)
         run: npm run sync-all
         env:
           NODE_OPTIONS: '--no-warnings'
+
+      - name: Buscar notícias novas (RSS + GNews + Claude)
+        run: npm run fetch-news
+        env:
+          NODE_OPTIONS: '--no-warnings'
+        continue-on-error: true
 
       - name: Gerar conteúdo editorial (Claude)
         run: |
@@ -91,5 +98,5 @@ jobs:
           if [ "${{ steps.diff.outputs.tem_mudancas }}" = "true" ]; then
             echo "✅ Conteúdo atualizado e commitado. Vercel deve fazer o redeploy automático." >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "ℹ️ Nenhuma mudança hoje (TMDB sem novidades, Claude não gerou conteúdo novo)." >> "$GITHUB_STEP_SUMMARY"
+            echo "ℹ️ Nenhuma mudança hoje (TMDB sem novidades, Claude não gerou conteúdo novo, nenhuma notícia nova no RSS)." >> "$GITHUB_STEP_SUMMARY"
           fi
