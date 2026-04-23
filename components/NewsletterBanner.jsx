@@ -11,10 +11,30 @@ export default function NewsletterBanner() {
     if (!email.trim()) return;
 
     setStatus('loading');
-    // Substitua pela sua chamada de API real
-    await new Promise(r => setTimeout(r, 1000));
-    setStatus('success');
-    setEmail('');
+    try {
+      // Beehiiv: POST direto para a API pública da publication.
+      // Variáveis em .env.local:
+      //   NEXT_PUBLIC_BEEHIIV_PUBLICATION_ID  → ex: pub_xxxx-xxxx-xxxx
+      //   BEEHIIV_API_KEY             → server-side only (ver route abaixo)
+      const res = await fetch('/api/newsletter-subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      if (!res.ok) throw new Error('subscribe failed');
+
+      // Tracking: conversão no GA4 + Meta Pixel
+      if (typeof window !== 'undefined') {
+        if (window.gtag) window.gtag('event', 'newsletter_subscribe', { method: 'beehiiv' });
+        if (window.fbq)  window.fbq('track', 'Lead', { content_name: 'newsletter' });
+      }
+
+      setStatus('success');
+      setEmail('');
+    } catch (err) {
+      console.warn('[newsletter]', err);
+      setStatus('error');
+    }
   }
 
   return (
@@ -37,6 +57,10 @@ export default function NewsletterBanner() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
             </svg>
             Inscrito com sucesso! Obrigado.
+          </div>
+        ) : status === 'error' ? (
+          <div className="inline-flex items-center gap-2 bg-red-900/30 border border-red-700/40 text-red-400 px-6 py-3 rounded-lg text-sm font-semibold">
+            Ops, algo deu errado. Tente novamente em alguns segundos.
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">

@@ -5,6 +5,7 @@ import { schemaOrganization, schemaWebSite } from '@/lib/structured-data';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Analytics from '@/components/Analytics';
+import CookieBanner from '@/components/CookieBanner';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
@@ -110,6 +111,9 @@ export default function RootLayout({ children }) {
         </main>
 
         <Footer />
+
+        {/* LGPD — consentimento de cookies (renderiza só na 1ª visita) */}
+        <CookieBanner />
       </body>
     </html>
   );
