@@ -1,0 +1,52 @@
+name: Fix Real Madrid img (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Substituir imagem da noticia Real Madrid x Betis
+        run: |
+          node --input-type=module <<'EOF'
+          import fs from 'fs';
+
+          const slug = 'real-madrid-x-betis-ao-vivo-no-disney-onde-assistir-a-laliga';
+          const newUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/M-estadio-santiago-bernabeu-diciembre-2024-c.jpg/1280px-M-estadio-santiago-bernabeu-diciembre-2024-c.jpg';
+
+          // mock-data.js
+          let mock = fs.readFileSync('lib/mock-data.js', 'utf8');
+          const re = new RegExp("(slug: '" + slug + "'[\\s\\S]*?imagem: ')[^']+(')", 'g');
+          mock = mock.replace(re, (_, p1, p2) => p1 + newUrl + p2);
+          fs.writeFileSync('lib/mock-data.js', mock);
+          console.log('mock-data.js atualizado');
+
+          // content.json
+          const content = JSON.parse(fs.readFileSync('lib/content.json', 'utf8'));
+          for (const bucket of ['esportes', 'noticias']) {
+            if (content[bucket]?.[slug]) {
+              content[bucket][slug].imagem = newUrl;
+              console.log('content.' + bucket + '.' + slug + ' atualizado');
+            }
+          }
+          fs.writeFileSync('lib/content.json', JSON.stringify(content, null, 2) + '\n');
+          EOF
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lib/mock-data.js lib/content.json
+          if ! git diff --staged --quiet; then
+            git commit -m "fix(imagens): troca imagem desalinhada do Real Madrid x Betis (era foto do Guardiola/Haaland)"
+            git push origin HEAD:master
+          fi
