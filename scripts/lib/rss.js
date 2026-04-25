@@ -1,7 +1,6 @@
-// scripts/lib/rss.js — parser RSS mínimo (sem dependências externas)
-// Usa DOMParser nativo do Node 22+ via @xmldom/xmldom? Não — aqui regex direto.
-// Trade-off: não é um parser XML "de verdade", mas cobre RSS 2.0 e Atom simples
-// que é o que todos esses portais usam. Se algum feed quebrar, substituir por rss-parser.
+// scripts/lib/rss.js — parser RSS minimo (sem dependencias externas)
+// Quando o feed RSS nao traz imagem (caso ESPN Brasil), busca og:image
+// no HTML do artigo automaticamente.
 
 const UA = '3W-Entretenimento NewsBot/1.0 (+https://3w-entretenimento.com)';
 
@@ -31,29 +30,46 @@ function attr(xml, name, attrName) {
 }
 
 function extractImage(item) {
-  // 1) enclosure
   let url = attr(item, 'enclosure', 'url');
   if (url) return url;
-  // 2) media:content / media:thumbnail
   url = attr(item, 'media:content', 'url') || attr(item, 'media:thumbnail', 'url');
   if (url) return url;
-  // 3) primeiro <img src=""> dentro do content:encoded ou description
   const content = tag(item, 'content:encoded') || tag(item, 'description');
   const m = content.match(/<img[^>]+src=["']([^"']+)["']/i);
   return m ? m[1] : null;
 }
 
+// Busca og:image no HTML do artigo quando o RSS nao trouxe imagem.
+async function tryOgImage(url, timeoutMs = 5000) {
+  if (!url) return null;
+  try {
+    const ac = new AbortController();
+    const to = setTimeout(() => ac.abort(), timeoutMs);
+    const res = await fetch(url, {
+      headers: { 'User-Agent': UA, 'Accept': 'text/html,*/*' },
+      signal: ac.signal,
+      redirect: 'follow',
+    });
+    clearTimeout(to);
+    if (!res.ok) return null;
+    const html = (await res.text()).slice(0, 200000);
+    const m =
+      html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i) ||
+      html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) ||
+      html.match(/<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i);
+    return m ? m[1] : null;
+  } catch {
+    return null;
+  }
+}
+
 function parseRss(xml) {
   const items = [];
-  // RSS 2.0: <item>...</item>    Atom: <entry>...</entry>
   const re = /<(item|entry)[^>]*>([\s\S]*?)<\/\1>/gi;
   let m;
   while ((m = re.exec(xml)) !== null) {
     const raw = m[2];
-    const link =
-      tag(raw, 'link') ||
-      attr(raw, 'link', 'href') ||
-      tag(raw, 'guid');
+    const link = tag(raw, 'link') || attr(raw, 'link', 'href') || tag(raw, 'guid');
     const pub = tag(raw, 'pubDate') || tag(raw, 'published') || tag(raw, 'updated');
     items.push({
       titulo: tag(raw, 'title'),
@@ -82,7 +98,15 @@ export async function fetchRssFeed(source, timeoutMs = 12000) {
       return [];
     }
     const xml = await res.text();
-    const items = parseRss(xml);
+    let items = parseRss(xml);
+
+    // Para itens sem imagem, busca og:image em paralelo
+    const semImagem = items.filter((it) => !it.imagem && it.url);
+    if (semImagem.length > 0) {
+      const ogResults = await Promise.all(semImagem.map((it) => tryOgImage(it.url)));
+      semImagem.forEach((it, i) => { if (ogResults[i]) it.imagem = ogResults[i]; });
+    }
+
     return items.map((it) => ({
       ...it,
       fonte: source.nome,
