@@ -1348,6 +1348,140 @@
       "vale_assistir": true,
       "frase_final": "Quando uma cabra sonha grande, o mundo inteiro para pra torcer.",
       "gerado_em": "2026-04-18T02:16:36.324Z"
+    },
+    "o-jogo-do-predador": {
+      "tmdb_id": 1318447,
+      "titulo": "O Jogo do Predador",
+      "sinopse": "Uma mulher em luto embarca sozinha em uma aventura pela natureza selvagem da Austrália, mas acaba se envolvendo em um jogo cruel de gato e rato com um assassino.",
+      "nota_tmdb": "6.4",
+      "duracao": 96,
+      "generos": [
+        "Thriller",
+        "Ação"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/9nzfyiYbmTUXWC4B2kwjl4NAlqO.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/s0ub7FDXEyu8DqGcHKQpaOSem49.jpg",
+      "diretor": "Baltasar Kormákur",
+      "elenco": [
+        {
+          "nome": "Charlize Theron",
+          "personagem": "Sasha",
+          "foto": "https://image.tmdb.org/t/p/w185/gd7ShD0yt4bsR2STeQ19KQ6hvXL.jpg"
+        },
+        {
+          "nome": "Taron Egerton",
+          "personagem": "Ben",
+          "foto": "https://image.tmdb.org/t/p/w185/uCaPhyKAQIfEzAWWCYIrO2004CB.jpg"
+        },
+        {
+          "nome": "Eric Bana",
+          "personagem": "Tommy",
+          "foto": "https://image.tmdb.org/t/p/w185/l9yoDgw3YFC2gMD1HTo5djGOwSY.jpg"
+        },
+        {
+          "nome": "Caitlin Stasey",
+          "personagem": "Leah",
+          "foto": "https://image.tmdb.org/t/p/w185/uJW62qSjIyI0OP30s5U8KLlDw32.jpg"
+        },
+        {
+          "nome": "Bessie Holland",
+          "personagem": "Cashier",
+          "foto": null
+        },
+        {
+          "nome": "Zachary Garred",
+          "personagem": "Sean",
+          "foto": "https://image.tmdb.org/t/p/w185/zBveIZvcVCkWTcAWEV88MwpynyG.jpg"
+        },
+        {
+          "nome": "Matt Whelan",
+          "personagem": "Hunter",
+          "foto": "https://image.tmdb.org/t/p/w185/qTIe7SblKwxR9DF6iNuVX0pEWIZ.jpg"
+        },
+        {
+          "nome": "Rob Carlton",
+          "personagem": "2nd Hunter",
+          "foto": "https://image.tmdb.org/t/p/w185/kv1KHqQw1ekhpFJW6vRYW3oitRQ.jpg"
+        }
+      ],
+      "lancamento": "2026-04-24",
+      "manchete": "Charlize Theron enfrenta o terror da natureza selvagem australiana",
+      "sinopse_pt": "Sasha, uma mulher marcada pelo luto, decide enfrentar a dor sozinha nas vastidões selvagens da Austrália. O que começa como uma jornada de cura vira pesadelo quando ela se torna alvo de um assassino implacável. A caçada que se segue vai testar cada limite físico e emocional da personagem.",
+      "paragrafos_review": [
+        "Baltasar Kormákur tem currículo de respeito em filmes de sobrevivência — 'Everest' e '2 Guns' provam que o islandês sabe trabalhar pressão e paisagem ao mesmo tempo. Em 'O Jogo do Predador', ele usa o outback australiano como personagem secundário, um cenário que engole a protagonista tanto quanto o vilão. O problema é que o roteiro aposta pesado num gatilho emocional — o luto de Sasha — mas abandona esse fio condutor assim que a primeira ameaça aparece. A profundidade some rápido demais.",
+        "Charlize Theron segura o filme nas costas com uma competência que já virou marca registrada dela. Tem uma cena específica em que Sasha, ferida e escondida numa ravina, decide usar o ambiente contra os caçadores — e Theron entrega aquilo sem uma palavra, só com o corpo e o olhar. Taron Egerton aparece pouco, mas quando aparece, funciona. Eric Bana como Tommy é o ponto mais irregular do elenco: o personagem oscila entre ameaçador e caricato sem nunca resolver essa equação.",
+        "Com 96 minutos, o filme não desperdiça tempo e mantém o ritmo firme. Mas coisa fina mesmo ele não é. A nota 6.4 no TMDB diz bastante: é entretenimento honesto, sem pretensão de ser mais do que um thriller de perseguição bem executado. Quem curte o gênero vai passar uma hora e meia sem se arrepender. Quem espera mais da Theron — e ela merece mais — vai sentir o gosto de oportunidade desperdiçada na boca."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Theron salva o filme que o roteiro quase enterra.",
+      "gerado_em": "2026-04-25T11:26:28.676Z"
+    },
+    "michael": {
+      "tmdb_id": 936075,
+      "titulo": "Michael",
+      "sinopse": "A história da vida de Michael Jackson além da música, traçando sua jornada desde a descoberta de seu talento extraordinário como líder dos Jackson Five até o artista visionário cuja ambição criativa impulsionou uma busca implacável para se tornar o maior artista do mundo.",
+      "nota_tmdb": "7.3",
+      "duracao": 128,
+      "generos": [
+        "Música",
+        "Drama"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/xBT0oNq6rsTFv4SxG5uGRIEOrq6.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/2FYFBgdNVVaUgVfNSh9z5WVTZ9y.jpg",
+      "diretor": "Antoine Fuqua",
+      "elenco": [
+        {
+          "nome": "Jaafar Jackson",
+          "personagem": "Michael Jackson",
+          "foto": "https://image.tmdb.org/t/p/w185/tVSzFjQxOrLOcvnzFto0772Q9Bw.jpg"
+        },
+        {
+          "nome": "Colman Domingo",
+          "personagem": "Joe Jackson",
+          "foto": "https://image.tmdb.org/t/p/w185/t0cgfvtA7Thxnrtj5baRi656zlc.jpg"
+        },
+        {
+          "nome": "Nia Long",
+          "personagem": "Katherine Jackson",
+          "foto": "https://image.tmdb.org/t/p/w185/heVQkCGKUuKKRjRJaZIBrEKGhYA.jpg"
+        },
+        {
+          "nome": "Juliano Krue Valdi",
+          "personagem": "Young Michael Jackson",
+          "foto": "https://image.tmdb.org/t/p/w185/1rQYmcxdPD1IwHpa78DcfVEu1EN.jpg"
+        },
+        {
+          "nome": "KeiLyn Durrel Jones",
+          "personagem": "Bill Bray",
+          "foto": "https://image.tmdb.org/t/p/w185/4wDO3Zt9KJg9CARCEgjuVdhWa8x.jpg"
+        },
+        {
+          "nome": "Miles Teller",
+          "personagem": "John Branca",
+          "foto": "https://image.tmdb.org/t/p/w185/kDf3sW3USjEBDQ3Ua7lbwOfwty6.jpg"
+        },
+        {
+          "nome": "Kendrick Sampson",
+          "personagem": "Quincy Jones",
+          "foto": "https://image.tmdb.org/t/p/w185/AoZGTujNZEfabaXR5kUwmDUmxfe.jpg"
+        },
+        {
+          "nome": "Joseph David-Jones",
+          "personagem": "Jackie Jackson",
+          "foto": "https://image.tmdb.org/t/p/w185/qwX7ciIV8jwssmIqHv1eyzzqEvh.jpg"
+        }
+      ],
+      "lancamento": "2026-04-22",
+      "manchete": "Michael Jackson volta ao cinema e exige muito mais que fãs",
+      "sinopse_pt": "De menino prodígio nos Jackson Five a ícone absoluto da música mundial, o filme acompanha a trajetória de Michael Jackson com foco nos bastidores humanos — e nos preços altíssimos que ele pagou por cada passo rumo ao topo. Antoine Fuqua assina uma produção que vai além dos palcos e das coreografias. O que está em jogo aqui é a alma de um artista que nunca teve infância.",
+      "paragrafos_review": [
+        "Antoine Fuqua é cineasta de mão cheia — Training Day e Southpaw provam isso. Então a escolha dele para dirigir um biopic de Michael Jackson não é aleatória, é estratégica. O filme opta por não começar com o auge de Thriller, mas sim com o jovem Michael ainda sufocado pela sombra do pai, Joe Jackson. Essa decisão de roteiro define o tom do longa: não é uma celebração, é uma investigação. Fuqua quer entender o homem antes de glorificar o artista, e isso já é um diferencial honesto num gênero que costuma pecar pelo excesso de bajulação.",
+        "Jaafar Jackson, sobrinho do próprio Michael, carrega o filme nas costas com uma entrega que vai além do físico. Tem um momento em que ele ensaia sozinho num corredor mal iluminado, repete um passo até a exaustão, e o silêncio ali pesa mais que qualquer trilha sonora. Colman Domingo como Joe Jackson é perturbador do jeito certo — autoritário sem virar caricatura. Kendrick Sampson como Quincy Jones tem pouco tempo de tela, o que é um desperdício visível. Miles Teller como John Branca segura bem a complexidade de um personagem que transita entre lealdade e interesse próprio.",
+        "Com 128 minutos, o filme não se perde em excesso, mas também não resolve tudo. Algumas fases da vida de Michael ficam comprimidas demais, como se o roteiro tivesse pressa de chegar no ícone e esquecesse o homem no caminho. A nota 7.3 no TMDB é justa — esse aqui é coisa fina em vários momentos, mas deixa arranhões onde podia ter cicatrizes profundas. Fica a sensação de que a história ainda maior está esperando alguém com coragem de contá-la sem filtro."
+      ],
+      "vale_assistir": true,
+      "frase_final": "O rei do pop ainda assombra — e o filme sabe disso.",
+      "gerado_em": "2026-04-25T11:26:45.885Z"
     }
   },
   "series": {
@@ -4110,6 +4244,29 @@
       "frase_destaque": "Guerra Secreta 2025 não é apenas um evento — é uma reinvenção completa do Universo Marvel.",
       "conclusao": "Guerra Secreta 2025 reafirma o poder dos quadrinhos como laboratório criativo da Marvel. Ao reorganizar seu universo com ousadia e profundidade, a editora entrega um evento que satisfaz veteranos e atrai novos leitores, enquanto sinaliza caminhos promissores para o cinema e a televisão. Quem ainda não embarcou nessa história está perdendo um dos capítulos mais importantes da maior editora de super-heróis do mundo.",
       "gerado_em": "2026-04-17T21:50:44.673Z"
+    },
+    "alcaraz-desiste-do-roland-garros-2026-com-dores-no-pulso": {
+      "titulo": "Alcaraz desiste do Roland Garros 2026 com dores no pulso",
+      "descricao": "Bicampeão em Paris, o espanhol Carlos Alcaraz confirmou que não vai defender o título em Roland Garros por causa de uma lesão no pulso.",
+      "categoria": "Esportes",
+      "autor": "Redação 3W",
+      "data": "2026-04-24",
+      "imagem": "/images/noticias/placeholder.jpg",
+      "tempo_leitura": 4,
+      "manchete": "Alcaraz fora de Roland Garros: bicampeão não defende o título",
+      "paragrafos": [
+        "Carlos Alcaraz não vai a Paris. O espanhol, que levantou a taça em Roland Garros nas duas últimas edições, confirmou nesta sexta-feira (24) que está fora do Grand Slam francês de 2026. A razão é uma lesão no pulso que persiste e o impede de competir. Para um jogador de 23 anos que vivia o melhor tênis da carreira, a notícia chega num momento delicado — e Alcaraz não escondeu o peso da situação.",
+        "As dores no pulso têm tirado o tenista das quadras e, aparentemente, o tratamento não evoluiu o suficiente para garantir condições físicas mínimas de disputa num Grand Slam. Roland Garros é o torneio de saibro mais importante do mundo, e defender dois títulos consecutivos já seria uma missão extraordinária. Sem o físico em ordem, o próprio Alcaraz reconhece que forçar seria arriscado demais — e a decisão, ainda que dura, é a mais responsável.",
+        "A ausência do espanhol muda o equilíbrio da chave masculina em Paris. Sem Alcaraz, nomes como Jannik Sinner e Novak Djokovic ganham ainda mais relevância na disputa pelo troféu. A torcida que acompanha o circuito já reagiu com frustração nas redes sociais: perder o atual bicampeão antes mesmo de uma bola ser sacada retira boa parte do brilho do torneio. É o tipo de vazio que nenhum outro jogador consegue preencher facilmente.",
+        "Segundo a ESPN Brasil, Alcaraz desabafou sobre o momento: 'É um momento muito complicado para mim.' A frase resume bem a situação — um atleta no auge, impedido pelo próprio corpo. O que vem a seguir depende da recuperação. Se o pulso responder bem, o calendário ainda tem Wimbledon e o US Open como janelas para o retorno do espanhol às grandes decisões."
+      ],
+      "frase_destaque": "'É um momento muito complicado para mim' — Carlos Alcaraz",
+      "conclusao": "A desistência de Alcaraz em Roland Garros 2026 é uma das maiores baixas da temporada no tênis. Bicampeão e favorito natural, o espanhol deixa um espaço enorme na chave parisiense. A lesão no pulso agora se torna o principal assunto do circuito — e torcer pela recuperação dele é, também, torcer por um torneio mais interessante em Wimbledon.",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/tenis/artigo/_/id/16619283/alcaraz-decide-nao-disputar-roland-garros-desabafa-momento-muito-complicado"
+      },
+      "gerado_em": "2026-04-25T11:27:46.629Z"
     }
   },
   "esportes": {
@@ -4354,6 +4511,52 @@
         "url": ""
       },
       "gerado_em": "2026-04-23T19:31:24.182Z"
+    },
+    "lakers-vencem-rockets-na-prorrogacao-e-abrem-3-a-0-na-serie": {
+      "titulo": "Lakers vencem Rockets na prorrogação e abrem 3 a 0 na série",
+      "descricao": "Com vitória dramática na prorrogação, o Los Angeles Lakers coloca um pé nas semifinais e pode fechar a série no domingo, em Houston.",
+      "categoria": "NBA",
+      "autor": "Redação 3W",
+      "data": "2026-04-25",
+      "imagem": "/images/noticias/placeholder.jpg",
+      "tempo_leitura": 4,
+      "manchete": "Lakers dominam Rockets e chegam a 3 a 0 na série",
+      "paragrafos": [
+        "O Los Angeles Lakers está a uma vitória de avançar na pós-temporada. Na madrugada deste sábado, a franquia californiana superou o Houston Rockets em um jogo tenso, decidido apenas na prorrogação, e abriu vantagem de 3 a 0 na série. Qualquer time que chega a essa marca nos playoffs da NBA tem histórico amplamente favorável — e os Rockets agora precisam de um feito raríssimo para sobreviver: vencer quatro partidas seguidas.",
+        "A partida foi longe do confortável para o Lakers. O jogo chegou à prorrogação, sinal de que Houston não facilitou e obrigou os angelinos a trabalhar até o limite do cronômetro. Esse tipo de confronto desgasta fisicamente o elenco vencedor, mas também serve como termômetro: o Lakers mostrou que tem capacidade de decidir sob pressão, o que vale ouro em uma campanha de playoffs. A intensidade do duelo indica que, mesmo encostados na parede, os Rockets não pretendem ir embora calados.",
+        "Para os torcedores do Lakers, a sensação é de alívio misturado com euforia. Vencer na prorrogação tem aquele sabor particular de jogo arrancado na força da vontade. Nas redes sociais, a torcida celebrou o resultado como se fosse o título — o que é compreensível, dado o drama do confronto. Mas os mais cautelosos lembram que series 3 a 0 já viraram antes na NBA, mesmo que raramente. O Rockets ainda respira.",
+        "O próximo capítulo desta série acontece no domingo (26), em Houston, segundo a ESPN Brasil. É a chance do Lakers fechar o confronto em quatro jogos e poupar energia para o restante dos playoffs. Para os Rockets, é uma questão de honra: vencer em casa e adiar o inevitável, ou ao menos tentar. A arena de Houston promete uma atmosfera de desespero e determinação — e esse tipo de ambiente já produziu reviraviravoltas históricas no basquete americano."
+      ],
+      "frase_destaque": "O Lakers está a um passo das semifinais, mas Houston ainda não assinou a rendição.",
+      "conclusao": "Uma série 3 a 0 nos playoffs da NBA raramente esconde emoção — e este confronto entre Lakers e Rockets prova o contrário. O jogo de domingo em Houston pode encerrar a série, mas a narrativa já está construída: o Lakers precisou ir à prorrogação para dobrar os Rockets, o que diz muito sobre o nível desta pós-temporada.",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/nba/artigo/_/id/16622563/nba-quase-la-final-tirar-folego-lakers-vencem-rockets-prorrogacao-abrem-3-a-0-serie"
+      },
+      "gerado_em": "2026-04-25T11:27:12.125Z"
+    },
+    "real-madrid-x-betis-ao-vivo-no-disney-onde-assistir-a-laliga": {
+      "titulo": "Real Madrid x Betis ao vivo no Disney+: onde assistir a LALIGA",
+      "descricao": "Real Madrid enfrenta o Betis pela 33ª rodada de LALIGA neste sábado, com transmissão ao vivo pelo plano premium do Disney+ às 16h.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-04-25",
+      "imagem": "/images/noticias/placeholder.jpg",
+      "tempo_leitura": 4,
+      "manchete": "Real Madrid x Betis: clássico espanhol ao vivo no Disney+",
+      "paragrafos": [
+        "O sábado tem futebol espanhol de alto nível na programação. Real Madrid e Betis se encontram pela 33ª rodada de LALIGA, com transmissão ao vivo pelo plano premium do Disney+ a partir das 16h, horário de Brasília. A partida chega em momento importante da temporada, quando cada ponto na tabela define trajetórias distintas — seja na briga pelo título, seja na luta por vagas europeias. Para quem assina o serviço, o jogo está a um clique de distância.",
+        "O Disney+ tem apostado na transmissão de LALIGA como um dos pilares do seu catálogo esportivo no Brasil. O plano premium, necessário para acessar o conteúdo ao vivo, dá direito a jogos do campeonato espanhol ao longo de toda a temporada. Real Madrid, mesmo em partidas fora de Madri, costuma movimentar o público — e um duelo contra o Betis, time que historicamente gosta de dificultar a vida dos grandes, tem tudo para render emoção.",
+        "A escolha do Disney+ como plataforma de streaming para LALIGA ainda divide opiniões entre os torcedores brasileiros. Parte do público prefere a praticidade de canais abertos ou pacotes de TV a cabo, mas outra parcela já incorporou o modelo de assinatura como rotina. O fato é que transmissões ao vivo em streaming cresceram consistentemente nos últimos anos, e jogos como este ajudam a justificar o investimento mensal para quem é fã do futebol europeu.",
+        "Segundo a ESPN Brasil, este é um dos destaques esportivos do sábado na plataforma. Para quem ainda não assina o plano premium, vale avaliar se a programação do fim de semana — com LALIGA na grade — compensa a adesão. O confronto entre Real Madrid e Betis começa às 16h e deve ser um dos jogos mais assistidos do dia no streaming nacional."
+      ],
+      "frase_destaque": "Real Madrid x Betis: futebol espanhol de alto nível a um clique de distância.",
+      "conclusao": "Jogos ao vivo de LALIGA no streaming ainda são novidade para muitos brasileiros, mas a tendência é clara. A oferta de partidas como Real Madrid x Betis no Disney+ mostra que as plataformas de assinatura estão levando a sério o torcedor de futebol europeu — e isso muda a forma como o esporte é consumido no país.",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/artigo/_/id/16607109/por-que-garoto-adorado-guardiola-ofusca-haaland-decisao-city-wembley-o-que-assistir-disney-plus"
+      },
+      "gerado_em": "2026-04-25T11:27:28.893Z"
     }
   }
 }
