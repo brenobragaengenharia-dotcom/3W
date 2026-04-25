@@ -1,0 +1,66 @@
+name: Fix imagens (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Atualizar imagens das 3 noticias quebradas
+        run: |
+          node --input-type=module <<'EOF'
+          import fs from 'fs';
+
+          const map = {
+            'real-madrid-x-betis-ao-vivo-no-disney-onde-assistir-a-laliga':
+              'https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0422%2Fr1647256_1296x729_16%2D9.jpg',
+            'lakers-vencem-rockets-na-prorrogacao-e-abrem-3-a-0-na-serie':
+              'https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0425%2Fr1648848_1296x729_16%2D9.jpg',
+            'alcaraz-desiste-do-roland-garros-2026-com-dores-no-pulso':
+              'https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0124%2Fr1605042_1296x729_16%2D9.jpg',
+          };
+
+          let mock = fs.readFileSync('lib/mock-data.js', 'utf8');
+          let mockChanges = 0;
+          for (const [slug, newUrl] of Object.entries(map)) {
+            const re = new RegExp("(slug: '" + slug + "'[\\s\\S]*?imagem: ')[^']+(')", 'g');
+            const before = mock;
+            mock = mock.replace(re, (_, p1, p2) => p1 + newUrl + p2);
+            if (before !== mock) mockChanges++;
+          }
+          fs.writeFileSync('lib/mock-data.js', mock);
+          console.log('mock-data.js atualizado: ' + mockChanges);
+
+          const content = JSON.parse(fs.readFileSync('lib/content.json', 'utf8'));
+          let contentChanges = 0;
+          for (const bucket of ['esportes', 'noticias']) {
+            if (!content[bucket]) continue;
+            for (const [slug, newUrl] of Object.entries(map)) {
+              if (content[bucket][slug]) {
+                content[bucket][slug].imagem = newUrl;
+                contentChanges++;
+              }
+            }
+          }
+          fs.writeFileSync('lib/content.json', JSON.stringify(content, null, 2) + '\n');
+          console.log('content.json atualizado: ' + contentChanges);
+          EOF
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lib/mock-data.js lib/content.json
+          if ! git diff --staged --quiet; then
+            git commit -m "fix(imagens): atualiza 3 noticias com og:image da ESPN"
+            git push origin HEAD:master
+          fi
