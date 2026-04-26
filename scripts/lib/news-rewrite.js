@@ -1,29 +1,23 @@
 // scripts/lib/news-rewrite.js
-// Reescreve uma notícia crua (vinda de RSS/GNews) no schema usado pelo 3W.
-// Chama Claude via fetch direto (mesmo padrão de scripts/lib/claude.js).
-//
-// Retorna um objeto com DUAS partes para encaixar nos dois arquivos:
-//
-//   entrada_mockdata: { id, slug, titulo, descricao, categoria, autor,
-//                       data, imagem, tempo_leitura }  ← vai pro array em lib/mock-data.js
-//   editorial:        { manchete, paragrafos[4], frase_destaque, conclusao }
-//                                                     ← vai pra content.noticias[slug]
-//                                                       ou content.esportes[slug] em lib/content.json
+// Reescreve uma notícia crua (RSS/GNews) no schema do 3W via Claude.
+// FILOSOFIA: fidelidade > tamanho. Notas curtas viram parágrafo único,
+// matérias longas viram até 4. NUNCA inventa para encher cota.
 
 const ANTHROPIC_API = 'https://api.anthropic.com/v1/messages';
 const MODEL = 'claude-sonnet-4-6';
 
 const DIRETRIZES = `
 DIRETRIZES DE ESCRITA (obrigatórias):
-1. NUNCA copie frases inteiras da fonte — parafraseie sempre. Mantenha os fatos fiéis.
-2. NÃO use muletas: "Descubra", "Explore", "Imperdível", "Mergulhe", "Embarque", "Surpreendente", "Revolucionário".
-3. NÃO abra com "Em um mundo onde...", "Quando...", "Prepare-se para...".
-4. Varie aberturas de parágrafo: fato, citação, comparação, pergunta, cena.
-5. PT-BR natural, frases curtas (máx. 3 vírgulas por frase).
-6. Um detalhe concreto por parágrafo — evite abstrações.
-7. Tenha opinião, não fique em cima do muro.
-8. Cite a fonte original uma vez com naturalidade (ex: "segundo o Omelete").
-9. NUNCA invente dados, números, nomes ou declarações que não estavam no material bruto.
+1. FIDELIDADE ANTES DE TUDO. Use SOMENTE fatos, números, nomes e declarações que aparecem no material bruto. NÃO invente nada — nem para "completar" um parágrafo nem para parecer mais informado.
+2. Se o material bruto for curto (lead de 1-2 frases), entregue UM parágrafo curto. Se for médio, 2 parágrafos. Se for matéria completa, até 4. NUNCA estique o texto só para atingir 4 parágrafos.
+3. Parafraseie em vez de copiar — mas mantenha o sentido EXATO da fonte. Em dúvida, prefira parafrasear de perto a inventar variação.
+4. NÃO use muletas: "Descubra", "Explore", "Imperdível", "Mergulhe", "Embarque", "Surpreendente", "Revolucionário".
+5. NÃO abra com "Em um mundo onde...", "Quando...", "Prepare-se para...".
+6. PT-BR natural, frases claras. Evite floreios.
+7. Um detalhe concreto por parágrafo — se não há detalhe concreto na fonte, NÃO escreva o parágrafo.
+8. Cite a fonte original uma vez quando fizer sentido (ex: "segundo o Omelete"). Não force.
+9. SEM editorialização especulativa: nada de "isso pode marcar uma virada" se a fonte não disse isso.
+10. frase_destaque e conclusao são OPCIONAIS. Se a fonte não traz frase forte ou desfecho claro, devolva string vazia. NUNCA fabrique.
 `;
 
 const CATEGORIAS_VALIDAS = ['Cinema', 'Séries', 'Comics', 'Futebol', 'NBA', 'Fórmula 1', 'Esportes', 'Xadrez'];
@@ -53,20 +47,20 @@ async function callClaude(prompt) {
 
   const data = await res.json();
   const text = data.content?.[0]?.text ?? '';
-  return text.replace(/^\`\`\`(?:json)?\s*/i, '').replace(/\s*\`\`\`\s*$/, '').trim();
+  return text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/, '').trim();
 }
 
 function slugify(str, fallback = '') {
   const s = String(str || '')
     .toLowerCase()
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[̀-ͯ]/g, '')
     .replace(/[^\w\s-]/g, '')
     .trim()
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
     .slice(0, 80)
-    .replace(/^-+|-+$/g, ''); // remove hifens de borda (pós-slice)
+    .replace(/^-+|-+$/g, '');
   return s || (fallback ? `noticia-${fallback}` : 'noticia');
 }
 
@@ -80,21 +74,30 @@ function toIsoDate(d) {
 function normalizaCategoria(cat, fallback = 'Cinema') {
   if (!cat) return fallback;
   const norm = String(cat).trim();
-  // match case-insensitive contra lista válida
   const hit = CATEGORIAS_VALIDAS.find((c) => c.toLowerCase() === norm.toLowerCase());
   return hit || fallback;
 }
 
-export async function rewriteNoticia(raw) {
-  const prompt = `Você é um jornalista do portal 3W Entretenimento (@3worlds_entertainment) cobrindo entretenimento, cultura pop e esportes.
-Receba este material bruto vindo de uma fonte externa e reescreva para publicação no portal.
+// Tempo de leitura proporcional ao texto efetivamente escrito (~200 ppm).
+function calcularTempoLeitura(paragrafos, conclusao) {
+  const total = (paragrafos || []).join(' ') + ' ' + (conclusao || '');
+  const palavras = total.trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.ceil(palavras / 200));
+}
 
-MATERIAL BRUTO:
+export async function rewriteNoticia(raw) {
+  const corpoBruto = (raw.corpo_original || raw.descricao || '').slice(0, 2500);
+  const palavrasBruto = corpoBruto.trim().split(/\s+/).filter(Boolean).length;
+
+  const prompt = `Você é um jornalista do portal 3W Entretenimento (@3worlds_entertainment) cobrindo entretenimento, cultura pop e esportes.
+Receba este material bruto e reescreva para publicação no portal.
+
+MATERIAL BRUTO (${palavrasBruto} palavras):
 - Fonte: ${raw.fonte}
 - URL original: ${raw.url}
 - Título original: ${raw.titulo}
 - Resumo/lead original: ${raw.descricao || '(sem resumo)'}
-- Corpo bruto: ${(raw.corpo_original || raw.descricao || '').slice(0, 2000)}
+- Corpo bruto: ${corpoBruto || '(sem corpo)'}
 - Categoria sugerida: ${raw.categoria_padrao || 'Cinema'}
 - Data: ${raw.data_publicacao}
 
@@ -102,21 +105,22 @@ ${DIRETRIZES}
 
 Categorias possíveis (escolha UMA): ${CATEGORIAS_VALIDAS.join(', ')}.
 
+REGRA DE TAMANHO (consequência, não meta):
+- Menos de 50 palavras de fonte → 1 parágrafo curto.
+- 50-150 palavras → 1 ou 2 parágrafos.
+- 150-400 palavras → 2 ou 3 parágrafos.
+- Mais de 400 palavras → 3 ou 4 parágrafos.
+NUNCA escreva um parágrafo genérico só para atingir 4. É melhor entregar 1 parágrafo verdadeiro do que 4 inflados.
+
 RETORNE EXATAMENTE este JSON (sem markdown, sem explicações):
 {
   "titulo": "título curto (50-75 caracteres) direto e com SEO",
-  "descricao": "lead em uma frase de 140-180 caracteres",
+  "descricao": "lead em uma frase de até 180 caracteres",
   "categoria": "uma das categorias listadas",
   "manchete": "frase de impacto de até 12 palavras (pode ser igual ou reescrita do título)",
-  "paragrafos": [
-    "parágrafo 1: contexto e abertura, expandindo o lead (80-100 palavras)",
-    "parágrafo 2: detalhes, dados e desenvolvimento (80-100 palavras)",
-    "parágrafo 3: análise ou reação do público/especialistas (70-90 palavras)",
-    "parágrafo 4: perspectivas, o que vem a seguir, e citação natural da fonte original (60-80 palavras)"
-  ],
-  "frase_destaque": "citação ou frase marcante para pull quote (até 20 palavras)",
-  "conclusao": "parágrafo conclusivo de 50-70 palavras sobre a importância da notícia",
-  "tempo_leitura": 4
+  "paragrafos": ["parágrafo 1", "...até 4 parágrafos baseados no material disponível"],
+  "frase_destaque": "citação ou frase marcante EXTRAÍDA do material (até 20 palavras) — string vazia se a fonte não tem",
+  "conclusao": "parágrafo conclusivo SE houver desfecho claro na fonte — string vazia se não houver"
 }`;
 
   const json = await callClaude(prompt);
@@ -124,7 +128,6 @@ RETORNE EXATAMENTE este JSON (sem markdown, sem explicações):
   try {
     parsed = JSON.parse(json);
   } catch (err) {
-    // tenta extrair { ... } balanceado
     const first = json.indexOf('{');
     const last = json.lastIndexOf('}');
     if (first >= 0 && last > first) {
@@ -137,7 +140,11 @@ RETORNE EXATAMENTE este JSON (sem markdown, sem explicações):
   const titulo = String(parsed.titulo || raw.titulo).trim();
   const categoria = normalizaCategoria(parsed.categoria, raw.categoria_padrao || 'Cinema');
   const data = toIsoDate(raw.data_publicacao);
-  const tempo_leitura = Number.isFinite(+parsed.tempo_leitura) ? +parsed.tempo_leitura : 4;
+  const paragrafos = Array.isArray(parsed.paragrafos)
+    ? parsed.paragrafos.map((p) => String(p).trim()).filter(Boolean)
+    : [];
+  const conclusao = String(parsed.conclusao || '').trim();
+  const tempo_leitura = calcularTempoLeitura(paragrafos, conclusao);
 
   return {
     slug: slugify(titulo),
@@ -155,9 +162,9 @@ RETORNE EXATAMENTE este JSON (sem markdown, sem explicações):
     },
     editorial: {
       manchete: String(parsed.manchete || titulo).trim(),
-      paragrafos: Array.isArray(parsed.paragrafos) ? parsed.paragrafos.map((p) => String(p).trim()).filter(Boolean) : [],
+      paragrafos,
       frase_destaque: String(parsed.frase_destaque || '').trim(),
-      conclusao: String(parsed.conclusao || '').trim(),
+      conclusao,
       fonte: { nome: raw.fonte, url: raw.url },
     },
   };
