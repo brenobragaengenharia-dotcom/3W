@@ -1,0 +1,262 @@
+name: Melhorias pipeline (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Etapa 3 — baixar placeholder.jpg fisico
+        run: |
+          mkdir -p public/images/noticias
+          curl -sL -o public/images/noticias/placeholder.jpg \
+            "https://placehold.co/1280x720/0a0a0a/FF6600/jpg?text=3W%20Entretenimento&font=raleway"
+          file public/images/noticias/placeholder.jpg
+          ls -la public/images/noticias/placeholder.jpg
+
+      - name: Etapa 2 — adicionar validacao HEAD em rss.js
+        run: |
+          cat > scripts/lib/rss.js <<'JS'
+          // scripts/lib/rss.js — parser RSS minimo (sem dependencias externas)
+          // - extrai imagem do feed (enclosure / media:content / <img> em content)
+          // - se nao achar, faz GET no HTML da fonte e tenta og:image / twitter:image
+          // - valida cada imagem com HEAD: so aceita 200 + content-type image/*
+
+          const UA = '3W-Entretenimento NewsBot/1.0 (+https://3w-entretenimento.com)';
+
+          function stripCdata(s = '') {
+            return String(s)
+              .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+              .replace(/<[^>]+>/g, ' ')
+              .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<')
+              .replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+              .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
+              .replace(/\s+/g, ' ').trim();
+          }
+
+          function tag(xml, name) {
+            const m = xml.match(new RegExp(\`<\${name}[^>]*>([\\\\s\\\\S]*?)<\\\\/\${name}>\`, 'i'));
+            return m ? stripCdata(m[1]) : '';
+          }
+
+          function attr(xml, name, attrName) {
+            const m = xml.match(new RegExp(\`<\${name}[^>]*\\\\b\${attrName}=["']([^"']+)["']\`, 'i'));
+            return m ? m[1] : '';
+          }
+
+          function extractImage(item) {
+            let url = attr(item, 'enclosure', 'url');
+            if (url) return url;
+            url = attr(item, 'media:content', 'url') || attr(item, 'media:thumbnail', 'url');
+            if (url) return url;
+            const content = tag(item, 'content:encoded') || tag(item, 'description');
+            const m = content.match(/<img[^>]+src=["']([^"']+)["']/i);
+            return m ? m[1] : null;
+          }
+
+          // ----- og:image fallback -----
+          async function tryOgImage(url, timeoutMs = 5000) {
+            if (!url) return null;
+            try {
+              const ac = new AbortController();
+              const to = setTimeout(() => ac.abort(), timeoutMs);
+              const res = await fetch(url, {
+                headers: { 'User-Agent': UA, 'Accept': 'text/html,*/*' },
+                signal: ac.signal, redirect: 'follow',
+              });
+              clearTimeout(to);
+              if (!res.ok) return null;
+              const html = (await res.text()).slice(0, 200000);
+              const m =
+                html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i) ||
+                html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) ||
+                html.match(/<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i);
+              return m ? m[1] : null;
+            } catch { return null; }
+          }
+
+          // ----- Etapa 2: validacao HEAD da URL da imagem -----
+          // So aceita se o GET responder 200 e content-type comecar com 'image/'.
+          async function isValidImageUrl(url, timeoutMs = 4000) {
+            if (!url) return false;
+            try {
+              const ac = new AbortController();
+              const to = setTimeout(() => ac.abort(), timeoutMs);
+              // HEAD primeiro; alguns CDNs nao suportam HEAD, faz GET range 0-1
+              let res = await fetch(url, { method: 'HEAD', headers: { 'User-Agent': UA }, signal: ac.signal, redirect: 'follow' });
+              if (!res.ok) {
+                // tenta GET com Range
+                res = await fetch(url, { method: 'GET', headers: { 'User-Agent': UA, 'Range': 'bytes=0-1' }, signal: ac.signal, redirect: 'follow' });
+              }
+              clearTimeout(to);
+              if (!res.ok) return false;
+              const ct = (res.headers.get('content-type') || '').toLowerCase();
+              return ct.startsWith('image/');
+            } catch { return false; }
+          }
+
+          // Tenta sequencialmente: extracao do feed -> og:image -> null. Cada etapa valida HEAD.
+          async function resolveImagem(rawItem, articleUrl) {
+            const fromFeed = extractImage(rawItem);
+            if (fromFeed && await isValidImageUrl(fromFeed)) return fromFeed;
+            const og = await tryOgImage(articleUrl);
+            if (og && await isValidImageUrl(og)) return og;
+            return null;
+          }
+
+          function parseRssRaw(xml) {
+            const items = [];
+            const re = /<(item|entry)[^>]*>([\s\S]*?)<\/\1>/gi;
+            let m;
+            while ((m = re.exec(xml)) !== null) {
+              const raw = m[2];
+              const link = tag(raw, 'link') || attr(raw, 'link', 'href') || tag(raw, 'guid');
+              const pub = tag(raw, 'pubDate') || tag(raw, 'published') || tag(raw, 'updated');
+              items.push({
+                _raw: raw,
+                titulo: tag(raw, 'title'),
+                descricao: tag(raw, 'description') || tag(raw, 'summary'),
+                corpo_original: tag(raw, 'content:encoded') || tag(raw, 'description') || tag(raw, 'summary'),
+                url: link,
+                data_publicacao: pub || new Date().toISOString(),
+                autor_original: tag(raw, 'dc:creator') || tag(raw, 'author'),
+              });
+            }
+            return items;
+          }
+
+          export async function fetchRssFeed(source, timeoutMs = 12000) {
+            try {
+              const ac = new AbortController();
+              const to = setTimeout(() => ac.abort(), timeoutMs);
+              const res = await fetch(source.url, {
+                headers: { 'User-Agent': UA, 'Accept': 'application/rss+xml, application/xml, text/xml, */*' },
+                signal: ac.signal,
+              });
+              clearTimeout(to);
+              if (!res.ok) {
+                console.warn(\`[rss] \${source.nome}: HTTP \${res.status}\`);
+                return [];
+              }
+              const xml = await res.text();
+              const items = parseRssRaw(xml);
+
+              // Resolve imagem para cada item em paralelo (extracao + og:image + HEAD)
+              const imagens = await Promise.all(items.map((it) => resolveImagem(it._raw, it.url)));
+              items.forEach((it, i) => { it.imagem = imagens[i]; delete it._raw; });
+
+              return items.map((it) => ({
+                ...it,
+                fonte: source.nome,
+                fonte_url: source.url,
+                categoria_padrao: source.categoria_padrao,
+                tags_hint: source.tags_hint || [],
+              }));
+            } catch (err) {
+              console.warn(\`[rss] \${source.nome}: \${err.message}\`);
+              return [];
+            }
+          }
+
+          export async function fetchAllRss(sources) {
+            const out = await Promise.all(sources.map((s) => fetchRssFeed(s)));
+            return out.flat();
+          }
+          JS
+          node --check scripts/lib/rss.js && echo "rss.js OK"
+
+      - name: Etapa 1 — adicionar anti-mismatch em fetch-news.js
+        run: |
+          node --input-type=module <<'EOF'
+          import fs from 'fs';
+          let src = fs.readFileSync('scripts/fetch-news.js', 'utf8');
+
+          const probe = "// ANTI-MISMATCH";
+          if (src.includes(probe)) {
+            console.log('Anti-mismatch ja existe — skip');
+            process.exit(0);
+          }
+
+          // Funcao auxiliar para inserir antes de "let criadas = 0;"
+          const helper = `
+          // ANTI-MISMATCH: compara titulo reescrito com <title> da pagina fonte
+          // Se sobreposicao de palavras-chave for baixa, descarta o item (item compósito)
+          async function fetchHtmlTitle(url, timeoutMs = 5000) {
+            try {
+              const ac = new AbortController();
+              const to = setTimeout(() => ac.abort(), timeoutMs);
+              const r = await fetch(url, {
+                headers: { 'User-Agent': '3W-Entretenimento NewsBot/1.0' },
+                signal: ac.signal, redirect: 'follow',
+              });
+              clearTimeout(to);
+              if (!r.ok) return null;
+              const html = (await r.text()).slice(0, 50000);
+              const m = html.match(/<title[^>]*>([\\s\\S]*?)<\\/title>/i);
+              return m ? m[1].trim() : null;
+            } catch { return null; }
+          }
+          function tokenize(s) {
+            return String(s || '').toLowerCase()
+              .normalize('NFD').replace(/[\\u0300-\\u036f]/g, '')
+              .replace(/[^a-z0-9 ]+/g, ' ')
+              .split(/\\s+/)
+              .filter(w => w.length >= 4); // ignora preposicoes/artigos
+          }
+          function overlapScore(a, b) {
+            const aSet = new Set(tokenize(a));
+            const bSet = new Set(tokenize(b));
+            if (aSet.size === 0 || bSet.size === 0) return 0;
+            let common = 0;
+            for (const w of aSet) if (bSet.has(w)) common++;
+            return common / Math.min(aSet.size, bSet.size);
+          }
+          `;
+
+          // Insere helper logo apos os imports do topo (antes de "const __dirname")
+          src = src.replace(/(const __dirname = dirname\(fileURLToPath)/, helper + '\n$1');
+
+          // Insere check anti-mismatch logo apos "result = await rewriteNoticia(raw);"
+          src = src.replace(
+            /(result = await rewriteNoticia\(raw\);)/,
+            `$1
+              // Etapa 1: validacao titulo reescrito vs <title> da fonte
+              if (raw.url) {
+                const htmlTitle = await fetchHtmlTitle(raw.url);
+                if (htmlTitle) {
+                  const score = overlapScore(result.entrada_mockdata.titulo, htmlTitle);
+                  if (score < 0.25) {
+                    console.warn(\`  ⚠ titulo desalinhado (score=\${score.toFixed(2)}): "\${result.entrada_mockdata.titulo.slice(0,50)}" vs HTML "\${htmlTitle.slice(0,50)}" — descartando\`);
+                    continue;
+                  }
+                }
+              }`
+          );
+
+          fs.writeFileSync('scripts/fetch-news.js', src);
+          console.log('fetch-news.js atualizado com anti-mismatch');
+          EOF
+          node --check scripts/fetch-news.js && echo "fetch-news.js OK"
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/lib/rss.js scripts/fetch-news.js public/images/noticias/placeholder.jpg
+          if ! git diff --staged --quiet; then
+            git commit -m "feat(pipeline): validacao HEAD imagens + anti-mismatch titulo + placeholder.jpg fisico
+
+          - rss.js: HEAD em cada URL de imagem, so aceita 200 + image/*
+          - fetch-news.js: compara titulo reescrito com <title> da fonte; descarta se nao bate (item composito da ESPN)
+          - public/images/noticias/placeholder.jpg: 1280x720 cinza com logo 3W"
+            git push origin HEAD:master
+          fi
