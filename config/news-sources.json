@@ -1,15 +1,16 @@
 {
-  "$doc": "Fontes para fetch-news.js. Escopo: entretenimento, comics, esportes.",
+  "$doc": "Fontes para fetch-news.js. Escopo: entretenimento, comics, esportes. URLs validadas em 2026-04-25.",
   "rss": [
-    { "nome": "Omelete",            "url": "https://www.omelete.com.br/feed",             "categoria_padrao": "Cinema",     "tags_hint": ["cinema","series"] },
-    { "nome": "AdoroCinema",        "url": "https://www.adorocinema.com/rss/noticias/",   "categoria_padrao": "Cinema",     "tags_hint": ["cinema","filmes"] },
-    { "nome": "Legiao dos Herois",  "url": "https://legiaodosherois.uol.com.br/feed",     "categoria_padrao": "Cultura Pop","tags_hint": ["marvel","dc"] },
-    { "nome": "Jovem Nerd",         "url": "https://jovemnerd.com.br/feed/",              "categoria_padrao": "Cultura Pop","tags_hint": ["geek"] },
-    { "nome": "Canaltech",          "url": "https://canaltech.com.br/entretenimento/rss/","categoria_padrao": "Séries",     "tags_hint": ["series","streaming"] },
-    { "nome": "Universo HQ",        "url": "https://www.universohq.com/feed/",            "categoria_padrao": "Comics",     "tags_hint": ["quadrinhos"] },
-    { "nome": "ESPN Brasil",        "url": "https://www.espn.com.br/espn/rss/news",       "categoria_padrao": "Esportes",   "tags_hint": ["futebol","nba","f1"] },
-    { "nome": "Globo Esporte",      "url": "https://ge.globo.com/rss/ge.xml",              "categoria_padrao": "Esportes",   "tags_hint": ["futebol"] },
-    { "nome": "Grande Prêmio F1",   "url": "https://www.grandepremio.com.br/feed",        "categoria_padrao": "Fórmula 1",  "tags_hint": ["f1"] }
+    { "nome": "Cinepop",            "url": "https://www.cinepop.com.br/feed",                       "categoria_padrao": "Cinema",     "tags_hint": ["cinema","filmes"] },
+    { "nome": "Papo de Cinema",     "url": "https://www.papodecinema.com.br/feed/",                 "categoria_padrao": "Cinema",     "tags_hint": ["cinema","filmes","critica"] },
+    { "nome": "Cinema com Rapadura","url": "https://www.cinemacomrapadura.com.br/feed/",            "categoria_padrao": "Cinema",     "tags_hint": ["cinema","series","critica"] },
+    { "nome": "Folha Ilustrada",    "url": "https://feeds.folha.uol.com.br/ilustrada/rss091.xml",   "categoria_padrao": "Cinema",     "tags_hint": ["cinema","series","cultura"] },
+    { "nome": "Legiao dos Herois",  "url": "https://legiaodosherois.uol.com.br/feed",               "categoria_padrao": "Cultura Pop","tags_hint": ["marvel","dc","series","filmes"] },
+    { "nome": "Universo HQ",        "url": "https://www.universohq.com/feed/",                      "categoria_padrao": "Comics",     "tags_hint": ["quadrinhos","marvel","dc","mangas"] },
+    { "nome": "Canaltech",          "url": "https://feeds2.feedburner.com/canaltechbr",             "categoria_padrao": "Séries",     "tags_hint": ["streaming","series","cinema"] },
+    { "nome": "ESPN Brasil",        "url": "https://www.espn.com.br/espn/rss/news",                 "categoria_padrao": "Esportes",   "tags_hint": ["futebol","nba","f1"] },
+    { "nome": "Globo Esporte",      "url": "https://ge.globo.com/dynamo/futebol/rss2.xml",          "categoria_padrao": "Futebol",    "tags_hint": ["futebol","brasileirao"] },
+    { "nome": "Grande Prêmio F1",   "url": "https://www.grandepremio.com.br/feed/",                 "categoria_padrao": "Fórmula 1",  "tags_hint": ["f1","formula1"] }
   ],
   "gnews": {
     "enabled": true,
