@@ -1,7 +1,6 @@
 // scripts/lib/news-rewrite.js
 // Reescreve uma notícia crua (RSS/GNews) no schema do 3W via Claude.
-// FILOSOFIA: fidelidade > tamanho. Notas curtas viram parágrafo único,
-// matérias longas viram até 4. NUNCA inventa para encher cota.
+// FILOSOFIA: fidelidade > tamanho. NÃO inventa. Notícias fora-de-tema são REJEITADAS.
 
 const ANTHROPIC_API = 'https://api.anthropic.com/v1/messages';
 const MODEL = 'claude-sonnet-4-6';
@@ -18,6 +17,7 @@ DIRETRIZES DE ESCRITA (obrigatórias):
 8. Cite a fonte original uma vez quando fizer sentido (ex: "segundo o Omelete"). Não force.
 9. SEM editorialização especulativa: nada de "isso pode marcar uma virada" se a fonte não disse isso.
 10. frase_destaque e conclusao são OPCIONAIS. Se a fonte não traz frase forte ou desfecho claro, devolva string vazia. NUNCA fabrique.
+11. REJEIÇÃO É BEM-VINDA. O portal cobre EXCLUSIVAMENTE: cinema, séries, filmes, comics/HQs/mangás/Marvel/DC, futebol, NBA/basquete, Fórmula 1/automobilismo, esportes em geral (tênis, MotoGP, atletismo, etc), xadrez. Se a notícia NÃO encaixa em nenhum desses temas (ex: tecnologia/celulares, política, economia, culinária, consumo, ciência geral, cultura literária, evento corporativo), devolva o JSON com "rejeitar": true. NÃO force a categoria. É preferível rejeitar 10 notícias do que publicar 1 fora do tema.
 `;
 
 const CATEGORIAS_VALIDAS = ['Cinema', 'Séries', 'Comics', 'Futebol', 'NBA', 'Fórmula 1', 'Esportes', 'Xadrez'];
@@ -78,7 +78,6 @@ function normalizaCategoria(cat, fallback = 'Cinema') {
   return hit || fallback;
 }
 
-// Tempo de leitura proporcional ao texto efetivamente escrito (~200 ppm).
 function calcularTempoLeitura(paragrafos, conclusao) {
   const total = (paragrafos || []).join(' ') + ' ' + (conclusao || '');
   const palavras = total.trim().split(/\s+/).filter(Boolean).length;
@@ -90,7 +89,7 @@ export async function rewriteNoticia(raw) {
   const palavrasBruto = corpoBruto.trim().split(/\s+/).filter(Boolean).length;
 
   const prompt = `Você é um jornalista do portal 3W Entretenimento (@3worlds_entertainment) cobrindo entretenimento, cultura pop e esportes.
-Receba este material bruto e reescreva para publicação no portal.
+Receba este material bruto e reescreva para publicação. Se NÃO encaixar no escopo do portal, REJEITE.
 
 MATERIAL BRUTO (${palavrasBruto} palavras):
 - Fonte: ${raw.fonte}
@@ -103,7 +102,7 @@ MATERIAL BRUTO (${palavrasBruto} palavras):
 
 ${DIRETRIZES}
 
-Categorias possíveis (escolha UMA): ${CATEGORIAS_VALIDAS.join(', ')}.
+Categorias válidas (escolha UMA): ${CATEGORIAS_VALIDAS.join(', ')}.
 
 REGRA DE TAMANHO (consequência, não meta):
 - Menos de 50 palavras de fonte → 1 parágrafo curto.
@@ -112,15 +111,22 @@ REGRA DE TAMANHO (consequência, não meta):
 - Mais de 400 palavras → 3 ou 4 parágrafos.
 NUNCA escreva um parágrafo genérico só para atingir 4. É melhor entregar 1 parágrafo verdadeiro do que 4 inflados.
 
-RETORNE EXATAMENTE este JSON (sem markdown, sem explicações):
+CASO 1 (notícia ENCAIXA no escopo) — RETORNE EXATAMENTE este JSON:
 {
-  "titulo": "título curto (50-75 caracteres) direto e com SEO",
+  "rejeitar": false,
+  "titulo": "título curto (50-75 caracteres)",
   "descricao": "lead em uma frase de até 180 caracteres",
   "categoria": "uma das categorias listadas",
-  "manchete": "frase de impacto de até 12 palavras (pode ser igual ou reescrita do título)",
-  "paragrafos": ["parágrafo 1", "...até 4 parágrafos baseados no material disponível"],
-  "frase_destaque": "citação ou frase marcante EXTRAÍDA do material (até 20 palavras) — string vazia se a fonte não tem",
-  "conclusao": "parágrafo conclusivo SE houver desfecho claro na fonte — string vazia se não houver"
+  "manchete": "frase de impacto de até 12 palavras",
+  "paragrafos": ["parágrafo 1", "...até 4 parágrafos baseados no material"],
+  "frase_destaque": "citação EXTRAÍDA do material — string vazia se não tem",
+  "conclusao": "parágrafo conclusivo SE houver desfecho claro — string vazia se não houver"
+}
+
+CASO 2 (notícia FORA DO ESCOPO) — RETORNE APENAS:
+{
+  "rejeitar": true,
+  "motivo": "<explicação curta, ex: 'celular/tecnologia não é entretenimento nem esporte'>"
 }`;
 
   const json = await callClaude(prompt);
@@ -135,6 +141,14 @@ RETORNE EXATAMENTE este JSON (sem markdown, sem explicações):
     } else {
       throw new Error(`JSON inválido do Claude: ${err.message}`);
     }
+  }
+
+  // Rejeição sinalizada pelo Claude — joga erro especifico que fetch-news.js captura
+  if (parsed.rejeitar === true) {
+    const motivo = String(parsed.motivo || 'fora do escopo').trim();
+    const e = new Error(`[skip-fora-tema] ${motivo}`);
+    e.code = 'SKIP_FORA_TEMA';
+    throw e;
   }
 
   const titulo = String(parsed.titulo || raw.titulo).trim();
