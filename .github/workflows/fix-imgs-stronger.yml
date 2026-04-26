@@ -1,0 +1,157 @@
+name: Fix imagens (UA browser + retry)
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Escrever scripts/fix-imgs-stronger.mjs
+        run: |
+          cat > scripts/fix-imgs-stronger.mjs << 'MJS'
+          import { readFileSync, writeFileSync } from 'fs';
+
+          const UA_BROWSER = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
+          const PLACEHOLDER = '/images/noticias/placeholder.jpg';
+
+          function urlVariations(url) {
+            const out = new Set([url]);
+            try {
+              const u = new URL(url);
+              if (u.pathname.endsWith('/')) out.add(u.toString().replace(/\/$/, ''));
+              else out.add(u.toString() + '/');
+              if (u.hostname.startsWith('www.')) {
+                const noWww = url.replace('://www.', '://');
+                out.add(noWww);
+                if (noWww.endsWith('/')) out.add(noWww.replace(/\/$/, '')); else out.add(noWww + '/');
+              } else {
+                out.add(url.replace('://', '://www.'));
+              }
+            } catch {}
+            return [...out];
+          }
+
+          async function fetchPageHtml(url, timeoutMs = 8000) {
+            const ac = new AbortController();
+            const to = setTimeout(() => ac.abort(), timeoutMs);
+            try {
+              const res = await fetch(url, {
+                headers: {
+                  'User-Agent': UA_BROWSER,
+                  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                  'Accept-Language': 'pt-BR,pt;q=0.9,en;q=0.8',
+                  'Cache-Control': 'no-cache',
+                },
+                signal: ac.signal,
+                redirect: 'follow',
+              });
+              clearTimeout(to);
+              if (!res.ok) return null;
+              return (await res.text()).slice(0, 500000);
+            } catch { return null; }
+          }
+
+          function extractOgImage(html) {
+            if (!html) return null;
+            const candidatos = [
+              html.match(/<meta[^>]+property=["']og:image:secure_url["'][^>]+content=["']([^"']+)["']/i),
+              html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i),
+              html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i),
+              html.match(/<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i),
+              html.match(/<meta[^>]+name=["']twitter:image:src["'][^>]+content=["']([^"']+)["']/i),
+              html.match(/"image"\s*:\s*"([^"]+\.(?:jpg|jpeg|png|webp)[^"]*)"/i),
+              html.match(/"image"\s*:\s*\[\s*"([^"]+\.(?:jpg|jpeg|png|webp)[^"]*)"/i),
+            ];
+            for (const m of candidatos) if (m) return m[1].replace(/&amp;/g, '&');
+            return null;
+          }
+
+          async function isImageReachable(url, timeoutMs = 6000) {
+            if (!url || url.startsWith('/')) return true;
+            try {
+              const ac = new AbortController();
+              const to = setTimeout(() => ac.abort(), timeoutMs);
+              const res = await fetch(url, {
+                method: 'GET',
+                headers: {
+                  'User-Agent': UA_BROWSER,
+                  'Range': 'bytes=0-2047',
+                  'Accept': 'image/webp,image/avif,image/*,*/*;q=0.8',
+                },
+                signal: ac.signal, redirect: 'follow',
+              });
+              clearTimeout(to);
+              if (!res.ok && res.status !== 206) return false;
+              const ct = (res.headers.get('content-type') || '').toLowerCase();
+              return ct.startsWith('image/');
+            } catch { return false; }
+          }
+
+          async function tentarResolverImagem(srcUrl) {
+            for (const variant of urlVariations(srcUrl)) {
+              const html = await fetchPageHtml(variant);
+              if (!html) continue;
+              const og = extractOgImage(html);
+              if (!og) continue;
+              const ok = await isImageReachable(og);
+              if (ok) return { url: og, via: variant };
+            }
+            return null;
+          }
+
+          const contentPath = 'lib/content.json';
+          const content = JSON.parse(readFileSync(contentPath, 'utf-8'));
+          const fixes = [];
+
+          for (const secao of ['noticias', 'esportes']) {
+            for (const slug of Object.keys(content[secao] || {})) {
+              const item = content[secao][slug];
+              if (item.imagem !== PLACEHOLDER) continue;
+              const url = item.fonte?.url;
+              if (!url) { console.log(`[skip-no-url] ${slug}`); continue; }
+              console.log(`[try]    ${slug}  src=${url}`);
+              const r = await tentarResolverImagem(url);
+              if (!r) { console.log(`         falhou todas variacoes`); continue; }
+              console.log(`[fix]    ${slug}  =>  ${r.url}`);
+              item.imagem = r.url;
+              fixes.push({ secao, slug, og: r.url });
+            }
+          }
+          writeFileSync(contentPath, JSON.stringify(content, null, 2), 'utf-8');
+
+          if (fixes.length > 0) {
+            const mockPath = 'lib/mock-data.js';
+            let src = readFileSync(mockPath, 'utf-8');
+            for (const f of fixes) {
+              const slugEsc = f.slug.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+              const re = new RegExp(`(slug:\\s*'${slugEsc}'[\\s\\S]*?imagem:\\s*')[^']+(')`, 'i');
+              if (re.test(src)) {
+                src = src.replace(re, `$1${f.og}$2`);
+                console.log(`[mock]   ${f.slug}`);
+              }
+            }
+            writeFileSync(mockPath, src, 'utf-8');
+          }
+
+          console.log(`\n=> ${fixes.length} item(ns) corrigido(s).`);
+          MJS
+          node --check scripts/fix-imgs-stronger.mjs
+
+      - name: Rodar fix
+        run: node scripts/fix-imgs-stronger.mjs
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f scripts/fix-imgs-stronger.mjs
+          git add lib/content.json lib/mock-data.js || true
+          git commit -m "fix(noticias): re-resolve placeholder via og:image com UA browser" || echo "no changes"
+          git push
