@@ -102,7 +102,7 @@ export default async function ComicPage({ params }) {
               </p>
             )}
             <h1 className="text-3xl md:text-4xl font-black text-white mb-3">{item.titulo}</h1>
-            <div className="flex flex-wrap items-center gap-3 text-sm text-[#737373] mb-4">
+            <div className="flex flex-wrap items-center gap-3 text-sm text-[#9ca3af] mb-4">
               {item.ano      && <span>{item.ano}</span>}
               {item.editora  && <><span aria-hidden="true">·</span><span>{item.editora}</span></>}
               {item.autor    && <><span aria-hidden="true">·</span><span>{item.autor}</span></>}
@@ -161,7 +161,7 @@ export default async function ComicPage({ params }) {
 
         {!g && (
           <div className="bg-[#141414] border border-[#2a2a2a] rounded-xl p-6 text-center">
-            <p className="text-[#737373] text-sm">
+            <p className="text-[#9ca3af] text-sm">
               Conteúdo sendo preparado. Execute{' '}
               <code className="text-[#FF6600]">npm run update-content</code> para gerar.
             </p>
@@ -169,7 +169,7 @@ export default async function ComicPage({ params }) {
         )}
 
         <div className="mt-8 pt-6 border-t border-[#1a1a1a]">
-          <Link href="/comics" className="text-[#737373] hover:text-[#FF6600] text-sm transition-colors">
+          <Link href="/comics" className="text-[#9ca3af] hover:text-[#FF6600] text-sm transition-colors">
             ← Voltar para Comics
           </Link>
         </div>

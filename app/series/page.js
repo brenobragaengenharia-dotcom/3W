@@ -28,7 +28,7 @@ export default function SeriesPage() {
         </nav>
 
         <h1 className="text-3xl font-black text-white mb-2">Séries</h1>
-        <p className="text-[#737373] mb-8">As melhores séries para maratonar em todas as plataformas.</p>
+        <p className="text-[#9ca3af] mb-8">As melhores séries para maratonar em todas as plataformas.</p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {SERIES.map((serie) => (
@@ -39,7 +39,7 @@ export default function SeriesPage() {
                   {serie.nota && <div className="absolute top-2 right-2"><span className="rating-badge">★ {serie.nota}</span></div>}
                 </div>
                 <h2 className="text-white text-xs font-semibold leading-snug line-clamp-2 mb-1">{serie.titulo}</h2>
-                <p className="text-[#737373] text-xs">{serie.ano} · {serie.categoria}</p>
+                <p className="text-[#9ca3af] text-xs">{serie.ano} · {serie.categoria}</p>
               </Link>
             </article>
           ))}
@@ -49,7 +49,7 @@ export default function SeriesPage() {
           <section aria-labelledby="noticias-series-title" className="mt-12">
             <div className="flex items-center justify-between mb-5">
               <h2 id="noticias-series-title" className="text-xl font-black text-white">Notícias de Séries</h2>
-              <Link href="/noticias" className="text-sm text-[#737373] hover:text-[#FF6600] transition-colors flex items-center gap-1">
+              <Link href="/noticias" className="text-sm text-[#9ca3af] hover:text-[#FF6600] transition-colors flex items-center gap-1">
                 Ver todas
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -67,11 +67,11 @@ export default function SeriesPage() {
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-xs font-semibold text-blue-400">{n.categoria}</span>
                         <span className="text-[#2a2a2a]" aria-hidden="true">·</span>
-                        <time dateTime={n.data} className="text-xs text-[#737373]">{new Date(n.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' })}</time>
+                        <time dateTime={n.data} className="text-xs text-[#9ca3af]">{new Date(n.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' })}</time>
                       </div>
                       <h3 className="text-white font-bold text-sm leading-snug mb-2 line-clamp-2 hover:text-[#FF6600] transition-colors">{n.titulo}</h3>
-                      <p className="text-[#737373] text-xs line-clamp-2">{n.descricao}</p>
-                      <p className="text-[#737373] text-xs mt-2">{n.autor} · {n.tempo_leitura} min</p>
+                      <p className="text-[#9ca3af] text-xs line-clamp-2">{n.descricao}</p>
+                      <p className="text-[#9ca3af] text-xs mt-2">{n.autor} · {n.tempo_leitura} min</p>
                     </div>
                   </Link>
                 </article>

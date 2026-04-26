@@ -42,7 +42,7 @@ export default function ElfsightFeed({ appId, title, perfil, href }) {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-[#737373] hover:text-[#FF6600] transition-colors flex items-center gap-1"
+                className="text-sm text-[#9ca3af] hover:text-[#FF6600] transition-colors flex items-center gap-1"
                 aria-label={`Ver ${perfil} no Instagram`}
               >
                 {perfil}

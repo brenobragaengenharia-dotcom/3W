@@ -19,7 +19,7 @@ export default function ContentRow({ title, items = [], basePath, viewAllPath, t
           {(viewAllPath || basePath) && (
             <Link
               href={viewAllPath || basePath}
-              className="text-sm text-[#737373] hover:text-[#FF6600] transition-colors flex items-center gap-1"
+              className="text-sm text-[#9ca3af] hover:text-[#FF6600] transition-colors flex items-center gap-1"
               aria-label={`Ver tudo em ${title}`}
             >
               Ver tudo
@@ -69,7 +69,7 @@ export default function ContentRow({ title, items = [], basePath, viewAllPath, t
                   <h3 className="text-white text-xs font-semibold leading-snug line-clamp-2 mb-1">
                     {item.titulo}
                   </h3>
-                  <div className="flex items-center gap-2 text-[#737373] text-xs">
+                  <div className="flex items-center gap-2 text-[#9ca3af] text-xs">
                     {item.ano && <span>{item.ano}</span>}
                     {item.categoria && (
                       <>

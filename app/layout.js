@@ -19,8 +19,8 @@ export const metadata = {
     default: '3W Entretenimento | Seu Universo de Entretenimento',
     template: '%s | 3W Entretenimento',
   },
-  description: 'Descubra o melhor do entretenimento: filmes, séries, música, jogos e eventos. Tudo em um só lugar.',
-  keywords: ['entretenimento', 'filmes', 'séries', 'música', 'jogos', 'eventos', 'brasil'],
+  description: 'Descubra o melhor do entretenimento: filmes, séries, comics, esportes e eventos. Tudo em um só lugar.',
+  keywords: ['entretenimento', 'filmes', 'séries', 'comics', 'hqs', 'mangás', 'esportes', 'futebol', 'nba', 'f1', 'brasil'],
   authors: [{ name: '3W Entretenimento', url: SITE_URL }],
   creator: '3W Entretenimento',
   publisher: '3W Entretenimento',
@@ -32,17 +32,15 @@ export const metadata = {
     url: SITE_URL,
     siteName: '3W Entretenimento',
     title: '3W Entretenimento | Seu Universo de Entretenimento',
-    description: 'Descubra o melhor do entretenimento: filmes, séries, música, jogos e eventos.',
+    description: 'Descubra o melhor do entretenimento: filmes, séries, comics, esportes e eventos.',
     images: [{ url: '/images/og-default.svg', width: 1200, height: 630, alt: '3W Entretenimento' }],
   },
 
   // Twitter Card
   twitter: {
     card: 'summary_large_image',
-    site: '@3wentretenimento',
-    creator: '@3wentretenimento',
     title: '3W Entretenimento | Seu Universo de Entretenimento',
-    description: 'Descubra o melhor do entretenimento: filmes, séries, música, jogos e eventos.',
+    description: 'Descubra o melhor do entretenimento: filmes, séries, comics, esportes e eventos.',
     images: ['/images/og-default.svg'],
   },
 

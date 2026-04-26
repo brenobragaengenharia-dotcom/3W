@@ -37,7 +37,7 @@ export default function Footer() {
               <span className="text-[#FF6600]">3W</span>
               <span className="text-white ml-1">Entretenimento</span>
             </Link>
-            <p className="text-[#737373] text-sm leading-relaxed mb-6 max-w-sm">
+            <p className="text-[#9ca3af] text-sm leading-relaxed mb-6 max-w-sm">
               Seu universo de entretenimento: filmes, séries, comics, esportes e eventos.
               Fique por dentro de tudo que acontece no mundo do entretenimento brasileiro e mundial.
             </p>
@@ -51,7 +51,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex items-center gap-2 w-fit text-[#737373] hover:text-[#FF6600] transition-colors group"
+                  className="flex items-center gap-2 w-fit text-[#9ca3af] hover:text-[#FF6600] transition-colors group"
                 >
                   <span className="w-7 h-7 flex items-center justify-center rounded-full bg-[#1a1a1a] group-hover:bg-[#FF6600] group-hover:text-white transition-colors flex-shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -70,7 +70,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {CATEGORIAS.map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} className="text-[#737373] hover:text-[#FF6600] text-sm transition-colors">
+                  <Link href={href} className="text-[#9ca3af] hover:text-[#FF6600] text-sm transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -84,7 +84,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {INSTITUCIONAL.map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} className="text-[#737373] hover:text-[#FF6600] text-sm transition-colors">
+                  <Link href={href} className="text-[#9ca3af] hover:text-[#FF6600] text-sm transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -95,7 +95,7 @@ export default function Footer() {
 
         {/* Rodapé inferior */}
         <div className="border-t border-[#1a1a1a] mt-10 pt-6">
-          <p className="text-[#737373] text-xs text-center sm:text-left">
+          <p className="text-[#9ca3af] text-xs text-center sm:text-left">
             © {new Date().getFullYear()} 3W Entretenimento. Todos os direitos reservados.
           </p>
         </div>

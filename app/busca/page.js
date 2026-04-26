@@ -13,7 +13,7 @@ function BuscaResultados() {
   if (!query.trim()) {
     return (
       <div className="text-center py-16">
-        <p className="text-[#737373] text-lg">Digite algo para buscar.</p>
+        <p className="text-[#9ca3af] text-lg">Digite algo para buscar.</p>
       </div>
     );
   }
@@ -35,7 +35,7 @@ function BuscaResultados() {
 
   return (
     <>
-      <p className="text-[#737373] text-sm mb-6">
+      <p className="text-[#9ca3af] text-sm mb-6">
         {resultados.length === 0
           ? `Nenhum resultado para "${query}".`
           : `${resultados.length} resultado${resultados.length > 1 ? 's' : ''} para "${query}"`}
@@ -73,7 +73,7 @@ export default function BuscaPage() {
 
       <h1 className="text-3xl font-black text-white mb-6">Resultados da Busca</h1>
 
-      <Suspense fallback={<p className="text-[#737373]">Buscando...</p>}>
+      <Suspense fallback={<p className="text-[#9ca3af]">Buscando...</p>}>
         <BuscaResultados />
       </Suspense>
     </div>

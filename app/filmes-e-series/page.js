@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { FILMES, SERIES, NOTICIAS } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
 import ElfsightFeed, { ELFSIGHT_IDS } from '@/components/ElfsightFeed';
-import NewsletterBanner from '@/components/NewsletterBanner';
 
 const NOTICIAS_CINEMA = NOTICIAS
   .filter((n) => n.categoria === 'Cinema')
@@ -41,7 +40,7 @@ export default function FilmesESeriesPage() {
         </nav>
 
         <h1 className="text-3xl font-black text-white mb-2">Filmes e Séries</h1>
-        <p className="text-[#737373] mb-10">Lançamentos, clássicos e maratonas imperdíveis.</p>
+        <p className="text-[#9ca3af] mb-10">Lançamentos, clássicos e maratonas imperdíveis.</p>
 
         {/* Filmes */}
         <section aria-labelledby="filmes-title" className="mb-12">
@@ -65,7 +64,7 @@ export default function FilmesESeriesPage() {
                     )}
                   </div>
                   <h3 className="text-white text-xs font-semibold leading-snug line-clamp-2 mb-1">{filme.titulo}</h3>
-                  <p className="text-[#737373] text-xs">{filme.ano} · {filme.categoria}</p>
+                  <p className="text-[#9ca3af] text-xs">{filme.ano} · {filme.categoria}</p>
                 </Link>
               </article>
             ))}
@@ -94,7 +93,7 @@ export default function FilmesESeriesPage() {
                     )}
                   </div>
                   <h3 className="text-white text-xs font-semibold leading-snug line-clamp-2 mb-1">{serie.titulo}</h3>
-                  <p className="text-[#737373] text-xs">{serie.ano} · {serie.categoria}</p>
+                  <p className="text-[#9ca3af] text-xs">{serie.ano} · {serie.categoria}</p>
                 </Link>
               </article>
             ))}
@@ -106,7 +105,7 @@ export default function FilmesESeriesPage() {
           <section aria-labelledby="noticias-cinema-title" className="mb-12">
             <div className="flex items-center justify-between mb-5">
               <h2 id="noticias-cinema-title" className="text-xl font-bold text-white">🎬 Notícias de Cinema</h2>
-              <Link href="/noticias" className="text-sm text-[#737373] hover:text-[#FF6600] transition-colors flex items-center gap-1">
+              <Link href="/noticias" className="text-sm text-[#9ca3af] hover:text-[#FF6600] transition-colors flex items-center gap-1">
                 Ver todas
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -124,11 +123,11 @@ export default function FilmesESeriesPage() {
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-xs font-semibold text-red-400">{n.categoria}</span>
                         <span className="text-[#2a2a2a]" aria-hidden="true">·</span>
-                        <time dateTime={n.data} className="text-xs text-[#737373]">{new Date(n.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' })}</time>
+                        <time dateTime={n.data} className="text-xs text-[#9ca3af]">{new Date(n.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' })}</time>
                       </div>
                       <h3 className="text-white font-bold text-sm leading-snug mb-2 line-clamp-2 hover:text-[#FF6600] transition-colors">{n.titulo}</h3>
-                      <p className="text-[#737373] text-xs line-clamp-2">{n.descricao}</p>
-                      <p className="text-[#737373] text-xs mt-2">{n.autor} · {n.tempo_leitura} min</p>
+                      <p className="text-[#9ca3af] text-xs line-clamp-2">{n.descricao}</p>
+                      <p className="text-[#9ca3af] text-xs mt-2">{n.autor} · {n.tempo_leitura} min</p>
                     </div>
                   </Link>
                 </article>
@@ -142,7 +141,7 @@ export default function FilmesESeriesPage() {
           <section aria-labelledby="noticias-series-title">
             <div className="flex items-center justify-between mb-5">
               <h2 id="noticias-series-title" className="text-xl font-bold text-white">📺 Notícias de Séries</h2>
-              <Link href="/noticias" className="text-sm text-[#737373] hover:text-[#FF6600] transition-colors flex items-center gap-1">
+              <Link href="/noticias" className="text-sm text-[#9ca3af] hover:text-[#FF6600] transition-colors flex items-center gap-1">
                 Ver todas
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -160,11 +159,11 @@ export default function FilmesESeriesPage() {
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-xs font-semibold text-blue-400">{n.categoria}</span>
                         <span className="text-[#2a2a2a]" aria-hidden="true">·</span>
-                        <time dateTime={n.data} className="text-xs text-[#737373]">{new Date(n.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' })}</time>
+                        <time dateTime={n.data} className="text-xs text-[#9ca3af]">{new Date(n.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' })}</time>
                       </div>
                       <h3 className="text-white font-bold text-sm leading-snug mb-2 line-clamp-2 hover:text-[#FF6600] transition-colors">{n.titulo}</h3>
-                      <p className="text-[#737373] text-xs line-clamp-2">{n.descricao}</p>
-                      <p className="text-[#737373] text-xs mt-2">{n.autor} · {n.tempo_leitura} min</p>
+                      <p className="text-[#9ca3af] text-xs line-clamp-2">{n.descricao}</p>
+                      <p className="text-[#9ca3af] text-xs mt-2">{n.autor} · {n.tempo_leitura} min</p>
                     </div>
                   </Link>
                 </article>
@@ -181,7 +180,6 @@ export default function FilmesESeriesPage() {
         perfil="@3worlds_entertainment"
         href="https://instagram.com/3worlds_entertainment"
       />
-      <NewsletterBanner />
     </>
   );
 }

@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { NOTICIAS, NOTICIAS_ESPORTES } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
-import NewsletterBanner from '@/components/NewsletterBanner';
 
 export const metadata = {
   title: 'Notícias',
@@ -40,7 +39,7 @@ export default function NoticiasPage() {
         </nav>
 
         <h1 className="text-3xl font-black text-white mb-2">Notícias</h1>
-        <p className="text-[#737373] mb-8">Fique por dentro de tudo que acontece no entretenimento.</p>
+        <p className="text-[#9ca3af] mb-8">Fique por dentro de tudo que acontece no entretenimento.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {ALL_NOTICIAS.map((n) => (
@@ -51,20 +50,19 @@ export default function NoticiasPage() {
                 </div>
                 <div className="p-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className={`text-xs font-semibold ${CATEGORIA_COLORS[n.categoria] || 'text-[#737373]'}`}>{n.categoria}</span>
+                    <span className={`text-xs font-semibold ${CATEGORIA_COLORS[n.categoria] || 'text-[#9ca3af]'}`}>{n.categoria}</span>
                     <span className="text-[#2a2a2a]" aria-hidden="true">·</span>
-                    <time dateTime={n.data} className="text-xs text-[#737373]">{new Date(n.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' })}</time>
+                    <time dateTime={n.data} className="text-xs text-[#9ca3af]">{new Date(n.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' })}</time>
                   </div>
                   <h2 className="text-white font-bold text-sm leading-snug mb-2 line-clamp-2 hover:text-[#FF6600] transition-colors">{n.titulo}</h2>
-                  <p className="text-[#737373] text-xs line-clamp-2">{n.descricao}</p>
-                  <p className="text-[#737373] text-xs mt-2">{n.autor} · {n.tempo_leitura} min</p>
+                  <p className="text-[#9ca3af] text-xs line-clamp-2">{n.descricao}</p>
+                  <p className="text-[#9ca3af] text-xs mt-2">{n.autor} · {n.tempo_leitura} min</p>
                 </div>
               </Link>
             </article>
           ))}
         </div>
       </div>
-      <NewsletterBanner />
     </>
   );
 }

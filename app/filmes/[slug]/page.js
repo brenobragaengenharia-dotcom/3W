@@ -90,11 +90,11 @@ export default async function FilmePage({ params }) {
               </p>
             )}
             <h1 className="text-3xl md:text-4xl font-black text-white mb-3">{filme.titulo}</h1>
-            <div className="flex flex-wrap items-center gap-3 text-sm text-[#737373] mb-4">
+            <div className="flex flex-wrap items-center gap-3 text-sm text-[#9ca3af] mb-4">
               {filme.ano     && <span>{filme.ano}</span>}
               {g?.duracao    && <><span aria-hidden="true">·</span><span>{g.duracao} min</span></>}
               {filme.nota    && <span className="rating-badge">★ {filme.nota}</span>}
-              {g?.nota_tmdb  && <span className="text-xs text-[#737373]">TMDB {g.nota_tmdb}</span>}
+              {g?.nota_tmdb  && <span className="text-xs text-[#9ca3af]">TMDB {g.nota_tmdb}</span>}
             </div>
             {g?.generos?.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-4">
@@ -106,7 +106,7 @@ export default async function FilmePage({ params }) {
               </div>
             )}
             {g?.diretor && (
-              <p className="text-sm text-[#737373]">
+              <p className="text-sm text-[#9ca3af]">
                 <span className="text-white font-medium">Direção:</span> {g.diretor}
               </p>
             )}
@@ -126,7 +126,7 @@ export default async function FilmePage({ params }) {
             </svg>
             Comprar Ingresso — ingresso.com
           </a>
-          <p className="text-[#444] text-[11px] mt-2">* Link patrocinado. Ao comprar você apoia o 3W Entretenimento sem custo extra.</p>
+          <p className="text-[#737373] text-[11px] mt-2">* Link patrocinado. Ao comprar você apoia o 3W Entretenimento sem custo extra.</p>
         </div>
 
         {/* Sinopse */}
@@ -166,12 +166,12 @@ export default async function FilmePage({ params }) {
                   {ator.foto ? (
                     <img src={ator.foto} alt={ator.nome} className="w-12 h-12 rounded-full object-cover mx-auto mb-2" />
                   ) : (
-                    <div className="w-12 h-12 rounded-full bg-[#2a2a2a] mx-auto mb-2 flex items-center justify-center text-[#737373] text-xl">
+                    <div className="w-12 h-12 rounded-full bg-[#2a2a2a] mx-auto mb-2 flex items-center justify-center text-[#9ca3af] text-xl">
                       👤
                     </div>
                   )}
                   <p className="text-white text-xs font-semibold line-clamp-1">{ator.nome}</p>
-                  <p className="text-[#737373] text-xs line-clamp-1">{ator.personagem}</p>
+                  <p className="text-[#9ca3af] text-xs line-clamp-1">{ator.personagem}</p>
                 </div>
               ))}
             </div>
@@ -181,7 +181,7 @@ export default async function FilmePage({ params }) {
         {/* Sem conteúdo gerado ainda */}
         {!g && (
           <div className="bg-[#141414] border border-[#2a2a2a] rounded-xl p-6 text-center">
-            <p className="text-[#737373] text-sm">
+            <p className="text-[#9ca3af] text-sm">
               Conteúdo sendo preparado. Execute{' '}
               <code className="text-[#FF6600]">npm run update-content</code> para gerar.
             </p>
@@ -189,7 +189,7 @@ export default async function FilmePage({ params }) {
         )}
 
         <div className="mt-8 pt-6 border-t border-[#1a1a1a]">
-          <Link href="/filmes-e-series" className="text-[#737373] hover:text-[#FF6600] text-sm transition-colors">
+          <Link href="/filmes-e-series" className="text-[#9ca3af] hover:text-[#FF6600] text-sm transition-colors">
             ← Voltar para Filmes e Séries
           </Link>
         </div>

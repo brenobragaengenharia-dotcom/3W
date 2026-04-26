@@ -95,7 +95,7 @@ export default function EnviarNoticiaPage() {
         <div className="max-w-sm w-full text-center bg-[#141414] border border-[#2a2a2a] rounded-2xl p-8">
           <p className="text-5xl mb-4">✅</p>
           <h1 className="text-white font-black text-xl mb-2">Notícia enviada!</h1>
-          <p className="text-[#737373] text-sm mb-6">O administrador vai revisar e publicar em breve.</p>
+          <p className="text-[#9ca3af] text-sm mb-6">O administrador vai revisar e publicar em breve.</p>
           <button
             onClick={() => setStatus(null)}
             className="w-full bg-[#FF6600] hover:bg-[#e55c00] text-white font-bold py-2.5 rounded-lg transition-colors text-sm"
@@ -116,7 +116,7 @@ export default function EnviarNoticiaPage() {
             <span className="text-[#FF6600]">3W</span>
             <span className="text-white ml-1">Redação</span>
           </span>
-          <Link href="/" className="text-xs text-[#737373] hover:text-white transition-colors">
+          <Link href="/" className="text-xs text-[#9ca3af] hover:text-white transition-colors">
             Ver site →
           </Link>
         </div>
@@ -125,7 +125,7 @@ export default function EnviarNoticiaPage() {
       <main className="max-w-3xl mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-2xl font-black text-white">Submeter notícia</h1>
-          <p className="text-[#737373] text-sm mt-1">
+          <p className="text-[#9ca3af] text-sm mt-1">
             Preencha todos os campos. O artigo ficará em revisão até a aprovação do editor.
           </p>
         </div>

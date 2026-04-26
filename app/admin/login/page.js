@@ -34,7 +34,7 @@ export default function AdminLoginPage() {
             <span className="text-[#FF6600]">3W</span>
             <span className="text-white ml-1">Admin</span>
           </p>
-          <p className="text-[#737373] text-sm mt-1">Área restrita — somente administradores</p>
+          <p className="text-[#9ca3af] text-sm mt-1">Área restrita — somente administradores</p>
         </div>
 
         <form onSubmit={handleSubmit} className="bg-[#141414] border border-[#2a2a2a] rounded-xl p-6 space-y-4">
@@ -48,7 +48,7 @@ export default function AdminLoginPage() {
               onChange={e => setPassword(e.target.value)}
               autoFocus
               required
-              className="w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg px-4 py-2.5 text-white placeholder-[#737373] focus:border-[#FF6600] focus:outline-none text-sm"
+              className="w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg px-4 py-2.5 text-white placeholder-[#9ca3af] focus:border-[#FF6600] focus:outline-none text-sm"
               placeholder="••••••••"
             />
           </div>

@@ -45,3 +45,4 @@ next-env.d.ts
 
 # Exceção: o exemplo de configuração entra no repo
 !.env.local.example
+.env*.local

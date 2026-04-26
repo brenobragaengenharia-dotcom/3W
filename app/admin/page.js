@@ -20,7 +20,7 @@ function PreviewModal({ article, onClose, onApprove, onReject, processing }) {
         {/* Header do modal */}
         <div className="flex items-center justify-between p-5 border-b border-[#2a2a2a]">
           <h2 className="text-white font-bold text-sm">Pré-visualização do artigo</h2>
-          <button onClick={onClose} className="text-[#737373] hover:text-white transition-colors">
+          <button onClick={onClose} className="text-[#9ca3af] hover:text-white transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -31,11 +31,11 @@ function PreviewModal({ article, onClose, onApprove, onReject, processing }) {
         <div className="p-5 space-y-4 max-h-[70vh] overflow-y-auto">
           {/* Meta */}
           <div className="flex items-center gap-2 flex-wrap">
-            <span className={`text-xs font-semibold ${CATEGORIA_COLORS[article.categoria] || 'text-[#737373]'}`}>{article.categoria}</span>
+            <span className={`text-xs font-semibold ${CATEGORIA_COLORS[article.categoria] || 'text-[#9ca3af]'}`}>{article.categoria}</span>
             <span className="text-[#4a4a4a]">·</span>
-            <time className="text-xs text-[#737373]">{new Date(article.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}</time>
+            <time className="text-xs text-[#9ca3af]">{new Date(article.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}</time>
             <span className="text-[#4a4a4a]">·</span>
-            <span className="text-xs text-[#737373]">{article.tempo_leitura} min</span>
+            <span className="text-xs text-[#9ca3af]">{article.tempo_leitura} min</span>
           </div>
 
           {/* Manchete */}
@@ -73,7 +73,7 @@ function PreviewModal({ article, onClose, onApprove, onReject, processing }) {
           )}
 
           {/* Info de submissão */}
-          <div className="bg-[#1a1a1a] rounded-lg p-3 text-xs text-[#737373] space-y-1">
+          <div className="bg-[#1a1a1a] rounded-lg p-3 text-xs text-[#9ca3af] space-y-1">
             <p>Submetido por: <span className="text-white">{article.submetido_por || '—'}</span></p>
             <p>Slug gerado: <span className="text-[#FF6600] font-mono">{article.slug}</span></p>
             <p>ID: <span className="font-mono">{article.id}</span></p>
@@ -206,13 +206,13 @@ export default function AdminDashboard() {
             <Link
               href="/"
               target="_blank"
-              className="text-xs text-[#737373] hover:text-white transition-colors px-2 py-1.5"
+              className="text-xs text-[#9ca3af] hover:text-white transition-colors px-2 py-1.5"
             >
               Ver site
             </Link>
             <button
               onClick={logout}
-              className="text-xs text-[#737373] hover:text-red-400 transition-colors px-2 py-1.5"
+              className="text-xs text-[#9ca3af] hover:text-red-400 transition-colors px-2 py-1.5"
             >
               Sair
             </button>
@@ -229,12 +229,12 @@ export default function AdminDashboard() {
               <span className="ml-2 text-base font-normal text-[#FF6600]">({articles.length})</span>
             )}
           </h1>
-          <p className="text-[#737373] text-sm mt-1">Revise e aprove os artigos submetidos pela equipe.</p>
+          <p className="text-[#9ca3af] text-sm mt-1">Revise e aprove os artigos submetidos pela equipe.</p>
         </div>
 
         {/* Estados */}
         {loading && (
-          <div className="text-center py-16 text-[#737373]">Carregando artigos...</div>
+          <div className="text-center py-16 text-[#9ca3af]">Carregando artigos...</div>
         )}
         {error && (
           <div className="text-center py-16 text-red-400">{error}</div>
@@ -243,7 +243,7 @@ export default function AdminDashboard() {
           <div className="text-center py-16 bg-[#141414] border border-[#2a2a2a] rounded-2xl">
             <p className="text-4xl mb-3">📭</p>
             <p className="text-white font-semibold mb-1">Nenhum artigo pendente</p>
-            <p className="text-[#737373] text-sm">Quando a equipe submeter notícias, elas aparecerão aqui.</p>
+            <p className="text-[#9ca3af] text-sm">Quando a equipe submeter notícias, elas aparecerão aqui.</p>
             <Link href="/admin/enviar" className="inline-block mt-4 text-[#FF6600] text-sm hover:underline">
               Submeter uma notícia →
             </Link>
@@ -270,14 +270,14 @@ export default function AdminDashboard() {
                 {/* Info */}
                 <div className="flex-1 p-4 min-w-0">
                   <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-                    <span className={`text-xs font-semibold ${CATEGORIA_COLORS[article.categoria] || 'text-[#737373]'}`}>{article.categoria}</span>
+                    <span className={`text-xs font-semibold ${CATEGORIA_COLORS[article.categoria] || 'text-[#9ca3af]'}`}>{article.categoria}</span>
                     <span className="text-[#4a4a4a]">·</span>
-                    <time className="text-xs text-[#737373]">{new Date(article.data).toLocaleDateString('pt-BR')}</time>
+                    <time className="text-xs text-[#9ca3af]">{new Date(article.data).toLocaleDateString('pt-BR')}</time>
                     <span className="text-[#4a4a4a]">·</span>
-                    <span className="text-xs text-[#737373]">por {article.submetido_por || '—'}</span>
+                    <span className="text-xs text-[#9ca3af]">por {article.submetido_por || '—'}</span>
                   </div>
                   <h2 className="text-white font-bold text-sm leading-snug mb-1 line-clamp-2">{article.titulo}</h2>
-                  <p className="text-[#737373] text-xs line-clamp-2">{article.descricao}</p>
+                  <p className="text-[#9ca3af] text-xs line-clamp-2">{article.descricao}</p>
                   <p className="text-[#4a4a4a] text-xs mt-2">
                     Enviado em {new Date(article.submetido_em).toLocaleString('pt-BR')}
                   </p>

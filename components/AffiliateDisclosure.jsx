@@ -13,7 +13,7 @@ export function AffiliateDisclosureFooter() {
   return (
     <div className="border-t border-[#1a1a1a] bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto px-4 py-4">
-        <p className="text-[11px] leading-relaxed text-[#737373]">
+        <p className="text-[11px] leading-relaxed text-[#9ca3af]">
           <strong className="text-[#b3b3b3]">Transparência:</strong> Algumas páginas deste site contêm
           links de afiliado.
           Quando você compra por esses links, o 3W pode receber uma comissão — sem custo adicional para você.
@@ -56,7 +56,7 @@ export function AffiliateDisclosureInline({ variant = 'compact' }) {
 
   // compact
   return (
-    <p className="my-2 text-[10px] uppercase tracking-widest text-[#737373]">
+    <p className="my-2 text-[10px] uppercase tracking-widest text-[#9ca3af]">
       <span
         aria-label="Aviso de afiliado"
         className="mr-1.5 inline-block rounded bg-[#FF6600]/15 px-1.5 py-0.5 font-bold text-[#FF6600]"

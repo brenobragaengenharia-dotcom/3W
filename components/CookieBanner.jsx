@@ -141,7 +141,7 @@ export default function CookieBanner() {
                   <input type="checkbox" checked disabled className="mt-1 accent-[#FF6600]" />
                   <span>
                     <strong className="block text-white">Essenciais</strong>
-                    <span className="text-[#737373]">
+                    <span className="text-[#9ca3af]">
                       Necessários para o site funcionar (sessão, preferências). Não podem ser desativados.
                     </span>
                   </span>
@@ -155,7 +155,7 @@ export default function CookieBanner() {
                   />
                   <span>
                     <strong className="block text-white">Analíticos</strong>
-                    <span className="text-[#737373]">
+                    <span className="text-[#9ca3af]">
                       Google Analytics 4 e Meta Pixel para entender como o site é usado. Dados agregados.
                     </span>
                   </span>
@@ -185,7 +185,7 @@ export default function CookieBanner() {
                 <button
                   type="button"
                   onClick={() => setShowDetails(true)}
-                  className="text-xs text-[#737373] underline underline-offset-2 hover:text-[#FF6600] transition-colors"
+                  className="text-xs text-[#9ca3af] underline underline-offset-2 hover:text-[#FF6600] transition-colors"
                 >
                   Personalizar
                 </button>
@@ -202,7 +202,7 @@ export default function CookieBanner() {
                 <button
                   type="button"
                   onClick={() => setShowDetails(false)}
-                  className="text-xs text-[#737373] underline underline-offset-2 hover:text-[#FF6600] transition-colors"
+                  className="text-xs text-[#9ca3af] underline underline-offset-2 hover:text-[#FF6600] transition-colors"
                 >
                   Voltar
                 </button>

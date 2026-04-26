@@ -29,7 +29,7 @@ export default function ContatoPage() {
       </nav>
 
       <h1 className="text-4xl font-black text-white mb-2">Fale com a gente</h1>
-      <p className="text-[#737373] mb-8">Tem dúvidas, sugestões ou quer anunciar? Envie uma mensagem.</p>
+      <p className="text-[#9ca3af] mb-8">Tem dúvidas, sugestões ou quer anunciar? Envie uma mensagem.</p>
 
       {status === 'success' ? (
         <div className="bg-green-900/30 border border-green-700/40 text-green-400 px-6 py-8 rounded-xl text-center">
@@ -38,7 +38,7 @@ export default function ContatoPage() {
           </svg>
           <p className="font-semibold text-lg">Mensagem enviada com sucesso!</p>
           <p className="text-green-500 text-sm mt-1">Retornaremos em breve.</p>
-          <Link href="/" className="inline-block mt-4 text-sm text-[#737373] hover:text-white transition-colors">
+          <Link href="/" className="inline-block mt-4 text-sm text-[#9ca3af] hover:text-white transition-colors">
             ← Voltar para a home
           </Link>
         </div>
@@ -48,12 +48,12 @@ export default function ContatoPage() {
             <div>
               <label htmlFor="nome" className="block text-sm font-medium text-[#b3b3b3] mb-1">Nome <span aria-hidden="true" className="text-[#FF6600]">*</span></label>
               <input id="nome" name="nome" type="text" required value={form.nome} onChange={handleChange}
-                className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#FF6600] focus:outline-none" />
+                className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#9ca3af] text-sm focus:border-[#FF6600] focus:outline-none" />
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-[#b3b3b3] mb-1">E-mail <span aria-hidden="true" className="text-[#FF6600]">*</span></label>
               <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} autoComplete="email"
-                className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#FF6600] focus:outline-none" />
+                className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#9ca3af] text-sm focus:border-[#FF6600] focus:outline-none" />
             </div>
           </div>
 
@@ -74,7 +74,7 @@ export default function ContatoPage() {
             <label htmlFor="mensagem" className="block text-sm font-medium text-[#b3b3b3] mb-1">Mensagem <span aria-hidden="true" className="text-[#FF6600]">*</span></label>
             <textarea id="mensagem" name="mensagem" required rows={5} value={form.mensagem} onChange={handleChange}
               placeholder="Escreva sua mensagem aqui..."
-              className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#FF6600] focus:outline-none resize-none" />
+              className="w-full bg-[#141414] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#9ca3af] text-sm focus:border-[#FF6600] focus:outline-none resize-none" />
           </div>
 
           <button type="submit" disabled={status === 'loading'}

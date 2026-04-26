@@ -26,7 +26,7 @@ export default function PoliticaDePrivacidadePage() {
           <span aria-current="page">Política de Privacidade</span>
         </nav>
         <h1 className="text-4xl font-black text-white mb-2">Política de Privacidade</h1>
-        <p className="text-[#737373] text-sm mb-10">Última atualização: {LAST_UPDATED}</p>
+        <p className="text-[#9ca3af] text-sm mb-10">Última atualização: {LAST_UPDATED}</p>
         <div className="space-y-8 text-[#b3b3b3] leading-relaxed">
           <section>
             <p>
@@ -196,7 +196,7 @@ export default function PoliticaDePrivacidadePage() {
           <div className="pt-4 border-t border-[#1a1a1a]">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-[#737373] hover:text-[#FF6600] text-sm transition-colors"
+              className="inline-flex items-center gap-2 text-[#9ca3af] hover:text-[#FF6600] text-sm transition-colors"
             >
               ← Voltar para o início
             </Link>

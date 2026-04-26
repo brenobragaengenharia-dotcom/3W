@@ -4,6 +4,7 @@ import { NOTICIAS, NOTICIAS_ESPORTES } from '@/lib/mock-data';
 import { schemaBreadcrumb, schemaNewsArticle } from '@/lib/structured-data';
 import content from '@/lib/content.json';
 import NewsletterBanner from '@/components/NewsletterBanner';
+import ArticleCTA from '@/components/ArticleCTA';
 
 // Todas as notícias (gerais + esportes) compartilham este template de página
 const TODAS_NOTICIAS = [...NOTICIAS, ...NOTICIAS_ESPORTES];
@@ -19,6 +20,8 @@ export async function generateMetadata({ params }) {
 
   const g = content.noticias?.[slug] ?? content.esportes?.[slug];
 
+  const ogUrl = `/api/og?title=${encodeURIComponent(noticia.titulo)}&category=${encodeURIComponent(noticia.categoria)}`;
+
   return {
     title: noticia.titulo,
     description: noticia.descricao,
@@ -27,10 +30,18 @@ export async function generateMetadata({ params }) {
       type: 'article',
       title: noticia.titulo,
       description: g?.paragrafos?.[0] ?? noticia.descricao,
-      images: [{ url: noticia.imagem, width: 1200, height: 630 }],
+      images: [
+        { url: ogUrl, width: 1200, height: 630, alt: noticia.titulo },
+      ],
       publishedTime: noticia.data,
       authors: [noticia.autor],
       section: noticia.categoria,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: noticia.titulo,
+      description: g?.paragrafos?.[0] ?? noticia.descricao,
+      images: [ogUrl],
     },
   };
 }
@@ -89,15 +100,15 @@ export default async function NoticiaPage({ params }) {
         <article itemScope itemType="https://schema.org/NewsArticle">
           {/* Categoria + Meta */}
           <div className="flex items-center gap-3 mb-4">
-            <span className={`text-sm font-semibold ${CATEGORIA_COLORS[noticia.categoria] || 'text-[#737373]'}`} itemProp="articleSection">
+            <span className={`text-sm font-semibold ${CATEGORIA_COLORS[noticia.categoria] || 'text-[#9ca3af]'}`} itemProp="articleSection">
               {noticia.categoria}
             </span>
             <span className="text-[#2a2a2a]" aria-hidden="true">·</span>
-            <time dateTime={noticia.data} itemProp="datePublished" className="text-sm text-[#737373]">
+            <time dateTime={noticia.data} itemProp="datePublished" className="text-sm text-[#9ca3af]">
               {new Date(noticia.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
             </time>
             <span className="text-[#2a2a2a]" aria-hidden="true">·</span>
-            <span className="text-sm text-[#737373]">{noticia.tempo_leitura} min de leitura</span>
+            <span className="text-sm text-[#9ca3af]">{noticia.tempo_leitura} min de leitura</span>
           </div>
 
           {/* Título */}
@@ -112,7 +123,7 @@ export default async function NoticiaPage({ params }) {
 
           {/* Autor */}
           <address rel="author" className="not-italic mb-6">
-            <span className="text-sm text-[#737373]">Por{' '}
+            <span className="text-sm text-[#9ca3af]">Por{' '}
               <span itemProp="author" className="text-white font-medium">{noticia.autor}</span>
             </span>
           </address>
@@ -157,7 +168,7 @@ export default async function NoticiaPage({ params }) {
               </>
             ) : (
               <div className="bg-[#141414] border border-[#2a2a2a] rounded-xl p-6 text-center">
-                <p className="text-[#737373] text-sm">
+                <p className="text-[#9ca3af] text-sm">
                   Conteúdo sendo preparado. Execute{' '}
                   <code className="text-[#FF6600]">npm run update-content</code> para gerar.
                 </p>
@@ -165,6 +176,9 @@ export default async function NoticiaPage({ params }) {
             )}
           </div>
         </article>
+
+        {/* CTA monetário contextual por categoria */}
+        <ArticleCTA categoria={noticia.categoria} slug={noticia.slug} />
 
         {/* Notícias relacionadas */}
         {relacionadas.length > 0 && (
@@ -178,7 +192,7 @@ export default async function NoticiaPage({ params }) {
                       <img src={r.imagem} alt={r.titulo} loading="lazy" className="w-full h-full object-cover" />
                     </div>
                     <div className="p-3">
-                      <span className={`text-xs font-semibold ${CATEGORIA_COLORS[r.categoria] || 'text-[#737373]'}`}>{r.categoria}</span>
+                      <span className={`text-xs font-semibold ${CATEGORIA_COLORS[r.categoria] || 'text-[#9ca3af]'}`}>{r.categoria}</span>
                       <h3 className="text-white text-xs font-semibold line-clamp-2 mt-1 hover:text-[#FF6600] transition-colors">{r.titulo}</h3>
                     </div>
                   </Link>

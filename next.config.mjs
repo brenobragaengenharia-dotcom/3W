@@ -48,9 +48,11 @@ const nextConfig = {
       { source: '/filmes',  destination: '/filmes-e-series',   permanent: true },
       { source: '/series',  destination: '/filmes-e-series',   permanent: true },
       { source: '/movies',  destination: '/filmes-e-series',   permanent: true },
-      { source: '/music',   destination: '/musica',   permanent: true },
-      { source: '/games',   destination: '/jogos',    permanent: true },
       { source: '/news',    destination: '/noticias', permanent: true },
+      { source: '/musica',  destination: '/',          permanent: true },
+      { source: '/jogos',   destination: '/',          permanent: true },
+      { source: '/music',   destination: '/',          permanent: true },
+      { source: '/games',   destination: '/',          permanent: true },
     ];
   },
 };

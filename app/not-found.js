@@ -10,7 +10,7 @@ export default function NotFound() {
     <div className="flex-1 flex flex-col items-center justify-center px-4 py-24 text-center">
       <p className="text-[#FF6600] font-black text-8xl mb-4">404</p>
       <h1 className="text-2xl font-bold text-white mb-3">Página não encontrada</h1>
-      <p className="text-[#737373] mb-8 max-w-sm">
+      <p className="text-[#9ca3af] mb-8 max-w-sm">
         A página que você está procurando não existe ou foi movida.
       </p>
       <div className="flex items-center gap-3 flex-wrap justify-center">

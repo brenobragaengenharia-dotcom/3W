@@ -43,13 +43,13 @@ export default function PaniniPromo() {
             <div className="flex items-center gap-2 mb-1">
               <span className="text-xs font-bold uppercase tracking-widest text-[#FF6600]">Parceiro Oficial</span>
               <span className="w-1 h-1 rounded-full bg-[#FF6600]" />
-              <span className="text-xs text-[#737373]">Link de afiliado</span>
+              <span className="text-xs text-[#9ca3af]">Link de afiliado</span>
             </div>
             <h2 id="panini-promo-title" className="text-2xl md:text-3xl font-black text-white leading-tight">
               HQs &amp; Mangás{' '}
               <span className="text-[#FF6600]">Panini</span>
             </h2>
-            <p className="text-[#737373] text-sm mt-1">
+            <p className="text-[#9ca3af] text-sm mt-1">
               Os melhores títulos Marvel, DC e mangás — compre direto no site oficial.
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function PaniniPromo() {
               <span className="w-3 h-3 rounded-sm bg-[#FF6600]" aria-hidden="true" />
               HQs em Destaque
             </h3>
-            <Link href="/comics" className="text-xs text-[#737373] hover:text-[#FF6600] transition-colors">
+            <Link href="/comics" className="text-xs text-[#9ca3af] hover:text-[#FF6600] transition-colors">
               Ver todos →
             </Link>
           </div>
@@ -94,7 +94,7 @@ export default function PaniniPromo() {
               <span className="w-3 h-3 rounded-sm bg-[#FF6600]" aria-hidden="true" />
               Mangás em Destaque
             </h3>
-            <Link href="/comics" className="text-xs text-[#737373] hover:text-[#FF6600] transition-colors">
+            <Link href="/comics" className="text-xs text-[#9ca3af] hover:text-[#FF6600] transition-colors">
               Ver todos →
             </Link>
           </div>
@@ -104,7 +104,7 @@ export default function PaniniPromo() {
         </div>
 
         {/* Rodapé do bloco */}
-        <p className="text-[#444] text-[11px] text-center mt-6">
+        <p className="text-[#737373] text-[11px] text-center mt-6">
           * Links de afiliado. Ao comprar você apoia o 3W Entretenimento sem custo extra.
         </p>
       </div>

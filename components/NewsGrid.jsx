@@ -20,7 +20,7 @@ export default function NewsGrid({ limit = 6 }) {
           <h2 id="noticias-title" className="text-lg md:text-xl font-bold text-white">
             Últimas Notícias
           </h2>
-          <Link href="/noticias" className="text-sm text-[#737373] hover:text-[#FF6600] transition-colors flex items-center gap-1">
+          <Link href="/noticias" className="text-sm text-[#9ca3af] hover:text-[#FF6600] transition-colors flex items-center gap-1">
             Ver todas
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
@@ -46,11 +46,11 @@ export default function NewsGrid({ limit = 6 }) {
                 {/* Conteúdo */}
                 <div className="p-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className={`text-xs font-semibold ${CATEGORIA_COLORS[noticia.categoria] || 'text-[#737373]'}`}>
+                    <span className={`text-xs font-semibold ${CATEGORIA_COLORS[noticia.categoria] || 'text-[#9ca3af]'}`}>
                       {noticia.categoria}
                     </span>
                     <span className="text-[#2a2a2a]" aria-hidden="true">·</span>
-                    <time dateTime={noticia.data} className="text-xs text-[#737373]">
+                    <time dateTime={noticia.data} className="text-xs text-[#9ca3af]">
                       {new Date(noticia.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' })}
                     </time>
                   </div>
@@ -59,11 +59,11 @@ export default function NewsGrid({ limit = 6 }) {
                     {noticia.titulo}
                   </h3>
 
-                  <p className="text-[#737373] text-xs leading-relaxed line-clamp-2">
+                  <p className="text-[#9ca3af] text-xs leading-relaxed line-clamp-2">
                     {noticia.descricao}
                   </p>
 
-                  <div className="flex items-center gap-2 mt-3 text-xs text-[#737373]">
+                  <div className="flex items-center gap-2 mt-3 text-xs text-[#9ca3af]">
                     <span>{noticia.autor}</span>
                     <span aria-hidden="true">·</span>
                     <span>{noticia.tempo_leitura} min de leitura</span>

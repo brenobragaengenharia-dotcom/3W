@@ -27,7 +27,7 @@ function FilmeCard({ filme }) {
           </div>
         </div>
         <h3 className="text-white text-[11px] font-semibold leading-snug line-clamp-2">{filme.titulo}</h3>
-        <p className="text-[#737373] text-[10px] mt-0.5 line-clamp-1">{filme.categoria}</p>
+        <p className="text-[#9ca3af] text-[10px] mt-0.5 line-clamp-1">{filme.categoria}</p>
       </Link>
     </article>
   );
@@ -47,13 +47,13 @@ export default function IngressoPromo() {
             <div className="flex items-center gap-2 mb-1">
               <span className="text-xs font-bold uppercase tracking-widest text-[#e11d48]">Parceiro Oficial</span>
               <span className="w-1 h-1 rounded-full bg-[#e11d48]" />
-              <span className="text-xs text-[#737373]">Link patrocinado</span>
+              <span className="text-xs text-[#9ca3af]">Link patrocinado</span>
             </div>
             <h2 id="ingresso-promo-title" className="text-2xl md:text-3xl font-black text-white leading-tight">
               Filmes em Cartaz{' '}
               <span className="text-[#e11d48]">Agora</span>
             </h2>
-            <p className="text-[#737373] text-sm mt-1">
+            <p className="text-[#9ca3af] text-sm mt-1">
               Garanta seu ingresso online — compre com facilidade direto no ingresso.com.
             </p>
           </div>
@@ -79,7 +79,7 @@ export default function IngressoPromo() {
         </div>
 
         {/* Rodapé do bloco */}
-        <p className="text-[#444] text-[11px] text-center mt-6">
+        <p className="text-[#737373] text-[11px] text-center mt-6">
           * Link patrocinado. Ao comprar você apoia o 3W Entretenimento sem custo extra.
         </p>
       </div>

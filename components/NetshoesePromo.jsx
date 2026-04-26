@@ -24,14 +24,14 @@ export default function NetshoesePromo() {
             <div className="flex items-center gap-2 mb-1">
               <span className="text-xs font-bold uppercase tracking-widest text-green-500">Parceiro Oficial</span>
               <span className="w-1 h-1 rounded-full bg-green-500" />
-              <span className="text-xs text-[#737373]">Link de afiliado</span>
+              <span className="text-xs text-[#9ca3af]">Link de afiliado</span>
             </div>
             <h2 id="netshoes-promo-title" className="text-2xl md:text-3xl font-black text-white leading-tight">
               Loja de{' '}
               <span className="text-green-500">Esportes</span>{' '}
               <span className="text-white">Netshoes</span>
             </h2>
-            <p className="text-[#737373] text-sm mt-1">
+            <p className="text-[#9ca3af] text-sm mt-1">
               Equipamentos e roupas esportivas — compre direto na Netshoes com os melhores preços.
             </p>
           </div>
@@ -85,7 +85,7 @@ export default function NetshoesePromo() {
           ))}
         </div>
 
-        <p className="text-[#444] text-[11px] text-center mt-6">
+        <p className="text-[#737373] text-[11px] text-center mt-6">
           * Links de afiliado. Ao comprar você apoia o 3W Entretenimento sem custo extra.
         </p>
       </div>

@@ -75,7 +75,7 @@ export default function NewsletterBanner() {
               required
               autoComplete="email"
               disabled={status === 'loading'}
-              className="flex-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#737373] text-sm focus:border-[#FF6600] focus:outline-none disabled:opacity-50"
+              className="flex-1 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg px-4 py-3 text-white placeholder-[#9ca3af] text-sm focus:border-[#FF6600] focus:outline-none disabled:opacity-50"
             />
             <button
               type="submit"
@@ -87,7 +87,7 @@ export default function NewsletterBanner() {
           </form>
         )}
 
-        <p className="text-[#737373] text-xs mt-4">
+        <p className="text-[#9ca3af] text-xs mt-4">
           Ao se inscrever, você concorda com nossa{' '}
           <a href="/politica-de-privacidade" className="underline hover:text-white transition-colors">
             Política de Privacidade

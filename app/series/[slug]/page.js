@@ -91,11 +91,11 @@ export default async function SeriePage({ params }) {
               </p>
             )}
             <h1 className="text-3xl md:text-4xl font-black text-white mb-3">{serie.titulo}</h1>
-            <div className="flex flex-wrap items-center gap-3 text-sm text-[#737373] mb-4">
+            <div className="flex flex-wrap items-center gap-3 text-sm text-[#9ca3af] mb-4">
               {serie.ano        && <span>{serie.ano}</span>}
               {g?.temporadas    && <><span aria-hidden="true">·</span><span>{g.temporadas} temporada{g.temporadas > 1 ? 's' : ''}</span></>}
               {serie.nota       && <span className="rating-badge">★ {serie.nota}</span>}
-              {g?.nota_tmdb     && <span className="text-xs text-[#737373]">TMDB {g.nota_tmdb}</span>}
+              {g?.nota_tmdb     && <span className="text-xs text-[#9ca3af]">TMDB {g.nota_tmdb}</span>}
             </div>
             {g?.generos?.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-4">
@@ -107,12 +107,12 @@ export default async function SeriePage({ params }) {
               </div>
             )}
             {g?.redes?.length > 0 && (
-              <p className="text-sm text-[#737373]">
+              <p className="text-sm text-[#9ca3af]">
                 <span className="text-white font-medium">Plataforma:</span> {g.redes.join(', ')}
               </p>
             )}
             {g?.criadores && (
-              <p className="text-sm text-[#737373] mt-1">
+              <p className="text-sm text-[#9ca3af] mt-1">
                 <span className="text-white font-medium">Criado por:</span> {g.criadores}
               </p>
             )}
@@ -156,12 +156,12 @@ export default async function SeriePage({ params }) {
                   {ator.foto ? (
                     <img src={ator.foto} alt={ator.nome} className="w-12 h-12 rounded-full object-cover mx-auto mb-2" />
                   ) : (
-                    <div className="w-12 h-12 rounded-full bg-[#2a2a2a] mx-auto mb-2 flex items-center justify-center text-[#737373] text-xl">
+                    <div className="w-12 h-12 rounded-full bg-[#2a2a2a] mx-auto mb-2 flex items-center justify-center text-[#9ca3af] text-xl">
                       👤
                     </div>
                   )}
                   <p className="text-white text-xs font-semibold line-clamp-1">{ator.nome}</p>
-                  <p className="text-[#737373] text-xs line-clamp-1">{ator.personagem}</p>
+                  <p className="text-[#9ca3af] text-xs line-clamp-1">{ator.personagem}</p>
                 </div>
               ))}
             </div>
@@ -170,7 +170,7 @@ export default async function SeriePage({ params }) {
 
         {!g && (
           <div className="bg-[#141414] border border-[#2a2a2a] rounded-xl p-6 text-center">
-            <p className="text-[#737373] text-sm">
+            <p className="text-[#9ca3af] text-sm">
               Conteúdo sendo preparado. Execute{' '}
               <code className="text-[#FF6600]">npm run update-content</code> para gerar.
             </p>
@@ -178,7 +178,7 @@ export default async function SeriePage({ params }) {
         )}
 
         <div className="mt-8 pt-6 border-t border-[#1a1a1a]">
-          <Link href="/filmes-e-series" className="text-[#737373] hover:text-[#FF6600] text-sm transition-colors">
+          <Link href="/filmes-e-series" className="text-[#9ca3af] hover:text-[#FF6600] text-sm transition-colors">
             ← Voltar para Filmes e Séries
           </Link>
         </div>
