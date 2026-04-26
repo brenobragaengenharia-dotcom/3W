@@ -26,7 +26,7 @@ DIRETRIZES DE ESCRITA (obrigatórias):
 9. NUNCA invente dados, números, nomes ou declarações que não estavam no material bruto.
 `;
 
-const CATEGORIAS_VALIDAS = ['Cinema', 'Séries', 'Games', 'Comics', 'Cultura Pop', 'Futebol', 'NBA', 'Fórmula 1', 'Esportes'];
+const CATEGORIAS_VALIDAS = ['Cinema', 'Séries', 'Comics', 'Futebol', 'NBA', 'Fórmula 1', 'Esportes', 'Xadrez'];
 
 async function callClaude(prompt) {
   const key = process.env.ANTHROPIC_API_KEY;
@@ -77,7 +77,7 @@ function toIsoDate(d) {
   return t.toISOString().slice(0, 10);
 }
 
-function normalizaCategoria(cat, fallback = 'Cultura Pop') {
+function normalizaCategoria(cat, fallback = 'Cinema') {
   if (!cat) return fallback;
   const norm = String(cat).trim();
   // match case-insensitive contra lista válida
@@ -95,7 +95,7 @@ MATERIAL BRUTO:
 - Título original: ${raw.titulo}
 - Resumo/lead original: ${raw.descricao || '(sem resumo)'}
 - Corpo bruto: ${(raw.corpo_original || raw.descricao || '').slice(0, 2000)}
-- Categoria sugerida: ${raw.categoria_padrao || 'Cultura Pop'}
+- Categoria sugerida: ${raw.categoria_padrao || 'Cinema'}
 - Data: ${raw.data_publicacao}
 
 ${DIRETRIZES}
@@ -135,7 +135,7 @@ RETORNE EXATAMENTE este JSON (sem markdown, sem explicações):
   }
 
   const titulo = String(parsed.titulo || raw.titulo).trim();
-  const categoria = normalizaCategoria(parsed.categoria, raw.categoria_padrao || 'Cultura Pop');
+  const categoria = normalizaCategoria(parsed.categoria, raw.categoria_padrao || 'Cinema');
   const data = toIsoDate(raw.data_publicacao);
   const tempo_leitura = Number.isFinite(+parsed.tempo_leitura) ? +parsed.tempo_leitura : 4;
 

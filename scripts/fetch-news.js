@@ -309,13 +309,13 @@ async function main() {
         })();
         result = {
           slug,
-          categoria: raw.categoria_padrao || 'Cultura Pop',
+          categoria: raw.categoria_padrao || 'Cinema',
           data: isoDate,
           entrada_mockdata: {
             slug,
             titulo: raw.titulo,
             descricao: raw.descricao || '',
-            categoria: raw.categoria_padrao || 'Cultura Pop',
+            categoria: raw.categoria_padrao || 'Cinema',
             autor: 'Redação 3W',
             data: isoDate,
             imagem: raw.imagem || '/images/noticias/placeholder.jpg',
