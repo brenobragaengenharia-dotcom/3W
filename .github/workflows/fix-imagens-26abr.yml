@@ -1,0 +1,178 @@
+name: Fix imagens placeholder (one-shot 26abr)
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Patch scripts/lib/gnews.js (paridade com rss.js)
+        run: |
+          cat > scripts/lib/gnews.js << 'GNJS'
+          // scripts/lib/gnews.js — cliente GNews com og:image fallback + HEAD validation
+          import { isValidImageUrl } from './rss.js';
+
+          const UA = '3W-Entretenimento NewsBot/1.0 (+https://3w-entretenimento.com)';
+
+          async function tryOgImage(url, timeoutMs = 5000) {
+            if (!url) return null;
+            try {
+              const ac = new AbortController();
+              const to = setTimeout(() => ac.abort(), timeoutMs);
+              const res = await fetch(url, {
+                headers: { 'User-Agent': UA, 'Accept': 'text/html,*/*' },
+                signal: ac.signal, redirect: 'follow',
+              });
+              clearTimeout(to);
+              if (!res.ok) return null;
+              const html = (await res.text()).slice(0, 200000);
+              const m =
+                html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i) ||
+                html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i) ||
+                html.match(/<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i);
+              return m ? m[1] : null;
+            } catch { return null; }
+          }
+
+          async function resolveGnewsImagem(feedImage, articleUrl) {
+            if (feedImage && (await isValidImageUrl(feedImage))) return feedImage;
+            const og = await tryOgImage(articleUrl);
+            if (og && (await isValidImageUrl(og))) return og;
+            return null;
+          }
+
+          export async function fetchGnews(config) {
+            if (!config?.enabled) return [];
+            const key = process.env.GNEWS_API_KEY;
+            if (!key) {
+              console.warn('[gnews] GNEWS_API_KEY ausente — pulando GNews.');
+              return [];
+            }
+            const all = [];
+            for (const q of config.queries || []) {
+              const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(q.q)}&lang=pt&country=br&max=${q.max || 5}&apikey=${key}`;
+              try {
+                const res = await fetch(url);
+                if (!res.ok) {
+                  console.warn(`[gnews] "${q.q}" HTTP ${res.status}`);
+                  continue;
+                }
+                const json = await res.json();
+                const articles = json.articles || [];
+                const imagens = await Promise.all(articles.map((a) => resolveGnewsImagem(a.image, a.url)));
+                articles.forEach((a, i) => {
+                  all.push({
+                    titulo: a.title,
+                    descricao: a.description,
+                    corpo_original: a.content || a.description || '',
+                    url: a.url,
+                    imagem: imagens[i],
+                    data_publicacao: a.publishedAt,
+                    autor_original: a.source?.name,
+                    fonte: a.source?.name || 'GNews',
+                    fonte_url: a.source?.url || null,
+                    categoria_padrao: q.categoria_padrao,
+                    tags_hint: [],
+                  });
+                });
+              } catch (err) {
+                console.warn(`[gnews] "${q.q}": ${err.message}`);
+              }
+            }
+            return all;
+          }
+          GNJS
+          node --check scripts/lib/gnews.js
+
+      - name: Escrever scripts/fix-placeholder-imagens.mjs
+        run: |
+          cat > scripts/fix-placeholder-imagens.mjs << 'MJS'
+          import { readFileSync, writeFileSync } from 'fs';
+          import { isValidImageUrl } from './lib/rss.js';
+
+          const UA = '3W-Entretenimento NewsBot/1.0';
+          const PLACEHOLDER = '/images/noticias/placeholder.jpg';
+
+          async function tryOgImage(url, timeoutMs = 6000) {
+            if (!url) return null;
+            try {
+              const ac = new AbortController();
+              const to = setTimeout(() => ac.abort(), timeoutMs);
+              const res = await fetch(url, {
+                headers: { 'User-Agent': UA, 'Accept': 'text/html,*/*' },
+                signal: ac.signal, redirect: 'follow',
+              });
+              clearTimeout(to);
+              if (!res.ok) return null;
+              const html = (await res.text()).slice(0, 300000);
+              const candidatos = [
+                html.match(/<meta[^>]+property=["']og:image:secure_url["'][^>]+content=["']([^"']+)["']/i),
+                html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i),
+                html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i),
+                html.match(/<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i),
+              ];
+              for (const m of candidatos) if (m) return m[1];
+              return null;
+            } catch { return null; }
+          }
+
+          const contentPath = 'lib/content.json';
+          const content = JSON.parse(readFileSync(contentPath, 'utf-8'));
+          const fixes = [];
+
+          for (const secao of ['noticias', 'esportes']) {
+            for (const slug of Object.keys(content[secao] || {})) {
+              const item = content[secao][slug];
+              if (item.imagem !== PLACEHOLDER) continue;
+              const url = item.fonte?.url;
+              if (!url) { console.log(`[skip-no-url] ${slug}`); continue; }
+              const og = await tryOgImage(url);
+              if (!og) { console.log(`[no-og]       ${slug}`); continue; }
+              const ok = await isValidImageUrl(og);
+              if (!ok) { console.log(`[invalid]     ${slug}  og=${og}`); continue; }
+              console.log(`[fix]         ${slug}  =>  ${og}`);
+              item.imagem = og;
+              fixes.push({ secao, slug, og });
+            }
+          }
+          writeFileSync(contentPath, JSON.stringify(content, null, 2), 'utf-8');
+
+          if (fixes.length > 0) {
+            const mockPath = 'lib/mock-data.js';
+            let src = readFileSync(mockPath, 'utf-8');
+            for (const f of fixes) {
+              const slugEsc = f.slug.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+              const re = new RegExp(`(slug:\\s*'${slugEsc}'[\\s\\S]*?imagem:\\s*')[^']+(')`, 'i');
+              if (re.test(src)) {
+                src = src.replace(re, `$1${f.og}$2`);
+              } else {
+                console.warn(`[mock-data not matched] ${f.slug}`);
+              }
+            }
+            writeFileSync(mockPath, src, 'utf-8');
+          }
+
+          console.log(`\n=> ${fixes.length} item(ns) corrigido(s).`);
+          MJS
+          node --check scripts/fix-placeholder-imagens.mjs
+
+      - name: Rodar correção
+        run: node scripts/fix-placeholder-imagens.mjs
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f scripts/fix-placeholder-imagens.mjs
+          git add scripts/lib/gnews.js lib/content.json lib/mock-data.js || true
+          git status
+          git commit -m "fix(noticias): re-resolve placeholder via og:image + paridade gnews.js" || echo "no changes"
+          git push
