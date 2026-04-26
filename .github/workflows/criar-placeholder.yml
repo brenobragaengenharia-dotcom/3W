@@ -1,0 +1,34 @@
+name: Criar placeholder.jpg (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Baixar placeholder.jpg de placehold.co
+        run: |
+          mkdir -p public/images/noticias
+          curl -sL -o public/images/noticias/placeholder.jpg \
+            "https://placehold.co/1280x720/0a0a0a/FF6600/jpg?text=3W%20Entretenimento&font=raleway"
+          file public/images/noticias/placeholder.jpg
+          ls -la public/images/noticias/placeholder.jpg
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/noticias/placeholder.jpg
+          if ! git diff --staged --quiet; then
+            git commit -m "feat(public): adiciona placeholder.jpg fisico para fallback de imagens"
+            git push origin HEAD:master
+          fi
