@@ -1,0 +1,148 @@
+name: Purgar Cultura Pop + Xadrez (one-shot)
+on:
+  workflow_dispatch:
+
+jobs:
+  purga:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Escrever scripts/purga-culturapop.mjs
+        run: |
+          cat > scripts/purga-culturapop.mjs << 'MJS'
+          import { readFileSync, writeFileSync } from 'fs';
+
+          const CATEGORIA_PROIBIDA = 'Cultura Pop';
+
+          // ─── content.json ─────────────────────────────────────────────────────
+          const cp = 'lib/content.json';
+          const c = JSON.parse(readFileSync(cp, 'utf-8'));
+          let removidosContent = 0;
+          for (const sec of ['noticias', 'esportes']) {
+            for (const slug of Object.keys(c[sec] || {})) {
+              if (c[sec][slug]?.categoria === CATEGORIA_PROIBIDA) {
+                console.log(`[content.json] remove ${sec}/${slug}`);
+                delete c[sec][slug];
+                removidosContent++;
+              }
+            }
+          }
+          writeFileSync(cp, JSON.stringify(c, null, 2), 'utf-8');
+          console.log(`[content.json] ${removidosContent} item(ns) removido(s)`);
+
+          // ─── mock-data.js ─────────────────────────────────────────────────────
+          // Para cada array NOTICIAS*, fazemos eval, filtramos, e reescrevemos.
+          const mp = 'lib/mock-data.js';
+          let src = readFileSync(mp, 'utf-8');
+
+          // pega quaisquer 'export const FOO = "..."' usados dentro dos arrays
+          const strConsts = [];
+          for (const m of src.matchAll(/^export const (\w+)\s*=\s*'([^']*?)';/gm)) {
+            strConsts.push(`const ${m[1]} = '${m[2]}';`);
+          }
+
+          function formatEntry(e) {
+            const esc = (s) => String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+            return `  {\n    id: ${e.id}, slug: '${esc(e.slug)}', titulo: '${esc(e.titulo)}',\n    descricao: '${esc(e.descricao)}',\n    categoria: '${esc(e.categoria)}', autor: '${esc(e.autor)}', data: '${esc(e.data)}',\n    imagem: '${esc(e.imagem)}', tempo_leitura: ${e.tempo_leitura},\n  }`;
+          }
+
+          let removidosMock = 0;
+          for (const arr of ['NOTICIAS', 'NOTICIAS_FUTEBOL', 'NOTICIAS_NBA', 'NOTICIAS_F1']) {
+            const re = new RegExp(`export const ${arr}\\s*=\\s*(\\[[\\s\\S]*?\\]);`);
+            const m = src.match(re);
+            if (!m) { console.log(`[mock-data.js] ${arr}: não encontrado`); continue; }
+            const items = eval(`${strConsts.join('\n')}\n${m[1]}`);
+            const filtered = items.filter((it) => it.categoria !== CATEGORIA_PROIBIDA);
+            const removidos = items.length - filtered.length;
+            removidosMock += removidos;
+            console.log(`[mock-data.js] ${arr}: ${items.length} → ${filtered.length} (removidos ${removidos})`);
+            const linhas = filtered.map(formatEntry).join(',\n');
+            const blocoNovo = `export const ${arr} = [\n${linhas}${filtered.length ? ',' : ''}\n];`;
+            src = src.replace(re, blocoNovo);
+          }
+          writeFileSync(mp, src, 'utf-8');
+          console.log(`[mock-data.js] total removido: ${removidosMock}`);
+
+          // ─── scripts/lib/news-rewrite.js: atualiza CATEGORIAS_VALIDAS + default
+          const nrPath = 'scripts/lib/news-rewrite.js';
+          let nr = readFileSync(nrPath, 'utf-8');
+          const novaLista = "['Cinema', 'Séries', 'Comics', 'Futebol', 'NBA', 'Fórmula 1', 'Esportes', 'Xadrez']";
+          nr = nr.replace(/const CATEGORIAS_VALIDAS = \[[^\]]+\]/, `const CATEGORIAS_VALIDAS = ${novaLista}`);
+          // troca defaults de "Cultura Pop" por "Cinema" (categoria genérica restante)
+          nr = nr.replace(/'Cultura Pop'/g, "'Cinema'");
+          writeFileSync(nrPath, nr, 'utf-8');
+          console.log('[news-rewrite.js] CATEGORIAS_VALIDAS atualizado e defaults remapeados para Cinema');
+
+          // ─── config/news-sources.json: muda categoria_padrao "Cultura Pop"
+          const cfgPath = 'config/news-sources.json';
+          const cfg = JSON.parse(readFileSync(cfgPath, 'utf-8'));
+          let trocas = 0;
+          for (const r of cfg.rss || []) {
+            if (r.categoria_padrao === CATEGORIA_PROIBIDA) {
+              console.log(`[config rss] ${r.nome}: ${CATEGORIA_PROIBIDA} → Comics`);
+              r.categoria_padrao = 'Comics';
+              trocas++;
+            }
+          }
+          if (cfg.gnews?.queries) {
+            cfg.gnews.queries = cfg.gnews.queries.filter((q) => {
+              if (q.categoria_padrao === CATEGORIA_PROIBIDA) {
+                console.log(`[config gnews] descarta query "${q.q}" (era Cultura Pop)`);
+                trocas++;
+                return false;
+              }
+              return true;
+            });
+            // Adiciona uma query Xadrez se ainda não tem
+            const temXadrez = cfg.gnews.queries.some((q) => q.categoria_padrao === 'Xadrez');
+            if (!temXadrez) {
+              cfg.gnews.queries.push({
+                q: 'xadrez OR "Magnus Carlsen" OR mundial OR Mequinho',
+                max: 4,
+                categoria_padrao: 'Xadrez',
+              });
+              console.log('[config gnews] adicionada query Xadrez');
+            }
+          }
+          writeFileSync(cfgPath, JSON.stringify(cfg, null, 2), 'utf-8');
+          console.log(`[config] ${trocas} ajuste(s)`);
+
+          // ─── fetch-news.js: muda fallback "Cultura Pop" -> "Cinema" (se houver)
+          const fnPath = 'scripts/fetch-news.js';
+          let fn = readFileSync(fnPath, 'utf-8');
+          const fnAntes = fn.match(/'Cultura Pop'/g)?.length || 0;
+          fn = fn.replace(/'Cultura Pop'/g, "'Cinema'");
+          if (fnAntes) {
+            writeFileSync(fnPath, fn, 'utf-8');
+            console.log(`[fetch-news.js] ${fnAntes} ocorrência(s) de 'Cultura Pop' remapeadas para 'Cinema'`);
+          }
+
+          console.log('\n=> purga concluída.');
+          MJS
+          node --check scripts/purga-culturapop.mjs
+
+      - name: Rodar purga
+        run: node scripts/purga-culturapop.mjs
+
+      - name: Validar JS após edição
+        run: |
+          node --check scripts/fetch-news.js
+          node --check scripts/lib/news-rewrite.js
+          node -e "JSON.parse(require('fs').readFileSync('lib/content.json','utf-8'))"
+          node -e "JSON.parse(require('fs').readFileSync('config/news-sources.json','utf-8'))"
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f scripts/purga-culturapop.mjs
+          git add lib/content.json lib/mock-data.js scripts/lib/news-rewrite.js scripts/fetch-news.js config/news-sources.json
+          git status
+          git commit -m "chore(noticias): remove Cultura Pop, adiciona Xadrez nas categorias permitidas" || echo "no changes"
+          git push
