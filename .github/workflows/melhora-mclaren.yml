@@ -1,0 +1,53 @@
+name: Melhorar imagem McLaren (manual)
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Trocar imagem do item McLaren
+        run: |
+          node - <<'NODE'
+          import('fs').then(({ readFileSync, writeFileSync }) => {
+            const SLUG = 'mclaren-de-olho-nos-sidepods-da-audi-e-na-asa-da-ferrari-para-2026';
+            const NOVA = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2024_McLaren_MCL38_Lando_Norris_F1.jpg/1280px-2024_McLaren_MCL38_Lando_Norris_F1.jpg';
+            const cp = 'lib/content.json';
+            const c = JSON.parse(readFileSync(cp, 'utf-8'));
+            for (const sec of ['noticias', 'esportes']) {
+              if (c[sec]?.[SLUG]) {
+                console.log(`[content.json] ${sec}/${SLUG}`);
+                console.log(`  antes: ${c[sec][SLUG].imagem}`);
+                console.log(`  depois: ${NOVA}`);
+                c[sec][SLUG].imagem = NOVA;
+              }
+            }
+            writeFileSync(cp, JSON.stringify(c, null, 2), 'utf-8');
+            const mp = 'lib/mock-data.js';
+            let src = readFileSync(mp, 'utf-8');
+            const slugEsc = SLUG.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+            const re = new RegExp(`(slug:\\s*'${slugEsc}'[\\s\\S]*?imagem:\\s*')[^']+(')`, 'i');
+            if (re.test(src)) {
+              src = src.replace(re, `$1${NOVA}$2`);
+              writeFileSync(mp, src, 'utf-8');
+              console.log('[mock-data.js] atualizado');
+            } else {
+              console.warn('[mock-data.js] pattern não encontrado');
+            }
+          });
+          NODE
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lib/content.json lib/mock-data.js
+          git commit -m "fix(mclaren): troca logo Mastercard por foto MCL38 do Lando Norris (mais tematica)" || echo "no changes"
+          git push
