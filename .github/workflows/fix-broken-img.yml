@@ -1,0 +1,134 @@
+name: Fix imagens quebradas (one-shot 26abr v2)
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Escrever scripts/fix-broken-img.mjs
+        run: |
+          cat > scripts/fix-broken-img.mjs << 'MJS'
+          import { readFileSync, writeFileSync } from 'fs';
+
+          const UA_BROWSER = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
+          const UA_BOT = '3W-Entretenimento NewsBot/1.0';
+
+          async function isImageReachable(url, timeoutMs = 6000) {
+            if (!url || url.startsWith('/')) return true;
+            try {
+              const ac = new AbortController();
+              const to = setTimeout(() => ac.abort(), timeoutMs);
+              // Tenta GET pequeno com Referer vazio (simula request do site)
+              const res = await fetch(url, {
+                method: 'GET',
+                headers: {
+                  'User-Agent': UA_BROWSER,
+                  'Range': 'bytes=0-2047',
+                  'Accept': 'image/webp,image/avif,image/*,*/*;q=0.8',
+                  'Referer': '',
+                },
+                signal: ac.signal, redirect: 'follow',
+              });
+              clearTimeout(to);
+              if (!res.ok && res.status !== 206) return false;
+              const ct = (res.headers.get('content-type') || '').toLowerCase();
+              return ct.startsWith('image/');
+            } catch { return false; }
+          }
+
+          async function tryOgImage(url, timeoutMs = 8000) {
+            if (!url) return null;
+            try {
+              const ac = new AbortController();
+              const to = setTimeout(() => ac.abort(), timeoutMs);
+              const res = await fetch(url, {
+                headers: { 'User-Agent': UA_BOT, 'Accept': 'text/html,*/*' },
+                signal: ac.signal, redirect: 'follow',
+              });
+              clearTimeout(to);
+              if (!res.ok) return null;
+              const html = (await res.text()).slice(0, 400000);
+              const candidatos = [
+                html.match(/<meta[^>]+property=["']og:image:secure_url["'][^>]+content=["']([^"']+)["']/i),
+                html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i),
+                html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i),
+                html.match(/<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i),
+              ];
+              for (const m of candidatos) if (m) return m[1];
+              return null;
+            } catch { return null; }
+          }
+
+          // 1. Verifica content.json
+          const contentPath = 'lib/content.json';
+          const content = JSON.parse(readFileSync(contentPath, 'utf-8'));
+          const fixes = [];
+
+          for (const secao of ['noticias', 'esportes']) {
+            for (const slug of Object.keys(content[secao] || {})) {
+              const item = content[secao][slug];
+              const url = item.fonte?.url;
+              const imgAtual = item.imagem;
+              if (!url || !imgAtual) continue;
+
+              // Pula placeholder explícito (já tratado em outro workflow)
+              if (imgAtual.startsWith('/')) continue;
+
+              const ok = await isImageReachable(imgAtual);
+              if (ok) { console.log(`[ok]   ${slug}`); continue; }
+
+              console.log(`[broken] ${slug}  current=${imgAtual.slice(0, 80)}`);
+              const og = await tryOgImage(url);
+              if (!og) { console.log(`         no og:image  src=${url}`); continue; }
+              if (og === imgAtual) { console.log(`         og same as broken; skip`); continue; }
+              const ogOk = await isImageReachable(og);
+              if (!ogOk) { console.log(`         og also broken: ${og.slice(0, 80)}`); continue; }
+
+              console.log(`[fix]    ${slug}  =>  ${og}`);
+              item.imagem = og;
+              fixes.push({ secao, slug, og });
+            }
+          }
+          writeFileSync(contentPath, JSON.stringify(content, null, 2), 'utf-8');
+
+          // 2. Atualiza mock-data.js
+          if (fixes.length > 0) {
+            const mockPath = 'lib/mock-data.js';
+            let src = readFileSync(mockPath, 'utf-8');
+            for (const f of fixes) {
+              const slugEsc = f.slug.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+              const re = new RegExp(`(slug:\\s*'${slugEsc}'[\\s\\S]*?imagem:\\s*')[^']+(')`, 'i');
+              if (re.test(src)) {
+                src = src.replace(re, `$1${f.og}$2`);
+                console.log(`[mock]   ${f.slug}`);
+              } else {
+                console.warn(`[mock-data not matched] ${f.slug}`);
+              }
+            }
+            writeFileSync(mockPath, src, 'utf-8');
+          }
+
+          console.log(`\n=> ${fixes.length} item(ns) corrigido(s).`);
+          MJS
+          node --check scripts/fix-broken-img.mjs
+
+      - name: Rodar correção
+        run: node scripts/fix-broken-img.mjs
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f scripts/fix-broken-img.mjs
+          git add lib/content.json lib/mock-data.js || true
+          git status
+          git commit -m "fix(noticias): re-resolve imagens com 404/hotlink bloqueado" || echo "no changes"
+          git push
