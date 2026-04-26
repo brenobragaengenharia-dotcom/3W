@@ -1,0 +1,65 @@
+name: Fix config fontes (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Substituir config/news-sources.json com fontes que respondem 200
+        run: |
+          cat > config/news-sources.json <<'JSON'
+          {
+            "$doc": "Fontes para fetch-news.js. Escopo: entretenimento, comics, esportes. URLs validadas em 2026-04-25.",
+            "rss": [
+              { "nome": "Cinepop",            "url": "https://www.cinepop.com.br/feed",                       "categoria_padrao": "Cinema",     "tags_hint": ["cinema","filmes"] },
+              { "nome": "Papo de Cinema",     "url": "https://www.papodecinema.com.br/feed/",                 "categoria_padrao": "Cinema",     "tags_hint": ["cinema","filmes","critica"] },
+              { "nome": "Cinema com Rapadura","url": "https://www.cinemacomrapadura.com.br/feed/",            "categoria_padrao": "Cinema",     "tags_hint": ["cinema","series","critica"] },
+              { "nome": "Folha Ilustrada",    "url": "https://feeds.folha.uol.com.br/ilustrada/rss091.xml",   "categoria_padrao": "Cinema",     "tags_hint": ["cinema","series","cultura"] },
+              { "nome": "Legiao dos Herois",  "url": "https://legiaodosherois.uol.com.br/feed",               "categoria_padrao": "Cultura Pop","tags_hint": ["marvel","dc","series","filmes"] },
+              { "nome": "Universo HQ",        "url": "https://www.universohq.com/feed/",                      "categoria_padrao": "Comics",     "tags_hint": ["quadrinhos","marvel","dc","mangas"] },
+              { "nome": "Canaltech",          "url": "https://feeds2.feedburner.com/canaltechbr",             "categoria_padrao": "Séries",     "tags_hint": ["streaming","series","cinema"] },
+              { "nome": "ESPN Brasil",        "url": "https://www.espn.com.br/espn/rss/news",                 "categoria_padrao": "Esportes",   "tags_hint": ["futebol","nba","f1"] },
+              { "nome": "Globo Esporte",      "url": "https://ge.globo.com/dynamo/futebol/rss2.xml",          "categoria_padrao": "Futebol",    "tags_hint": ["futebol","brasileirao"] },
+              { "nome": "Grande Prêmio F1",   "url": "https://www.grandepremio.com.br/feed/",                 "categoria_padrao": "Fórmula 1",  "tags_hint": ["f1","formula1"] }
+            ],
+            "gnews": {
+              "enabled": true,
+              "queries": [
+                { "q": "Marvel OR DC OR Pixar OR Disney+",                  "categoria_padrao": "Cinema",     "max": 3 },
+                { "q": "Netflix OR HBO Max OR Prime Video OR Apple TV",     "categoria_padrao": "Séries",     "max": 3 },
+                { "q": "HQ OR quadrinhos OR mangá OR anime",                "categoria_padrao": "Comics",     "max": 2 },
+                { "q": "Brasileirão OR Champions OR seleção brasileira",    "categoria_padrao": "Futebol",    "max": 3 },
+                { "q": "NBA OR LeBron OR Curry OR playoffs",                "categoria_padrao": "NBA",        "max": 2 },
+                { "q": "Fórmula 1 OR Verstappen OR Hamilton",               "categoria_padrao": "Fórmula 1",  "max": 2 }
+              ]
+            },
+            "limites": {
+              "max_noticias_por_rodada": 8,
+              "max_por_categoria": 3,
+              "max_por_array": 40,
+              "min_palavras_corpo_original": 30,
+              "idade_maxima_horas": 48
+            },
+            "categorias_aceitas": ["Cinema", "Séries", "Comics", "Cultura Pop", "Futebol", "NBA", "Fórmula 1", "Esportes"]
+          }
+          JSON
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/news-sources.json
+          if ! git diff --staged --quiet; then
+            git commit -m "feat(config): substitui 6 RSS quebrados por 6 que respondem 200 (Cinepop, Papo de Cinema, Cinema com Rapadura, Folha Ilustrada, Canaltech via Feedburner, GE futebol)"
+            git push origin HEAD:master
+          fi
