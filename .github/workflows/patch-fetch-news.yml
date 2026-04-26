@@ -1,0 +1,105 @@
+name: Patch fetch-news.js (Etapa 1 anti-mismatch)
+on:
+  workflow_dispatch:
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply anti-mismatch patch
+        run: |
+          python3 - <<'PY'
+          import re, sys, pathlib
+          p = pathlib.Path("scripts/fetch-news.js")
+          src = p.read_text(encoding="utf-8")
+          if "fetchHtmlTitle" in src:
+              print("Already patched, skipping."); sys.exit(0)
+
+          helpers = r"""// ─── Anti-mismatch título vs HTML ─────────────────────────────────────────────
+          async function fetchHtmlTitle(url, timeoutMs = 5000) {
+            try {
+              const ac = new AbortController();
+              const to = setTimeout(() => ac.abort(), timeoutMs);
+              const res = await fetch(url, {
+                headers: { 'User-Agent': '3W-Entretenimento NewsBot/1.0' },
+                signal: ac.signal,
+                redirect: 'follow',
+              });
+              clearTimeout(to);
+              if (!res.ok) return null;
+              const html = await res.text();
+              const og = html.match(/<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)["']/i)
+                      || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:title["']/i);
+              if (og) return og[1].trim();
+              const t = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+              return t ? t[1].replace(/\s+/g,' ').trim() : null;
+            } catch { return null; }
+          }
+
+          function tokenize(s) {
+            return new Set(
+              String(s || '')
+                .toLowerCase()
+                .normalize('NFD').replace(/[̀-ͯ]/g, '')
+                .replace(/[^\w\s]/g, ' ')
+                .split(/\s+/)
+                .filter((w) => w.length >= 4)
+            );
+          }
+
+          function overlapScore(a, b) {
+            const A = tokenize(a), B = tokenize(b);
+            if (A.size === 0 || B.size === 0) return 0;
+            let inter = 0;
+            for (const w of A) if (B.has(w)) inter++;
+            return inter / Math.min(A.size, B.size);
+          }
+
+          """
+          helpers = "\n".join(line[10:] if line.startswith("          ") else line for line in helpers.split("\n"))
+
+          src = src.replace(
+              "const __dirname = dirname(fileURLToPath(import.meta.url));",
+              helpers + "const __dirname = dirname(fileURLToPath(import.meta.url));",
+              1
+          )
+
+          check_block = r"""
+
+                if (raw.url && !flags.skipRewrite) {
+                  const htmlTitle = await fetchHtmlTitle(raw.url);
+                  if (htmlTitle) {
+                    const score = overlapScore(result.entrada_mockdata.titulo, htmlTitle);
+                    if (score < 0.25) {
+                      console.warn(`  [skip-mismatch] score=${score.toFixed(2)}  rewrite="${result.entrada_mockdata.titulo.slice(0,60)}"  htmlTitle="${htmlTitle.slice(0,60)}"`);
+                      continue;
+                    }
+                  }
+                }
+          """
+          check_block = "\n".join(line[10:] if line.startswith("          ") else line for line in check_block.split("\n"))
+
+          old = "        result.entrada_mockdata.slug = result.slug;\n      }"
+          new = "        result.entrada_mockdata.slug = result.slug;\n      }" + check_block
+          if old not in src:
+              print("ERROR: pattern not found"); sys.exit(1)
+          src = src.replace(old, new, 1)
+
+          p.write_text(src, encoding="utf-8")
+          print("Patched OK")
+          PY
+
+      - name: Validate JS syntax
+        run: node --check scripts/fetch-news.js
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/fetch-news.js
+          git commit -m "feat(news): anti-mismatch titulo vs HTML (Etapa 1)" || echo "no changes"
+          git push
