@@ -1,0 +1,49 @@
+name: Fix imagens manual (Sawe + Chelsea)
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Aplicar imagens manuais
+        run: |
+          node - <<'NODE'
+          import('fs').then(({ readFileSync, writeFileSync }) => {
+            const FIXES = [
+              { slug: 'sawe-quebra-recorde-e-corre-maratona-oficial-em-menos-de-2-horas', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Sabastian_Sawe_%28KEN%29_2025.jpg/1280px-Sabastian_Sawe_%28KEN%29_2025.jpg' },
+              { slug: 'chelsea-x-manchester-city-final-da-copa-da-inglaterra-marcada', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/London_Wembley.jpg/1280px-London_Wembley.jpg' },
+            ];
+            const cp = 'lib/content.json';
+            const c = JSON.parse(readFileSync(cp, 'utf-8'));
+            for (const f of FIXES) {
+              for (const sec of ['noticias', 'esportes']) {
+                if (c[sec]?.[f.slug]) { console.log(`[content.json] ${sec}/${f.slug}`); c[sec][f.slug].imagem = f.url; }
+              }
+            }
+            writeFileSync(cp, JSON.stringify(c, null, 2), 'utf-8');
+            const mp = 'lib/mock-data.js';
+            let src = readFileSync(mp, 'utf-8');
+            for (const f of FIXES) {
+              const slugEsc = f.slug.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+              const re = new RegExp(`(slug:\\s*'${slugEsc}'[\\s\\S]*?imagem:\\s*')[^']+(')`, 'i');
+              if (re.test(src)) { src = src.replace(re, `$1${f.url}$2`); console.log(`[mock] ${f.slug}`); }
+            }
+            writeFileSync(mp, src, 'utf-8');
+          });
+          NODE
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lib/content.json lib/mock-data.js
+          git commit -m "fix(noticias): imagens manuais Sawe + Wembley" || echo "no changes"
+          git push
