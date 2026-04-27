@@ -173,7 +173,7 @@ CASO 2 (notícia FORA DO ESCOPO) — RETORNE APENAS:
       categoria,
       autor: 'Redação 3W',
       data,
-      imagem: safeImage(raw.imagem),
+      imagem: safeImage(raw.imagem, { categoria, slug: slugify(titulo), titulo }),
       tempo_leitura,
     },
     editorial: {

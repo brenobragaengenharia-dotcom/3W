@@ -90,15 +90,6 @@
         "futebol",
         "brasileirao"
       ]
-    },
-    {
-      "nome": "Grande Prêmio F1",
-      "url": "https://www.grandepremio.com.br/feed/",
-      "categoria_padrao": "Fórmula 1",
-      "tags_hint": [
-        "f1",
-        "formula1"
-      ]
     }
   ],
   "gnews": {

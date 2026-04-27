@@ -384,7 +384,7 @@ async function main() {
             categoria: raw.categoria_padrao || 'Cinema',
             autor: 'Redação 3W',
             data: isoDate,
-            imagem: safeImage(raw.imagem),
+            imagem: safeImage(raw.imagem, { categoria: raw.categoria_padrao, slug, titulo: raw.titulo }),
             tempo_leitura: 4,
           },
           editorial: {

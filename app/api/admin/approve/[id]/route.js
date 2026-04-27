@@ -60,7 +60,7 @@ export async function POST(req, { params }) {
       categoria: article.categoria,
       autor: article.autor || 'Redação 3W',
       data: article.data,
-      imagem: safeImage(article.imagem),
+      imagem: safeImage(article.imagem, { categoria: article.categoria, slug: article.slug, titulo: article.titulo }),
       tempo_leitura: Number(article.tempo_leitura) || 4,
     });
 
@@ -79,7 +79,7 @@ export async function POST(req, { params }) {
       categoria: article.categoria,
       autor: article.autor || 'Redação 3W',
       data: article.data,
-      imagem: safeImage(article.imagem),
+      imagem: safeImage(article.imagem, { categoria: article.categoria, slug: article.slug, titulo: article.titulo }),
       tempo_leitura: Number(article.tempo_leitura) || 4,
       manchete: article.manchete || article.titulo,
       paragrafos: article.paragrafos || [],
