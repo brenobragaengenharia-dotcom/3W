@@ -29,13 +29,17 @@
  *   GNEWS_API_KEY     no .env.local (opcional — só RSS funciona sem)
  */
 
-import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
 import { fetchAllRss } from './lib/rss.js';
 import { fetchGnews } from './lib/gnews.js';
 import { rewriteNoticia } from './lib/news-rewrite.js';
+
+// sharp é opcional — se não estiver instalado, salva o arquivo bruto sem processamento
+let sharp;
+try { sharp = (await import('sharp')).default; } catch {/* opcional */}
 
 // ─── Anti-mismatch título vs HTML ───────────────────────────────────────────
 async function fetchHtmlTitle(url, timeoutMs = 5000) {
@@ -83,6 +87,67 @@ const ROOT = join(__dirname, '..');
 const MOCK_DATA_PATH = join(ROOT, 'lib', 'mock-data.js');
 const CONTENT_PATH   = join(ROOT, 'lib', 'content.json');
 const CONFIG_PATH    = join(ROOT, 'config', 'news-sources.json');
+const IMAGES_DIR     = join(ROOT, 'public', 'images', 'noticias');
+
+// ─── Download e otimização de imagem ──────────────────────────────────────────
+// Baixa a imagem externa, otimiza pra JPG 85%, salva em /public/images/noticias/[slug].jpg.
+// Retorna o caminho relativo (`/images/noticias/[slug].jpg`) ou null se falhar.
+async function downloadImage(externalUrl, slug, timeoutMs = 12000) {
+  if (!externalUrl) return null;
+  // Já é local — não precisa baixar
+  if (externalUrl.startsWith('/')) return externalUrl;
+
+  try {
+    mkdirSync(IMAGES_DIR, { recursive: true });
+
+    const ac = new AbortController();
+    const to = setTimeout(() => ac.abort(), timeoutMs);
+    const res = await fetch(externalUrl, {
+      headers: {
+        // Alguns CDNs (Wikimedia, ESPN) bloqueiam User-Agent vazio. Pretendo de browser.
+        'User-Agent': 'Mozilla/5.0 (compatible; 3W-Entretenimento NewsBot/1.0; +https://3w-entretenimento.com)',
+        'Accept': 'image/webp,image/avif,image/png,image/jpeg,image/*,*/*;q=0.8',
+      },
+      signal: ac.signal,
+      redirect: 'follow',
+    });
+    clearTimeout(to);
+
+    if (!res.ok) {
+      console.warn(`  ⚠️  [img] HTTP ${res.status} para ${externalUrl.slice(0, 80)}`);
+      return null;
+    }
+    const contentType = (res.headers.get('content-type') || '').toLowerCase();
+    if (!contentType.startsWith('image/')) {
+      console.warn(`  ⚠️  [img] content-type ${contentType} não é imagem`);
+      return null;
+    }
+
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (buf.length < 1000) {
+      console.warn(`  ⚠️  [img] arquivo muito pequeno (${buf.length} bytes) — provavelmente placeholder`);
+      return null;
+    }
+
+    const outPath = join(IMAGES_DIR, `${slug}.jpg`);
+
+    if (sharp) {
+      // Otimiza: max 1280px largura, JPG 85%, progressivo
+      await sharp(buf)
+        .resize(1280, null, { withoutEnlargement: true })
+        .jpeg({ quality: 85, progressive: true, mozjpeg: true })
+        .toFile(outPath);
+    } else {
+      // Fallback: salva bruto (apenas se for JPG/PNG)
+      writeFileSync(outPath, buf);
+    }
+
+    return `/images/noticias/${slug}.jpg`;
+  } catch (err) {
+    console.warn(`  ⚠️  [img] falha download: ${err.message}`);
+    return null;
+  }
+}
 
 // ─── Env (mesmo loader do update-content.js) ──────────────────────────────────
 function loadEnv() {
@@ -350,6 +415,14 @@ async function main() {
 
       const destino = arrayKeyForCategory(result.categoria);
       const entrada = { id: nextId++, ...result.entrada_mockdata };
+
+      // Tenta baixar imagem para hosting local (resiliente contra CDNs caírem)
+      const imagemLocal = await downloadImage(entrada.imagem, entrada.slug);
+      if (imagemLocal) {
+        entrada.imagem = imagemLocal;
+        log('🖼️ ', `imagem salva em ${imagemLocal}`);
+      } // senão mantém URL externa como fallback
+
       updates[destino.mock].unshift(entrada); // inserir no topo (mais recente primeiro)
 
       // Poda o array se ficar muito grande (evita mock-data.js crescer sem fim)

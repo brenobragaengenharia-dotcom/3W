@@ -3,6 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FILMES, SERIES, NOTICIAS } from '@/lib/mock-data';
 import NewsletterBanner from '@/components/NewsletterBanner';
 
@@ -47,8 +48,8 @@ function BuscaResultados() {
             <article key={idx} className="card-hover">
               <Link href={item.url} className="block">
                 <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-[#1a1a1a] mb-2">
-                  <img src={item.imagem} alt={item.titulo} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-                  <div className="absolute top-2 left-2">
+                  <Image src={item.imagem} alt={item.titulo} fill sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 16vw" className="object-cover" />
+                  <div className="absolute top-2 left-2 z-10">
                     <span className="text-xs bg-[#0d0d0d]/80 text-[#b3b3b3] px-1.5 py-0.5 rounded">{item.tipo}</span>
                   </div>
                 </div>

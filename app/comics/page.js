@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { HQS_PANINI, LIVROS_PANINI, NOTICIAS } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
 import ElfsightFeed, { ELFSIGHT_IDS } from '@/components/ElfsightFeed';
@@ -62,8 +63,8 @@ export default function ComicsPage() {
               {noticiasComics.map(n => (
                 <article key={n.id} className="card-hover rounded-xl overflow-hidden bg-[#141414] border border-[#2a2a2a]">
                   <Link href={`/noticias/${n.slug}`} className="block">
-                    <div className="aspect-video overflow-hidden bg-[#1a1a1a]">
-                      <img src={n.imagem} alt={n.titulo} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <div className="relative aspect-video overflow-hidden bg-[#1a1a1a]">
+                      <Image src={n.imagem} alt={n.titulo} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="p-4">
                       <h3 className="text-white font-bold text-sm line-clamp-2 hover:text-yellow-400 transition-colors">{n.titulo}</h3>
@@ -89,11 +90,11 @@ export default function ComicsPage() {
               <article key={hq.id} className="card-hover">
                 <Link href={`/comics/${hq.slug}`} className="block">
                   <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-[#1a1a1a] mb-2">
-                    <img src={hq.imagem} alt={`Capa: ${hq.titulo}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-                    <div className="absolute top-2 left-2">
+                    <Image src={hq.imagem} alt={`Capa: ${hq.titulo}`} fill sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 16vw" className="object-cover" />
+                    <div className="absolute top-2 left-2 z-10">
                       <span className="text-xs bg-yellow-600/90 text-white px-1.5 py-0.5 rounded font-medium">{hq.categoria}</span>
                     </div>
-                    <div className="absolute bottom-2 right-2">
+                    <div className="absolute bottom-2 right-2 z-10">
                       <span className="text-xs bg-[#FF6600] text-white px-1.5 py-0.5 rounded font-bold">Panini</span>
                     </div>
                   </div>
@@ -118,8 +119,8 @@ export default function ComicsPage() {
               <article key={manga.id} className="card-hover">
                 <Link href={`/comics/${manga.slug}`} className="block">
                   <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-[#1a1a1a] mb-2">
-                    <img src={manga.imagem} alt={`Capa: ${manga.titulo}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-                    <div className="absolute bottom-2 right-2">
+                    <Image src={manga.imagem} alt={`Capa: ${manga.titulo}`} fill sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 16vw" className="object-cover" />
+                    <div className="absolute bottom-2 right-2 z-10">
                       <span className="text-xs bg-[#FF6600] text-white px-1.5 py-0.5 rounded font-bold">Panini</span>
                     </div>
                   </div>

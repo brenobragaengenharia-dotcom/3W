@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { HQS_PANINI, LIVROS_PANINI, PANINI_AFFILIATE_URL } from '@/lib/mock-data';
 import AffiliateLink from '@/components/AffiliateLink';
 
@@ -11,15 +12,15 @@ function ItemCard({ item }) {
     <article className="card-hover flex-shrink-0" style={{ width: '120px' }}>
       <Link href={`/comics/${item.slug}`} className="block">
         <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-[#1a1a1a] mb-2">
-          <img
+          <Image
             src={item.imagem}
             alt={`Capa: ${item.titulo}`}
-            loading="lazy"
-            decoding="async"
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            fill
+            sizes="120px"
+            className="object-cover hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-          <div className="absolute bottom-1.5 right-1.5">
+          <div className="absolute bottom-1.5 right-1.5 z-10">
             <span className="text-[10px] bg-[#FF6600] text-white px-1.5 py-0.5 rounded font-bold">Panini</span>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { NOTICIAS } from '@/lib/mock-data';
 
 const CATEGORIA_COLORS = {
@@ -34,12 +35,13 @@ export default function NewsGrid({ limit = 6 }) {
               <Link href={`/noticias/${noticia.slug}`} className="block">
                 {/* Imagem */}
                 <div className={`relative overflow-hidden bg-[#1a1a1a] ${index === 0 ? 'aspect-video' : 'aspect-video'}`}>
-                  <img
+                  <Image
                     src={noticia.imagem}
                     alt={noticia.titulo}
-                    loading={index === 0 ? 'eager' : 'lazy'}
-                    decoding="async"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    fill
+                    priority={index === 0}
+                    sizes={index === 0 ? '(max-width: 768px) 100vw, 66vw' : '(max-width: 768px) 100vw, 33vw'}
+                    className="object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 

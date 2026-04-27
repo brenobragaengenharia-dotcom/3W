@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { PRODUTOS_NETSHOES, NETSHOES_AFFILIATE_URL } from '@/lib/mock-data';
 import AffiliateLink from '@/components/AffiliateLink';
 
@@ -62,15 +63,15 @@ export default function NetshoesePromo() {
                 className="block"
               >
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-[#1a1a1a] mb-2">
-                  <img
+                  <Image
                     src={produto.imagem}
                     alt={produto.titulo}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 16vw"
+                    className="object-cover hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2">
+                  <div className="absolute bottom-2 left-2 z-10">
                     <span className={`text-[10px] border px-1.5 py-0.5 rounded font-semibold ${CATEGORIA_BADGE[produto.categoria] || 'bg-[#2a2a2a] border-[#3a3a3a] text-[#b3b3b3]'}`}>
                       {produto.categoria}
                     </span>

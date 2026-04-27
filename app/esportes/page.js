@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { NOTICIAS_FUTEBOL, NOTICIAS_NBA, NOTICIAS_F1 } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
 import ElfsightFeed, { ELFSIGHT_IDS } from '@/components/ElfsightFeed';
@@ -117,8 +118,8 @@ function NoticiaCard({ noticia }) {
   return (
     <article className="card-hover rounded-xl overflow-hidden bg-[#141414] border border-[#2a2a2a]">
       <Link href={`/noticias/${noticia.slug}`} className="block">
-        <div className="aspect-video overflow-hidden bg-[#1a1a1a]">
-          <img src={noticia.imagem} alt={noticia.titulo} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+        <div className="relative aspect-video overflow-hidden bg-[#1a1a1a]">
+          <Image src={noticia.imagem} alt={noticia.titulo} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover hover:scale-105 transition-transform duration-500" />
         </div>
         <div className="p-4">
           <div className="flex items-center gap-2 mb-2">

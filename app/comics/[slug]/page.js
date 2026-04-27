@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { COMICS, LIVROS_RECOMENDADOS, HQS_PANINI, LIVROS_PANINI } from '@/lib/mock-data';
 import { schemaBreadcrumb, schemaBook, schemaProduct } from '@/lib/structured-data';
 import content from '@/lib/content.json';
@@ -87,12 +88,14 @@ export default async function ComicPage({ params }) {
 
         {/* Cabeçalho */}
         <div className="flex gap-6 mb-8">
-          <div className="flex-shrink-0">
-            <img
+          <div className="flex-shrink-0 relative w-36 aspect-[2/3] rounded-lg overflow-hidden shadow-lg bg-[#1a1a1a]">
+            <Image
               src={item.imagem}
               alt={`Capa: ${item.titulo}`}
-              className="w-36 rounded-lg object-cover shadow-lg"
-              fetchpriority="high"
+              fill
+              priority
+              sizes="144px"
+              className="object-cover"
             />
           </div>
           <div>

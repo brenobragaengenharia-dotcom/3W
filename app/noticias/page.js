@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { NOTICIAS, NOTICIAS_ESPORTES } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
 
@@ -45,8 +46,8 @@ export default function NoticiasPage() {
           {ALL_NOTICIAS.map((n) => (
             <article key={n.slug} className="card-hover rounded-xl overflow-hidden bg-[#141414] border border-[#2a2a2a]">
               <Link href={`/noticias/${n.slug}`} className="block">
-                <div className="aspect-video overflow-hidden bg-[#1a1a1a]">
-                  <img src={n.imagem} alt={n.titulo} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <div className="relative aspect-video overflow-hidden bg-[#1a1a1a]">
+                  <Image src={n.imagem} alt={n.titulo} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-4">
                   <div className="flex items-center gap-2 mb-2">

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FILMES, INGRESSO_URL } from '@/lib/mock-data';
 import AffiliateLink from '@/components/AffiliateLink';
 
@@ -7,22 +8,22 @@ function FilmeCard({ filme }) {
     <article className="card-hover flex-shrink-0" style={{ width: '120px' }}>
       <Link href={`/filmes/${filme.slug}`} className="block">
         <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-[#1a1a1a] mb-2">
-          <img
+          <Image
             src={filme.imagem}
             alt={`Pôster: ${filme.titulo}`}
-            loading="lazy"
-            decoding="async"
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            fill
+            sizes="120px"
+            className="object-cover hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           {/* Nota — topo direito */}
-          <div className="absolute top-1.5 right-1.5">
+          <div className="absolute top-1.5 right-1.5 z-10">
             <span className="text-[10px] bg-black/70 text-yellow-400 px-1.5 py-0.5 rounded font-bold">
               ★ {filme.nota}
             </span>
           </div>
           {/* Badge — baixo esquerdo */}
-          <div className="absolute bottom-1.5 left-1.5">
+          <div className="absolute bottom-1.5 left-1.5 z-10">
             <span className="text-[10px] bg-[#e11d48] text-white px-1.5 py-0.5 rounded font-bold">Em Cartaz</span>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FILMES, NOTICIAS } from '@/lib/mock-data';
 import { schemaBreadcrumb } from '@/lib/structured-data';
 import NewsletterBanner from '@/components/NewsletterBanner';
@@ -40,15 +41,15 @@ export default function FilmesPage() {
             <article key={filme.id} className="card-hover">
               <Link href={`/filmes/${filme.slug}`} className="block">
                 <div className="relative aspect-[2/3] rounded-lg overflow-hidden bg-[#1a1a1a] mb-2">
-                  <img
+                  <Image
                     src={filme.imagem}
                     alt={`Capa: ${filme.titulo}`}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 16vw"
+                    className="object-cover"
                   />
                   {filme.nota && (
-                    <div className="absolute top-2 right-2">
+                    <div className="absolute top-2 right-2 z-10">
                       <span className="rating-badge">★ {filme.nota}</span>
                     </div>
                   )}
@@ -75,8 +76,8 @@ export default function FilmesPage() {
               {NOTICIAS_CINEMA.map((n) => (
                 <article key={n.slug} className="card-hover rounded-xl overflow-hidden bg-[#141414] border border-[#2a2a2a]">
                   <Link href={`/noticias/${n.slug}`} className="block">
-                    <div className="aspect-video overflow-hidden bg-[#1a1a1a]">
-                      <img src={n.imagem} alt={n.titulo} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <div className="relative aspect-video overflow-hidden bg-[#1a1a1a]">
+                      <Image src={n.imagem} alt={n.titulo} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="p-4">
                       <div className="flex items-center gap-2 mb-2">

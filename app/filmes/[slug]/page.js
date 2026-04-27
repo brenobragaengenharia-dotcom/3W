@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FILMES, INGRESSO_URL } from '@/lib/mock-data';
 import { schemaBreadcrumb, schemaMovie } from '@/lib/structured-data';
 import content from '@/lib/content.json';
@@ -58,11 +59,13 @@ export default async function FilmePage({ params }) {
 
       {/* Hero backdrop */}
       <div className="relative w-full h-64 md:h-96 overflow-hidden bg-[#141414]">
-        <img
+        <Image
           src={g?.backdrop ?? filme.imagem}
           alt={filme.titulo}
-          className="w-full h-full object-cover object-center"
-          fetchpriority="high"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-[#0d0d0d]/50 to-transparent" />
       </div>
@@ -78,11 +81,15 @@ export default async function FilmePage({ params }) {
 
         {/* Cabeçalho */}
         <div className="flex gap-6 mb-8">
-          <img
-            src={g?.poster ?? filme.imagem}
-            alt={`Pôster: ${filme.titulo}`}
-            className="hidden sm:block w-32 rounded-lg object-cover flex-shrink-0 self-start"
-          />
+          <div className="hidden sm:block relative w-32 aspect-[2/3] rounded-lg overflow-hidden flex-shrink-0 self-start bg-[#1a1a1a]">
+            <Image
+              src={g?.poster ?? filme.imagem}
+              alt={`Pôster: ${filme.titulo}`}
+              fill
+              sizes="128px"
+              className="object-cover"
+            />
+          </div>
           <div>
             {g?.manchete && (
               <p className="text-[#FF6600] text-sm font-semibold uppercase tracking-widest mb-2">
@@ -164,7 +171,9 @@ export default async function FilmePage({ params }) {
               {g.elenco.map(ator => (
                 <div key={ator.nome} className="bg-[#141414] border border-[#2a2a2a] rounded-lg p-3 text-center">
                   {ator.foto ? (
-                    <img src={ator.foto} alt={ator.nome} className="w-12 h-12 rounded-full object-cover mx-auto mb-2" />
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden mx-auto mb-2 bg-[#2a2a2a]">
+                      <Image src={ator.foto} alt={ator.nome} fill sizes="48px" className="object-cover" />
+                    </div>
                   ) : (
                     <div className="w-12 h-12 rounded-full bg-[#2a2a2a] mx-auto mb-2 flex items-center justify-center text-[#9ca3af] text-xl">
                       👤

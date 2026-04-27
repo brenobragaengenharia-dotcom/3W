@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { NOTICIAS, NOTICIAS_ESPORTES } from '@/lib/mock-data';
 import { schemaBreadcrumb, schemaNewsArticle } from '@/lib/structured-data';
@@ -129,14 +130,15 @@ export default async function NoticiaPage({ params }) {
           </address>
 
           {/* Imagem principal */}
-          <figure className="mb-8">
-            <img
+          <figure className="mb-8 relative w-full aspect-video rounded-xl overflow-hidden bg-[#1a1a1a]">
+            <Image
               src={noticia.imagem}
               alt={noticia.titulo}
               itemProp="image"
-              loading="eager"
-              decoding="async"
-              className="w-full rounded-xl object-cover aspect-video"
+              fill
+              priority
+              sizes="(max-width: 896px) 100vw, 896px"
+              className="object-cover"
             />
           </figure>
 
@@ -188,8 +190,8 @@ export default async function NoticiaPage({ params }) {
               {relacionadas.map(r => (
                 <article key={r.id} className="card-hover rounded-xl overflow-hidden bg-[#141414] border border-[#2a2a2a]">
                   <Link href={`/noticias/${r.slug}`} className="block">
-                    <div className="aspect-video overflow-hidden bg-[#1a1a1a]">
-                      <img src={r.imagem} alt={r.titulo} loading="lazy" className="w-full h-full object-cover" />
+                    <div className="relative aspect-video overflow-hidden bg-[#1a1a1a]">
+                      <Image src={r.imagem} alt={r.titulo} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                     </div>
                     <div className="p-3">
                       <span className={`text-xs font-semibold ${CATEGORIA_COLORS[r.categoria] || 'text-[#9ca3af]'}`}>{r.categoria}</span>
