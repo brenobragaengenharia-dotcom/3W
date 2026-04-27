@@ -67,7 +67,7 @@ Se ainda não tem um bom vídeo de cada categoria, **rode o pipeline automatizad
 Eu criei um workflow que roda **todo dia 06h30 BRT** e gera 3 roteiros completos para você. Você só precisa:
 
 1. **Esperar 1 dia** (próxima execução é amanhã 06h30 BRT, ou disparar manualmente — abaixo).
-2. **Abrir o repositório** em GitHub → pasta `out/` → arquivo `tiktok-roteiros-YYYY-MM-DD.md`.
+2. **Abrir o repositório** em GitHub → pasta `tiktok-roteiros/` → arquivo `tiktok-roteiros-YYYY-MM-DD.md`.
 3. **Copiar/colar** os roteiros na sua produção de vídeo. Cada um tem: 3 captions A/B/C, comentário fixado, hook visual, sugestão de stitch/duet, texto sobreposto.
 
 **Disparar manualmente agora** (via terminal):
