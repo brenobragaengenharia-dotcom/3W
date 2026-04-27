@@ -36,6 +36,7 @@ import { dirname, join } from 'path';
 import { fetchAllRss } from './lib/rss.js';
 import { fetchGnews } from './lib/gnews.js';
 import { rewriteNoticia } from './lib/news-rewrite.js';
+import { safeImage } from '../lib/safe-image.js';
 
 // sharp é opcional — se não estiver instalado, salva o arquivo bruto sem processamento
 let sharp;
@@ -383,7 +384,7 @@ async function main() {
             categoria: raw.categoria_padrao || 'Cinema',
             autor: 'Redação 3W',
             data: isoDate,
-            imagem: raw.imagem || '/images/noticias/placeholder.jpg',
+            imagem: safeImage(raw.imagem),
             tempo_leitura: 4,
           },
           editorial: {

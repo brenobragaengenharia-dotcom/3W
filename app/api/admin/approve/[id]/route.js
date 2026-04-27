@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getFile, putFile } from '@/lib/github-api';
+import { safeImage } from '@/lib/safe-image';
 
 function esc(s) { return String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'"); }
 
@@ -59,7 +60,7 @@ export async function POST(req, { params }) {
       categoria: article.categoria,
       autor: article.autor || 'Redação 3W',
       data: article.data,
-      imagem: article.imagem || '/images/noticias/placeholder.jpg',
+      imagem: safeImage(article.imagem),
       tempo_leitura: Number(article.tempo_leitura) || 4,
     });
 
@@ -78,7 +79,7 @@ export async function POST(req, { params }) {
       categoria: article.categoria,
       autor: article.autor || 'Redação 3W',
       data: article.data,
-      imagem: article.imagem || '/images/noticias/placeholder.jpg',
+      imagem: safeImage(article.imagem),
       tempo_leitura: Number(article.tempo_leitura) || 4,
       manchete: article.manchete || article.titulo,
       paragrafos: article.paragrafos || [],

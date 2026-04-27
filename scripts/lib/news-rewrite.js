@@ -2,6 +2,8 @@
 // Reescreve uma notícia crua (RSS/GNews) no schema do 3W via Claude.
 // FILOSOFIA: fidelidade > tamanho. NÃO inventa. Notícias fora-de-tema são REJEITADAS.
 
+import { safeImage } from '../../lib/safe-image.js';
+
 const ANTHROPIC_API = 'https://api.anthropic.com/v1/messages';
 const MODEL = 'claude-sonnet-4-6';
 
@@ -171,7 +173,7 @@ CASO 2 (notícia FORA DO ESCOPO) — RETORNE APENAS:
       categoria,
       autor: 'Redação 3W',
       data,
-      imagem: raw.imagem || '/images/noticias/placeholder.jpg',
+      imagem: safeImage(raw.imagem),
       tempo_leitura,
     },
     editorial: {

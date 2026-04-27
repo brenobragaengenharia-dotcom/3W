@@ -14,6 +14,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'covers.openlibrary.org' },
       { protocol: 'https', hostname: 'wallpapercave.com' },
       { protocol: 'https', hostname: 'f.i.uol.com.br' },
+      { protocol: 'https', hostname: 'cinepop.com.br' },
       { protocol: 'https', hostname: '**.espncdn.com' },
       { protocol: 'https', hostname: 'images.thedirect.com' },
       { protocol: 'https', hostname: 'static.netshoes.com.br' },
