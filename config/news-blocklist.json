@@ -1,0 +1,6 @@
+{
+  "_descricao": "URLs de notícias que não devem ser ingeridas pelo fetch-news.js. Adicionar aqui ao invés de só remover do mock-data.js, senão o cron diário pode reimportar.",
+  "blockedUrls": [
+    "https://cinepop.com.br/michael-filme-originalmente-abordaria-acusacoes-de-abuso-e-investigacoes-policiais-730543/"
+  ]
+}

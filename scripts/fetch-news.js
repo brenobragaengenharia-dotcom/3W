@@ -88,6 +88,7 @@ const ROOT = join(__dirname, '..');
 const MOCK_DATA_PATH = join(ROOT, 'lib', 'mock-data.js');
 const CONTENT_PATH   = join(ROOT, 'lib', 'content.json');
 const CONFIG_PATH    = join(ROOT, 'config', 'news-sources.json');
+const BLOCKLIST_PATH = join(ROOT, 'config', 'news-blocklist.json');
 const IMAGES_DIR     = join(ROOT, 'public', 'images', 'noticias');
 
 // ─── Download e otimização de imagem ──────────────────────────────────────────
@@ -296,6 +297,15 @@ async function main() {
 
   let itens = dedupeByUrl([...rss, ...gnews]);
   log('♻️ ', `após dedupe: ${itens.length}`);
+
+  // Filtro de blocklist (URLs explicitamente banidas)
+  if (existsSync(BLOCKLIST_PATH)) {
+    const bl = JSON.parse(readFileSync(BLOCKLIST_PATH, 'utf-8'));
+    const blocked = new Set((bl.blockedUrls || []).map(normalizeUrl));
+    const before = itens.length;
+    itens = itens.filter((it) => !blocked.has(normalizeUrl(it.url)));
+    if (before !== itens.length) log('🚫', `removidas pelo blocklist: ${before - itens.length}`);
+  }
 
   // Filtra os que já estão publicados (pelos slugs atuais nos arrays)
   const slugsExistentes = new Set();
