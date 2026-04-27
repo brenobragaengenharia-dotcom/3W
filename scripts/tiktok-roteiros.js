@@ -148,7 +148,7 @@ async function main() {
     });
   }
 
-  const outDir  = path.join(ROOT, 'out');
+  const outDir  = path.join(ROOT, 'tiktok-roteiros');
   await fs.mkdir(outDir, { recursive: true });
   const stamp   = new Date().toISOString().slice(0, 10);
   const outPath = path.join(outDir, `tiktok-roteiros-${stamp}.json`);
