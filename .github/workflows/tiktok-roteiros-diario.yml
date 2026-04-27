@@ -1,0 +1,79 @@
+name: TikTok roteiros diário (06:30 BRT)
+
+# Roda 30 min depois do atualiza-conteudo, pra pegar as notícias frescas do dia.
+on:
+  schedule:
+    - cron: '30 9 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: tiktok-roteiros
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  gerar:
+    name: Gera roteiros + captions Claude para top-3 notícias do dia
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm ci --no-audit --no-fund
+
+      - name: Gerar .env.local
+        run: |
+          cat > .env.local <<EOF
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          EOF
+
+      - name: Rodar tiktok-roteiros
+        run: npm run tiktok-roteiros
+        env:
+          NODE_OPTIONS: '--no-warnings'
+        continue-on-error: true
+
+      - name: Limpar .env.local
+        if: always()
+        run: rm -f .env.local
+
+      - name: Detectar mudanças
+        id: diff
+        run: |
+          if [ -n "$(git status --porcelain out/)" ]; then
+            echo "tem_mudancas=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "tem_mudancas=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit dos roteiros gerados
+        if: steps.diff.outputs.tem_mudancas == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add out/
+          git commit -m "chore(tiktok): roteiros automáticos $(date +'%Y-%m-%d')"
+          git push origin HEAD:master
+
+      - name: Resumo
+        run: |
+          if [ "${{ steps.diff.outputs.tem_mudancas }}" = "true" ]; then
+            echo "✅ Roteiros TikTok gerados em out/" >> "$GITHUB_STEP_SUMMARY"
+            ls -la out/ >> "$GITHUB_STEP_SUMMARY" || true
+          else
+            echo "ℹ️ Nenhum roteiro novo." >> "$GITHUB_STEP_SUMMARY"
+          fi
