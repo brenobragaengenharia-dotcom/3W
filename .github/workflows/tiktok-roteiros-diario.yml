@@ -1,9 +1,10 @@
-name: TikTok roteiros diário (06:30 BRT)
+name: TikTok roteiros (manual)
 
-# Roda 30 min depois do atualiza-conteudo, pra pegar as notícias frescas do dia.
+# Cron desativado em 2026-04-26 a pedido do user — só roda via workflow_dispatch.
+# Para reativar a execução diária 06:30 BRT, descomente o bloco schedule abaixo.
 on:
-  schedule:
-    - cron: '30 9 * * *'
+  # schedule:
+  #   - cron: '30 9 * * *'
   workflow_dispatch:
 
 concurrency:
