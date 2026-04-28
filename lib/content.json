@@ -4599,6 +4599,27 @@
         "url": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/prime-video-apresenta-spider-noir-na-ccxp-com-nicolas-cage-como-heroi.shtml"
       },
       "gerado_em": "2026-04-26T23:50:01.739Z"
+    },
+    "silo-teaser-dublado-da-3-temporada-e-divulgado": {
+      "titulo": "Silo | Teaser dublado da 3ª temporada é divulgado",
+      "descricao": "Apple TV Brasil lançou o teaser dublado da 3ª temporada de 'Silo' e confirmou estreia para 3 de julho.",
+      "categoria": "Séries",
+      "autor": "Redação 3W",
+      "data": "2026-04-28",
+      "imagem": "/images/noticias/silo-teaser-dublado-da-3-temporada-e-divulgado.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Silo retorna em julho com Rebecca Ferguson no comando",
+      "paragrafos": [
+        "O Apple TV Brasil divulgou o teaser dublado da 3ª temporada de 'Silo', série distópica estrelada por Rebecca Ferguson. O streaming também confirmou a data de estreia do novo ciclo: 3 de julho.",
+        "Segundo o CinePop, a série já está renovada para a 4ª temporada, que será a última."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Cinepop",
+        "url": "https://cinepop.com.br/confira-o-teaser-trailer-dublado-da-3a-temporada-de-silo-730893/"
+      },
+      "gerado_em": "2026-04-28T10:55:47.078Z"
     }
   },
   "esportes": {
@@ -5103,6 +5124,46 @@
         "url": "https://www.espn.com.br/disneyplus/artigo/_/id/16615493/hora-igor-thiago-quais-10-brasileiros-artilheiros-grandes-ligas-europa-que-assistir-disney-plus"
       },
       "gerado_em": "2026-04-27T10:54:17.249Z"
+    },
+    "botafogo-saf-admite-estado-pre-falimentar-a-justica": {
+      "titulo": "Botafogo SAF admite 'estado pré-falimentar' à Justiça",
+      "descricao": "Clube carioca enviou manifestação ao Tribunal Arbitral reconhecendo situação financeira crítica e venda de jogador para pagar salários.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-04-28",
+      "imagem": "/images/noticias/placeholder.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Botafogo SAF declara estado pré-falimentar ao Tribunal Arbitral",
+      "paragrafos": [
+        "A SAF do Botafogo enviou uma manifestação ao Tribunal Arbitral reconhecendo que o clube se encontra em 'estado pré-falimentar'. No mesmo documento, segundo a ESPN Brasil, o clube informou ter uma venda de jogador encaminhada com o objetivo de quitar salários em atraso."
+      ],
+      "frase_destaque": "estado pré-falimentar",
+      "conclusao": "",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/botafogo/artigo/_/id/16635585/botafogo-saf-diz-a-justica-esta-em-estado-pre-falimentar-tem-venda-jogador-encaminhada-para-pagar-salarios"
+      },
+      "gerado_em": "2026-04-28T10:55:52.523Z"
+    },
+    "napoli-negocia-contratacao-de-zagueiro-do-athletic-club": {
+      "titulo": "Napoli negocia contratação de zagueiro do Athletic Club",
+      "descricao": "Clube italiano abriu negociação para contratar jovem defensor do time mineiro, segundo a ESPN Brasil.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-04-28",
+      "imagem": "/images/noticias/placeholder.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Napoli vai à caça de jovem zagueiro do Athletic Club",
+      "paragrafos": [
+        "O Napoli iniciou negociações para contratar um jovem zagueiro do Athletic Club, clube mineiro. Segundo a ESPN Brasil, há valores sendo discutidos entre as duas equipes pelo defensor."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/mercado-da-bola/artigo/_/id/16635287/napoli-abre-negociacao-para-contratar-jovem-zagueiro-athletic-club"
+      },
+      "gerado_em": "2026-04-28T10:55:56.630Z"
     }
   }
 }
