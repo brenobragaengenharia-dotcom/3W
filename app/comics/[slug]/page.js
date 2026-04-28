@@ -17,6 +17,7 @@ export async function generateMetadata({ params }) {
   const item   = TODOS_COMICS.find(c => c.slug === slug);
   const gerado = content.comics?.[slug];
   if (!item) return {};
+  const ogUrl = `/api/og?title=${encodeURIComponent(item.titulo)}&category=${encodeURIComponent('Comics')}`;
   return {
     title:       item.titulo,
     description: gerado?.sinopse_pt ?? item.titulo,
@@ -24,7 +25,13 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title:       item.titulo,
       description: gerado?.sinopse_pt ?? '',
-      images: [{ url: item.imagem }],
+      images: [{ url: ogUrl, width: 1200, height: 630, alt: item.titulo }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: item.titulo,
+      description: gerado?.sinopse_pt ?? '',
+      images: [ogUrl],
     },
   };
 }

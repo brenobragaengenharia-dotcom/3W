@@ -20,7 +20,7 @@ function PreviewModal({ article, onClose, onApprove, onReject, processing }) {
         {/* Header do modal */}
         <div className="flex items-center justify-between p-5 border-b border-[#2a2a2a]">
           <h2 className="text-white font-bold text-sm">Pré-visualização do artigo</h2>
-          <button onClick={onClose} className="text-[#9ca3af] hover:text-white transition-colors">
+          <button onClick={onClose} aria-label="Fechar" className="text-[#9ca3af] hover:text-white transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>

@@ -15,6 +15,7 @@ export async function generateMetadata({ params }) {
   const serie  = SERIES.find(s => s.slug === slug);
   const gerado = content.series?.[slug];
   if (!serie) return {};
+  const ogUrl = `/api/og?title=${encodeURIComponent(serie.titulo)}&category=${encodeURIComponent('Séries')}`;
   return {
     title:       serie.titulo,
     description: gerado?.sinopse_pt ?? serie.titulo,
@@ -22,7 +23,13 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title:       serie.titulo,
       description: gerado?.sinopse_pt ?? '',
-      images: [{ url: gerado?.backdrop ?? serie.imagem }],
+      images: [{ url: ogUrl, width: 1200, height: 630, alt: serie.titulo }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: serie.titulo,
+      description: gerado?.sinopse_pt ?? '',
+      images: [ogUrl],
     },
   };
 }

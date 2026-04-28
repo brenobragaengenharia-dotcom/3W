@@ -15,6 +15,7 @@ export async function generateMetadata({ params }) {
   const filme  = FILMES.find(f => f.slug === slug);
   const gerado = content.filmes?.[slug];
   if (!filme) return {};
+  const ogUrl = `/api/og?title=${encodeURIComponent(filme.titulo)}&category=${encodeURIComponent('Cinema')}`;
   return {
     title:       filme.titulo,
     description: gerado?.sinopse_pt ?? filme.titulo,
@@ -23,7 +24,13 @@ export async function generateMetadata({ params }) {
       type:   'video.movie',
       title:   filme.titulo,
       description: gerado?.sinopse_pt ?? '',
-      images: [{ url: gerado?.backdrop ?? filme.imagem }],
+      images: [{ url: ogUrl, width: 1200, height: 630, alt: filme.titulo }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: filme.titulo,
+      description: gerado?.sinopse_pt ?? '',
+      images: [ogUrl],
     },
   };
 }
