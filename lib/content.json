@@ -1550,6 +1550,74 @@
       "vale_assistir": true,
       "frase_final": "Alguns filmes terminam. Esse aqui permanece.",
       "gerado_em": "2026-04-26T11:27:00.795Z"
+    },
+    "eles-vao-te-matar": {
+      "tmdb_id": 1292695,
+      "titulo": "Eles Vão te Matar",
+      "sinopse": "Uma mulher aceita um emprego como governanta em um arranha-céu de Nova York, sem saber da história de desaparecimentos do prédio. Ela logo percebe que a comunidade está envolta em mistério.",
+      "nota_tmdb": "6.5",
+      "duracao": 94,
+      "generos": [
+        "Ação",
+        "Comédia",
+        "Terror"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/xnb15logFGJRniA7Ud3NILSPPhs.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/kPiqEJ8reCWKZXIWgweQd6eR2tP.jpg",
+      "diretor": "Кирилл Соколов",
+      "elenco": [
+        {
+          "nome": "Zazie Beetz",
+          "personagem": "Asia Reaves",
+          "foto": "https://image.tmdb.org/t/p/w185/sgxzT54GnvgeMnOZgpQQx9csAdd.jpg"
+        },
+        {
+          "nome": "Patricia Arquette",
+          "personagem": "Lily Woodhouse",
+          "foto": "https://image.tmdb.org/t/p/w185/jeThSouMatiuRiLkjDvSBLHpmq0.jpg"
+        },
+        {
+          "nome": "Myha'la",
+          "personagem": "Maria Reaves",
+          "foto": "https://image.tmdb.org/t/p/w185/hRc3igngt5dkpM08i0a3z7gkYWa.jpg"
+        },
+        {
+          "nome": "Paterson Joseph",
+          "personagem": "Ray Woodhouse",
+          "foto": "https://image.tmdb.org/t/p/w185/7CIVAl4HiuWrmp4r8Jk09sqxTBy.jpg"
+        },
+        {
+          "nome": "Tom Felton",
+          "personagem": "Kevin",
+          "foto": "https://image.tmdb.org/t/p/w185/etmtUBzJ1i1XJTLS6MkotJFE1se.jpg"
+        },
+        {
+          "nome": "Heather Graham",
+          "personagem": "Sharon",
+          "foto": "https://image.tmdb.org/t/p/w185/avYdNkeg1oTvmrNJbFDcTlBCkKs.jpg"
+        },
+        {
+          "nome": "Willie Ludik",
+          "personagem": "Bob",
+          "foto": "https://image.tmdb.org/t/p/w185/8uWmGHp0bO3jrXZIOsmHIh1La3i.jpg"
+        },
+        {
+          "nome": "David Viviers",
+          "personagem": "Tall Steve",
+          "foto": "https://image.tmdb.org/t/p/w185/imKMFCnYUiJOUc3uOZ1lPv9SFpF.jpg"
+        }
+      ],
+      "lancamento": "2026-03-25",
+      "manchete": "Governanta em apuros: terror, risadas e muito sangue em NY",
+      "sinopse_pt": "Asia Reaves aceita um trabalho como governanta num arranha-céu luxuoso de Nova York — e logo percebe que os moradores somem sem explicação. O que parecia um emprego comum vira um pesadelo com pitadas de humor negro. A comunidade do prédio esconde segredos que ninguém deveria descobrir sozinho.",
+      "paragrafos_review": [
+        "Misturar ação, comédia e terror num único filme é uma aposta arriscada, e 'Eles Vão te Matar' sabe disso desde o primeiro ato. O diretor Kirill Sokolov, conhecido pelo estilo visceral de 'Por que Eu Me Mato?', usa o arranha-céu como microcosmo social: cada andar esconde uma camada de absurdo e perigo. A decisão de roteiro de apresentar Lily Woodhouse, vivida por Patricia Arquette, como anfitriã educada demais é o sinal vermelho que o filme planta cedo — e que a maioria dos personagens ignora.",
+        "Zazie Beetz carrega o filme nas costas com uma presença magnética. Há uma cena em que Asia confronta Ray Woodhouse, interpretado por Paterson Joseph, no corredor do décimo andar, e a tensão ali é coisa fina: humor e ameaça dividindo o mesmo espaço. Tom Felton entrega um Kevin perturbadoramente simpático, longe do vilão óbvio. A direção de Sokolov mantém o ritmo nos 94 minutos sem enrolação, embora o segundo ato perca um pouco o fio ao tentar equilibrar os três gêneros ao mesmo tempo.",
+        "A nota 6.5 no TMDB é honesta. O filme diverte, assusta em momentos pontuais e arranca algumas boas risadas, mas não fecha o pacote com chave de ouro. O final resolve as pontas principais sem dar o nó na cabeça que a premissa prometia. Ainda assim, é um trabalho com personalidade própria, elenco afiado e estética que respeita o gênero. Quem curte terror com autoironia vai sair satisfeito."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Nem todo arranha-céu tem vista pro paraíso — alguns têm vista pro inferno.",
+      "gerado_em": "2026-04-29T10:46:51.882Z"
     }
   },
   "series": {
@@ -4620,6 +4688,26 @@
         "url": "https://cinepop.com.br/confira-o-teaser-trailer-dublado-da-3a-temporada-de-silo-730893/"
       },
       "gerado_em": "2026-04-28T10:55:47.078Z"
+    },
+    "sequencia-de-o-diabo-veste-prada-estreia-nos-cinemas-brasileiros": {
+      "titulo": "Sequência de O Diabo Veste Prada estreia nos cinemas brasileiros",
+      "descricao": "Continuação do clássico de moda e cinema chega às telas nesta quinta-feira (30), 20 anos após o lançamento original.",
+      "categoria": "Cinema",
+      "autor": "Redação 3W",
+      "data": "2026-04-29",
+      "imagem": "/images/noticias/sequencia-de-o-diabo-veste-prada-estreia-nos-cinemas-brasileiros.jpg",
+      "tempo_leitura": 1,
+      "manchete": "O Diabo Veste Prada volta ao cinema 20 anos depois",
+      "paragrafos": [
+        "A sequência de O Diabo Veste Prada, uma das continuações mais aguardadas pelos fãs de moda e cinema em 2026, estreia nesta quinta-feira (30) nos cinemas brasileiros. O longa chega com figurinos extravagantes e elenco de peso, mantendo a base fiel de fãs construída duas décadas após o filme original."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Folha Ilustrada",
+        "url": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/como-o-diabo-veste-prada-inspirou-uma-geracao-com-sua-protagonista-girlboss.shtml"
+      },
+      "gerado_em": "2026-04-29T10:47:38.426Z"
     }
   },
   "esportes": {
@@ -5164,6 +5252,47 @@
         "url": "https://www.espn.com.br/futebol/mercado-da-bola/artigo/_/id/16635287/napoli-abre-negociacao-para-contratar-jovem-zagueiro-athletic-club"
       },
       "gerado_em": "2026-04-28T10:55:56.630Z"
+    },
+    "jovem-do-goias-atrai-clubes-ingleses-e-olheiros-da-selecao-sub-20": {
+      "titulo": "Jovem do Goiás atrai clubes ingleses e olheiros da Seleção Sub-20",
+      "descricao": "Lucas Rodrigues, de 18 anos, eleito revelação do Goiano, está na mira do futebol inglês e da Seleção Brasileira Sub-20.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-04-28",
+      "imagem": "/images/noticias/jovem-do-goias-atrai-clubes-ingleses-e-olheiros-da-selecao-sub-20.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Meia de 18 anos do Goiás entra no radar inglês e da Seleção",
+      "paragrafos": [
+        "O meia Lucas Rodrigues, de 18 anos, vem chamando atenção além das fronteiras do futebol brasileiro. Eleito revelação do Campeonato Goiano, o jogador do Goiás está sendo monitorado por clubes ingleses e por olheiros da Seleção Brasileira Sub-20, segundo a ESPN Brasil."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Espn Brazil",
+        "url": "https://www.espn.com.br/futebol/serie-b/artigo/_/id/16640235/goias-lucas-rodrigues-atrai-observadores-selecao-base-e-futebol-ingles"
+      },
+      "gerado_em": "2026-04-29T10:47:46.929Z"
+    },
+    "militao-esta-fora-da-copa-com-lesao-no-biceps-femoral": {
+      "titulo": "Militão está fora da Copa com lesão no bíceps femoral",
+      "descricao": "Zagueiro do Real Madrid sofreu ruptura no tendão da perna esquerda e não defenderá a Seleção Brasileira no Mundial.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-04-28",
+      "imagem": "/images/noticias/militao-esta-fora-da-copa-com-lesao-no-biceps-femoral.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Lesão grave tira Militão da Copa do Mundo",
+      "paragrafos": [
+        "Éder Militão não vai disputar a Copa do Mundo pela Seleção Brasileira. O Real Madrid confirmou nesta terça-feira (28) que o zagueiro sofreu uma lesão no tendão do bíceps femoral da perna esquerda, problema que o afasta do torneio.",
+        "Segundo a CNN Brasil, um ortopedista detalhou o tipo de lesão muscular sofrida pelo jogador, explicando a gravidade do problema que levou ao afastamento de Militão da convocação."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "CNN Brasil",
+        "url": "https://www.cnnbrasil.com.br/saude/lesao-no-biceps-femoral-entenda-problema-que-tirou-eder-militao-da-copa/"
+      },
+      "gerado_em": "2026-04-29T10:47:52.679Z"
     }
   }
 }
