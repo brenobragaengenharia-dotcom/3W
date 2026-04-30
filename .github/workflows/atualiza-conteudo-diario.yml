@@ -73,6 +73,12 @@ jobs:
           NODE_OPTIONS: '--no-warnings'
         continue-on-error: true
 
+      - name: Recuperar imagens órfãs (download para /public/images/noticias)
+        run: node --experimental-vm-modules scripts/repair-news-images.js
+        env:
+          NODE_OPTIONS: '--no-warnings'
+        continue-on-error: true
+
       - name: Limpar .env.local (paranoia — não fica em artefatos)
         if: always()
         run: rm -f .env.local
@@ -80,7 +86,8 @@ jobs:
       - name: Detectar mudanças
         id: diff
         run: |
-          if [ -n "$(git status --porcelain lib/mock-data.js lib/content.json)" ]; then
+          # Inclui também as imagens baixadas pelo fetch-news / repair
+          if [ -n "$(git status --porcelain lib/mock-data.js lib/content.json public/images/noticias)" ]; then
             echo "tem_mudancas=true" >> "$GITHUB_OUTPUT"
           else
             echo "tem_mudancas=false" >> "$GITHUB_OUTPUT"
@@ -91,7 +98,9 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add lib/mock-data.js lib/content.json
+          # IMPORTANTE: incluir as imagens baixadas em public/images/noticias/
+          # caso contrário mock-data.js aponta para arquivos que não existem no repo
+          git add lib/mock-data.js lib/content.json public/images/noticias
           git commit -m "chore(content): atualização automática diária $(date +'%Y-%m-%d %H:%M UTC')"
           git push origin HEAD:master
 
