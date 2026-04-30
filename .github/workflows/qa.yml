@@ -1,0 +1,51 @@
+name: QA — lint + build
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'app/**'
+      - 'components/**'
+      - 'lib/**'
+      - 'scripts/**'
+      - 'middleware.js'
+      - 'next.config.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'eslint.config.mjs'
+      - '.github/workflows/qa.yml'
+  pull_request:
+    branches: [master]
+
+# Cancela runs anteriores se um novo push chegar — evita fila redundante.
+concurrency:
+  group: qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qa:
+    name: Lint + build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm ci --no-audit --no-fund
+
+      - name: Lint
+        run: npm run lint
+        continue-on-error: false
+
+      - name: Build (sem env vars — só validação de tipos/sintaxe)
+        run: npm run build
+        env:
+          # Stubs pra build não quebrar por env ausente. NÃO são credenciais reais.
+          ADMIN_SECRET: ci-stub-admin-secret
+          TEAM_SECRET: ci-stub-team-secret
