@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server';
+import { isAdminToken, COOKIE_NAME } from '@/lib/admin-auth';
 
-// Rotas dentro de /admin e /api/admin que não precisam de auth
+// Rotas dentro de /admin e /api/admin que não precisam de admin auth.
+// /admin/enviar e /api/admin/submit são forms para redatores submeterem
+// notícias — protegidos por TEAM_SECRET próprio + rate-limit (não exigem
+// login de admin).
 const PUBLIC = new Set([
   '/admin/login',
   '/admin/enviar',
@@ -8,17 +12,10 @@ const PUBLIC = new Set([
   '/api/admin/submit',
 ]);
 
-async function sha256hex(msg) {
-  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(msg));
-  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
-}
-
 async function isAdmin(req) {
-  const token = req.cookies.get('admin_token')?.value;
-  if (!token || !process.env.ADMIN_SECRET) return false;
-  const day = new Date().toISOString().slice(0, 10);
-  const expected = await sha256hex(`admin:${process.env.ADMIN_SECRET}:${day}`);
-  return token === expected;
+  const token = req.cookies.get(COOKIE_NAME)?.value;
+  if (!token) return false;
+  return isAdminToken(token);
 }
 
 export const config = { matcher: ['/admin/:path*', '/api/admin/:path*'] };
