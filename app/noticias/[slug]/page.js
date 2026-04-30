@@ -153,7 +153,7 @@ export default async function NoticiaPage({ params }) {
                 {/* Pull quote */}
                 {g.frase_destaque && (
                   <blockquote className="border-l-4 border-[#FF6600] pl-5 py-2 my-6">
-                    <p className="text-white font-semibold text-lg italic">"{g.frase_destaque}"</p>
+                    <p className="text-white font-semibold text-lg italic">&ldquo;{g.frase_destaque}&rdquo;</p>
                   </blockquote>
                 )}
 

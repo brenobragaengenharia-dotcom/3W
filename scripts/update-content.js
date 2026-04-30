@@ -86,7 +86,6 @@ function extractArrayFromMockData(varName) {
   const regex = new RegExp(`export const ${varName}\\s*=\\s*(\\[[\\s\\S]*?\\]);`);
   const match = src.match(regex);
   if (!match) return [];
-  // eslint-disable-next-line no-eval
   return eval(`${strConsts.join('\n')}\n${match[1]}`);
 }
 

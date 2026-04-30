@@ -165,7 +165,7 @@ export default async function ComicPage({ params }) {
         {/* Frase final */}
         {g?.frase_final && (
           <blockquote className="border-l-4 border-yellow-500 pl-5 py-2 my-8">
-            <p className="text-white font-semibold text-lg italic">"{g.frase_final}"</p>
+            <p className="text-white font-semibold text-lg italic">&ldquo;{g.frase_final}&rdquo;</p>
           </blockquote>
         )}
 

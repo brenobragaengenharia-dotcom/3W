@@ -56,7 +56,7 @@ function PreviewModal({ article, onClose, onApprove, onReject, processing }) {
             ))}
             {article.frase_destaque && (
               <blockquote className="border-l-4 border-[#FF6600] pl-4 py-1">
-                <p className="text-white font-semibold italic text-sm">"{article.frase_destaque}"</p>
+                <p className="text-white font-semibold italic text-sm">&ldquo;{article.frase_destaque}&rdquo;</p>
               </blockquote>
             )}
             {(article.paragrafos || []).slice(2).map((p, i) => (
@@ -125,6 +125,11 @@ export default function AdminDashboard() {
     setLoading(false);
   }, [router]);
 
+  // fetchPending faz fetch + setState — padrão clássico de "carrega ao montar".
+  // O lint react-hooks/set-state-in-effect alerta sobre isso, mas é o uso correto
+  // pra dados iniciais que dependem do request. Sem alternativa idiomática melhor
+  // sem adicionar uma lib de data-fetching (SWR/TanStack Query).
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { fetchPending(); }, [fetchPending]);
 
   async function approve(id) {

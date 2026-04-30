@@ -156,7 +156,7 @@ export default async function SeriePage({ params }) {
         {/* Frase final */}
         {g?.frase_final && (
           <blockquote className="border-l-4 border-[#FF6600] pl-5 py-2 my-8">
-            <p className="text-white font-semibold text-lg italic">"{g.frase_final}"</p>
+            <p className="text-white font-semibold text-lg italic">&ldquo;{g.frase_final}&rdquo;</p>
           </blockquote>
         )}
 
