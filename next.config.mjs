@@ -2,6 +2,8 @@
 const nextConfig = {
   // Otimização de imagens — adicione domínios externos conforme necessário
   images: {
+    // Quota Vercel Hobby do otimizador foi atingida — servir originais.
+    unoptimized: true,
     remotePatterns: [
       { protocol: 'https', hostname: 'image.tmdb.org' },
       { protocol: 'https', hostname: 'i.scdn.co' },
