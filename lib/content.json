@@ -4791,6 +4791,28 @@
         "url": "https://olhardigital.com.br/2026/04/29/curiosidades/o-que-vem-na-terceira-temporada-de-dress-up-darling-segundo-os-capitulos-mais-recentes-do-manga/"
       },
       "gerado_em": "2026-04-30T10:47:36.091Z"
+    },
+    "portfolio-de-artista-reforca-rumores-de-injustice-3": {
+      "titulo": "Portfólio de artista reforça rumores de Injustice 3",
+      "descricao": "Menção ao jogo no ArtStation de um funcionário da WB Games se soma a dados de MultiVersus e declarações de dubladores.",
+      "categoria": "Comics",
+      "autor": "Redação 3W",
+      "data": "2026-05-01",
+      "imagem": "/images/noticias/portfolio-de-artista-reforca-rumores-de-injustice-3.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Injustice 3 acumula pistas e só falta o anúncio oficial",
+      "paragrafos": [
+        "Segundo o site MP1st, um artista ligado à WB Games listou Injustice 3 em seu portfólio no ArtStation — ao lado de outros títulos AAA ainda não anunciados e de uma sequência de Hogwarts Legacy. O MP1st optou por não divulgar o nome do profissional para não comprometê-lo, mas afirmou ter visto a menção diretamente na página.",
+        "Não é o primeiro sinal. Em 2025, um dataminer encontrou referências ao jogo nos arquivos de MultiVersus, e os dubladores George Newbern e Phil LaMarr — vozes de Superman e Lanterna Verde nas duas primeiras edições — confirmaram em uma convenção que estavam trabalhando no título. James Gunn e Peter Safran, à frente da DC atualmente, também chegaram a conversar com a NetherRealm e a Rocksteady sobre novos games na franquia.",
+        "Um fator de incerteza, porém, paira sobre o projeto: a Warner Bros. foi adquirida pela Paramount Skydance e está em processo de transição, o que pode gerar instabilidade interna e até o cancelamento de projetos. Por enquanto, confirmações oficiais da NetherRealm ou da WB Games ainda não vieram."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Canaltech",
+        "url": "https://canaltech.com.br/games/artista-da-wb-games-pode-ter-confirmado-injustice-3-sem-querer-em-portfolio/"
+      },
+      "gerado_em": "2026-05-01T10:16:35.891Z"
     }
   },
   "esportes": {
@@ -5457,6 +5479,48 @@
         "url": "https://www.espn.com.br/futebol/corinthians/artigo/_/id/16645484/matheus-bidu-explica-o-que-mudou-no-corinthians-com-fernando-diniz-exalta-defesa-zerada-sonha-com-selecao-brasileira"
       },
       "gerado_em": "2026-04-30T11:59:07.747Z"
+    },
+    "gp-de-miami-2026-horarios-dos-treinos-e-da-corrida": {
+      "titulo": "GP de Miami 2026: horários dos treinos e da corrida",
+      "descricao": "A F1 volta à ação após cinco semanas de pausa com o GP de Miami, primeira corrida em solo americano da temporada 2026.",
+      "categoria": "Fórmula 1",
+      "autor": "Redação 3W",
+      "data": "2026-04-30",
+      "imagem": "/images/noticias/gp-de-miami-2026-horarios-dos-treinos-e-da-corrida.jpg",
+      "tempo_leitura": 1,
+      "manchete": "F1 retorna em Miami após cinco semanas de pausa",
+      "paragrafos": [
+        "A Fórmula 1 retorna ao calendário neste fim de semana com o Grande Prêmio de Miami, disputado entre 1º e 3 de maio de 2026. A etapa marca a volta da categoria depois de cinco semanas sem corridas e é a primeira realizada em território americano na temporada.",
+        "Por ser sediada nos Estados Unidos, a corrida oferece horários de início mais acessíveis para o público brasileiro do que as etapas europeias e asiáticas — um detalhe que, segundo o DCI, diferencia o GP de Miami dentro do calendário da temporada."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "DCI",
+        "url": "https://www.dci.com.br/esporte/horarios-da-formula-1-em-miami-2026/330062/"
+      },
+      "gerado_em": "2026-05-01T10:16:43.419Z"
+    },
+    "bottas-revela-dieta-extrema-que-quase-o-deixou-em-inanicao-na-f1": {
+      "titulo": "Bottas revela dieta extrema que quase o deixou em inanição na F1",
+      "descricao": "Piloto finlandês contou que viveu delírios e se sentiu como 'dependente de drogas' para controlar o peso na segunda temporada pela Williams.",
+      "categoria": "Fórmula 1",
+      "autor": "Redação 3W",
+      "data": "2026-04-30",
+      "imagem": "/images/noticias/bottas-revela-dieta-extrema-que-quase-o-deixou-em-inanicao-na-f1.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Bottas: delírios e inanição pelo peso na Fórmula 1",
+      "paragrafos": [
+        "Valtteri Bottas revelou que passou por uma dieta perigosa há 12 anos, durante sua segunda temporada na Fórmula 1 pela Williams. Segundo o piloto finlandês, a restrição alimentar foi tão severa que o levou a ter delírios e a se sentir como um 'dependente de drogas', chegando à beira da inanição.",
+        "O relato, divulgado pela Gazeta Esportiva, expõe os riscos físicos e psicológicos a que pilotos podem se submeter para atender às exigências de peso da categoria. Bottas descreveu a experiência como uma das mais extremas de sua carreira no automobilismo."
+      ],
+      "frase_destaque": "Teve delírios, se sentiu como um 'dependente de drogas' e ficou à beira da inanição",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Gazeta Esportiva",
+        "url": "https://www.gazetaesportiva.com/motor/formula-1/bottas-revela-dieta-perigosa-que-o-deixou-a-beira-da-inanicao-na-f1/"
+      },
+      "gerado_em": "2026-05-01T10:16:49.907Z"
     }
   }
 }
