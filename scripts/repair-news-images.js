@@ -94,8 +94,15 @@ function listAllNews(content) {
   return out;
 }
 
+// Considera 'precisa reparo' quando:
+//   - imagem ausente
+//   - imagem aponta para placeholder (genérico ou categórico)
+//   - imagem é card dinâmico /api/og?... (queremos imagem real, não card de título)
+//   - imagem aponta para /images/noticias/X.jpg que não existe no disco
 function isLocalMissing(imagem) {
   if (!imagem) return true;
+  if (imagem.startsWith('/api/og')) return true;
+  if (imagem.startsWith('/images/noticias/placeholder')) return true;
   if (!imagem.startsWith('/images/noticias/')) return false;
   const file = join(ROOT, 'public', imagem);
   return !existsSync(file);
