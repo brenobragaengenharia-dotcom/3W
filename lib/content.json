@@ -4887,7 +4887,7 @@
       "categoria": "Séries",
       "autor": "Redação 3W",
       "data": "2026-05-02",
-      "imagem": "/images/noticias/placeholder.jpg",
+      "imagem": "/api/og?title=%27Os+Anos+Novos%27%3A+a+s%C3%A9rie+da+Mubi+que+merece+mais+aten%C3%A7%C3%A3o&category=S%C3%A9ries",
       "tempo_leitura": 1,
       "manchete": "'Os Anos Novos' é joia escondida na Mubi",
       "paragrafos": [
