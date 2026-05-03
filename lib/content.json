@@ -1685,6 +1685,76 @@
       "vale_assistir": true,
       "frase_final": "Miranda envelheceu, mas continua sendo a pessoa mais perigosa da sala.",
       "gerado_em": "2026-05-02T09:54:25.644Z"
+    },
+    "como-magica": {
+      "tmdb_id": 1007757,
+      "titulo": "Como Mágica",
+      "sinopse": "Uma pequena criatura da floresta e um pássaro majestoso trocam de corpo e precisam se unir para sobreviver à aventura mais incrível de suas vidas.",
+      "nota_tmdb": "8.3",
+      "duracao": 102,
+      "generos": [
+        "Animação",
+        "Aventura",
+        "Comédia",
+        "Família",
+        "Fantasia"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/r4Tfw8CPeeI4EIHI3wH9qNkycZd.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/7FBnCkYzHlVHEtuzTEiGgFhs8EQ.jpg",
+      "diretor": "Nathan Greno",
+      "elenco": [
+        {
+          "nome": "Michael B. Jordan",
+          "personagem": "Ollie (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/sMBpav8cK7t7Nk0yf4tuNOqNUyW.jpg"
+        },
+        {
+          "nome": "Juno Temple",
+          "personagem": "Ivy (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/n20TNExAma6q9iVcWtPRxLl7pEc.jpg"
+        },
+        {
+          "nome": "Tracy Morgan",
+          "personagem": "Boogle / Firewolf (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/ec0OJVbs6NZKMbS1yiCAJKjeoJf.jpg"
+        },
+        {
+          "nome": "Cedric the Entertainer",
+          "personagem": "Caloo (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/s6UrY5uofyxXsU5PydWBoLFReK0.jpg"
+        },
+        {
+          "nome": "Justina Machado",
+          "personagem": "Calli (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/j5FaJXoyhMHlqv1l6TBdt1CH1oO.jpg"
+        },
+        {
+          "nome": "Nate Torrence",
+          "personagem": "Lodd (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/yT9o149xPygdY0NsF9sNgiQwuru.jpg"
+        },
+        {
+          "nome": "Camden Brooks",
+          "personagem": "Young Ollie (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/ge9FgIjRERhyylebW2Np9YwkqqR.jpg"
+        },
+        {
+          "nome": "Tata Vega",
+          "personagem": "Grandma / Mrs. Dung Beetle (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/9SdaK2vly0Gx5yvI5rrTszh31vt.jpg"
+        }
+      ],
+      "lancamento": "2026-05-01",
+      "manchete": "Como Mágica transforma a animação familiar em algo realmente especial",
+      "sinopse_pt": "Ollie, uma pequena criatura da floresta, e Ivy, um pássaro majestoso, acordam um dia com os corpos trocados — e nenhum dos dois pediu por isso. Para reverter o feitiço, precisam aprender a confiar um no outro numa aventura cheia de humor e emoção. O resultado é uma história sobre diferenças que, no fundo, unem mais do que separam.",
+      "paragrafos_review": [
+        "A premissa de troca de corpos já rendeu clássicos do cinema — de Sexta-Feira Muito Louca a Vice-Versa. Nathan Greno, que dirigiu Entrelaçados pela Disney, pega essa fórmula conhecida e injeta nela uma energia nova. O que chama atenção logo de cara é a escolha de colocar dois animais completamente opostos no centro do conflito: uma criaturinha rasteira da floresta e um pássaro que domina os céus. Esse contraste físico cria situações genuinamente engraçadas e, ao mesmo tempo, abre espaço para reflexões sobre empatia sem virar sermão.",
+        "Michael B. Jordan entrega uma performance vocal que surpreende pela leveza — quem esperava o Jordan intenso de Creed vai se divertir com a vulnerabilidade cômica que ele imprime no Ollie. Tracy Morgan, como sempre, rouba cada cena em que aparece, especialmente quando Boogle tenta agir como o feroz Firewolf mas não consegue intimidar nem um besouro. A direção de Greno mantém o ritmo acelerado sem abrir mão dos momentos de silêncio que realmente tocam. Os 102 minutos passam sem aquela sensação de que o filme esticou mais do que devia.",
+        "Como Mágica é coisa fina, sem rodeios. Não é perfeito — o terceiro ato acelera demais e alguns personagens secundários ficam no rascunho. Mas a nota 8.3 no TMDB não é acidente: o filme acerta onde muitas animações erram, que é criar laços reais entre quem assiste e os personagens. Crianças vão gargalhar, adultos vão engolir seco numa ou duas cenas."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Quando a mágica funciona de verdade, a gente nem percebe o truque.",
+      "gerado_em": "2026-05-03T09:59:17.852Z"
     }
   },
   "series": {
@@ -5671,6 +5741,87 @@
         "url": "https://www.lance.com.br/selecao-brasileira/ancelotti-observara-jogadores-de-flamengo-e-vasco-antes-de-convocacao-da-selecao-brasileira.html"
       },
       "gerado_em": "2026-05-02T09:55:31.875Z"
+    },
+    "76ers-viram-serie-contra-os-celtics-e-avancam-nos-playoffs": {
+      "titulo": "76ers viram série contra os Celtics e avançam nos playoffs",
+      "descricao": "Com noite de gala de Joel Embiid, Philadelphia completa virada histórica saindo de 1 a 3 para avançar nos playoffs.",
+      "categoria": "NBA",
+      "autor": "Redação 3W",
+      "data": "2026-05-03",
+      "imagem": "/api/og?title=76ers+viram+s%C3%A9rie+contra+os+Celtics+e+avan%C3%A7am+nos+playoffs&category=NBA",
+      "tempo_leitura": 1,
+      "manchete": "Embiid brilha e 76ers fazem virada histórica nos playoffs",
+      "paragrafos": [
+        "Com uma noite de gala de Joel Embiid, o Philadelphia 76ers completou a virada sobre o Boston Celtics e avançou nos playoffs da NBA. Segundo a ESPN Brasil, foi a primeira vez na história da franquia que o time conseguiu reverter uma série em que perdia por 3 a 1."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/nba/artigo/_/id/16657757/nba-joel-embiid-tem-noite-gala-76ers-completam-virada-sobre-celtics-avancam-playoffs"
+      },
+      "gerado_em": "2026-05-03T09:59:48.593Z"
+    },
+    "palmeiras-empata-com-santos-e-ve-lideranca-ameacada": {
+      "titulo": "Palmeiras empata com Santos e vê liderança ameaçada",
+      "descricao": "Com gol anulado no fim e na volta de Paulinho, Palmeiras e Santos empataram por 1 a 1 na 14ª rodada do Brasileirão.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-03",
+      "imagem": "/api/og?title=Palmeiras+empata+com+Santos+e+v%C3%AA+lideran%C3%A7a+amea%C3%A7ada&category=Futebol",
+      "tempo_leitura": 1,
+      "manchete": "Gol anulado no fim frustra Palmeiras no clássico",
+      "paragrafos": [
+        "Na volta de Paulinho, o Palmeiras ficou no empate por 1 a 1 com o Santos em clássico válido pela 14ª rodada do Brasileirão. O resultado deixa o clube alviverde em situação de ver sua vantagem na liderança da competição diminuir, segundo a ESPN Brasil."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/brasileirao/artigo/_/id/16657691/palmeiras-gol-anulado-no-fim-empata-com-santos-pode-ver-vantagem-lideranca-brasileirao-diminuir-paulinho-volta"
+      },
+      "gerado_em": "2026-05-03T09:59:53.814Z"
+    },
+    "barcelona-vence-osasuna-e-pressiona-por-titulo-da-laliga": {
+      "titulo": "Barcelona vence Osasuna e pressiona por título da LaLiga",
+      "descricao": "Jogando fora de casa, o Barça superou o Osasuna e pode ser campeão espanhol já neste domingo (3).",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-03",
+      "imagem": "/api/og?title=Barcelona+vence+Osasuna+e+pressiona+por+t%C3%ADtulo+da+LaLiga&category=Futebol",
+      "tempo_leitura": 1,
+      "manchete": "Barcelona vence e pode ser campeão antes do Clásico",
+      "paragrafos": [
+        "Com gols marcados no fim da partida, o Barcelona venceu o Osasuna jogando fora de casa e coloca pressão sobre o Real Madrid: os catalães podem garantir o título da LaLiga já neste domingo (3), antes mesmo do El Clásico."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/laliga/artigo/_/id/16657019/laliga-barcelona-vence-osasuna-seca-real-madrid-ser-campeao-antes-do-el-clasico"
+      },
+      "gerado_em": "2026-05-03T09:59:58.451Z"
+    },
+    "remo-vira-no-acrescimo-e-derrota-o-botafogo-no-nilton-santos": {
+      "titulo": "Remo vira no acréscimo e derrota o Botafogo no Nilton Santos",
+      "descricao": "De virada, o Remo venceu o Botafogo por 2 a 1 no Nilton Santos e respirou no Brasileirão 2026.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-02",
+      "imagem": "/images/noticias/remo-vira-no-acrescimo-e-derrota-o-botafogo-no-nilton-santos.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Leão Azul vira nos acréscimos e quebra invencibilidade do Botafogo",
+      "paragrafos": [
+        "O Botafogo teve sua sequência de cinco jogos sem derrota encerrada no Campeonato Brasileiro. Na tarde deste sábado, o clube carioca recebeu o Remo no Nilton Santos, no Rio de Janeiro, e perdeu por 2 a 1, de virada. Ferraresi abriu o placar para os donos da casa, mas Alef Manga e Jajá marcaram para o Leão Azul, que garantiu a vitória nos acréscimos.",
+        "Com o resultado, segundo o Futebol Interior, o Remo respira na tabela do Brasileirão 2026, enquanto o Botafogo volta a tropeçar em casa após período de recuperação."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Futebol Interior",
+        "url": "https://www.futebolinterior.com.br/botafogo-perde-de-virada-para-o-remo-brasileirao-2026/"
+      },
+      "gerado_em": "2026-05-03T10:00:07.751Z"
     }
   }
 }
