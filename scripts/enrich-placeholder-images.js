@@ -148,7 +148,7 @@ async function main() {
   for (const bucket of ['noticias', 'esportes']) {
     for (const [slug, n] of Object.entries(content[bucket] || {})) {
       if (SLUG && slug !== SLUG) continue;
-      if (n.imagem && n.imagem.includes('placeholder') && n.fonte?.url) {
+      if (n.imagem && (n.imagem.includes('placeholder') || n.imagem.includes('/api/og')) && n.fonte?.url) {
         alvos.push({ slug, bucket, fonte: n.fonte.url, n });
       }
     }
