@@ -1811,6 +1811,139 @@
       "vale_assistir": false,
       "frase_final": "Tayuan 2 termina antes de começar de verdade.",
       "gerado_em": "2026-05-06T10:56:54.921Z"
+    },
+    "casamento-sangrento-a-viuva": {
+      "tmdb_id": 1266127,
+      "titulo": "Casamento Sangrento: A Viúva",
+      "sinopse": "A noiva retorna em uma nova e sinistra rodada do tradicional jogo de esconde-esconde, agora com elementos sobrenaturais e demoníacos.",
+      "nota_tmdb": "7.1",
+      "duracao": 108,
+      "generos": [
+        "Terror",
+        "Comédia"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/9dMp9t0d0nIGhiil8TyqChwiNwA.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/l08o8b3NAPxDzJca9ZF0fdQvbaz.jpg",
+      "diretor": "Matt Bettinelli-Olpin",
+      "elenco": [
+        {
+          "nome": "Samara Weaving",
+          "personagem": "Grace MacCaulley",
+          "foto": "https://image.tmdb.org/t/p/w185/7ThO37CpqkBRgrosep0ROVs2q5s.jpg"
+        },
+        {
+          "nome": "Kathryn Newton",
+          "personagem": "Faith MacCaulley",
+          "foto": "https://image.tmdb.org/t/p/w185/qif107CZyhprh1kEPNg2Fkn1LsI.jpg"
+        },
+        {
+          "nome": "Elijah Wood",
+          "personagem": "The Lawyer",
+          "foto": "https://image.tmdb.org/t/p/w185/ayARmqAe9Aab1zg6FjJG0u9MEBo.jpg"
+        },
+        {
+          "nome": "Sarah Michelle Gellar",
+          "personagem": "Ursula Danforth",
+          "foto": "https://image.tmdb.org/t/p/w185/sCpCv2ldnrAQN9NVQOE6PYxG8TN.jpg"
+        },
+        {
+          "nome": "Shawn Hatosy",
+          "personagem": "Titus Danforth",
+          "foto": "https://image.tmdb.org/t/p/w185/xTwYIiSOvvIUb9YIZcTNp8fdnwp.jpg"
+        },
+        {
+          "nome": "Varun Saranga",
+          "personagem": "Madhu Rajan",
+          "foto": "https://image.tmdb.org/t/p/w185/hxBgqaSqmYcSFrLwszW7zLDw1sB.jpg"
+        },
+        {
+          "nome": "Masa Lizdek",
+          "personagem": "Martina Rajan",
+          "foto": "https://image.tmdb.org/t/p/w185/ojsf2SfLziAxBVoSCWn1S4TVAa8.jpg"
+        },
+        {
+          "nome": "Olivia Cheng",
+          "personagem": "Wan Chen Xing",
+          "foto": "https://image.tmdb.org/t/p/w185/c1rOhwVuZi3v47fuTAnVVB4XuSc.jpg"
+        }
+      ],
+      "lancamento": "2026-03-19",
+      "manchete": "A Noiva voltou — e desta vez trouxe o capeta junto",
+      "sinopse_pt": "Grace MacCaulley sobreviveu a uma noite de horror puro na mansão dos Le Domas. Agora, anos depois, uma nova rodada do jogo mortal recomeça — só que desta vez com forças demoníacas ditando as regras. A viúva está de volta, e o jogo ficou muito mais sujo.",
+      "paragrafos_review": [
+        "Matt Bettinelli-Olpin volta ao universo que o colocou no mapa do horror contemporâneo com uma aposta ousada: jogar elementos sobrenaturais em cima de uma fórmula que já funcionava muito bem no plano físico e humano. O primeiro filme dependia da brutalidade doméstica e do absurdo aristocrático para criar tensão. Aqui, a virada demoníaca muda o contrato com o público. Não é necessariamente um erro — mas é uma escolha que divide o filme em dois antes e depois que a lógica sobrenatural assume o controle da narrativa.",
+        "Samara Weaving continua sendo o coração pulsante dessa franquia. Tem uma cena em que Grace encara uma porta que não deveria estar aberta, e Weaving entrega pânico e tédio existencial ao mesmo tempo — como quem já cansou de sobreviver. Kathryn Newton traz uma energia caótica e divertida como Faith, equilibrando bem o tom de comédia negra. Sarah Michelle Gellar aparece com presença de sobra como Ursula Danforth, e Elijah Wood faz um advogado tão suspeito que dá vergonha alheia — no bom sentido.",
+        "O filme entrega o que promete: sangue, risada e aquela sensação gostosa de ver gente horrível levar o que merece. Os 108 minutos passam rápido, o ritmo é bem calibrado e o final dá um nó na cabeça de um jeito satisfatório. Não é obra-prima, mas é coisa fina dentro do que se propõe. Esse aqui é pra ver com pipoca, luzes apagadas e o volume lá em cima."
+      ],
+      "vale_assistir": true,
+      "frase_final": "A viúva prometeu caos — e cumpriu cada gota de sangue.",
+      "gerado_em": "2026-05-07T11:01:39.806Z"
+    },
+    "pov-presenca-oculta": {
+      "tmdb_id": 1510745,
+      "titulo": "POV: Presença Oculta",
+      "sinopse": "O que começou como uma chamada de rotina vira um pesadelo quando dois policiais se envolvem em um acidente fatal. Bryce, desesperado para proteger seu emprego e sua família, convence seu parceiro a destruir todos os registros para esconder a verdade. Mas conforme a madrugada avança, eles percebem que as câmeras não eram as únicas testemunhas e que algo sobrenatural acompanhava cada movimento deles naquela noite.",
+      "nota_tmdb": "5.1",
+      "duracao": 75,
+      "generos": [
+        "Terror"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/vHoi1MddXOU7jbpEd8YVQzMDLnT.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/fC4GSEiDu2ONAOjT3VhKdAOR2UI.jpg",
+      "diretor": "Brandon Christensen",
+      "elenco": [
+        {
+          "nome": "Jaime M. Callica",
+          "personagem": "Officer Jackson",
+          "foto": "https://image.tmdb.org/t/p/w185/bMdYe1mrsvLp638lNqTqQELroNr.jpg"
+        },
+        {
+          "nome": "Sean Rogerson",
+          "personagem": "Officer Bryce",
+          "foto": "https://image.tmdb.org/t/p/w185/AeU4FinI8HOEh7CFhx99YTS5FkY.jpg"
+        },
+        {
+          "nome": "Catherine Lough Haggquist",
+          "personagem": "Ally Jackson",
+          "foto": "https://image.tmdb.org/t/p/w185/3q6uhNYa7Dapl09YtqVrwndmj1l.jpg"
+        },
+        {
+          "nome": "Angel Prater",
+          "personagem": "Esposito",
+          "foto": "https://image.tmdb.org/t/p/w185/bTkS0ULS8EvMwNj2t0OGOfTaScI.jpg"
+        },
+        {
+          "nome": "Keegan Connor Tracy",
+          "personagem": "The Mother",
+          "foto": "https://image.tmdb.org/t/p/w185/lP5rlqK8YIqobtFghURPbNdN5zw.jpg"
+        },
+        {
+          "nome": "Chris Casson",
+          "personagem": "The Father",
+          "foto": "https://image.tmdb.org/t/p/w185/tE14eWGWlf9bWdGurjcUwmmtjWJ.jpg"
+        },
+        {
+          "nome": "Elizabeth Longshaw",
+          "personagem": "Michelle",
+          "foto": null
+        },
+        {
+          "nome": "Colette Nwachi",
+          "personagem": "Neisha",
+          "foto": null
+        }
+      ],
+      "lancamento": "2026-03-12",
+      "manchete": "Câmeras apagadas, mas o sobrenatural viu tudo",
+      "sinopse_pt": "Dois policiais tentam encobrir um acidente fatal destruindo todas as provas registradas naquela noite. O problema é que algo muito mais antigo e perturbador estava assistindo cada passo deles. O que era uma cobertura policial vira uma corrida desesperada pela sobrevivência.",
+      "paragrafos_review": [
+        "POV: Presença Oculta parte de uma premissa honesta: a culpa humana como porta de entrada para o horror sobrenatural. Brandon Christensen, diretor canadense que já explorou o found footage em 'Still/Born', aposta numa estrutura enxuta de 75 minutos onde a decisão do policial Bryce de destruir as câmeras é exatamente o gatilho que abre espaço para algo pior surgir. A ideia é boa no papel. O problema é que o roteiro não sabe bem o que fazer com ela depois dos primeiros trinta minutos.",
+        "Jaime M. Callica carrega o filme nas costas como o parceiro relutante Jackson, entregando a tensão moral com mais credibilidade do que o script merecia. Sean Rogerson, como Bryce, oscila entre convincente e caricato dependendo da cena. Keegan Connor Tracy, em poucos minutos como 'A Mãe', deixa a impressão mais duradoura da noite, com uma presença que genuinamente incomoda. Christensen tem olho para atmosfera, mas perde o fio condutor no terceiro ato, quando o sobrenatural aparece de vez e o roteiro tropeça nas próprias ambições.",
+        "O filme funciona como passatempo de madrugada, mas não passa disso. A nota 5.1 no TMDB é justa e até generosa em alguns momentos. Faltou coragem para aprofundar a crítica à corporação policial que a trama prometia nas primeiras cenas. Ficou só na superfície do horror e da denúncia social."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Apagou as câmeras, mas não apagou a consciência — nem o que vinha junto.",
+      "gerado_em": "2026-05-07T11:01:56.028Z"
     }
   },
   "series": {
@@ -6145,6 +6278,46 @@
         "url": "https://tribunadonorte.com.br/esportes/casemiro-diz-que-neymar-aceitaria-a-reserva-na-selecao-e-afirma-ele-nao-precisa-provar-nada/"
       },
       "gerado_em": "2026-05-06T10:58:01.554Z"
+    },
+    "corinthians-pode-se-classificar-sem-entrar-em-campo": {
+      "titulo": "Corinthians pode se classificar sem entrar em campo",
+      "descricao": "O Timão avança antecipadamente na Libertadores se o Peñarol não vencer o Platense nesta quinta-feira (7).",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-07",
+      "imagem": "/api/og?title=Corinthians+pode+se+classificar+sem+entrar+em+campo&category=Futebol",
+      "tempo_leitura": 1,
+      "manchete": "Classificação do Corinthians depende de resultado alheio",
+      "paragrafos": [
+        "O Corinthians tem a chance de garantir sua classificação na Libertadores antes mesmo de jogar. Segundo a ESPN Brasil, o cenário se concretiza caso o Peñarol não vença o Platense na partida desta quinta-feira, 7 de maio."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/corinthians/artigo/_/id/16677260/corinthians-contas-para-garantir-classificacao-libertadores-sem-entrar-em-campo"
+      },
+      "gerado_em": "2026-05-07T11:02:40.750Z"
+    },
+    "cruzeiro-segura-empate-com-um-a-menos-na-libertadores": {
+      "titulo": "Cruzeiro segura empate com um a menos na Libertadores",
+      "descricao": "Com um jogador a menos no segundo tempo, o Cruzeiro ficou no 0 a 0 com a Universidad Católica e segue na zona de classificação.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-07",
+      "imagem": "/api/og?title=Cruzeiro+segura+empate+com+um+a+menos+na+Libertadores&category=Futebol",
+      "tempo_leitura": 1,
+      "manchete": "Com um a menos, Cruzeiro segura empate na Libertadores",
+      "paragrafos": [
+        "O Cruzeiro ficou no empate sem gols com a Universidad Católica jogando com um a menos praticamente durante todo o segundo tempo, segundo a ESPN Brasil. O resultado mantém o clube brasileiro na zona de classificação da Libertadores."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/libertadores/artigo/_/id/16677493/cruzeiro-segura-empate-universidad-catolica-com-um-a-menos-segue-zona-classificacao-libertadores"
+      },
+      "gerado_em": "2026-05-07T11:02:45.240Z"
     }
   }
 }
