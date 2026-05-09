@@ -2012,6 +2012,74 @@
       "vale_assistir": true,
       "frase_final": "Shao Kahn cai, Johnny Cage rouba o filme e a franquia finalmente cresce.",
       "gerado_em": "2026-05-08T10:17:34.613Z"
+    },
+    "meu-querido-assassino": {
+      "tmdb_id": 1630423,
+      "titulo": "Meu Querido Assassino",
+      "sinopse": "Perseguida por ter um tipo sanguíneo raro, uma jovem encontra proteção nos braços de um assassino perigoso. Juntos, eles lutam para sobreviver.",
+      "nota_tmdb": "6.5",
+      "duracao": 128,
+      "generos": [
+        "Ação",
+        "Drama",
+        "Romance"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/d1TupF3vMdQ6BhnADkFiNf0ZBOo.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/9ZfPvLEx1xcuTkfAtrVyIbA5Vaw.jpg",
+      "diretor": "Taweewat Wantha",
+      "elenco": [
+        {
+          "nome": "พิมพ์ชนก ลือวิเศษไพบูลย์",
+          "personagem": "Lhan",
+          "foto": "https://image.tmdb.org/t/p/w185/1dAa0G7gG3KbeF66HOof4DPXrpX.jpg"
+        },
+        {
+          "nome": "ธนภพ ลีรัตนขจร",
+          "personagem": "Pran",
+          "foto": "https://image.tmdb.org/t/p/w185/zZCYpbtAe4axyySy0TYS8eICujw.jpg"
+        },
+        {
+          "nome": "ศิวกร อดุลสุทธิกุล",
+          "personagem": "M",
+          "foto": "https://image.tmdb.org/t/p/w185/tbE7j3kwPCW6Yj3WQPZFtL9EasR.jpg"
+        },
+        {
+          "nome": "ชาตโยดม หิรัญยัติ",
+          "personagem": "Poh",
+          "foto": "https://image.tmdb.org/t/p/w185/srsQcBSRLjjyIhSdS72xNPlHhUZ.jpg"
+        },
+        {
+          "nome": "ธีรชัย วิมลชัยฤกษ์",
+          "personagem": "Pruek",
+          "foto": "https://image.tmdb.org/t/p/w185/s4NJCN5jvx3xx7lrJvGdQH5mouf.jpg"
+        },
+        {
+          "nome": "Teerawat Mulvilai",
+          "personagem": "Lhek",
+          "foto": "https://image.tmdb.org/t/p/w185/p67Fm2px5Cs2iBBPrXzS45Ly893.jpg"
+        },
+        {
+          "nome": "ชูพงษ์ ช่างปรุง",
+          "personagem": "Deaw",
+          "foto": "https://image.tmdb.org/t/p/w185/hl3Xhzbf5Vpxfx9bcdDPsdlXmWB.jpg"
+        },
+        {
+          "nome": "เกศริน เอกธวัชกุล",
+          "personagem": "Ja",
+          "foto": "https://image.tmdb.org/t/p/w185/1IffgogYt2XbkWB2YloZL9PsLxp.jpg"
+        }
+      ],
+      "lancamento": "2026-05-06",
+      "manchete": "Amor e sangue raro numa fuga que não perdoa ninguém",
+      "sinopse_pt": "Lhan carrega um fardo incomum: seu tipo sanguíneo raro a torna alvo de pessoas poderosas e sem escrúpulos. A saída menos esperada vem na forma de Pran, um assassino profissional que decide protegê-la — e paga um preço alto por isso. Entre balas e sentimentos, os dois descobrem que sobreviver juntos é mais complicado do que parece.",
+      "paragrafos_review": [
+        "A produção tailandesa de 2026 aposta numa premissa que parece saída de mangá japonês, mas com uma execução que tenta os pés no chão. A ideia de perseguir alguém pelo tipo sanguíneo é absurda no melhor sentido — cria urgência sem precisar de vilão sobrenatural. O diretor Taweewat Wantha já mostrou familiaridade com ação estilizada em trabalhos anteriores, e aqui ele usa os 128 minutos sem muita gordura. O roteiro equilibra três gêneros ao mesmo tempo, o que é arriscado, mas o filme raramente perde o fio da meada.",
+        "Pimchanok Luewisetpaiboon entrega uma Lhan que não é mocinha passiva — há uma cena em que ela recusa a fuga fácil e confronta Pran sobre seus métodos, e esse momento define o tom da relação entre os dois. Thanaphob Lerattanavibool como Pran tem carisma de sobra, mas o roteiro às vezes poupa o personagem de consequências reais, o que enfraquece a tensão. A direção de fotografia merece nota: as sequências noturnas de perseguição têm contraste agressivo que combina muito bem com o clima de ameaça constante.",
+        "Meu Querido Assassino não reinventa nada, mas faz o que promete com competência e alguns momentos genuinamente tensos. A nota 6.5 no TMDB é justa — não é obra prima, mas também não é filme de passar o tempo sem deixar rastro. O romance poderia ter sido mais corajoso, e o desfecho resolve rápido demais para tudo que foi construído. Mesmo assim, é cinema asiático de ação com coração, e isso já é mais do que a média entrega."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Sangue raro, sentimento real — e um final que devia ter durado mais.",
+      "gerado_em": "2026-05-09T10:00:51.736Z"
     }
   },
   "series": {
@@ -4877,7 +4945,7 @@
       "categoria": "Esportes",
       "autor": "Redação 3W",
       "data": "2026-04-26",
-      "imagem": "/images/noticias/placeholder-motogp.jpg",
+      "imagem": "/api/og?title=Agius+vence+de+novo+na+Moto2+e+Intact+domina+GP+da+Espanha&category=Esportes",
       "tempo_leitura": 4,
       "manchete": "Agius é bicampeão de etapa e Intact faz 1-2 em Jerez",
       "paragrafos": [
@@ -5517,6 +5585,49 @@
         "url": "https://www.omelete.com.br/mangas-animes/one-piece-talks-podcast-episodio-1160-anime-1181-manga"
       },
       "gerado_em": "2026-05-08T10:18:22.978Z"
+    },
+    "hq-eldorado-revisita-a-carreira-frustrada-do-pai-de-quintanilha": {
+      "titulo": "HQ 'Eldorado' revisita a carreira frustrada do pai de Quintanilha",
+      "descricao": "Quadrinista Marcello Quintanilha usa o novo álbum para contar as desventuras futebolísticas do pai e a formação do Brasil atual.",
+      "categoria": "Comics",
+      "autor": "Redação 3W",
+      "data": "2026-05-09",
+      "imagem": "/images/noticias/hq-eldorado-revisita-a-carreira-frustrada-do-pai-de-quintanilha.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Futebol como metáfora: Quintanilha transforma trauma familiar em HQ",
+      "paragrafos": [
+        "O quadrinista Marcello Quintanilha não guarda memórias positivas do futebol. O esporte era tabu em sua juventude: sem reuniões familiares em torno de partidas, sem incentivo para torcer por algum time. O motivo era a carreira interrompida de seu pai, Hálcio Carneiro Quintanilha, jogador do Canto do Rio Foot-Ball Club, de Niterói, que encerrou a trajetória cedo após uma lesão no fim dos anos 1950 — deixando amargura e ressentimento em todos ao seu redor.",
+        "Ainda assim, Quintanilha enxerga no esporte 'um agente capaz de metaforizar quase todos os aspectos da vida'. É essa visão que sustenta 'Eldorado', seu álbum mais recente, descrito como uma peça de um quebra-cabeça pessoal em quadrinhos sobre a formação do Brasil contemporâneo a partir do microcosmo familiar e das desventuras futebolísticas do pai."
+      ],
+      "frase_destaque": "um agente capaz de metaforizar quase todos os aspectos da vida",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Folha Ilustrada",
+        "url": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/05/marcello-quintanilha-volta-a-carreira-futebolistica-do-pai-em-hq-de-saga-policial.shtml"
+      },
+      "gerado_em": "2026-05-09T10:01:52.498Z"
+    },
+    "mortal-kombat-2-tem-cena-pos-creditos-entenda": {
+      "titulo": "Mortal Kombat 2 tem cena pós-créditos? Entenda",
+      "descricao": "Filme estreou na quinta-feira (7) e muitos fãs querem saber se vale ficar na sala após os créditos.",
+      "categoria": "Cinema",
+      "autor": "Redação 3W",
+      "data": "2026-05-09",
+      "imagem": "/images/noticias/mortal-kombat-2-tem-cena-pos-creditos-entenda.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Mortal Kombat 2 não tem cena pós-créditos",
+      "paragrafos": [
+        "Mortal Kombat 2 chegou aos cinemas no dia 7 de maio com Johnny Cage (Karl Urban) no centro da história. Na trama, os lutadores enfrentam Shao Kahn (Martyn Ford), que ameaça destruir o Plano Terreno. O filme é dirigido por Simon McQuoid e, até o momento, registra 68% de aprovação entre críticos e 91% de audiência no Rotten Tomatoes.",
+        "Para quem se pergunta se vale ficar na sessão após o fim: a resposta é não. Mortal Kombat 2 não possui nenhuma cena pós-créditos. Ainda assim, fãs da franquia podem aproveitar a primeira parte dos créditos para ouvir o tema clássico da série, com o narrador icônico citando o nome de cada personagem.",
+        "O encerramento do filme, no entanto, indica continuidade: sobreviventes como Sonya Blade (Jessica McNamee), Raiden (Tadanobu Asano) e Kano (Josh Lawson) partem em missão para trazer de volta os aliados mortos durante o torneio. New Line Cinema e Warner Bros. ainda não confirmaram oficialmente um terceiro filme, mas o roteirista Jeremy Slater afirmou na New York Comic Con 2025 que já foi acionado pelos estúdios para trabalhar no próximo longa."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Canaltech",
+        "url": "https://canaltech.com.br/entretenimento/mortal-kombat-2-tem-cena-pos-creditos/"
+      },
+      "gerado_em": "2026-05-09T10:02:09.410Z"
     }
   },
   "esportes": {
@@ -6428,6 +6539,66 @@
         "url": "https://www.espn.com.br/futebol/libertadores/artigo/_/id/16677493/cruzeiro-segura-empate-universidad-catolica-com-um-a-menos-segue-zona-classificacao-libertadores"
       },
       "gerado_em": "2026-05-07T11:02:45.240Z"
+    },
+    "conmebol-deve-definir-resultado-de-medellin-x-flamengo-em-uma-semana": {
+      "titulo": "Conmebol deve definir resultado de Medellín x Flamengo em uma semana",
+      "descricao": "Entidade espera ter uma decisão final sobre o jogo entre Independiente Medellín e Flamengo, pela Libertadores, no prazo de uma semana.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-09",
+      "imagem": "/api/og?title=Conmebol+deve+definir+resultado+de+Medell%C3%ADn+x+Flamengo+em+uma+semana&category=Futebol",
+      "tempo_leitura": 1,
+      "manchete": "Conmebol tem uma semana para decidir sobre Flamengo na Libertadores",
+      "paragrafos": [
+        "Segundo a ESPN Brasil, a Conmebol espera ter uma decisão final sobre o resultado da partida entre Independiente Medellín e Flamengo, válida pela Copa Libertadores, dentro de uma semana."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/flamengo/artigo/_/id/16685924/libertadores-medellin-x-flamengo-decisao-final-conmebol-deve-sair-uma-semana-passo-a-passo"
+      },
+      "gerado_em": "2026-05-09T10:01:25.206Z"
+    },
+    "jardim-e-boto-relatam-tensao-do-flamengo-em-medellin": {
+      "titulo": "Jardim e Boto relatam tensão do Flamengo em Medellín",
+      "descricao": "Técnico e diretor do Flamengo falaram sobre momentos tensos vividos pelo clube na Libertadores, na Colômbia.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-09",
+      "imagem": "/api/og?title=Jardim+e+Boto+relatam+tens%C3%A3o+do+Flamengo+em+Medell%C3%ADn&category=Futebol",
+      "tempo_leitura": 1,
+      "manchete": "Flamengo relata tensão em jogo da Libertadores na Colômbia",
+      "paragrafos": [
+        "O técnico Leonardo Jardim e o diretor José Boto falaram sobre a tensão vivida pelo Flamengo durante partida da CONMEBOL Libertadores disputada em Medellín, na Colômbia, segundo a ESPN Brasil."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/futebol/flamengo/artigo/_/id/16684626/jardim-boto-relatam-momentos-tensao-medellin-diretor-diz-sugestao-flamengo-barrou-seria-pior"
+      },
+      "gerado_em": "2026-05-09T10:01:30.639Z"
+    },
+    "wembanyama-arrasa-e-spurs-vencem-timberwolves-nos-playoffs": {
+      "titulo": "Wembanyama arrasa e Spurs vencem Timberwolves nos playoffs",
+      "descricao": "Francês marcou 39 pontos, 15 rebotes e 5 bloqueios, tornando-se o quarto jogador na história com esses números em um jogo de playoffs.",
+      "categoria": "NBA",
+      "autor": "Redação 3W",
+      "data": "2026-05-09",
+      "imagem": "/api/og?title=Wembanyama+arrasa+e+Spurs+vencem+Timberwolves+nos+playoffs&category=NBA",
+      "tempo_leitura": 1,
+      "manchete": "Wembanyama faz história e Spurs recuperam mando de quadra",
+      "paragrafos": [
+        "Victor Wembanyama entrou para um seleto grupo na história da NBA ao registrar 39 pontos, 15 rebotes e 5 tocos em um único jogo de playoffs — feito alcançado por apenas outros três jogadores antes dele. Com a atuação do gigante francês, o San Antonio Spurs derrotou o Minnesota Timberwolves e reconquistou o mando de quadra na série."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "ESPN Brasil",
+        "url": "https://www.espn.com.br/nba/artigo/_/id/16686285/nba-wembanyama-spurs-jogo-avassalador-batem-timberwolves-recuperam-mando-quadra"
+      },
+      "gerado_em": "2026-05-09T10:01:36.870Z"
     }
   }
 }
