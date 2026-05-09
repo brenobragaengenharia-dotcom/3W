@@ -79,6 +79,24 @@ jobs:
           NODE_OPTIONS: '--no-warnings'
         continue-on-error: true
 
+      - name: Enriquecer placeholders (UA browser, og:image / twitter:image / JSON-LD)
+        run: node --experimental-vm-modules scripts/enrich-placeholder-images.js
+        env:
+          NODE_OPTIONS: '--no-warnings'
+        continue-on-error: true
+
+      - name: Remover notícias que ainda estão em placeholder
+        # Política: o site nunca mostra placeholder. Se o pipeline acima não
+        # conseguiu uma imagem real, a notícia é descartada antes do commit.
+        # Resultado: volume cai um pouco, mas todas as notícias publicadas
+        # têm foto real. Hosts que bloqueiam fetch (ESPN com AWS WAF,
+        # grandepremio.com.br com hotlink-403) silenciosamente saem do feed
+        # do dia.
+        run: node --experimental-vm-modules scripts/delete-placeholder-news.js
+        env:
+          NODE_OPTIONS: '--no-warnings'
+        continue-on-error: true
+
       - name: Limpar .env.local (paranoia — não fica em artefatos)
         if: always()
         run: rm -f .env.local
