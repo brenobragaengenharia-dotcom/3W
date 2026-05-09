@@ -4945,7 +4945,7 @@
       "categoria": "Esportes",
       "autor": "Redação 3W",
       "data": "2026-04-26",
-      "imagem": "/api/og?title=Agius+vence+de+novo+na+Moto2+e+Intact+domina+GP+da+Espanha&category=Esportes",
+      "imagem": "/images/noticias/placeholder-motogp.jpg",
       "tempo_leitura": 4,
       "manchete": "Agius é bicampeão de etapa e Intact faz 1-2 em Jerez",
       "paragrafos": [
@@ -6506,7 +6506,7 @@
       "categoria": "Futebol",
       "autor": "Redação 3W",
       "data": "2026-05-07",
-      "imagem": "/api/og?title=Corinthians+pode+se+classificar+sem+entrar+em+campo&category=Futebol",
+      "imagem": "/images/noticias/placeholder.jpg",
       "tempo_leitura": 1,
       "manchete": "Classificação do Corinthians depende de resultado alheio",
       "paragrafos": [
@@ -6526,7 +6526,7 @@
       "categoria": "Futebol",
       "autor": "Redação 3W",
       "data": "2026-05-07",
-      "imagem": "/api/og?title=Cruzeiro+segura+empate+com+um+a+menos+na+Libertadores&category=Futebol",
+      "imagem": "/images/noticias/placeholder.jpg",
       "tempo_leitura": 1,
       "manchete": "Com um a menos, Cruzeiro segura empate na Libertadores",
       "paragrafos": [
@@ -6546,7 +6546,7 @@
       "categoria": "Futebol",
       "autor": "Redação 3W",
       "data": "2026-05-09",
-      "imagem": "/api/og?title=Conmebol+deve+definir+resultado+de+Medell%C3%ADn+x+Flamengo+em+uma+semana&category=Futebol",
+      "imagem": "/images/noticias/placeholder.jpg",
       "tempo_leitura": 1,
       "manchete": "Conmebol tem uma semana para decidir sobre Flamengo na Libertadores",
       "paragrafos": [
@@ -6566,7 +6566,7 @@
       "categoria": "Futebol",
       "autor": "Redação 3W",
       "data": "2026-05-09",
-      "imagem": "/api/og?title=Jardim+e+Boto+relatam+tens%C3%A3o+do+Flamengo+em+Medell%C3%ADn&category=Futebol",
+      "imagem": "/images/noticias/placeholder.jpg",
       "tempo_leitura": 1,
       "manchete": "Flamengo relata tensão em jogo da Libertadores na Colômbia",
       "paragrafos": [
@@ -6586,7 +6586,7 @@
       "categoria": "NBA",
       "autor": "Redação 3W",
       "data": "2026-05-09",
-      "imagem": "/api/og?title=Wembanyama+arrasa+e+Spurs+vencem+Timberwolves+nos+playoffs&category=NBA",
+      "imagem": "/images/noticias/placeholder.jpg",
       "tempo_leitura": 1,
       "manchete": "Wembanyama faz história e Spurs recuperam mando de quadra",
       "paragrafos": [
