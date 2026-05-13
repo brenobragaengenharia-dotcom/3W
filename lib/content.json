@@ -2147,6 +2147,73 @@
       "vale_assistir": true,
       "frase_final": "Um polvo não fala, mas esse filme diz tudo que importa.",
       "gerado_em": "2026-05-12T11:12:43.510Z"
+    },
+    "beast": {
+      "tmdb_id": 1292415,
+      "titulo": "Beast",
+      "sinopse": "Um pescador comercial que luta para sustentar a família e vingar a morte do irmão enfrenta um adversário perigoso em uma luta de artes marciais mistas.",
+      "nota_tmdb": "6.8",
+      "duracao": 114,
+      "generos": [
+        "Ação",
+        "Drama"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/hlZGaey4lR9hc4rGxZRAmIEsZOc.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/7NrvUI3vnW8H3rD7ExKcTL7KRcQ.jpg",
+      "diretor": "Tyler Atkins",
+      "elenco": [
+        {
+          "nome": "Daniel MacPherson",
+          "personagem": "Patton",
+          "foto": "https://image.tmdb.org/t/p/w185/aBvJnrSlzXeU8K3glUa6XQ6nbuK.jpg"
+        },
+        {
+          "nome": "Luke Hemsworth",
+          "personagem": "Gabriel",
+          "foto": "https://image.tmdb.org/t/p/w185/m3VkYWENQc392VMrn0B4VnW886R.jpg"
+        },
+        {
+          "nome": "Russell Crowe",
+          "personagem": "Sammy",
+          "foto": "https://image.tmdb.org/t/p/w185/uxiXuVH4vNWrKlJMVVPG1sxAJFe.jpg"
+        },
+        {
+          "nome": "Mojean Aria",
+          "personagem": "Malon James",
+          "foto": "https://image.tmdb.org/t/p/w185/v5W5lpuAWSDVMokU0RKGkHDT2rj.jpg"
+        },
+        {
+          "nome": "Kelly Gale",
+          "personagem": "Luciana",
+          "foto": "https://image.tmdb.org/t/p/w185/bU9w5FITuN7TUa9VxFH3whhXFkP.jpg"
+        },
+        {
+          "nome": "George Burgess",
+          "personagem": "Neal",
+          "foto": "https://image.tmdb.org/t/p/w185/fxTvtnpfjU5uKFKu4GoAVD1o7i0.jpg"
+        },
+        {
+          "nome": "Nathan Phillips",
+          "personagem": "Skipper",
+          "foto": "https://image.tmdb.org/t/p/w185/9t54w1XE7u7fOWQv83IP0xYAWkh.jpg"
+        },
+        {
+          "nome": "Sol Nc Carrico",
+          "personagem": "Maddie",
+          "foto": null
+        }
+      ],
+      "lancamento": "2026-04-10",
+      "manchete": "Russell Crowe e pancadaria no ringue: Beast chega com tudo",
+      "sinopse_pt": "Patton é um pescador que mal consegue colocar comida na mesa e ainda carrega o peso da morte do irmão. Para buscar justiça e salvar o que sobrou da família, ele precisa entrar no mundo brutal das artes marciais mistas. O caminho até o adversário certo vai custar sangue, osso e muito mais.",
+      "paragrafos_review": [
+        "Beast parte de uma premissa clássica — o homem comum empurrado ao limite — e não tenta reinventar a roda. Tyler Atkins, estreando em longa de maior envergadura, aposta numa estrutura de vingança que o cinema de ação já explorou à exaustão. O diferencial aqui é o contexto: a pesca comercial como cenário de origem do protagonista Patton dá um sabor mais rústico e crível à história. Não é sofisticação narrativa, mas funciona como alicerce honesto para o que vem depois.",
+        "Russell Crowe como Sammy rouba qualquer cena em que aparece. Tem um momento específico em que ele confronta Patton numa conversa de bar, e a gravidade que Crowe coloca naquele silêncio vale o ingresso. Daniel MacPherson segura bem o papel principal, com um físico convincente para o ringue e uma expressão que comunica cansaço de verdade. Luke Hemsworth como Gabriel entrega o esperado — nem mais, nem menos. Kelly Gale aparece pouco, mas o filme sofre quando ela sai de cena.",
+        "Beast não é coisa fina, mas é honesto com o que se propõe. Os 114 minutos passam sem arranhão, as cenas de luta têm impacto real e o final não apela para milagre barato. A nota 6.8 no TMDB é justa — esse aqui é um filme de sábado à noite sem culpa. Quem busca profundidade vai ficar com fome. Quem quer adrenalina com um fundo emocional decente vai embora satisfeito."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Beast não salva o cinema, mas salva o seu fim de semana.",
+      "gerado_em": "2026-05-13T11:26:15.300Z"
     }
   },
   "series": {
@@ -5837,6 +5904,46 @@
         "url": "https://atarde.com.br/esportes/tecnico-desiste-da-copa-do-mundo-e-abandona-selecao-faltando-um-mes-1388551"
       },
       "gerado_em": "2026-05-12T11:13:59.204Z"
+    },
+    "como-magica-chega-ao-top-1-da-netflix-com-animacao-e-aventura": {
+      "titulo": "'Como Mágica' chega ao Top 1 da Netflix com animação e aventura",
+      "descricao": "Filme dirigido por Nathan Greno mistura fantasia e sobrevivência na natureza e conquistou o topo do streaming.",
+      "categoria": "Cinema",
+      "autor": "Redação 3W",
+      "data": "2026-05-13",
+      "imagem": "/images/noticias/como-magica-chega-ao-top-1-da-netflix-com-animacao-e-aventura.jpg",
+      "tempo_leitura": 1,
+      "manchete": "'Como Mágica' é o filme mais assistido da Netflix agora",
+      "paragrafos": [
+        "'Como Mágica', dirigido por Nathan Greno, chegou ao Top 1 da Netflix combinando fantasia com elementos de sobrevivência na natureza selvagem. A animação traz personagens carismáticos e, segundo o CinePOP, permeia lições tanto para crianças quanto para adultos ao longo de suas ações."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Cinepop",
+        "url": "https://cinepop.com.br/critica-como-magica-aventura-cheia-de-significados-chegou-ao-top-1-da-netflix-733182/"
+      },
+      "gerado_em": "2026-05-13T11:26:41.866Z"
+    },
+    "critica-criaturas-extraordinariamente-brilhantes": {
+      "titulo": "Crítica: 'Criaturas Extraordinariamente Brilhantes'",
+      "descricao": "Filme aborda compaixão e adaptação diante de situações sem saída, com amizades e aprendizados como fio condutor.",
+      "categoria": "Cinema",
+      "autor": "Redação 3W",
+      "data": "2026-05-13",
+      "imagem": "/images/noticias/critica-criaturas-extraordinariamente-brilhantes.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Um filme sobre compaixão em tempos de intolerância",
+      "paragrafos": [
+        "Segundo o CinePop, 'Criaturas Extraordinariamente Brilhantes' levanta uma questão central: como se adaptar a uma situação que parece sem solução e transformar isso em sentido de vida, com amizades e aprendizados apontando novos caminhos. O filme trata de compaixão em um cenário marcado por intolerância, guerras e polarização — e, por isso, funciona como um alívio para quem ainda preserva essa sensibilidade."
+      ],
+      "frase_destaque": "Falar sobre compaixão em um contexto atual repleto de intolerância, marcado por guerras, polarização sobre quase tudo, acaba sendo um oásis.",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Cinepop",
+        "url": "https://cinepop.com.br/critica-criaturas-extraordinariamente-brilhantes-a-beleza-das-reflexoes-no-caminho-da-compaixao-733176/"
+      },
+      "gerado_em": "2026-05-13T11:26:53.546Z"
     }
   },
   "esportes": {
@@ -6849,6 +6956,68 @@
         "url": "https://www.cnnbrasil.com.br/esportes/futebol/copa-do-mundo/regiao-do-estadio-azteca-afunda-e-preocupa-autoridades-a-31-dias-da-copa/"
       },
       "gerado_em": "2026-05-12T11:13:50.144Z"
+    },
+    "casemiro-elege-o-jogador-mais-completo-do-real-madrid": {
+      "titulo": "Casemiro elege o jogador mais completo do Real Madrid",
+      "descricao": "Em entrevista ao ex-zagueiro Rio Ferdinand, o brasileiro relembrou sua passagem pelo clube espanhol e falou da Seleção.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-12",
+      "imagem": "/images/noticias/casemiro-elege-o-jogador-mais-completo-do-real-madrid.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Casemiro abre o jogo sobre sua carreira no Real Madrid",
+      "paragrafos": [
+        "Casemiro concedeu entrevista ao ex-zagueiro inglês Rio Ferdinand e falou sobre bastidores de sua carreira, incluindo sua passagem pelo Real Madrid. No bate-papo, o volante elegeu o jogador mais completo com quem atuou no clube espanhol e também comentou sobre a atualidade da Seleção Brasileira.",
+        "Segundo o Lance!, o jogador abordou temas sensíveis durante a conversa e relembrou a vitoriosa trajetória que viveu no Real Madrid, onde conquistou títulos expressivos ao longo dos anos."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "LANCE",
+        "url": "https://www.lance.com.br/futebol-internacional/casemiro-surpreende-ao-eleger-jogador-mais-completo-que-atuou-pelo-real-madrid.html"
+      },
+      "gerado_em": "2026-05-13T11:27:01.588Z"
+    },
+    "ancelotti-fala-sobre-decisao-de-convocar-neymar-para-a-copa": {
+      "titulo": "Ancelotti fala sobre decisão de convocar Neymar para a Copa",
+      "descricao": "Técnico da seleção brasileira diz que a questão não é simples, mas garante postura 100% profissional na escolha.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-12",
+      "imagem": "/images/noticias/ancelotti-fala-sobre-decisao-de-convocar-neymar-para-a-copa.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Ancelotti promete decisão profissional sobre Neymar na Copa",
+      "paragrafos": [
+        "Carlo Ancelotti admitiu que a decisão sobre convocar ou não Neymar para a Copa do Mundo não será simples. O técnico da seleção brasileira, no entanto, garantiu que será '100% profissional' na hora de definir a lista, que será divulgada no dia 18 de maio, segundo o jornal O Dia."
+      ],
+      "frase_destaque": "Será 100% profissional",
+      "conclusao": "",
+      "fonte": {
+        "nome": "O DIA",
+        "url": "https://odia.ig.com.br/esporte/2026/05/7249810-ancelotti-nao-ve-decisao-tao-simples-sobre-neymar-mas-destaca-sera-100-profissional.html"
+      },
+      "gerado_em": "2026-05-13T11:27:07.081Z"
+    },
+    "luciano-juba-celebra-pre-lista-da-selecao-e-projeta-bahia-na-copa-do-brasil": {
+      "titulo": "Luciano Juba celebra pré-lista da Seleção e projeta Bahia na Copa do Brasil",
+      "descricao": "Lateral fala sobre momento histórico como artilheiro do clube no Brasileirão e o duelo contra o Remo pelo torneio nacional.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-12",
+      "imagem": "/images/noticias/luciano-juba-celebra-pre-lista-da-selecao-e-projeta-bahia-na-copa-do-brasil.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Juba na Seleção e Bahia com missão na Copa do Brasil",
+      "paragrafos": [
+        "O Bahia enfrenta o Remo nesta quarta-feira, às 21h30 (horário de Brasília), no Mangueirão, pela partida de volta da quinta fase da Copa do Brasil. Antes do confronto, o lateral Luciano Juba concedeu entrevista à Gazeta Esportiva e falou sobre a convocação para a pré-lista da Seleção Brasileira, o momento do time e sua marca histórica como artilheiro do clube no Brasileirão.",
+        "Juba celebrou a inclusão na pré-lista e também projetou a reação do Bahia na competição. O jogador vive fase de destaque e acumula a condição de artilheiro tricolor na atual edição do Campeonato Brasileiro, números que reforçam sua visibilidade no cenário nacional."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Gazeta Esportiva",
+        "url": "https://www.gazetaesportiva.com/times/bahia/luciano-juba-celebra-nome-na-pre-lista-da-selecao-e-projeta-reacao-do-bahia-na-copa-do-brasil/"
+      },
+      "gerado_em": "2026-05-13T11:27:16.610Z"
     }
   }
 }
