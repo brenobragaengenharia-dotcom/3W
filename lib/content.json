@@ -6327,6 +6327,26 @@
         "url": "https://cinepop.com.br/cannes-2026-dias-3-e-4-velozes-furiosos-slasher-metalinguistico-e-os-favoritos-da-competicao-734196/"
       },
       "gerado_em": "2026-05-19T11:55:25.969Z"
+    },
+    "pedro-pascal-e-baby-yoda-tentam-resgatar-star-wars-nas-telas": {
+      "titulo": "Pedro Pascal e Baby Yoda tentam resgatar Star Wars nas telas",
+      "descricao": "Disney aposta em 'O Mandaloriano e Grogu', primeiro filme da franquia em sete anos, para recuperar o prestígio de Star Wars.",
+      "categoria": "Cinema",
+      "autor": "Redação 3W",
+      "data": "2026-05-20",
+      "imagem": "/images/noticias/pedro-pascal-e-baby-yoda-tentam-resgatar-star-wars-nas-telas.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Star Wars volta ao cinema com Pedro Pascal após sete anos",
+      "paragrafos": [
+        "A Disney convocou Pedro Pascal para tentar reajustar a trajetória de Star Wars. O ator protagoniza 'O Mandaloriano e Grogu', primeiro filme da franquia bilionária em sete anos — período em que a saga vinha perdendo força, segundo a Folha de S.Paulo."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Folha Ilustrada",
+        "url": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/05/como-fofura-do-baby-yoda-e-apelo-de-pedro-pascal-tentam-reaver-a-forca-de-star-wars.shtml"
+      },
+      "gerado_em": "2026-05-20T11:44:16.442Z"
     }
   },
   "esportes": {
@@ -7483,6 +7503,48 @@
         "url": "https://oglobo.globo.com/esportes/noticia/2026/05/15/taffarel-revela-conversa-com-bento-apos-falha-e-aposta-em-recuperacao-de-alisson-ate-a-copa.ghtml"
       },
       "gerado_em": "2026-05-16T10:09:19.321Z"
+    },
+    "southampton-e-expulso-dos-playoffs-por-caso-de-espionagem": {
+      "titulo": "Southampton é expulso dos playoffs por caso de espionagem",
+      "descricao": "Membro da comissão técnica foi flagrado gravando treino do Middlesbrough antes da semifinal; vitória foi revertida.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-19",
+      "imagem": "/images/noticias/southampton-e-expulso-dos-playoffs-por-caso-de-espionagem.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Espionagem custa acesso à Premier League para o Southampton",
+      "paragrafos": [
+        "O Southampton foi expulso dos playoffs de acesso à Premier League após um membro de sua comissão técnica ser flagrado gravando os treinos do Middlesbrough antes do confronto de semifinal. O clube havia vencido o duelo e se encaminhava para a final, mas o resultado foi revertido pela irregularidade.",
+        "Com a decisão, o Southampton perde a vaga na disputa pela promoção à primeira divisão inglesa — consequência direta do episódio de espionagem que envolveu a gravação de sessão de treinamento de time adversário, prática vedada pelas regras da competição."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "O GLOBO",
+        "url": "https://oglobo.globo.com/esportes/futebol-internacional/noticia/2026/05/19/southampton-e-expulso-de-disputa-por-acesso-a-premier-league-apos-caso-de-espionagem-entenda.ghtml"
+      },
+      "gerado_em": "2026-05-20T11:44:26.218Z"
+    },
+    "bortoleto-animado-para-o-gp-do-canada-fim-de-semana-especial": {
+      "titulo": "Bortoleto animado para o GP do Canadá: 'Fim de semana especial'",
+      "descricao": "A F1 volta à ação em Montreal após duas semanas de pausa desde o GP de Miami, com novidade no formato da etapa.",
+      "categoria": "Fórmula 1",
+      "autor": "Redação 3W",
+      "data": "2026-05-19",
+      "imagem": "/images/noticias/bortoleto-animado-para-o-gp-do-canada-fim-de-semana-especial.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Bortoleto celebra retorno da F1 no Canadá com sprint",
+      "paragrafos": [
+        "A Fórmula 1 retorna ao circuito de Montreal neste fim de semana para o GP do Canadá, encerrando uma pausa de duas semanas desde o GP de Miami. A etapa canadense terá corrida sprint pela primeira vez, o que reduz o tempo de pista disponível: os pilotos contarão com apenas um treino livre antes de partir para a classificação.",
+        "Gabriel Bortoleto demonstrou entusiasmo com a chegada da rodada canadense. Segundo o Lance!, o piloto brasileiro classificou o fim de semana como \"especial\" e afirmou estar animado para a prova. A Sauber, equipe do jovem, também terá sua parceria com a Audi oficializada a partir desta temporada — reforçando o peso simbólico do período para o time."
+      ],
+      "frase_destaque": "Fim de semana especial",
+      "conclusao": "",
+      "fonte": {
+        "nome": "LANCE",
+        "url": "https://www.lance.com.br/formula-1/bortoleto-se-diz-animado-para-o-gp-do-canada-de-f1-fim-de-semana-especial.html"
+      },
+      "gerado_em": "2026-05-20T11:44:35.329Z"
     }
   }
 }
