@@ -2550,6 +2550,140 @@
       "vale_assistir": true,
       "frase_final": "Quando a experiência bate de frente com a tecnologia, a experiência vence.",
       "gerado_em": "2026-05-23T10:22:25.309Z"
+    },
+    "star-wars-o-mandaloriano-e-grogu": {
+      "tmdb_id": 1228710,
+      "titulo": "Star Wars: O Mandaloriano e Grogu",
+      "sinopse": "O maligno Império caiu e os senhores da guerra Imperiais ainda estão espalhados pela galáxia. Enquanto a jovem Nova República luta para proteger tudo pelo que a Rebelião batalhou, ela conta com a ajuda do lendário caçador de recompensas Mandaloriano Din Djarin e seu jovem aprendiz Grogu.",
+      "nota_tmdb": "6.6",
+      "duracao": 132,
+      "generos": [
+        "Ação",
+        "Aventura",
+        "Ficção científica"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/7OedxK0BvSKJ0ZWCPRYADViTBx6.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/dNwaS0tnwgQRaQFPY5MbGxdmYXr.jpg",
+      "diretor": "Jon Favreau",
+      "elenco": [
+        {
+          "nome": "Pedro Pascal",
+          "personagem": "The Mandalorian",
+          "foto": "https://image.tmdb.org/t/p/w185/9VYK7oxcqhjd5LAH6ZFJ3XzOlID.jpg"
+        },
+        {
+          "nome": "Jeremy Allen White",
+          "personagem": "Rotta (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/zKk4vmDeUexdevtt6wm8WdMQ1TG.jpg"
+        },
+        {
+          "nome": "Sigourney Weaver",
+          "personagem": "Colonel Ward",
+          "foto": "https://image.tmdb.org/t/p/w185/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+        },
+        {
+          "nome": "Jonny Coyne",
+          "personagem": "Lord Janu",
+          "foto": "https://image.tmdb.org/t/p/w185/6PSW0qaoY3KSnWUUv6f54NOuPC0.jpg"
+        },
+        {
+          "nome": "Dave Filoni",
+          "personagem": "Trapper Wolf / Embo",
+          "foto": "https://image.tmdb.org/t/p/w185/dDTTrShpCnCacxB3LhpPffFIdB5.jpg"
+        },
+        {
+          "nome": "Steve Blum",
+          "personagem": "Zeb Orrelios (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/cpO0muunoigq1WHegeOEI1AIQAo.jpg"
+        },
+        {
+          "nome": "Martin Scorsese",
+          "personagem": "Hugo Durant (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/9U9Y5GQuWX3EZy39B8nkk4NY01S.jpg"
+        },
+        {
+          "nome": "Hemky Madera",
+          "personagem": "Commander Baro",
+          "foto": "https://image.tmdb.org/t/p/w185/net1kEEpSrr9QC9be6YRhLGuM0k.jpg"
+        }
+      ],
+      "lancamento": "2026-05-20",
+      "manchete": "Din Djarin e Grogu finalmente chegam às telas grandes",
+      "sinopse_pt": "Com o Império em ruínas e senhores da guerra imperiais espalhados pela galáxia, a Nova República precisa de aliados improváveis. O Mandaloriano Din Djarin e seu pequeno aprendiz Grogu são convocados para uma missão que vai testar os limites dessa dupla improvável. Jon Favreau expande o universo da série para o cinema com 132 minutos de ação e nostalgia.",
+      "paragrafos_review": [
+        "A transição de série para filme sempre carrega um risco enorme. Jon Favreau já havia construído uma base sólida no Disney+, mas levar Din Djarin para as telas grandes exige mais do que episódios estendidos. O roteiro tenta equilibrar o apelo nostálgico da franquia com uma narrativa nova, apresentando a Coronel Ward de Sigourney Weaver como peça central de um conflito político pós-Império. O problema é que essa estrutura já foi usada tantas vezes em Star Wars que o espectador reconhece cada curva antes de chegar nela.",
+        "Pedro Pascal entrega o que sabe fazer bem: presença física imponente e emoção contida atrás do capacete. A surpresa fica por conta de Jonny Coyne como Lord Janu, vilão com camadas que o roteiro quase desperdiça numa cena de confronto apressada no segundo ato. Dave Filoni na frente das câmeras como Trapper Wolf é um aceno carinhoso para os fãs de longa data. A direção de Favreau tem ritmo, os cenários são lindos, mas falta aquela virada que te deixa sem ar. Esse aqui é coze bem, mas não ferve.",
+        "A nota 6.6 no TMDB diz muita coisa. O filme agrada quem já é fã e deixa o público casual com uma sensação de 'poderia ser mais'. Grogu continua sendo o coração emocional da história, e uma sequência específica com ele no terceiro ato lembra por que a dupla funcionou tão bem na TV. Mas cinema pede aposta mais alta. Favreau joga seguro demais para uma galáxia que já foi muito mais ousada."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Grogu salva o filme que o roteiro quase deixou para trás.",
+      "gerado_em": "2026-05-24T10:26:31.314Z"
+    },
+    "primeiro-as-damas": {
+      "tmdb_id": 1368881,
+      "titulo": "Primeiro as Damas",
+      "sinopse": "Um mulherengo arrogante e carismático vê sua vida de luxo, poder e lances casuais desmoronar quando acorda em um mundo paralelo onde são as mulheres que mandam.",
+      "nota_tmdb": "5.4",
+      "duracao": 94,
+      "generos": [
+        "Comédia"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/bOy625BjpCskOWnx3tD09MsKVCb.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/tW10rRdxMwJC4r1zldQzxcyzEUS.jpg",
+      "diretor": "Thea Sharrock",
+      "elenco": [
+        {
+          "nome": "Sacha Baron Cohen",
+          "personagem": "Damien Sachs",
+          "foto": "https://image.tmdb.org/t/p/w185/bGzXHu8zwWqUY5gEExSh3deQd2j.jpg"
+        },
+        {
+          "nome": "Rosamund Pike",
+          "personagem": "Alex Fox",
+          "foto": "https://image.tmdb.org/t/p/w185/tW3pobTn2znqK1nuSUWT7Kj8CSc.jpg"
+        },
+        {
+          "nome": "Tom Davis",
+          "personagem": "Chris Black",
+          "foto": "https://image.tmdb.org/t/p/w185/n7JqvXrpPsbpfeelPpZ5R8HTWMG.jpg"
+        },
+        {
+          "nome": "Emily Mortimer",
+          "personagem": "Sunny Black",
+          "foto": "https://image.tmdb.org/t/p/w185/oZ4CZW2eW8lL2alD1mwZrFkfACI.jpg"
+        },
+        {
+          "nome": "Weruche Opia",
+          "personagem": "Ruby",
+          "foto": "https://image.tmdb.org/t/p/w185/pPgIOuM9lRO1zH6eDnqDpf0w7da.jpg"
+        },
+        {
+          "nome": "Charles Dance",
+          "personagem": "Fred Powell",
+          "foto": "https://image.tmdb.org/t/p/w185/3xHwq5lchAI6mfW0aGQOEijexv6.jpg"
+        },
+        {
+          "nome": "Fiona Shaw",
+          "personagem": "Felicity Chase",
+          "foto": "https://image.tmdb.org/t/p/w185/8X7fZybxtwh2nTvYk6kjRYo9RIY.jpg"
+        },
+        {
+          "nome": "Richard E. Grant",
+          "personagem": "Pigeon Man",
+          "foto": "https://image.tmdb.org/t/p/w185/720dpCjuN5cEYFn43GwzZqXtpWv.jpg"
+        }
+      ],
+      "lancamento": "2026-05-21",
+      "manchete": "Mundo invertido, comédia pela metade: Primeiro as Damas decepciona",
+      "sinopse_pt": "Damien Sachs é o tipo de homem que acha que o mundo foi feito sob medida para ele — e, por um bom tempo, estava certo. Tudo muda quando ele acorda em uma realidade paralela onde o poder sempre esteve nas mãos das mulheres. O que parecia premissa para uma comédia afiada acaba sendo um passeio seguro demais por um território que pede ousadia.",
+      "paragrafos_review": [
+        "A premissa de 'Primeiro as Damas' tem tudo para funcionar: um arrogante jogador de charme jogado de cabeça em um mundo onde as regras do jogo foram escritas por mulheres. O problema é que o roteiro trata essa inversão como decoração, não como argumento. A comédia fica na superfície, com piadas que dependem quase que exclusivamente da cara de espanto de Damien diante de situações que, em 2026, já foram muito mais bem exploradas em outras produções. A sátira existe, mas nunca morde de verdade.",
+        "Sacha Baron Cohen salva mais do que devia. Há uma cena específica em que Damien tenta seduzir uma executora de poder absoluto e sai da sala literalmente expulso — e Baron Cohen entrega o vexame com um timing físico que lembra seus melhores momentos em 'Ali G'. Rosamund Pike está bem, como sempre, mas seu papel de Alex Fox é subutilizado. Charles Dance como Fred Powell rouba as poucas cenas em que aparece. A direção de Thea Sharrock é competente, porém conservadora demais para uma história que pedia risco.",
+        "Com 94 minutos, o filme ao menos não overstays his welcome, como diriam os gringos. Mas a nota 5.4 no TMDB não mente: 'Primeiro as Damas' é daquelas comédias que você assiste, ri duas vezes, e esquece antes do crédito final. Não é um desastre, é pior — é mediano. E mediano, com esse elenco todo, é um desperdício que dói."
+      ],
+      "vale_assistir": false,
+      "frase_final": "Elenco de primeira, filme de terça.",
+      "gerado_em": "2026-05-24T10:26:47.057Z"
     }
   },
   "series": {
@@ -6670,6 +6804,69 @@
         "url": "https://cinepop.com.br/marsupilami-confusao-a-bordo-739389/"
       },
       "gerado_em": "2026-05-23T10:23:18.586Z"
+    },
+    "7-series-para-maratonar-depois-de-the-last-of-us": {
+      "titulo": "7 séries para maratonar depois de The Last of Us",
+      "descricao": "De The Walking Dead a The Leftovers, confira sete séries com mundos colapsados, vínculos improváveis e dilemas morais.",
+      "categoria": "Séries",
+      "autor": "Redação 3W",
+      "data": "2026-05-23",
+      "imagem": "/images/noticias/7-series-para-maratonar-depois-de-the-last-of-us.jpg",
+      "tempo_leitura": 2,
+      "manchete": "Gostou de The Last of Us? Veja o que assistir agora",
+      "paragrafos": [
+        "O maior apelo de The Last of Us não está apenas nos infectados ou na violência — está no lado humano do apocalipse: tensão, perda, vínculos improváveis e sociedades destruídas. Para quem terminou a série e quer algo no mesmo tom, há sete produções que cobrem ao menos uma dessas camadas.",
+        "Para quem quer zumbis e conflitos entre sobreviventes, The Walking Dead (2010), disponível na Disney+, Netflix e Claro TV+, é o ponto de partida mais óbvio: a franquia carregava esses elementos antes mesmo do jogo existir. No campo emocional, Sweet Tooth (2021), na Netflix, repete a dinâmica de protetor e criança vulnerável que marcou Joel e Ellie, só que com menos brutalidade. Já The Leftovers (2014), no HBO Max, dispensa zumbis e apostas em luto coletivo e trauma — peso emocional sem confrontos ou sequências de ação.",
+        "Para fãs de games, Fallout (2024), na Amazon Prime Video, entrega outra adaptação de videogame com apocalipse nuclear, facções e violência, mas com tom satírico bem diferente do da HBO. Quem prefere distopias fechadas tem Silo (2023), com Rebecca Ferguson, na Apple TV+, explorando controle social e segredos institucionais. Black Summer (2019), na Netflix, reconstrói os primeiros dias do colapso com ritmo urgente e sem muitas explicações. Por fim, o drama sul-coreano Kingdom (2019), também na Netflix, transpõe a epidemia de zumbis para o período feudal asiático, cruzando a ameaça biológica com intriga política."
+      ],
+      "frase_destaque": "O verdadeiro perigo reside nos sobreviventes.",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Canaltech",
+        "url": "https://canaltech.com.br/entretenimento/series-para-quem-gostou-de-the-last-of-us/"
+      },
+      "gerado_em": "2026-05-24T10:27:28.824Z"
+    },
+    "selecao-brasileira-de-ginastica-ritmica-faz-show-com-criancas-em-lauro-de-freita": {
+      "titulo": "Seleção Brasileira de Ginástica Rítmica faz show com crianças em Lauro de Freitas",
+      "descricao": "Atletas da seleção brasileira de ginástica rítmica se apresentaram ao lado de crianças de projetos sociais em Lauro de Freitas.",
+      "categoria": "Esportes",
+      "autor": "Redação 3W",
+      "data": "2026-05-23",
+      "imagem": "/images/noticias/selecao-brasileira-de-ginastica-ritmica-faz-show-com-criancas-em-lauro-de-freita.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Ginástica rítmica brasileira inspira mini-atletas em Lauro de Freitas",
+      "paragrafos": [
+        "A Seleção Brasileira de Ginástica Rítmica realizou um show ao lado de crianças participantes de projetos sociais de esporte em Lauro de Freitas. O evento reuniu jovens que, segundo o A Tarde, passaram a ver de perto as mesmas atletas que acompanhavam pela televisão e pela internet — dividindo o mesmo espaço, sorrindo, dançando e treinando juntas."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "A Tarde",
+        "url": "https://atarde.com.br/esportes/selecao-brasileira-de-ginastica-faz-show-com-mini-ginastas-em-lauro-1389840"
+      },
+      "gerado_em": "2026-05-24T10:27:35.879Z"
+    },
+    "cel-de-dragon-ball-z-e-vendido-por-mais-de-us-100-mil": {
+      "titulo": "Cel de Dragon Ball Z é vendido por mais de US$ 100 mil",
+      "descricao": "Um fotograma de cena icônica de Dragon Ball Z foi arrematado por mais de 100 mil dólares, segundo o IGN Brasil.",
+      "categoria": "Comics",
+      "autor": "Redação 3W",
+      "data": "2026-05-23",
+      "imagem": "/images/noticias/cel-de-dragon-ball-z-e-vendido-por-mais-de-us-100-mil.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Fotograma de DBZ ultrapassa 100 mil dólares em leilão",
+      "paragrafos": [
+        "Ao longo de seus 391 episódios, Dragon Ball Z acumulou momentos considerados icônicos pelo público. A Toei Animation foi responsável por levar a obra de Toriyama ao mundo, tornando a série um marco da cultura pop.",
+        "Um celuloide — fotograma físico do anime — de uma dessas cenas foi vendido por mais de 100 mil dólares. O valor do item cresceu consideravelmente ao longo do tempo, segundo o IGN Brasil."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "IGN Brasil",
+        "url": "https://br.ign.com/dragon-ball/153212/esta-cena-de-dragon-ball-z-e-tao-iconica-que-um-dos-fotogramas-do-anime-foi-vendido-por-mais-de-100"
+      },
+      "gerado_em": "2026-05-24T10:27:42.861Z"
     }
   },
   "esportes": {
