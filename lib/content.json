@@ -2684,6 +2684,72 @@
       "vale_assistir": false,
       "frase_final": "Elenco de primeira, filme de terça.",
       "gerado_em": "2026-05-24T10:26:47.057Z"
+    },
+    "titulo-1320660": {
+      "tmdb_id": 1320660,
+      "titulo": "पति पत्नी और वो दो",
+      "sinopse": "",
+      "nota_tmdb": "8.0",
+      "duracao": 117,
+      "generos": [
+        "Comédia"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/eNAFLrd1XAAD4hgdTPjewpzYU4W.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/5MweEeMzPbueb65BcJpdiy0ihwU.jpg",
+      "diretor": "Mudassar Aziz",
+      "elenco": [
+        {
+          "nome": "Ayushmann Khurrana",
+          "personagem": "Prajapati Pandey",
+          "foto": "https://image.tmdb.org/t/p/w185/qbdclvnDkJxPX7OQqmMY7w9ekBP.jpg"
+        },
+        {
+          "nome": "Wamiqa Gabbi",
+          "personagem": "Aparna Pandey",
+          "foto": "https://image.tmdb.org/t/p/w185/e1CNXkH2scGeoabOTowFJJxX2YF.jpg"
+        },
+        {
+          "nome": "Rakul Preet Singh",
+          "personagem": "Nilofer Khan",
+          "foto": "https://image.tmdb.org/t/p/w185/d5OOKtPu9NhlNVMQTAAPff29KMv.jpg"
+        },
+        {
+          "nome": "Sara Ali Khan",
+          "personagem": "Chanchal Kumari",
+          "foto": "https://image.tmdb.org/t/p/w185/nRtF9kNgIt9q52jy89cyZBimUPs.jpg"
+        },
+        {
+          "nome": "Vijay Raaz",
+          "personagem": "Dharamveer Singh",
+          "foto": "https://image.tmdb.org/t/p/w185/bLSjiy51UPjVnTYRDmgRUy1VOwD.jpg"
+        },
+        {
+          "nome": "Tigmanshu Dhulia",
+          "personagem": "MLA Gajraj Tiwari",
+          "foto": "https://image.tmdb.org/t/p/w185/2CRk2UX3KfqMythuLBleMwQ7bQr.jpg"
+        },
+        {
+          "nome": "Ayesha Raza Mishra",
+          "personagem": "",
+          "foto": "https://image.tmdb.org/t/p/w185/cKC6Gj5AbeoLpH0bxnSj8SEzewi.jpg"
+        },
+        {
+          "nome": "Vishal Vashishtha",
+          "personagem": "Sudhanshu Tiwari",
+          "foto": "https://image.tmdb.org/t/p/w185/gxvmaEsTW1HnhnHLZOb7CNQmJIp.jpg"
+        }
+      ],
+      "lancamento": "2026-05-15",
+      "manchete": "Casamento, caos e duas mulheres: Ayushmann equilibra tudo isso",
+      "sinopse_pt": "Prajapati Pandey é um homem casado que se vê enredado em duas relações ao mesmo tempo — a esposa Aparna de um lado, e a sedutora Nilofer do outro. A confusão aumenta quando Chanchal Kumari entra na jogada, transformando a vida do pobre Pandey num verdadeiro circo. É comédia de costumes indiana no seu formato mais clássico, com pitadas de sátira matrimonial.",
+      "paragrafos_review": [
+        "Mudassar Aziz já dirigiu 'Dil Juunglee' e 'Pati Patni Aur Woh' (2019), então sabe exatamente o que está fazendo quando escala Ayushmann Khurrana para viver mais um homem comum metido em roubada. O título original é uma variação direta desse legado — e a proposta aqui é expandir a fórmula para quatro personagens principais em vez de três. Com 117 minutos, o filme aposta na comédia de erros matrimoniais com toques de sátira política, já que o personagem de Tigmanshu Dhulia, um MLA corrupto, entra como catalisador do caos.",
+        "Ayushmann Khurrana continua sendo um dos atores mais afinados do cinema hindi contemporâneo. Há uma cena específica em que Prajapati tenta manter conversas paralelas com Aparna e Nilofer ao mesmo tempo, num restaurante, e a mímica dele é de arrancar risada sem esforço. Wamiqa Gabbi segura bem o papel de esposa que não é boba, e Sara Ali Khan como Chanchal Kumari entrega uma energia cômica que não víamos dela há algum tempo. A direção de Aziz é funcional, sem firulas, focada no timing das piadas.",
+        "Com nota 8.0 no TMDB, o filme claramente agradou o público que já o viu. Faz sentido: é comédia bem executada, elenco em sintonia e roteiro que não trata o espectador como idiota. Não é uma obra que vai mudar sua vida, mas cumpre o que promete com competência e bom humor. Esse tipo de filme a gente precisa mais."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Pandey se enrola, o público ri, e a conta no final não fecha pra ninguém.",
+      "gerado_em": "2026-05-25T12:19:51.335Z"
     }
   },
   "series": {
@@ -4473,6 +4539,120 @@
       "vale_assistir": true,
       "frase_final": "Frank Castle não precisa de capa — precisa só de motivo.",
       "gerado_em": "2026-05-19T11:54:47.788Z"
+    },
+    "westworld": {
+      "tmdb_id": 63247,
+      "titulo": "Westworld",
+      "sinopse": "Num parque temático, visitantes mergulham num universo onde qualquer desejo pode ser realizado por robôs cuidadosamente programados. Mas algumas destas máquinas desviam do padrão de programação com comportamentos anormais.",
+      "nota_tmdb": "8.0",
+      "temporadas": 4,
+      "episodios": 36,
+      "generos": [
+        "Sci-Fi & Fantasy",
+        "Faroeste"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/rX5hvSRB2k4YoIvRg6Zky52rWk0.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/3xwpiixCoif2cf7MUofd3Xxob6I.jpg",
+      "redes": [
+        "HBO"
+      ],
+      "status": "Canceled",
+      "criadores": "Jonathan Nolan, Lisa Joy",
+      "elenco": [
+        {
+          "nome": "Evan Rachel Wood",
+          "personagem": "Christina",
+          "foto": "https://image.tmdb.org/t/p/w185/ksXTb2bvqt60bCGRwBlWrNbZHnr.jpg"
+        },
+        {
+          "nome": "Thandiwe Newton",
+          "personagem": "Maeve Millay",
+          "foto": "https://image.tmdb.org/t/p/w185/hZQLvxj7nV7pBrRyWTvWVz1CDi8.jpg"
+        },
+        {
+          "nome": "Jeffrey Wright",
+          "personagem": "Bernard Lowe",
+          "foto": "https://image.tmdb.org/t/p/w185/yGcuHGW4glqRpOPxgiCvjcren7F.jpg"
+        },
+        {
+          "nome": "Tessa Thompson",
+          "personagem": "Charlotte Hale",
+          "foto": "https://image.tmdb.org/t/p/w185/19ze60jXlb2j7dXc2UpA3MujXA8.jpg"
+        },
+        {
+          "nome": "Aaron Paul",
+          "personagem": "Caleb Nichols",
+          "foto": "https://image.tmdb.org/t/p/w185/8Ac9uuoYwZoYVAIJfRLzzLsGGJn.jpg"
+        },
+        {
+          "nome": "James Marsden",
+          "personagem": "Theodore 'Teddy' Flood",
+          "foto": "https://image.tmdb.org/t/p/w185/gmM9kCBzMeSGmkVXJGAkm25i9pe.jpg"
+        },
+        {
+          "nome": "Angela Sarafyan",
+          "personagem": "Clementine Pennyfeather",
+          "foto": "https://image.tmdb.org/t/p/w185/n23SKRSGUZL5sJz4MFkjnPxLgPl.jpg"
+        },
+        {
+          "nome": "Ed Harris",
+          "personagem": "Man in Black",
+          "foto": "https://image.tmdb.org/t/p/w185/kUbUA70WPiosPT4kBJMWtGk0ASd.jpg"
+        }
+      ],
+      "estreia": "2016-10-02",
+      "manchete": "Westworld: quando as máquinas decidem que já chega",
+      "sinopse_pt": "Em um parque temático futurista, robôs programados para servir começam a desenvolver consciência própria — e aí o bicho pega de vez. A série acompanha a escalada desse despertar, passando por faroeste, ficção científica e thriller corporativo. É uma obra que questiona o que significa ser humano, e faz isso sem papas na língua.",
+      "paragrafos_review": [
+        "Westworld estreou em 2016 pela HBO e chegou causando. A premissa mistura faroeste clássico com ficção científica de alto nível: um parque onde humanos ricos pagam caro para viver fantasias com anfitriões robóticos que não podem revidar. A primeira temporada é coisa fina — roteiro em camadas, viradas de tirar o fôlego e uma direção de arte que impressiona até hoje. A cena em que Dolores (Evan Rachel Wood) levanta a arma pela primeira vez vale sozinha o preço da assinatura.",
+        "Jeffrey Wright entrega uma das melhores atuações da TV recente como Bernard, um personagem cuja crise de identidade dá nó na cabeça — do bom. Thandiwe Newton como Maeve é presença magnética em cada cena. O problema é que Jonathan Nolan e Lisa Joy ficaram viciados em complexidade. A terceira e quarta temporadas perdem o fio da meada com subtramas confusas e um Aaron Paul claramente desperdiçado. A produção segue linda, mas o roteiro tropeça quando tenta ser inteligente demais.",
+        "As duas primeiras temporadas são essenciais. As duas últimas, opcionais com ressalvas. O cancelamento da HBO, embora doloroso, talvez tenha poupado o público de mais uma espiral narrativa sem saída. Westworld começou como uma obra que desafiava o espectador a pensar. Terminou como um enigma que nem os criadores sabiam resolver direito."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Começou como obra-prima e terminou como aviso sobre ambição sem freio.",
+      "gerado_em": "2026-05-25T12:20:06.798Z"
+    },
+    "the-mandalorian": {
+      "tmdb_id": 82856,
+      "titulo": "The Mandalorian",
+      "sinopse": "A saga de um guerreiro solitário, que também é um mercenário e pistoleiro, viajando pelos territórios esquecidos e marginais do espaço, logo após a queda do Império e antes da criação da temida Primeira Ordem.",
+      "nota_tmdb": "8.4",
+      "temporadas": 3,
+      "episodios": 24,
+      "generos": [
+        "Sci-Fi & Fantasy",
+        "Action & Adventure"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/9zcbqSxdsRMZWHYtyCd1nXPr2xq.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+      "redes": [
+        "Disney+"
+      ],
+      "status": "Ended",
+      "criadores": "Jon Favreau",
+      "elenco": [
+        {
+          "nome": "Pedro Pascal",
+          "personagem": "Din Djarin / The Mandalorian",
+          "foto": "https://image.tmdb.org/t/p/w185/9VYK7oxcqhjd5LAH6ZFJ3XzOlID.jpg"
+        },
+        {
+          "nome": "Katee Sackhoff",
+          "personagem": "Bo-Katan Kryze",
+          "foto": "https://image.tmdb.org/t/p/w185/kzcwfDDrgXnVgyTfcpG0obOn7Qk.jpg"
+        }
+      ],
+      "estreia": "2019-11-12",
+      "manchete": "O pistoleiro do espaço que ressuscitou Star Wars",
+      "sinopse_pt": "Din Djarin é um Mandaloriano — guerreiro, caçador de recompensas e homem de pouquíssimas palavras — vagando pelos confins da galáxia depois da queda do Império. Tudo muda quando ele encontra uma criatura que o mundo inteiro passou a chamar de Grogu, o Baby Yoda. A partir daí, a série constrói um faroeste espacial cheio de honra, perigo e afeto inesperado.",
+      "paragrafos_review": [
+        "The Mandalorian chegou em 2019 como a primeira aposta real do Disney+ em live-action dentro do universo Star Wars. Jon Favreau foi inteligente: em vez de tentar repetir a trilogia original, ele criou algo com cara de faroeste dos anos 70, daqueles de Clint Eastwood. O herói não fala muito, age com precisão e carrega um código de honra rígido. A cena do primeiro episódio, quando Din Djarin descobre quem é o 'pacote' que deve entregar, define o tom de toda a série num único olhar.",
+        "Pedro Pascal entrega uma atuação física de alto nível — lembrando que ele passa boa parte do tempo com o rosto coberto por um elmo. A expressão vem do corpo, da postura, do silêncio calculado. Katee Sackhoff como Bo-Katan rouba cenas na terceira temporada e traz camadas políticas ao universo Mandaloriano que a série precisava. O roteiro das duas primeiras temporadas é coeso e bem amarrado. A terceira perde um pouco o fio da meada, tenta abraçar muito e acaba ficando difusa — mas os efeitos visuais com a tecnologia Volume seguem sendo coisa fina.",
+        "As duas primeiras temporadas são das melhores produções já feitas dentro de Star Wars, sem exagero. A terceira temporada tropeça, mas não cai. A série terminou com 24 episódios e um legado claro: provou que histórias menores, mais íntimas, funcionam muito melhor do que blockbusters inflados nesse universo. Grogu virou ícone cultural mundial — e não foi por acaso."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Este é o Caminho — e ele vale cada passo.",
+      "gerado_em": "2026-05-25T12:20:23.486Z"
     }
   },
   "comics": {
@@ -6867,6 +7047,47 @@
         "url": "https://br.ign.com/dragon-ball/153212/esta-cena-de-dragon-ball-z-e-tao-iconica-que-um-dos-fotogramas-do-anime-foi-vendido-por-mais-de-100"
       },
       "gerado_em": "2026-05-24T10:27:42.861Z"
+    },
+    "titanic-e-la-la-land-voltam-aos-cinemas-em-junho": {
+      "titulo": "Titanic e La La Land voltam aos cinemas em junho",
+      "descricao": "Os dois clássicos do Oscar terão sessões especiais nas salas UCI no dia 1º de junho, com ingressos a partir de R$ 12.",
+      "categoria": "Cinema",
+      "autor": "Redação 3W",
+      "data": "2026-05-25",
+      "imagem": "/images/noticias/titanic-e-la-la-land-voltam-aos-cinemas-em-junho.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Clássicos do Oscar voltam às telas em sessões especiais",
+      "paragrafos": [
+        "Titanic e La La Land, dois dos filmes mais indicados na história do Oscar, retornam aos cinemas no dia 1º de junho com sessões especiais nas salas da rede UCI. A programação faz parte do UCI Day, evento que oferece entradas a R$ 12 para salas 2D, 3D, Imax e Xplus, e a R$ 20 para salas VIP de lux e 4DX.",
+        "Os ingressos já estão à venda no site dos cinemas UCI."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Folha Ilustrada",
+        "url": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://guia.folha.uol.com.br/cinema/2026/05/titanic-e-la-la-land-retornam-aos-cinemas-com-sessoes-especiais-em-junho.shtml"
+      },
+      "gerado_em": "2026-05-25T12:20:55.472Z"
+    },
+    "almodovar-lanca-natal-amargo-nos-cinemas-brasileiros": {
+      "titulo": "Almodóvar lança 'Natal Amargo' nos cinemas brasileiros",
+      "descricao": "Novo filme do diretor espanhol chega às salas nesta quinta (29) após estrear no Festival de Cannes.",
+      "categoria": "Cinema",
+      "autor": "Redação 3W",
+      "data": "2026-05-25",
+      "imagem": "/images/noticias/almodovar-lanca-natal-amargo-nos-cinemas-brasileiros.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Almodóvar e o mistério da criação em 'Natal Amargo'",
+      "paragrafos": [
+        "Aos 76 anos e com quase meio século de carreira, Pedro Almodóvar ainda se diz fascinado pelo mistério da criação. O cineasta espanhol, reconhecido como um dos mais influentes de sua geração, traz essa busca para o centro de seu novo filme, 'Natal Amargo', que estreia nos cinemas nesta quinta-feira (29) após passar pelo Festival de Cannes."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Folha Ilustrada",
+        "url": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/05/pedro-almodovar-lanca-natal-amargo-e-diz-que-a-arte-deve-refletir-seu-tempo.shtml"
+      },
+      "gerado_em": "2026-05-25T12:21:17.168Z"
     }
   },
   "esportes": {
