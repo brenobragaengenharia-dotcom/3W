@@ -2883,6 +2883,74 @@
       "vale_assistir": true,
       "frase_final": "O coração perdoa os excessos quando o sentimento é verdadeiro.",
       "gerado_em": "2026-05-30T10:43:59.696Z"
+    },
+    "backrooms-um-nao-lugar": {
+      "tmdb_id": 1083381,
+      "titulo": "Backrooms: Um Não-Lugar",
+      "sinopse": "Em 1990, o vendedor de móveis Clark descobre em sua loja um portal para os \"Backrooms\", um labirinto infinito de escritórios surreais. Fascinado, ele convence sua funcionária Kat e o namorado dela a mapearem as anomalias do local. Após o desaparecimento de Clark, sua terapeuta, a Dra. Mary Kline, mergulha na dimensão impossível para resgatá-lo, sendo forçada a confrontar seus próprios traumas enquanto busca uma saída.",
+      "nota_tmdb": "6.6",
+      "duracao": 110,
+      "generos": [
+        "Terror",
+        "Mistério",
+        "Ficção científica"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/mCpwRayjXMFzKHbjbzc5JRKfq1O.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/a1pgQeEge47xrS4jGlDwIHiieVK.jpg",
+      "diretor": "Kane Parsons",
+      "elenco": [
+        {
+          "nome": "Chiwetel Ejiofor",
+          "personagem": "Clark",
+          "foto": "https://image.tmdb.org/t/p/w185/kq5DDnqqofoRI0t6ddtRlsJnNPT.jpg"
+        },
+        {
+          "nome": "Renate Reinsve",
+          "personagem": "Mary Kline",
+          "foto": "https://image.tmdb.org/t/p/w185/cOb1N2A4YL14cEZn9pDrfhJTaBi.jpg"
+        },
+        {
+          "nome": "Mark Duplass",
+          "personagem": "Phil",
+          "foto": "https://image.tmdb.org/t/p/w185/lRDf99rAfcdqt8Cqk4LsIT7XSD2.jpg"
+        },
+        {
+          "nome": "Finn Bennett",
+          "personagem": "Robert 'Bobby' Franklin",
+          "foto": "https://image.tmdb.org/t/p/w185/lPq5n7WreNVtt53obM5hmnAjxeK.jpg"
+        },
+        {
+          "nome": "Lukita Maxwell",
+          "personagem": "Kathrine 'Kat' Taylor",
+          "foto": "https://image.tmdb.org/t/p/w185/g5g6XxUAtSdPfsJrSoFkl7vH51d.jpg"
+        },
+        {
+          "nome": "Avan Jogia",
+          "personagem": "Naren Warne",
+          "foto": "https://image.tmdb.org/t/p/w185/7BX0Lg39bHlgtvWZpszTr1YjTAW.jpg"
+        },
+        {
+          "nome": "Ember Ambrose",
+          "personagem": "Young Mary",
+          "foto": "https://image.tmdb.org/t/p/w185/w7h6l4ltuWaMYanGgzwyhAHGL2y.jpg"
+        },
+        {
+          "nome": "Krista Kosonen",
+          "personagem": "Nora Kline",
+          "foto": "https://image.tmdb.org/t/p/w185/7iW2mxbxBgV5sX2y0fSY78lewW4.jpg"
+        }
+      ],
+      "lancamento": "2026-05-27",
+      "manchete": "Os Backrooms chegam ao cinema e o corredor não tem fim",
+      "sinopse_pt": "Clark, um vendedor de móveis, encontra em sua loja um portal para os Backrooms — um labirinto infinito de salas amareladas que parece não ter lógica nem saída. Quando ele desaparece, sua terapeuta, a Dra. Mary Kline, entra na dimensão para resgatá-lo e acaba encarando seus próprios fantasmas no caminho. É terror psicológico com cheiro de ficção científica dos anos 90.",
+      "paragrafos_review": [
+        "Kane Parsons saiu direto do YouTube para dirigir sua primeira produção de grande porte — e isso, por si só, já diz muito sobre como o fenômeno dos Backrooms virou coisa séria. O roteiro situa a história em 1990, o que é uma decisão inteligente: sem celular, sem internet, a sensação de isolamento absoluto dentro do labirinto de escritórios desbotados pesa de verdade. A ambientação análogica funciona como personagem, e o filme aproveita isso com competência nas cenas de mapeamento feitas por Kat e seu namorado.",
+        "Chiwetel Ejiofor entrega um Clark magnético nos primeiros atos — tem uma cena específica em que ele toca a parede amarela com uma curiosidade quase infantil, e você entende por que esse homem se perdeu ali dentro. Renate Reinsve carrega o segundo tempo com uma intensidade que lembra seu trabalho em 'A Pior Pessoa do Mundo'. A direção de Parsons prefere o silêncio ao susto barato, o que é coisa fina para um estreante. O problema está no roteiro: os traumas de Mary são apresentados, mas nunca resolvidos com a profundidade que prometem.",
+        "O final dá um nó na cabeça — não o tipo bom, que faz você repensar tudo, mas o tipo que parece inacabado. A nota 6.6 no TMDB é honesta. 'Backrooms: Um Não-Lugar' é um filme que acerta na atmosfera e erra na conclusão. Vale o ingresso pela experiência visual e pelas atuações, mas sai do cinema com gosto de potencial desperdiçado."
+      ],
+      "vale_assistir": true,
+      "frase_final": "O corredor é ótimo. É uma pena que a saída decepcione.",
+      "gerado_em": "2026-05-31T10:52:14.318Z"
     }
   },
   "series": {
@@ -8665,6 +8733,68 @@
         "url": "https://tribunahoje.com/noticias/esportes/2026/05/29/186084-libertadores-define-classificados-as-oitavas-e-sulamericana-jogos-dos-playoffs"
       },
       "gerado_em": "2026-05-29T12:09:40.401Z"
+    },
+    "selecao-brasileira-chega-ao-rio-com-festa-da-torcida": {
+      "titulo": "Seleção Brasileira chega ao Rio com festa da torcida",
+      "descricao": "Centenas de torcedores receberam o Brasil no Hilton Barra da Tijuca, onde a equipe fica concentrada antes do amistoso contra o Panamá.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-30",
+      "imagem": "/images/noticias/selecao-brasileira-chega-ao-rio-com-festa-da-torcida.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Torcida lota hotel da Seleção no Rio antes do Panamá",
+      "paragrafos": [
+        "A Seleção Brasileira deixou a Granja Comary, em Teresópolis, na tarde deste sábado (30) e se transferiu para o hotel Hilton, na Barra da Tijuca, Zona Oeste do Rio de Janeiro. A chegada mobilizou centenas de torcedores, segundo o Lance, que registraram o momento com grande entusiasmo ao ver de perto os principais nomes do time.",
+        "O grupo permanece concentrado no hotel até o amistoso contra o Panamá, marcado para este domingo (31) no Maracanã."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "LANCE",
+        "url": "https://www.lance.com.br/selecao-brasileira/com-apoio-de-torcedores-selecao-brasileira-chega-a-hotel-no-rio-veja.html"
+      },
+      "gerado_em": "2026-05-31T10:53:02.723Z"
+    },
+    "gremio-usa-goleiro-de-17-anos-apos-expulsao-contra-o-corinthians": {
+      "titulo": "Grêmio usa goleiro de 17 anos após expulsão contra o Corinthians",
+      "descricao": "Gabriel Menegon entrou em campo depois que Thiago Beltrame foi expulso no segundo tempo, com os titulares indisponíveis.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-30",
+      "imagem": "/images/noticias/gremio-usa-goleiro-de-17-anos-apos-expulsao-contra-o-corinthians.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Com 17 anos, Menegon estreia em situação extrema pelo Grêmio",
+      "paragrafos": [
+        "O Grêmio precisou recorrer ao seu quarto goleiro, Gabriel Menegon, de 17 anos, durante a partida contra o Corinthians neste sábado, dia 30, na Arena do Grêmio. A necessidade surgiu após a expulsão de Thiago Beltrame, terceiro goleiro do clube, que havia iniciado o jogo como titular no segundo tempo.",
+        "A situação ocorreu porque o titular Weverton estava com a Seleção Brasileira e Gabriel Grando se encontrava lesionado, deixando Beltrame como a opção disponível — até ser expulso e abrir caminho para a entrada do jovem Menegon."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Terra",
+        "url": "https://www.terra.com.br/esportes/gremio/gremio-recorre-a-goleiro-de-17-anos-apos-expulsao-de-terceiro-reserva-contra-o-corinthians,ef02ded0481f78f55372ce7337909fae9bq0qxbp.html"
+      },
+      "gerado_em": "2026-05-31T10:53:11.569Z"
+    },
+    "neymar-volta-a-usar-a-camisa-10-do-brasil-na-copa-2026": {
+      "titulo": "Neymar volta a usar a camisa 10 do Brasil na Copa 2026",
+      "descricao": "CBF divulgou neste sábado (30) a numeração oficial da Seleção Brasileira para a Copa do Mundo de 2026.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-05-30",
+      "imagem": "/images/noticias/neymar-volta-a-usar-a-camisa-10-do-brasil-na-copa-2026.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Neymar reassume a 10 do Brasil na Copa do Mundo",
+      "paragrafos": [
+        "A CBF divulgou neste sábado (30) a numeração oficial da Seleção Brasileira para a Copa do Mundo de 2026. O principal destaque é o retorno de Neymar à camisa 10, número que voltou a ser tema de debate entre torcedores desde a convocação do atacante."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Jornal Folha Vitória",
+        "url": "https://www.folhavitoria.com.br/esportes/quem-vai-ser-o-camisa-10-da-selecao-na-copa-cbf-divulga-a-numeracao/"
+      },
+      "gerado_em": "2026-05-31T10:53:16.993Z"
     }
   }
 }
