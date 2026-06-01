@@ -2951,6 +2951,74 @@
       "vale_assistir": true,
       "frase_final": "O corredor é ótimo. É uma pena que a saída decepcione.",
       "gerado_em": "2026-05-31T10:52:14.318Z"
+    },
+    "titulo-1433117": {
+      "tmdb_id": 1433117,
+      "titulo": "கர",
+      "sinopse": "",
+      "nota_tmdb": "6.5",
+      "duracao": 161,
+      "generos": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/jatqtz0VlQRiugmHktbKQpuf5EV.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/uIrFdMWlJFdc1jPBP9bxeaISCDj.jpg",
+      "diretor": "Vignesh Raja",
+      "elenco": [
+        {
+          "nome": "Dhanush",
+          "personagem": "Karasaami",
+          "foto": "https://image.tmdb.org/t/p/w185/7bI9oy1BXIk58hsOK8WfN5g0i1P.jpg"
+        },
+        {
+          "nome": "Mamitha Baiju",
+          "personagem": "Selli",
+          "foto": "https://image.tmdb.org/t/p/w185/tGEFW7uGdYrvZ2f3FP8JH5Yh5L2.jpg"
+        },
+        {
+          "nome": "K. S. Ravikumar",
+          "personagem": "Kanthasaami",
+          "foto": "https://image.tmdb.org/t/p/w185/8dUdM3sFvL4aXnDtLJJCkDMNEbo.jpg"
+        },
+        {
+          "nome": "Suraj Venjaramoodu",
+          "personagem": "Bharathan",
+          "foto": "https://image.tmdb.org/t/p/w185/2FUs0wmR3eHBd8g4GVbCmhkUzeI.jpg"
+        },
+        {
+          "nome": "Karunas",
+          "personagem": "Kasi Maayan",
+          "foto": "https://image.tmdb.org/t/p/w185/dnh00MeOyiWFQ21l5az3UVJ5rhp.jpg"
+        },
+        {
+          "nome": "Jayaram",
+          "personagem": "Muthu Selvan",
+          "foto": "https://image.tmdb.org/t/p/w185/cc1SfVFctuYH353NgxXNBoAFX2d.jpg"
+        },
+        {
+          "nome": "M. S. Bhaskar",
+          "personagem": "Kangayya",
+          "foto": "https://image.tmdb.org/t/p/w185/jyamX33xAwz2ZWCgh29qkg9exb8.jpg"
+        },
+        {
+          "nome": "Prithvi Pandiarajan",
+          "personagem": "Murugesan",
+          "foto": null
+        }
+      ],
+      "lancamento": "2026-04-30",
+      "manchete": "Dhanush no crime: tensão tamil que não dá trégua",
+      "sinopse_pt": "Karasaami é um homem do crime que carrega o peso de um nome e de um destino difícil de escapar. Entre lealdades sangrentas e escolhas impossíveis, ele navega por um submundo onde cada aliança pode ser a última. A história costura família, poder e traição num painel denso do interior do Tamil Nadu.",
+      "paragrafos_review": [
+        "Vignesh Raja assina sua direção com uma câmera que prefere o suor ao glamour. Kara chega em 2026 com 161 minutos de crime e drama pesado, apostando num elenco veterano para sustentar uma narrativa de tensão acumulada. O filme não tem pressa de agradar — ele constrói o seu universo tijolo por tijolo, no ritmo de quem conhece as regras do gênero e não quer encurtar caminho. Esse tipo de confiança na narrativa é raro no cinema comercial indiano atual.",
+        "Dhanush entrega Karasaami com uma economia de gestos que pesa mais do que qualquer discurso dramático. Tem uma cena em que ele simplesmente olha para o pai, vivido por K. S. Ravikumar, e o silêncio ali diz o que páginas de roteiro não conseguiriam. Suraj Venjaramoodu, como Bharathan, rouba algumas sequências com uma vilania que parece natural, nunca forçada. A direção de Vignesh Raja sabe quando deixar o ator respirar — e isso faz toda a diferença.",
+        "A nota 6.5 no TMDB é honesta, mas um pouco ingrata. O filme tem gordura para cortar, especialmente no segundo ato, mas o conjunto funciona. Quem curte crime-drama com densidade emocional vai sair satisfeito. O final dá um nó na cabeça do jeito certo — sem resposta fácil, sem laço arrumado."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Kara fica na memória como uma cicatriz: discreta, mas permanente.",
+      "gerado_em": "2026-06-01T14:51:17.440Z"
     }
   },
   "series": {
@@ -7432,6 +7500,86 @@
         "url": "https://cinepop.com.br/resident-evil-696513/"
       },
       "gerado_em": "2026-05-30T10:44:47.765Z"
+    },
+    "echo-a-cadela-de-heartstopper-morre-em-18-de-maio": {
+      "titulo": "Echo, a cadela de 'Heartstopper', morre em 18 de maio",
+      "descricao": "Echo, que interpretou Nellie na série da Netflix, morreu no dia 18 de maio, conforme confirmado nas redes sociais do animal.",
+      "categoria": "Séries",
+      "autor": "Redação 3W",
+      "data": "2026-06-01",
+      "imagem": "/images/noticias/echo-a-cadela-de-heartstopper-morre-em-18-de-maio.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Morre Echo, a cadela de estimação de Nick em Heartstopper",
+      "paragrafos": [
+        "Echo, a cachorra que deu vida a Nellie — o animal de estimação de Nick Nelson (Kit Connor) na série 'Heartstopper', da Netflix — faleceu no dia 18 de maio. A morte foi confirmada pelo perfil oficial do animal nas redes sociais."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Cinepop",
+        "url": "https://cinepop.com.br/heartstopper-echo-a-cadela-que-interpretou-nellie-na-serie-falece-746971/"
+      },
+      "gerado_em": "2026-06-01T14:51:48.401Z"
+    },
+    "minions-monstros-ganha-teaser-inedito-estreia-em-julho": {
+      "titulo": "Minions & Monstros ganha teaser inédito; estreia em julho",
+      "descricao": "A Universal Pictures divulgou um teaser inédito de 'Minions & Monstros', terceiro capítulo da franquia, com estreia nacional em 2 de julho.",
+      "categoria": "Cinema",
+      "autor": "Redação 3W",
+      "data": "2026-06-01",
+      "imagem": "/images/noticias/minions-monstros-ganha-teaser-inedito-estreia-em-julho.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Terceiro filme dos Minions chega aos cinemas em julho",
+      "paragrafos": [
+        "A Universal Pictures divulgou um teaser inédito de 'Minions & Monstros', terceiro capítulo da franquia Minions. O longa tem estreia prevista nos cinemas brasileiros para 2 de julho, segundo o CinePop."
+      ],
+      "frase_destaque": "hollywood will never be the same",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Cinepop",
+        "url": "https://cinepop.com.br/minions-conquistam-hollywood-no-novo-teaser-de-minions-confira-746974/"
+      },
+      "gerado_em": "2026-06-01T14:51:56.299Z"
+    },
+    "robert-downey-jr-aparece-em-artes-de-vingadores-doutor-destino": {
+      "titulo": "Robert Downey Jr. aparece em artes de 'Vingadores: Doutor Destino'",
+      "descricao": "Kit colecionável do filme revela novas imagens de RDJ como Victor von Doom e dos heróis que enfrentarão o vilão.",
+      "categoria": "Cinema",
+      "autor": "Redação 3W",
+      "data": "2026-06-01",
+      "imagem": "/images/noticias/robert-downey-jr-aparece-em-artes-de-vingadores-doutor-destino.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Novo material mostra RDJ como Doutor Destino ao lado dos heróis",
+      "paragrafos": [
+        "Um novo kit colecionável de 'Vingadores: Doutor Destino' trouxe artes promocionais com Robert Downey Jr. no papel do antagonista Victor von Doom, além de imagens de alguns dos heróis que vão enfrentá-lo no filme. Segundo o Cinepop, as artes estão um pouco desfocadas, mas ainda assim oferecem mais um vislumbre do vencedor do Oscar no papel do icônico vilão."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Cinepop",
+        "url": "https://cinepop.com.br/victor-von-doom-sr-fantastico-e-mais-nas-novas-artes-promocionais-de-vingadores-doutor-destino-746970/"
+      },
+      "gerado_em": "2026-06-01T14:52:05.936Z"
+    },
+    "one-piece-1184-abre-flashback-sobre-o-passado-de-brook-em-esperia": {
+      "titulo": "One Piece 1184 abre flashback sobre o passado de Brook em Esperia",
+      "descricao": "Capítulo mais recente do mangá inicia flashback da infância de Brook no reino de Esperia, durante o arco de Elbaf.",
+      "categoria": "Comics",
+      "autor": "Redação 3W",
+      "data": "2026-05-31",
+      "imagem": "/images/noticias/one-piece-1184-abre-flashback-sobre-o-passado-de-brook-em-esperia.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Mangá revela a infância obscura de Brook em Esperia",
+      "paragrafos": [
+        "O capítulo 1184 de One Piece deu início a um flashback centrado na infância de Brook, ambientado no reino de Esperia, dentro do arco de Elbaf. A revelação acontece enquanto o mangá se aproxima do desfecho das batalhas no território dos gigantes — ao mesmo tempo em que o anime ainda dá os primeiros passos nessa mesma região, segundo o Omelete."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Omelete",
+        "url": "https://www.omelete.com.br/mangas-animes/one-piece-1184-flashback-brook-segredos-reino-esperia"
+      },
+      "gerado_em": "2026-06-01T14:52:30.920Z"
     }
   },
   "esportes": {
@@ -8795,6 +8943,27 @@
         "url": "https://www.folhavitoria.com.br/esportes/quem-vai-ser-o-camisa-10-da-selecao-na-copa-cbf-divulga-a-numeracao/"
       },
       "gerado_em": "2026-05-31T10:53:16.993Z"
+    },
+    "knicks-x-spurs-datas-confirmadas-para-a-final-da-nba-202526": {
+      "titulo": "Knicks x Spurs: datas confirmadas para a final da NBA 2025/26",
+      "descricao": "San Antonio e Nova York se enfrentam na decisão da temporada 2025/26, repetindo a final histórica de 1999.",
+      "categoria": "NBA",
+      "autor": "Redação 3W",
+      "data": "2026-05-31",
+      "imagem": "/images/noticias/knicks-x-spurs-datas-confirmadas-para-a-final-da-nba-202526.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Spurs e Knicks se reencontram na final da NBA após 26 anos",
+      "paragrafos": [
+        "O San Antonio Spurs está na final da NBA após derrotar o Oklahoma City Thunder no jogo 7, na noite do último sábado (30/5). Do outro lado, os New York Knicks chegaram à decisão pela Conferência Leste. A série repete o duelo de 1999, quando as duas franquias também se enfrentaram pelo título.",
+        "Segundo os Metrópoles, a programação completa dos jogos da final já foi divulgada, com datas e horários definidos para a disputa entre texanos e nova-iorquinos pela temporada 2025/26."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Metrópoles",
+        "url": "https://www.metropoles.com/esportes/veja-quando-serao-os-jogos-entre-knicks-x-spurs-pela-final-da-nba"
+      },
+      "gerado_em": "2026-06-01T14:52:20.801Z"
     }
   }
 }
