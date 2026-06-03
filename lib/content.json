@@ -3019,6 +3019,73 @@
       "vale_assistir": true,
       "frase_final": "Kara fica na memória como uma cicatriz: discreta, mas permanente.",
       "gerado_em": "2026-06-01T14:51:17.440Z"
+    },
+    "titulo-1065834": {
+      "tmdb_id": 1065834,
+      "titulo": "കാട്ടാളൻ",
+      "sinopse": "",
+      "nota_tmdb": "6.0",
+      "duracao": 119,
+      "generos": [
+        "Ação",
+        "Thriller"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/nTimAHDG7PoycFF2afMZVPyOokg.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/53FATyQirV8BuBcrsQMGPvGKgCu.jpg",
+      "diretor": "Paul George",
+      "elenco": [
+        {
+          "nome": "Antony Varghese",
+          "personagem": "Antony Varghese",
+          "foto": "https://image.tmdb.org/t/p/w185/dKRa8ghSXw6J1OTcxMziZh3l1jb.jpg"
+        },
+        {
+          "nome": "Sunil Varma",
+          "personagem": "Maari",
+          "foto": "https://image.tmdb.org/t/p/w185/ifmUCkLgpEzbfnRjIw62otrADpI.jpg"
+        },
+        {
+          "nome": "Dushara Vijayan",
+          "personagem": "Lucy",
+          "foto": "https://image.tmdb.org/t/p/w185/5C5V9qdYil7LVCp8LqctZCEsu1n.jpg"
+        },
+        {
+          "nome": "Jagadish",
+          "personagem": "Ali",
+          "foto": "https://image.tmdb.org/t/p/w185/ml3XX5bWPIdHUPvqhW2MYYZ8H7Y.jpg"
+        },
+        {
+          "nome": "Kabir Duhan Singh",
+          "personagem": "Eddy",
+          "foto": "https://image.tmdb.org/t/p/w185/lAVAxFARP63oTHMYWpwHrWsXPWa.jpg"
+        },
+        {
+          "nome": "Parth Tiwari",
+          "personagem": "Roby",
+          "foto": null
+        },
+        {
+          "nome": "Raj Tirandasu",
+          "personagem": "Maari 95",
+          "foto": "https://image.tmdb.org/t/p/w185/dnuD0t8xpELhXs4tKZDRdsFureg.jpg"
+        },
+        {
+          "nome": "Siddique",
+          "personagem": "George D’Peter",
+          "foto": "https://image.tmdb.org/t/p/w185/tMv7QsmYlXAXtP75D3eIxXHpgTv.jpg"
+        }
+      ],
+      "lancamento": "2026-05-14",
+      "manchete": "Kaattalan entrega adrenalina crua com estilo do cinema indiano",
+      "sinopse_pt": "Kaattalan acompanha Antony, um homem envolto em um submundo violento onde lealdades são moeda rara e traição custa caro. Entre personagens como Maari, Lucy e o enigmático George D'Peter, a trama constrói uma rede de tensões que vai apertando o nó até o limite. É ação malaia com cheiro de pólvora e contas a acertar.",
+      "paragrafos_review": [
+        "Dirigido por Paul George, Kaattalan chega em 2026 dentro de uma tradição bem consolidada do cinema malaio de ação: protagonista durão, hierarquias criminosas e cenas de confronto que não pedem licença. Antony Varghese carrega o filme nas costas com uma presença física inegável, e a dinâmica entre seu personagem e o Maari de Sunil Varma funciona como motor narrativo desde os primeiros minutos. O problema é que a estrutura do roteiro repete batidas já vistas, sem muito risco criativo.",
+        "Dushara Vijayan como Lucy é, honestamente, o ponto mais interessante do elenco. A personagem quebra um pouco o padrão de coadjuvante decorativa que o gênero costuma impor às mulheres. Jagadish e Siddique entregam atuações sólidas, como esperado de atores experientes. A direção de Paul George tem competência técnica nas sequências de ação, especialmente num confronto em espaço fechado que usa o ambiente de forma inteligente. Não é genial, mas funciona.",
+        "Com 119 minutos e nota 6 no TMDB, Kaattalan é exatamente o que parece: um thriller de ação bem executado, sem pretensão de reinventar o gênero. Quem curte cinema indiano de entretenimento direto ao ponto vai se satisfazer. Quem busca profundidade vai sair com a sensação de que o filme deixou dinheiro na mesa. Esse aqui é coisa fina nas mãos, mas rasa na cabeça."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Kaattalan acerta o alvo, mas nunca mira além do óbvio.",
+      "gerado_em": "2026-06-03T13:06:58.169Z"
     }
   },
   "series": {
@@ -7580,6 +7647,26 @@
         "url": "https://www.omelete.com.br/mangas-animes/one-piece-1184-flashback-brook-segredos-reino-esperia"
       },
       "gerado_em": "2026-06-01T14:52:30.920Z"
+    },
+    "novo-filme-do-he-man-aposta-na-nostalgia-dos-anos-1980": {
+      "titulo": "Novo filme do He-Man aposta na nostalgia dos anos 1980",
+      "descricao": "Herói icônico dos desenhos infantis retorna ao cinema, mas pronuncia seu famoso grito com insegurança.",
+      "categoria": "Cinema",
+      "autor": "Redação 3W",
+      "data": "2026-06-03",
+      "imagem": "/images/noticias/novo-filme-do-he-man-aposta-na-nostalgia-dos-anos-1980.jpg",
+      "tempo_leitura": 1,
+      "manchete": "He-Man volta inseguro em novo filme nostálgico",
+      "paragrafos": [
+        "Presença marcante nos programas infantis dos anos 1980, He-Man retorna ao cinema em novo filme que apela para a nostalgia. A cena mais famosa do personagem — em que ele empunha a espada e declara ter o poder — reaparece na produção, mas desta vez o herói pronuncia as palavras com insegurança, distante da invulnerabilidade que caracterizou o personagem na época, segundo a Folha de S.Paulo."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Folha Ilustrada",
+        "url": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/06/he-man-luta-com-a-propria-inseguranca-em-novo-filme-que-apela-para-a-nostalgia.shtml"
+      },
+      "gerado_em": "2026-06-03T13:07:33.187Z"
     }
   },
   "esportes": {
