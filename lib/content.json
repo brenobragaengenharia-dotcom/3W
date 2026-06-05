@@ -5055,6 +5055,79 @@
       "vale_assistir": true,
       "frase_final": "Este é o Caminho — e ele vale cada passo.",
       "gerado_em": "2026-05-25T12:20:23.486Z"
+    },
+    "riverdale": {
+      "tmdb_id": 69050,
+      "titulo": "Riverdale",
+      "sinopse": "Enquanto tentam lidar com problemas típicos da adolescência como amor, sexo, escola e família, Archie e sua turma se envolvem em um grande mistério.",
+      "nota_tmdb": "8.4",
+      "temporadas": 7,
+      "episodios": 137,
+      "generos": [
+        "Crime",
+        "Drama",
+        "Mistério"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/kb9XvtEnDhBVVit4eeKygqll4EA.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/d8mmn9thQ5dBk2qbv6BCqGUXWK3.jpg",
+      "redes": [
+        "The CW"
+      ],
+      "status": "Ended",
+      "criadores": "Roberto Aguirre-Sacasa",
+      "elenco": [
+        {
+          "nome": "KJ Apa",
+          "personagem": "Archie Andrews",
+          "foto": "https://image.tmdb.org/t/p/w185/e2mowKCKKkexzsKy0bTGk5S5Soa.jpg"
+        },
+        {
+          "nome": "Lili Reinhart",
+          "personagem": "Betty Cooper",
+          "foto": "https://image.tmdb.org/t/p/w185/2EJteImXda5q69AxYqNGC1H6w4t.jpg"
+        },
+        {
+          "nome": "Camila Mendes",
+          "personagem": "Veronica Lodge",
+          "foto": "https://image.tmdb.org/t/p/w185/pZAWRHdJtJlDcWuQHlgIwX12s02.jpg"
+        },
+        {
+          "nome": "Cole Sprouse",
+          "personagem": "Jughead Jones",
+          "foto": "https://image.tmdb.org/t/p/w185/mQAXL0rUGwX316d1FBBQmloZzHu.jpg"
+        },
+        {
+          "nome": "Madelaine Petsch",
+          "personagem": "Cheryl Blossom",
+          "foto": "https://image.tmdb.org/t/p/w185/mfZo30YgMx7vhAUajM8OG6I6VM8.jpg"
+        },
+        {
+          "nome": "Casey Cott",
+          "personagem": "Kevin Keller",
+          "foto": "https://image.tmdb.org/t/p/w185/hIoxwQTXTzw4L0ZNZz201pAKdmj.jpg"
+        },
+        {
+          "nome": "Drew Ray Tanner",
+          "personagem": "Fangs Fogarty",
+          "foto": "https://image.tmdb.org/t/p/w185/hEDc4uUmrx0pE93bwYoUWE6jvSB.jpg"
+        },
+        {
+          "nome": "Vanessa Morgan",
+          "personagem": "Toni Topaz",
+          "foto": "https://image.tmdb.org/t/p/w185/1hcow9vyGUtv1P6EpI7xbDIzOAs.jpg"
+        }
+      ],
+      "estreia": "2017-01-26",
+      "manchete": "Riverdale começou genial e terminou completamente fora do eixo",
+      "sinopse_pt": "Archie Andrews e seus amigos vivem em Riverdale, uma cidadezinha americana que esconde segredos sombrios por baixo da fachada de normalidade. O que começa como um mistério sobre a morte de um estudante popular vai se transformando em algo cada vez mais bizarro a cada temporada. São 7 temporadas e 137 episódios de uma montanha-russa que diverte, cansa e, às vezes, deixa o espectador de queixo caído.",
+      "paragrafos_review": [
+        "Riverdale estreou em 2017 com uma proposta afiada: pegar os personagens cor-de-rosa dos quadrinhos da Archie Comics e jogá-los num noir teen cheio de tensão e assassinatos. A primeira temporada, centrada na morte de Jason Blossom, é coisa fina de verdade. Roberto Aguirre-Sacasa soube criar uma atmosfera densa, com aquela Cheryl Blossom de Madelaine Petsch roubando cada cena que aparecia. A estética sombria combinada com o charme retrô de Riverdale funcionou muito bem nessa fase inicial.",
+        "Cole Sprouse como Jughead é, sem dúvida, o ponto alto do elenco. Ele carrega uma ironia cansada que combina perfeitamente com o tom da série. Lili Reinhart também entrega uma Betty Cooper complexa, longe do estereótipo boazinha. O problema é que, a partir da terceira temporada, o roteiro começa a perder o fio. Aparece culto satânico, superpoderes, viagem no tempo — e o que era drama policial vira um circo sem lona. A decisão de levar Archie para um ring de boxe na segunda temporada já era um sinal de alerta.",
+        "Maratonar Riverdale exige paciência e um certo senso de humor com o absurdo. As três primeiras temporadas têm fôlego real. Depois disso, a série parece que foi escrita em modo desespero, jogando tudo na parede pra ver o que cola. O final dá um nó na cabeça de um jeito que não é necessariamente bom. Mesmo assim, os personagens grudam — e isso conta muito."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Riverdale é aquela festa boa que durou tempo demais e virou bagunça.",
+      "gerado_em": "2026-06-05T11:56:17.808Z"
     }
   },
   "comics": {
@@ -7733,6 +7806,26 @@
         "url": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/06/he-man-luta-com-a-propria-inseguranca-em-novo-filme-que-apela-para-a-nostalgia.shtml"
       },
       "gerado_em": "2026-06-03T13:07:33.187Z"
+    },
+    "cabo-do-medo-chega-a-tv-com-bencao-de-scorsese": {
+      "titulo": "'Cabo do Medo' chega à TV com bênção de Scorsese",
+      "descricao": "Adaptação televisiva do clássico livro de John D. MacDonald conta com o aval do diretor Martin Scorsese.",
+      "categoria": "Séries",
+      "autor": "Redação 3W",
+      "data": "2026-06-05",
+      "imagem": "/images/noticias/cabo-do-medo-chega-a-tv-com-bencao-de-scorsese.jpg",
+      "tempo_leitura": 1,
+      "manchete": "'Cabo do Medo' sai do cinema e ganha versão para TV",
+      "paragrafos": [
+        "Há quase sete décadas, o escritor John D. MacDonald criou 'Cabo do Medo' motivado pela visão de um mundo desonesto e violento demais. A história narra o confronto entre bem e mal: um estuprador que, ao sair da cadeia, decide se vingar do homem que testemunhou contra ele. O livro foi adaptado para o cinema cinco anos após sua publicação e agora ganha uma versão televisiva com a bênção de Martin Scorsese, segundo a Folha Ilustrada."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Folha Ilustrada",
+        "url": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/06/cabo-do-medo-na-tv-tem-bencao-de-martin-scorsese-e-mira-os-podres-da-sociedade.shtml"
+      },
+      "gerado_em": "2026-06-05T11:57:09.741Z"
     }
   },
   "esportes": {
