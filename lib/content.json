@@ -3152,6 +3152,140 @@
       "vale_assistir": true,
       "frase_final": "Alguns pesadelos não terminam quando você acorda.",
       "gerado_em": "2026-06-04T11:44:34.931Z"
+    },
+    "na-zona-cinzenta": {
+      "tmdb_id": 1122573,
+      "titulo": "Na Zona Cinzenta",
+      "sinopse": "Dois especialistas em resgates embarcam na difícil missão de recuperar uma fortuna bilionária roubada. Para isso, eles precisam traçar uma rota de fuga segura para uma experiente negociadora, mas o plano rapidamente se transforma em uma guerra explosiva de estratégia, traições e sobrevivência.",
+      "nota_tmdb": "6.7",
+      "duracao": 98,
+      "generos": [
+        "Ação",
+        "Thriller"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/oBft4BZeoDQzTT9ZGijClr76qvK.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/x8lAJde9fcXBFv5M2cOEv4YpIs5.jpg",
+      "diretor": "Guy Ritchie",
+      "elenco": [
+        {
+          "nome": "Henry Cavill",
+          "personagem": "Sid",
+          "foto": "https://image.tmdb.org/t/p/w185/kN3A5oLgtKYAxa9lAkpsIGYKYVo.jpg"
+        },
+        {
+          "nome": "Jake Gyllenhaal",
+          "personagem": "Bronco",
+          "foto": "https://image.tmdb.org/t/p/w185/j2Yahha9C0zN5DRaTDzYA7WtdOT.jpg"
+        },
+        {
+          "nome": "Eiza González",
+          "personagem": "Rachel WIld",
+          "foto": "https://image.tmdb.org/t/p/w185/9kwfAiMeRUGR6cpZyY8FCuP5MSX.jpg"
+        },
+        {
+          "nome": "Carlos Bardem",
+          "personagem": "Manny Salazar",
+          "foto": "https://image.tmdb.org/t/p/w185/4eVSnaYe4O06BNZjuw8UHnWaqB5.jpg"
+        },
+        {
+          "nome": "Michael Vu",
+          "personagem": "Ed Glover",
+          "foto": "https://image.tmdb.org/t/p/w185/rHtIIqQvViPHovSJkDzDegBU6nb.jpg"
+        },
+        {
+          "nome": "Fisher Stevens",
+          "personagem": "William Horowitz",
+          "foto": "https://image.tmdb.org/t/p/w185/wWC6wbLV56RJGtyytMmmGvi054t.jpg"
+        },
+        {
+          "nome": "Rosamund Pike",
+          "personagem": "Bobby Sheen",
+          "foto": "https://image.tmdb.org/t/p/w185/8ObNklHDi2hjdz0ayzJFB9jtqzm.jpg"
+        },
+        {
+          "nome": "Mohammed Al Turki",
+          "personagem": "Wolfgang Klose",
+          "foto": "https://image.tmdb.org/t/p/w185/u9tO2CaUajPbkErAvZCAUYrORkc.jpg"
+        }
+      ],
+      "lancamento": "2026-05-13",
+      "manchete": "Cavill e Gyllenhaal numa guerra de traições sem pausa para respirar",
+      "sinopse_pt": "Dois especialistas em resgates recebem a missão de recuperar uma fortuna bilionária e garantir a fuga de uma negociadora experiente. O que parecia um trabalho cirúrgico vira um caos de estratégias cruzadas e lealdades descartáveis. Ninguém está exatamente do lado que parece.",
+      "paragrafos_review": [
+        "Guy Ritchie está em casa no caos organizado. 'Na Zona Cinzenta' segue a receita que o diretor britânico domina desde 'Snatch': personagens com nomes estranhos, diálogos afiados e reviravoltas que chegam antes do espectador conseguir processar a anterior. O problema é que, desta vez, a receita cheira a requentado. A premissa dos dois especialistas em rota de fuga tem potencial, mas o roteiro desperdiça boa parte dele nos primeiros trinta minutos, insistindo em apresentações que poderiam ter sido resolvidas em cena.",
+        "Henry Cavill carrega o filme nas costas largas — literalmente e no sentido figurado. O Sid dele é um homem de poucas palavras e ações calculadas, e tem uma sequência num armazém portuário que é o melhor momento do longa: câmera colada nele, sem trilha, só o barulho de metal e respiração. Jake Gyllenhaal como Bronco funciona bem no contraponto cômico, mas Rosamund Pike é quem rouba as cenas que aparece. A Bobby Sheen dela tem uma frieza que dá calafrio. Eiza González fica subutilizada, o que é um desperdício visível.",
+        "Com 98 minutos, o filme não se perde em gordura. O ritmo é o maior trunfo aqui. Mas a nota 6.7 no TMDB diz muito: é entretenimento honesto, sem pretensão de ser mais do que é. O final dá um nó satisfatório, nada que vá te tirar o sono. Ritchie entrega o que promete, e só isso. Esse aqui é coisa boa de sessão de sexta, não de lista de melhores do ano."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Diversão garantida, mas o brilho some junto com os créditos finais.",
+      "gerado_em": "2026-06-06T10:49:53.798Z"
+    },
+    "titulo-1057265": {
+      "tmdb_id": 1057265,
+      "titulo": "పెద్ది",
+      "sinopse": "",
+      "nota_tmdb": "9.3",
+      "duracao": 192,
+      "generos": [
+        "Ação",
+        "Drama"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/oPsRr7AfNLw6XaPuMpvkWK0bIUA.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/kJAJNNBYlbqAcpTDxBNnaILSMTy.jpg",
+      "diretor": "Buchi Babu Sana",
+      "elenco": [
+        {
+          "nome": "Ram Charan",
+          "personagem": "Peddi Pehelwan",
+          "foto": "https://image.tmdb.org/t/p/w185/twGqYUCR0Yh33j3TcgRTZRBRhTd.jpg"
+        },
+        {
+          "nome": "Janhvi Kapoor",
+          "personagem": "Achiyyamma",
+          "foto": "https://image.tmdb.org/t/p/w185/gzTtKYASxhUUF5DqxqrWW3IT9GC.jpg"
+        },
+        {
+          "nome": "Shivaraj Kumar",
+          "personagem": "Gournaidu",
+          "foto": "https://image.tmdb.org/t/p/w185/aOQ6tjRLjMReW8Pig9PjJaudl5b.jpg"
+        },
+        {
+          "nome": "Jagapati Babu",
+          "personagem": "Appala Soori",
+          "foto": "https://image.tmdb.org/t/p/w185/bm72k6FmDxhxtZsl1xvxoz88Hkm.jpg"
+        },
+        {
+          "nome": "Divyendu Sharma",
+          "personagem": "Ram Bujji",
+          "foto": "https://image.tmdb.org/t/p/w185/rGlCCQtOBiNJULfB5w0FXgPPKw0.jpg"
+        },
+        {
+          "nome": "Rajatabha Dutta",
+          "personagem": "",
+          "foto": "https://image.tmdb.org/t/p/w185/8ukhcXEule4DROSsd4MtXaVoQnt.jpg"
+        },
+        {
+          "nome": "Dayanand Reddy",
+          "personagem": "",
+          "foto": "https://image.tmdb.org/t/p/w185/8rP0hqbamgqPCVkjMhbXtydAYI4.jpg"
+        },
+        {
+          "nome": "Upendra Limaye",
+          "personagem": "",
+          "foto": "https://image.tmdb.org/t/p/w185/vFELR5TiBfc6LkLvI5kC5lpEnHv.jpg"
+        }
+      ],
+      "lancamento": "2026-06-03",
+      "manchete": "Ram Charan como Peddi Pehelwan: pancadaria épica com alma dramática",
+      "sinopse_pt": "Peddi Pehelwan é um lutador bruto, criado entre a poeira e o suor das brigas de rua, que se vê enredado em conflitos maiores do que seus punhos conseguem resolver. Entre alianças perigosas e traições, ele precisa decidir quem realmente é. Uma história de força física que cobra um preço alto demais da alma.",
+      "paragrafos_review": [
+        "Buchi Babu Sana, o mesmo diretor de Uppena, não veio aqui pra fazer frescura. Com 192 minutos de duração, Peddi já avisa logo de cara: esse aqui é coisa fina, mas exige paciência. O filme carrega na veia o cinema Telugu mais raiz, aquele que mistura pancadaria de verdade com drama familiar pesado. A proposta é ambiciosa — colocar Ram Charan num personagem chamado Peddi Pehelwan e construir em volta dele um universo de poder, lealdade e violência que tem cheiro de terra e sangue.",
+        "Ram Charan entrega uma das atuações mais físicas da sua carreira. Tem uma cena específica em que Peddi encara Gournaidu, vivido por Shivaraj Kumar, com uma calma que assusta mais do que qualquer grito. Shivaraj rouba o chão em cada sequência que aparece. Janhvi Kapoor surpreende como Achiyyamma, mostrando uma maturidade que seus trabalhos anteriores não deixavam prever. Jagapati Babu e Divyendu Sharma completam um elenco afiado, sem papel decorativo. A direção de Buchi Babu tem ritmo, sabe quando apertar e quando respirar.",
+        "A nota 9.3 no TMDB não é exagero de fã empolgado. Peddi funciona porque tem coragem dramática rara no cinema de ação atual. Não esconde as contradições do protagonista nem entrega resolução fácil. Os quase três e meia horas passam, e quando o crédito sobe, o espectador fica sentado processando o que acabou de ver. Esse filme não termina na tela — ele continua na cabeça."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Peddi Pehelwan não pede licença para entrar na sua memória.",
+      "gerado_em": "2026-06-06T10:50:09.964Z"
     }
   },
   "series": {
@@ -5128,6 +5262,67 @@
       "vale_assistir": true,
       "frase_final": "Riverdale é aquela festa boa que durou tempo demais e virou bagunça.",
       "gerado_em": "2026-06-05T11:56:17.808Z"
+    },
+    "the-crown": {
+      "tmdb_id": 65494,
+      "titulo": "The Crown",
+      "sinopse": "Esta série dramática segue a política, rivalidades e relacionamentos da rainha Elizabeth II, e os eventos que fizeram a história.",
+      "nota_tmdb": "8.2",
+      "temporadas": 6,
+      "episodios": 60,
+      "generos": [
+        "Drama"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/8VXhcrl5z2I1zEU9X3pkkNrZlD.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/ehUMAA3qDR5HNor9DB60g72KNQZ.jpg",
+      "redes": [
+        "Netflix"
+      ],
+      "status": "Ended",
+      "criadores": "Peter Morgan",
+      "elenco": [
+        {
+          "nome": "Imelda Staunton",
+          "personagem": "Queen Elizabeth II",
+          "foto": "https://image.tmdb.org/t/p/w185/96LYLMnUOWZ4DFXEeQPItNsxzEP.jpg"
+        },
+        {
+          "nome": "Jonathan Pryce",
+          "personagem": "Prince Philip, Duke of Edinburgh",
+          "foto": "https://image.tmdb.org/t/p/w185/zwSv5uXzPTtmitFe39UdqnVwmdL.jpg"
+        },
+        {
+          "nome": "Lesley Manville",
+          "personagem": "Princess Margaret",
+          "foto": "https://image.tmdb.org/t/p/w185/tioPlSoypjdME3oMu3g7XmgIIKS.jpg"
+        },
+        {
+          "nome": "Dominic West",
+          "personagem": "Prince Charles",
+          "foto": "https://image.tmdb.org/t/p/w185/6y2M3EWslBPwPlugEFg8XDHfSJ0.jpg"
+        },
+        {
+          "nome": "Claudia Harrison",
+          "personagem": "Princess Anne",
+          "foto": "https://image.tmdb.org/t/p/w185/5OrmaPj4iw9NmeqdLHOIzGqdscb.jpg"
+        },
+        {
+          "nome": "Marcia Warren",
+          "personagem": "Queen Elizabeth the Queen Mother",
+          "foto": "https://image.tmdb.org/t/p/w185/nhpbQcoogi3uAdgmOW9A0FqdIxz.jpg"
+        }
+      ],
+      "estreia": "2016-11-04",
+      "manchete": "The Crown entrega a monarquia britânica sem filtro e sem dó",
+      "sinopse_pt": "The Crown acompanha décadas do reinado de Elizabeth II, da coroação às crises familiares que abalaram o palácio. A série não romantiza a realeza — ela a disseca com frieza cirúrgica. Entre decisões políticas pesadas e relacionamentos destroçados, fica claro que a coroa tem um preço alto demais.",
+      "paragrafos_review": [
+        "Seis temporadas, sessenta episódios e uma produção que custou mais do que muitos filmes de Hollywood. The Crown não é entretenimento leve — é uma aula de história embrulhada em drama de alto nível. A Netflix apostou pesado nessa reconstrução do reinado de Elizabeth II, e o resultado é uma série que envelhece bem, temporada após temporada. O elenco foi trocado ao longo das fases da vida da rainha, decisão ousada que funcionou muito bem.",
+        "Imelda Staunton carrega a fase final da série com uma contenção emocional que dá arrepio. A cena em que Elizabeth confronta os desdobramentos do relacionamento de Charles e Diana é de uma tensão cortante — sem gritos, sem melodrama, só olhares e silêncios que dizem tudo. O roteiro de Peter Morgan resiste à tentação de fazer vilões caricatos. Todo mundo aqui age com motivações críveis, o que torna cada conflito mais difícil de assistir. Esse aqui é coisa fina mesmo.",
+        "O final da sexta temporada divide opiniões, mas eu acho que ele acerta ao recusar um encerramento grandioso. A série termina como viveu: discreta, pesada e honesta. Quem espera catarse sai um pouco frustrado. Quem entende que essa é a proposta desde o primeiro episódio, sai satisfeito. The Crown não veio para consolar ninguém."
+      ],
+      "vale_assistir": true,
+      "frase_final": "A coroa brilha, mas quem a usa raramente sorri de verdade.",
+      "gerado_em": "2026-06-06T10:50:24.809Z"
     }
   },
   "comics": {
@@ -9311,6 +9506,48 @@
         "url": "https://odia.ig.com.br/esporte/copa-do-mundo/2026/06/7260386-carlo-ancelotti-testa-mudancas-em-treino-da-selecao-brasileira.html"
       },
       "gerado_em": "2026-06-04T11:45:31.678Z"
+    },
+    "gp-de-monaco-2025-data-horario-e-onde-assistir": {
+      "titulo": "GP de Mônaco 2025: data, horário e onde assistir",
+      "descricao": "A Fórmula 1 volta ao Principado de Mônaco no domingo (07), com largada às 10h (horário de Brasília).",
+      "categoria": "Fórmula 1",
+      "autor": "Redação 3W",
+      "data": "2026-06-05",
+      "imagem": "/images/noticias/gp-de-monaco-2025-data-horario-e-onde-assistir.jpg",
+      "tempo_leitura": 1,
+      "manchete": "F1 retorna a Monte Carlo para uma das corridas mais importantes do calendário",
+      "paragrafos": [
+        "Depois de duas semanas sem corridas, a Fórmula 1 chega ao Principado de Mônaco para uma das etapas mais tradicionais do calendário. A prova em Monte Carlo acontece no domingo (07), com largada marcada para as 10h no horário de Brasília.",
+        "O GP de Mônaco é conhecido pela pista estreita, característica que torna o circuito um dos mais desafiadores da categoria, segundo a ESPN Brasil."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Espn Brazil",
+        "url": "https://www.espn.com.br/f1/artigo/_/id/16796730/gp-de-monaco-de-formula-1-onde-assistir-ao-vivo-data-horario-classificacao-palpite"
+      },
+      "gerado_em": "2026-06-06T10:51:36.638Z"
+    },
+    "brasil-x-egito-reune-torcedores-brasileiros-no-meio-oeste-dos-eua": {
+      "titulo": "Brasil x Egito reúne torcedores brasileiros no meio-oeste dos EUA",
+      "descricao": "Sem cidade-sede na região, brasileiros de Ohio e Michigan aproveitam amistoso em Cleveland para ver a Seleção antes da Copa.",
+      "categoria": "Futebol",
+      "autor": "Redação 3W",
+      "data": "2026-06-05",
+      "imagem": "/images/noticias/brasil-x-egito-reune-torcedores-brasileiros-no-meio-oeste-dos-eua.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Amistoso em Cleveland vira Copa para brasileiros do meio-oeste",
+      "paragrafos": [
+        "Moradora de Cleveland há mais de 20 anos, a contadora carioca Gisele Kaschelk, 44 anos, se assustou com os preços dos ingressos para a Copa do Mundo, mas encontrou no amistoso entre Brasil e Egito — marcado para sábado (7), na cidade — uma alternativa mais em conta para ver a Seleção ao vivo.",
+        "A região do meio-oeste americano não tem nenhuma cidade-sede na Copa de 2026, o que faz do jogo em Cleveland uma oportunidade rara para os brasileiros que vivem em estados como Ohio e Michigan. Segundo a Zero Hora, torcedores da região estão se mobilizando para comparecer ao estádio e viver um clima de Copa sem precisar viajar longe."
+      ],
+      "frase_destaque": "Clima de Copa por preço acessível",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Zero Hora",
+        "url": "https://gauchazh.clicrbs.com.br/esportes/copa-do-mundo/noticia/2026/06/clima-de-copa-por-preco-acessivel-brasil-x-egito-anima-brasileiros-do-meio-oeste-americano-cmq1ievjk01xy016dfk5vtvw9.html"
+      },
+      "gerado_em": "2026-06-06T10:51:47.848Z"
     }
   }
 }
