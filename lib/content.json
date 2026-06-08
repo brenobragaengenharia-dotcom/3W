@@ -3286,6 +3286,72 @@
       "vale_assistir": true,
       "frase_final": "Peddi Pehelwan não pede licença para entrar na sua memória.",
       "gerado_em": "2026-06-06T10:50:09.964Z"
+    },
+    "mestres-do-universo": {
+      "tmdb_id": 454639,
+      "titulo": "Mestres do Universo",
+      "sinopse": "Adam caiu na Terra quando era criança e perdeu a espada mágica que o ligava a Eternia. Quase 20 anos depois, ele a recupera e retorna ao seu planeta natal para protegê-lo do malvado Esqueleto, mas primeiro precisa desvendar seu passado.",
+      "nota_tmdb": "7.4",
+      "duracao": 133,
+      "generos": [
+        "Ação",
+        "Fantasia",
+        "Ficção científica"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/eQySd26OW7UmCuaeBOL7qy6foMn.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/dobbDBQC0G9m65pcVaDM2D2aMr8.jpg",
+      "diretor": "Travis Knight",
+      "elenco": [
+        {
+          "nome": "Nicholas Galitzine",
+          "personagem": "Adam Glenn / He-Man",
+          "foto": "https://image.tmdb.org/t/p/w185/hG4rH7eBMs117746bBOd8fUa4PA.jpg"
+        },
+        {
+          "nome": "Camila Mendes",
+          "personagem": "Teela",
+          "foto": "https://image.tmdb.org/t/p/w185/pZAWRHdJtJlDcWuQHlgIwX12s02.jpg"
+        },
+        {
+          "nome": "Idris Elba",
+          "personagem": "Duncan / Man-At-Arms",
+          "foto": "https://image.tmdb.org/t/p/w185/be1bVF7qGX91a6c5WeRPs5pKXln.jpg"
+        },
+        {
+          "nome": "Jared Leto",
+          "personagem": "Skeletor",
+          "foto": "https://image.tmdb.org/t/p/w185/ca3x0OfIKbJppZh8S1Alx3GfUZO.jpg"
+        },
+        {
+          "nome": "Alison Brie",
+          "personagem": "Evil-Lyn",
+          "foto": "https://image.tmdb.org/t/p/w185/uu16GiwYblS6IJV3o4qFSLWKXOC.jpg"
+        },
+        {
+          "nome": "Jóhannes Haukur Jóhannesson",
+          "personagem": "Malcolm / Fisto",
+          "foto": "https://image.tmdb.org/t/p/w185/oqZftP0WS1rD5NFpR7vLp6JU52I.jpg"
+        },
+        {
+          "nome": "Jon Xue Zhang",
+          "personagem": "Ram-Man",
+          "foto": "https://image.tmdb.org/t/p/w185/olCEAjH9KeWte5ei24ej8MJAkZz.jpg"
+        },
+        {
+          "nome": "Sam C. Wilson",
+          "personagem": "Kronis / Trap Jaw",
+          "foto": "https://image.tmdb.org/t/p/w185/riwTkODF3CH1bJZG6K7U3dTUHhb.jpg"
+        }
+      ],
+      "lancamento": "2026-06-03",
+      "manchete": "He-Man voltou — e dessa vez a espada pesa de verdade",
+      "sinopse_pt": "Adam cresceu na Terra sem saber que era o herdeiro de Eternia, separado da espada mágica que carregava seu destino desde criança. Quase vinte anos depois, a arma volta às suas mãos e ele precisa enfrentar Skeletor antes de entender quem realmente é. É uma história de identidade disfarçada de filme de fantasia com músculos.",
+      "paragrafos_review": "Travis Knight tem um currículo que mistura delicadeza e pancadaria — foi ele quem deu alma ao Bumblebee de 2018. Aqui, essa mesma lógica aparece na cena em que Adam empunha a espada pela primeira vez em Eternia: o filme para, respira, deixa o peso do momento existir. Mestres do Universo não trata o material de origem como piada nem como objeto sagrado intocável. Trata como ponto de partida. Isso já é mais do que a maioria das adaptações de décadas passadas conseguiu fazer.",
+      "paragrafos_review_2": "Nicholas Galitzine carrega o filme nos ombros com uma presença física convincente e, o que é mais difícil, com vulnerabilidade. Jared Leto como Skeletor é a aposta mais ousada do elenco — e funciona melhor do que o esperado, entregando um vilão teatral sem escorregar pro ridículo. Camila Mendes como Teela tem bom timing nas cenas de ação, mas o roteiro a subutiliza no terceiro ato. Idris Elba é Idris Elba: digno, grave, confiável. Dá pra reclamar? Não muito.",
+      "paragrafos_review_3": "Com 133 minutos, o filme perde um pouco de fôlego no meio, quando as revelações sobre o passado de Adam se esticam além do necessário. Mas o terceiro ato recupera o ritmo e entrega o confronto que o público espera. A nota 7.4 no TMDB é justa — não é obra de gênio, mas é um blockbuster feito com respeito e intenção. Esse aqui é coisa fina o suficiente pra querer ver a sequência.",
+      "vale_assistir": true,
+      "frase_final": "Pelo Poder de Grayskull — e dessa vez dá pra acreditar nisso.",
+      "gerado_em": "2026-06-08T12:58:43.870Z"
     }
   },
   "series": {
@@ -5323,6 +5389,79 @@
       "vale_assistir": true,
       "frase_final": "A coroa brilha, mas quem a usa raramente sorri de verdade.",
       "gerado_em": "2026-06-06T10:50:24.809Z"
+    },
+    "a-casa-do-dragao": {
+      "tmdb_id": 94997,
+      "titulo": "A Casa do Dragão",
+      "sinopse": "200 anos antes dos eventos de \"Game of Thrones\", os Targaryen estavam no ápice de seu poder, tendo inúmeros dragões sob seu comando, mas nem tudo dura para sempre. O início do fim da dinastia Targaryen.",
+      "nota_tmdb": "8.3",
+      "temporadas": 3,
+      "episodios": 26,
+      "generos": [
+        "Sci-Fi & Fantasy",
+        "Drama",
+        "Action & Adventure"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/577eXC8wFQT0eUrJcgznSiFPRmk.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/xEC4nyJvcWcOu7QaobLcqz6iRUL.jpg",
+      "redes": [
+        "HBO"
+      ],
+      "status": "Returning Series",
+      "criadores": "George R.R. Martin, Ryan Condal",
+      "elenco": [
+        {
+          "nome": "Matt Smith",
+          "personagem": "Prince Daemon Targaryen",
+          "foto": "https://image.tmdb.org/t/p/w185/wxMdHj4UA6LgIU5MiA7CKySZeVU.jpg"
+        },
+        {
+          "nome": "Emma D'Arcy",
+          "personagem": "Princess Rhaenyra Targaryen",
+          "foto": "https://image.tmdb.org/t/p/w185/9Zlmb7VmtVCxkLq5yqFFRRxCaED.jpg"
+        },
+        {
+          "nome": "Olivia Cooke",
+          "personagem": "Queen Alicent Hightower",
+          "foto": "https://image.tmdb.org/t/p/w185/eIpUKrBoddAM0PoNv8n2Mq99VO1.jpg"
+        },
+        {
+          "nome": "Steve Toussaint",
+          "personagem": "Lord Corlys 'The Sea Snake' Velaryon",
+          "foto": "https://image.tmdb.org/t/p/w185/sNjMpDYLVu6l79iP0olrYDaNlrD.jpg"
+        },
+        {
+          "nome": "Rhys Ifans",
+          "personagem": "Ser Otto Hightower",
+          "foto": "https://image.tmdb.org/t/p/w185/AfXRP33ncRunR83JPehZ06Kgh8e.jpg"
+        },
+        {
+          "nome": "Fabien Frankel",
+          "personagem": "Ser Criston Cole",
+          "foto": "https://image.tmdb.org/t/p/w185/nXh1h7KbdeZc41ucwGhzp1cOMnd.jpg"
+        },
+        {
+          "nome": "Ewan Mitchell",
+          "personagem": "Prince Aemond Targaryen",
+          "foto": "https://image.tmdb.org/t/p/w185/v1PqysDnx5umfA2DqGyjwuAxc9C.jpg"
+        },
+        {
+          "nome": "Tom Glynn-Carney",
+          "personagem": "King Aegon II Targaryen",
+          "foto": "https://image.tmdb.org/t/p/w185/jJ3KqUW8ySGBwHXOCN3x2Wxjm5W.jpg"
+        }
+      ],
+      "estreia": "2022-08-21",
+      "manchete": "A queda dos Targaryen começa aqui, dragão por dragão",
+      "sinopse_pt": "Duzentos anos antes de Daenerys e Jon Snow, a Casa Targaryen reinava absoluta sobre Westeros com uma armada de dragões. Mas o poder absoluto cobra um preço alto, e a disputa pelo Trono de Ferro vai rachar a própria família ao meio. A guerra civil conhecida como Dança dos Dragões é o coração sangrento desta história.",
+      "paragrafos_review": [
+        "A Casa do Dragão estreou em 2022 na HBO e chegou com uma missão difícil: fazer o público esquecer o trauma do final de Game of Thrones. A série é um prelúdio político e familiar, ambientado numa época em que os Targaryen ainda tinham dentes. A cena do Grande Conselho logo no primeiro episódio já deixa claro o tom: aqui, traição e protocolo andam de mãos dadas. Esse aqui é coisa fina, com orçamento, cuidado estético e uma escrita que respeita a inteligência do espectador.",
+        "Matt Smith rouba qualquer cena em que aparece como Daemon Targaryen — um homem que parece genuinamente gostar de causar problemas. Emma D'Arcy carrega o peso de uma protagonista complexa, e a virada de Olivia Cooke como Alicent Hightower é o melhor trabalho de atuação da série. O roteiro tem coragem de fazer saltos temporais ousados entre episódios, o que desafia, mas também matura os personagens de forma orgânica. A fotografia de tons dourados e vermelhos não é enfeite: ela marca o início da decadência de uma linhagem.",
+        "Com 26 episódios em duas temporadas e uma terceira confirmada, a série já construiu uma das narrativas mais sólidas da TV paga atual. Não é perfeita — alguns episódios do meio da segunda temporada perdem fôlego. Mas quando acerta, como no confronto aéreo sobre Bastião de Harrenhal, o nó que dá na cabeça é o mesmo de antigamente. Os Targaryen nunca foram heróis. E é justamente isso que os torna fascinantes."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Dragões morrem. Linhagens também. Assista antes de esquecer por quê.",
+      "gerado_em": "2026-06-08T12:59:00.348Z"
     }
   },
   "comics": {
@@ -8081,6 +8220,28 @@
         "url": "https://www.otempo.com.br/opiniao/diego-almeida/2026/6/6/astro-da-marvel-ja-interpretou-9-personagens-da-dc-e-quase-ninguem-percebeu"
       },
       "gerado_em": "2026-06-07T11:01:41.987Z"
+    },
+    "x-men-97-jean-grey-ganha-visual-classico-dos-anos-2000-na-2-temporada": {
+      "titulo": "X-Men '97: Jean Grey ganha visual clássico dos anos 2000 na 2ª temporada",
+      "descricao": "Trailer da segunda temporada mostra Jean Grey com traje inspirado na fase dos Novos X-Men das HQs, com jaqueta amarela e preta.",
+      "categoria": "Séries",
+      "autor": "Redação 3W",
+      "data": "2026-06-08",
+      "imagem": "/images/noticias/x-men-97-jean-grey-ganha-visual-classico-dos-anos-2000-na-2-temporada.jpg",
+      "tempo_leitura": 1,
+      "manchete": "Jean Grey troca o visual em X-Men '97 — e é nostalgia pura",
+      "paragrafos": [
+        "O trailer da segunda temporada de X-Men '97, divulgado pelo Marvel Studios, mostrou Jean Grey com um traje diferente ao lado do Ciclope. O uniforme é bastante similar ao usado pela personagem na fase dos Novos X-Men nos quadrinhos, lançada nos anos 2000, com jaqueta amarela e preta, camisa listrada e o logo da equipe em destaque.",
+        "A mudança de visual acompanha a proposta da temporada de levar os heróis a uma nova era, com estética mais sombria condizente com o aumento da tensão na trama. Na história, os X-Men estarão divididos em diferentes linhas temporais para enfrentar Apocalipse — um grupo no passado acompanha a ascensão do vilão, enquanto Ciclope e Jean Grey aparecem em um futuro distante e o presente vive uma crise com a ausência da equipe.",
+        "A segunda temporada de X-Men '97 estreia no dia 1º de julho no Disney+. O lançamento também serve de preparação para Homem-Aranha: Um Novo Dia, filme do MCU que, segundo especulações de fãs, pode trazer uma nova versão de Jean Grey para as telas — com rumores envolvendo Sadie Sink, de Stranger Things, no papel. Nada foi confirmado pelo estúdio até o momento."
+      ],
+      "frase_destaque": "",
+      "conclusao": "",
+      "fonte": {
+        "nome": "Canaltech",
+        "url": "https://canaltech.com.br/entretenimento/nova-temporada-de-x-men-97-tera-jean-grey-com-visual-classico-dos-anos-2000/"
+      },
+      "gerado_em": "2026-06-08T13:00:03.188Z"
     }
   },
   "esportes": {
