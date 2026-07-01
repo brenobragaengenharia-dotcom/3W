@@ -3486,6 +3486,413 @@
       "vale_assistir": true,
       "frase_final": "Um romance de escritório que não muda o mundo, mas aquece bem o inverno.",
       "gerado_em": "2026-06-09T11:53:42.811Z"
+    },
+    "dia-d": {
+      "tmdb_id": 1275779,
+      "titulo": "Dia D",
+      "sinopse": "A existência de vida extraterrestre torna-se uma realidade inegável para todos os habitantes da Terra em um único instante. O mundo entra em colapso quando uma meteorologista, em plena transmissão ao vivo, é dominada por uma força invisível, perdendo a fala e emitindo sons perturbadores. Enquanto fenômenos inexplicáveis e sinais de controle mental em massa se espalham, um informante tenta expor segredos governamentais guardados por décadas. Diante da prova definitiva de que a humanidade não está sozinha, o pânico e o fascínio tomam conta de uma civilização confrontada pelo desconhecido.",
+      "nota_tmdb": "6.7",
+      "duracao": 145,
+      "generos": [
+        "Ficção científica",
+        "Thriller"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/s6ly8laenkHWlIBRkLSfIuEMLC6.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/5e8BQ6RP3GRPz45yno1jjlXu56.jpg",
+      "diretor": "Steven Spielberg",
+      "elenco": [
+        {
+          "nome": "Emily Blunt",
+          "personagem": "Margaret Fairchild",
+          "foto": "https://image.tmdb.org/t/p/w185/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+        },
+        {
+          "nome": "Josh O'Connor",
+          "personagem": "Daniel Kellner",
+          "foto": "https://image.tmdb.org/t/p/w185/iFGxCv7wMaComYR40Mt7fwbfY1k.jpg"
+        },
+        {
+          "nome": "Colin Firth",
+          "personagem": "Noah Scanlon",
+          "foto": "https://image.tmdb.org/t/p/w185/4VBeYEUQbfhnivdkqInM36u5fda.jpg"
+        },
+        {
+          "nome": "Colman Domingo",
+          "personagem": "Hugo Wakefield",
+          "foto": "https://image.tmdb.org/t/p/w185/2tu6T9ugnf82qIMGVKWSb0dvvq5.jpg"
+        },
+        {
+          "nome": "Eve Hewson",
+          "personagem": "Jane Blakenship",
+          "foto": "https://image.tmdb.org/t/p/w185/1OlMfQrXEujIPTBUWt3AM0J0hJa.jpg"
+        },
+        {
+          "nome": "Wyatt Russell",
+          "personagem": "Jackson",
+          "foto": "https://image.tmdb.org/t/p/w185/zIldBzXdBWskPZB7x35G2hYEVDo.jpg"
+        },
+        {
+          "nome": "Elizabeth Marvel",
+          "personagem": "Sister Maura",
+          "foto": "https://image.tmdb.org/t/p/w185/zJaDO2YI0XHeUDB5onVSgAVrvg2.jpg"
+        },
+        {
+          "nome": "Henry Lloyd-Hughes",
+          "personagem": "Casper Boyd",
+          "foto": "https://image.tmdb.org/t/p/w185/m8zSYF7KmQS0x0o7wnWSuWLc0LW.jpg"
+        }
+      ],
+      "lancamento": "2026-06-10",
+      "manchete": "Spielberg traz o primeiro contato como você nunca esperava ver",
+      "sinopse_pt": "Uma meteorologista perde o controle do próprio corpo ao vivo, diante de milhões de telespectadores, e esse momento vira o estopim de uma crise global sem precedentes. Enquanto fenômenos de controle mental se alastram pelo planeta, um informante corre contra o tempo para revelar décadas de segredos governamentais sobre vida extraterrestre. A humanidade, finalmente confrontada com a prova que sempre temeu, oscila entre o pânico e uma curiosidade que não consegue disfarçar.",
+      "paragrafos_review": [
+        "Spielberg não chegou aqui para fazer mais um filme de invasão alienígena com explosões e heróis de maxilar quadrado. A cena de abertura — Margaret Fairchild paralisada no ar, emitindo sons guturais enquanto a câmera do estúdio continua gravando — estabelece um tom de horror cotidiano que o diretor domina como poucos. A proposta de Dia D é tratar o primeiro contato não como catástrofe bélica, mas como ruptura psicológica coletiva. Essa escolha é ousada e, na maior parte do tempo, funciona muito bem.",
+        "Emily Blunt carrega o filme nas costas com uma atuação física e emocionalmente exigente, especialmente nas sequências em que Margaret tenta reconquistar o controle da própria voz. Colin Firth, como o enigmático Noah Scanlon, entrega aquela frieza britânica de dar arrepio — o cara parece saber mais do que deveria desde a primeira cena em que aparece. Colman Domingo, por sua vez, rouba cada sequência em que está presente. Spielberg mantém o ritmo firme nos dois primeiros atos, mas perde um pouco o fio nos trinta minutos finais.",
+        "Dia D é filme bom, mas não é obra-prima. A nota 6.7 no TMDB até que subestima o primeiro ato, porém o roteiro vacila justamente quando deveria apertar o nó. O informante de Josh O'Connor some da trama por tempo demais, e o desfecho deixa perguntas sem resposta de um jeito que parece preguiça, não ambiguidade intencional. Mesmo assim, é Spielberg em modo competente, com elenco de peso e uma premissa que fica martelando na cabeça depois que as luzes acendem."
+      ],
+      "vale_assistir": true,
+      "frase_final": "O céu nunca mais vai parecer tão quieto quanto antes.",
+      "gerado_em": "2026-07-01T11:51:32.747Z"
+    },
+    "welcome-to-the-jungle": {
+      "tmdb_id": 1169516,
+      "titulo": "Welcome to the Jungle",
+      "sinopse": "",
+      "nota_tmdb": "5.5",
+      "duracao": 170,
+      "generos": [
+        "Ação",
+        "Comédia",
+        "Aventura",
+        "Crime"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/96chPcURxg5thGyLqxO6otyxHFR.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/1JlfUuvvX5xLP2LIDah4JhWUtTx.jpg",
+      "diretor": "Ahmed Khan",
+      "elenco": [
+        {
+          "nome": "Akshay Kumar",
+          "personagem": "Rajeev Kohli",
+          "foto": "https://image.tmdb.org/t/p/w185/sR8nASRtTpiwXqkFHjG2jdRBZ7a.jpg"
+        },
+        {
+          "nome": "सुनील शेट्टी",
+          "personagem": "Yeda Anna",
+          "foto": "https://image.tmdb.org/t/p/w185/7N2gTXit5GMfgUhkZ3QsjTnoMH6.jpg"
+        },
+        {
+          "nome": "Arshad Warsi",
+          "personagem": "Romeo",
+          "foto": "https://image.tmdb.org/t/p/w185/iXSA1C7B5mtoUrfDZ2sULE28bww.jpg"
+        },
+        {
+          "nome": "जैकलिन फर्नांडीस",
+          "personagem": "Jenny",
+          "foto": "https://image.tmdb.org/t/p/w185/32cDAxBoNHLX6XNsM1JRxa1WCxC.jpg"
+        },
+        {
+          "nome": "Disha Patani",
+          "personagem": "Nadia",
+          "foto": "https://image.tmdb.org/t/p/w185/oWfHKrvbk3Ak6UnrzDlAoZu7nlh.jpg"
+        },
+        {
+          "nome": "रवीना टंडन",
+          "personagem": "Zoya",
+          "foto": "https://image.tmdb.org/t/p/w185/3ifGMlHKKRFvK9Sg5y2bs5jWUlI.jpg"
+        },
+        {
+          "nome": "Jackie Shroff",
+          "personagem": "Zatara",
+          "foto": "https://image.tmdb.org/t/p/w185/1UNJypgEyuihUW2avLLVYj76jie.jpg"
+        },
+        {
+          "nome": "Paresh Rawal",
+          "personagem": "Das",
+          "foto": "https://image.tmdb.org/t/p/w185/xFVHMvDC8s4Ab2sLXrdVxMxZ33b.jpg"
+        }
+      ],
+      "lancamento": "2026-06-25",
+      "manchete": "Caos tropical e humor pastelão numa selva sem lei",
+      "sinopse_pt": "Rajeev Kohli lidera um grupo improvável de personagens numa missão cheia de confusão, brigas e gargalhadas em meio à selvageria de uma jungla perigosa. O crime encontra a comédia nessa mistura explosiva de estilos que aposta tudo no carisma do elenco. É bagunça calculada — ou pelo menos tenta ser.",
+      "paragrafos_review": [
+        "Ahmed Khan já dirigiu blockbusters indianos de ação pesada, e aqui ele aposta numa fórmula diferente: o humor pastelão como cola entre as cenas de pancadaria. O problema é que 170 minutos é tempo demais para sustentar esse tipo de proposta. Em algum momento lá pelo segundo ato, o filme começa a rodar em círculos, repetindo situações cômicas que já haviam esgotado o efeito na primeira vez. A ambição é válida, mas o roteiro não acompanha o entusiasmo da direção.",
+        "Akshay Kumar carrega o filme nas costas com o charme de sempre — tem uma cena em que Rajeev Kohli tenta negociar com o vilão Zatara usando um português macarrônico que arranca risada genuína. Arshad Warsi como Romeo rouba todas as cenas em que aparece, lembrando o melhor do seu Circuit de Munna Bhai. Jackie Shroff está divertidamente exagerado como antagonista. O problema real é que o elenco feminino, especialmente Disha Patani e Jacqueline Fernandez, recebe personagens rasos que existem mais como enfeite do que como força dramática.",
+        "Nota 5.5 no TMDB não mente: esse aqui é um filme que diverte sem comprometer, mas também não fica na memória. Para uma sessão de sábado à tarde sem pretensão, cumpre o papel. Só que quase três horas de duração para uma comédia de ação é uma escolha difícil de defender. Ahmed Khan tem talento, o elenco tem carisma — faltou alguém com coragem de pegar a tesoura no corte final."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Muita selva, pouca profundidade — mas Warsi sozinho justifica o ingresso.",
+      "gerado_em": "2026-07-01T11:51:49.333Z"
+    },
+    "toy-story-5": {
+      "tmdb_id": 1084244,
+      "titulo": "Toy Story 5",
+      "sinopse": "O trabalho de Buzz, Woody, Jessie e do resto da gangue fica exponencialmente mais difícil quando eles enfrentam uma nova ameaça à diversão: a tecnologia.",
+      "nota_tmdb": "7.4",
+      "duracao": 100,
+      "generos": [
+        "Animação",
+        "Família",
+        "Comédia",
+        "Aventura"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/4D1pdB27uph7J8HQzNf8QvvH9bn.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/iwEuq51BV59mm2LgZ42bWgPgagW.jpg",
+      "diretor": "Andrew Stanton",
+      "elenco": [
+        {
+          "nome": "Tom Hanks",
+          "personagem": "Woody (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+        },
+        {
+          "nome": "Tim Allen",
+          "personagem": "Buzz Lightyear (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/woWhZzFILVhYMAvsPL171HjMY0y.jpg"
+        },
+        {
+          "nome": "Joan Cusack",
+          "personagem": "Jessie (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/59UIeHZFYrKyP20lXqijtfTXglO.jpg"
+        },
+        {
+          "nome": "Greta Lee",
+          "personagem": "Lilypad (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/6SydTis4XUcovlwIGskT59JowLX.jpg"
+        },
+        {
+          "nome": "Conan O'Brien",
+          "personagem": "Smarty Pants (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/deRbViPut0t80miscBpP2DhBJU5.jpg"
+        },
+        {
+          "nome": "Craig Robinson",
+          "personagem": "Atlas (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/mTyTrOWUSOBJMOlDpnd4OYx7FlJ.jpg"
+        },
+        {
+          "nome": "Shelby Rabara",
+          "personagem": "Snappy (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/ouMiEKlhCj2LFKEQtI6fGRMDemF.jpg"
+        },
+        {
+          "nome": "Tony Hale",
+          "personagem": "Forky (voice)",
+          "foto": "https://image.tmdb.org/t/p/w185/ar4uapp4w5wMkThZcqWUNMSTO8z.jpg"
+        }
+      ],
+      "lancamento": "2026-06-17",
+      "manchete": "Woody e Buzz enfrentam o maior vilão da era digital",
+      "sinopse_pt": "Woody, Buzz, Jessie e a turma toda estão de volta — mas dessa vez o inimigo não tem rosto nem corpo: é a tecnologia. Num mundo onde tablets e assistentes virtuais ameaçam roubar a atenção das crianças, os brinquedos precisam se reinventar para continuar relevantes. A batalha pela imaginação infantil nunca foi tão atual.",
+      "paragrafos_review": [
+        "A Pixar demorou para voltar à franquia, mas trouxe Andrew Stanton na cadeira de diretor — o mesmo responsável por WALL-E e Procurando Nemo. A escolha não é aleatória: Stanton tem histórico de contar histórias que parecem simples na superfície e te acertam no estômago lá pelas três da tarde de um domingo. A proposta de Toy Story 5 é ousada porque o tema 'tecnologia vs. brinquedo físico' é, na prática, a própria crise existencial do cinema de animação tradicional. Roteiro com autoconsciência ou contradição? As duas coisas ao mesmo tempo.",
+        "Tom Hanks e Tim Allen entregam o que a gente já sabe que eles entregam — conforto absoluto, como pão de queijo quentinho. A novidade fica por conta de Greta Lee como Lilypad e Conan O'Brien dublando Smarty Pants, um brinquedo tecnológico que rouba cenas com um humor ácido e timing perfeito. A cena em que Smarty Pants 'atualiza o firmware' na frente de Woody é genial: cômica, melancólica e perturbadoramente atual. Stanton equilibra o ritmo com competência, sem deixar os 100 minutos pesarem.",
+        "Toy Story 5 não é perfeito — o terceiro ato perde um pouco do fôlego e a resolução chega rápida demais. Mas acerta onde importa: faz adultos sentirem saudade de algo que nem sabiam que tinham perdido. A nota 7.4 no TMDB subestima o impacto emocional da coisa. Esse aqui é coisa fina, sim, mas com uma camada de amargura que vai ficar na cabeça muito depois dos créditos."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Brinquedo nenhum sobrevive ao tempo — e o filme sabe disso.",
+      "gerado_em": "2026-07-01T11:52:06.261Z"
+    },
+    "todo-mundo-em-panico": {
+      "tmdb_id": 1273221,
+      "titulo": "Todo Mundo em Pânico",
+      "sinopse": "Vinte e seis anos depois de escaparem de um assassino mascarado suspeitosamente familiar, o Quarteto Fantástico está de volta à mira do criminoso, e nenhuma propriedade intelectual de filmes de terror está a salvo.",
+      "nota_tmdb": "5.5",
+      "duracao": 95,
+      "generos": [
+        "Comédia",
+        "Terror"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/xWBiXclrRmTggQHMRsIn84YHavs.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/97lWamoj4RSBjBHXFmliQbPs06K.jpg",
+      "diretor": "Michael Tiddes",
+      "elenco": [
+        {
+          "nome": "Marlon Wayans",
+          "personagem": "Shorty Meeks",
+          "foto": "https://image.tmdb.org/t/p/w185/7LYnX3vluHFBs1WCRKUjSIEDEkn.jpg"
+        },
+        {
+          "nome": "Shawn Wayans",
+          "personagem": "Ray Wilkins",
+          "foto": "https://image.tmdb.org/t/p/w185/Cat25uXhB680QLmvg9Tu16W563.jpg"
+        },
+        {
+          "nome": "Anna Faris",
+          "personagem": "Cindy Campbell",
+          "foto": "https://image.tmdb.org/t/p/w185/tptTb0BQwCpKWETNqzkZzzf5qSZ.jpg"
+        },
+        {
+          "nome": "Regina Hall",
+          "personagem": "Brenda Meeks",
+          "foto": "https://image.tmdb.org/t/p/w185/jiFZ4xNrvUUZLBHnJu71CvdN4kj.jpg"
+        },
+        {
+          "nome": "Damon Wayans Jr.",
+          "personagem": "Agent Underwood",
+          "foto": "https://image.tmdb.org/t/p/w185/f6gNg71Js9XqCiXUtyFyXXbJ9ni.jpg"
+        },
+        {
+          "nome": "Gregg Wayans",
+          "personagem": "Brad Meeks",
+          "foto": "https://image.tmdb.org/t/p/w185/lNsrZObXzbBA7jzTCBI4BFwQYdV.jpg"
+        },
+        {
+          "nome": "Kim Wayans",
+          "personagem": "Nurse Ratchett",
+          "foto": "https://image.tmdb.org/t/p/w185/iLcbmO6GkY0Calo1cM0PwiBR5K1.jpg"
+        },
+        {
+          "nome": "Benny Zielke",
+          "personagem": "Jess Phillippe",
+          "foto": "https://image.tmdb.org/t/p/w185/8ul4eT5RAGvVXcCbrkqNqdqvRHU.jpg"
+        }
+      ],
+      "lancamento": "2026-06-03",
+      "manchete": "Os Wayans voltam para destruir o terror — de novo",
+      "sinopse_pt": "Vinte e seis anos depois de sobreviverem a um assassino mascarado claramente inspirado em Ghostface, Shorty, Ray, Cindy e Brenda se veem no centro de uma nova carnificina absurda. Desta vez, nenhum clássico do terror está a salvo das garras da paródia. O Quarteto Fantástico enfrenta mortes improváveis, referências abusadas e piadas que não pedem licença.",
+      "paragrafos_review": [
+        "A franquia Todo Mundo em Pânico nasceu em 2000 com uma proposta simples e eficiente: esfaquear o terror teen com humor escrachado. Vinte e seis anos depois, esse quinto capítulo chega com a mesma receita, mas o mercado mudou bastante. O terror atual — Hereditário, Midsommar, Talk to Me — é denso demais para aguentar esse tipo de zoação rasa. O roteiro tenta abraçar tudo de uma vez e acaba tropeçando na própria ambição, entregando uma paródia que corre atrás do próprio rabo.",
+        "Marlon Wayans continua sendo o coração caótico da franquia. Tem uma cena em que Shorty tenta se esconder de um assassino dentro de um armário e acaba travando um monólogo existencial com um casaco de inverno — é o tipo de momento que lembra por que a família Wayans ainda tem timing. Anna Faris retorna com disposição total, e Damon Wayans Jr. rouba algumas cenas como o agente mais incompetente da história do cinema. Michael Tiddes, que já dirigiu o quarto filme, sabe conduzir a bagunça sem deixar o ritmo morrer.",
+        "Nota 5.5 no TMDB não é injusta, não. O filme diverte em partes, especialmente se você cresceu com a franquia e tem um carinho formado. Mas 95 minutos de piadas recicladas cansam. Não tem aquela gordura cômica dos dois primeiros filmes. É entretenimento de sessão de domingo à tarde, sem pretensão e sem arrependimento. Só não espere genialidade."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Ri, sim — mas logo esqueci por quê.",
+      "gerado_em": "2026-07-01T11:52:22.929Z"
+    },
+    "aguas-mortais": {
+      "tmdb_id": 1127384,
+      "titulo": "Águas Mortais",
+      "sinopse": "Um voo de Los Angeles para Xangai cai no meio do Oceano Pacífico. Após sobreviverem ao acidente, os passageiros logo percebem que não estão sozinhos e precisam lutar pela própria vida em águas infestadas por tubarões.",
+      "nota_tmdb": "6.2",
+      "duracao": 106,
+      "generos": [
+        "Terror",
+        "Thriller"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/iYjlQzWbcFIjWe2WifbEPb4kErp.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/dWsw0X420R6ngEcVCkNlZ189Amr.jpg",
+      "diretor": "Renny Harlin",
+      "elenco": [
+        {
+          "nome": "Aaron Eckhart",
+          "personagem": "Ben",
+          "foto": "https://image.tmdb.org/t/p/w185/u5JjnRMr9zKEVvOP7k3F6gdcwT6.jpg"
+        },
+        {
+          "nome": "Ben Kingsley",
+          "personagem": "Rich",
+          "foto": "https://image.tmdb.org/t/p/w185/k3Dmu49B2akwDvgqy52MOxznI59.jpg"
+        },
+        {
+          "nome": "Molly Belle Wright",
+          "personagem": "Cora",
+          "foto": "https://image.tmdb.org/t/p/w185/sjG5KfNuvSyv7ztNFNcuCulnuCS.jpg"
+        },
+        {
+          "nome": "Angus Sampson",
+          "personagem": "Dan",
+          "foto": "https://image.tmdb.org/t/p/w185/8EX6ul2zyVUg91oDvI3RpYS5szV.jpg"
+        },
+        {
+          "nome": "Elijah Tamati",
+          "personagem": "Finn",
+          "foto": "https://image.tmdb.org/t/p/w185/rFGB97FgZDQ7t01NtMdb4n6vkgg.jpg"
+        },
+        {
+          "nome": "Zhao Simei",
+          "personagem": "Lilly",
+          "foto": "https://image.tmdb.org/t/p/w185/39WrPp7nICluex1fGNhtPaUhTFI.jpg"
+        },
+        {
+          "nome": "李汶翰",
+          "personagem": "Sam",
+          "foto": "https://image.tmdb.org/t/p/w185/eUi1yeqa7YIl4LIwz1rDasteJ27.jpg"
+        },
+        {
+          "nome": "Nashi",
+          "personagem": "Zoe",
+          "foto": "https://image.tmdb.org/t/p/w185/i2oD8NEMmCSXDVtJq0bxOF0cJ4V.jpg"
+        }
+      ],
+      "lancamento": "2026-04-30",
+      "manchete": "Tubarões, pânico e oceano: sobreviver nunca foi tão brutal",
+      "sinopse_pt": "Um voo de Los Angeles a Xangai cai no meio do Oceano Pacífico, deixando os sobreviventes à deriva em pleno mar aberto. O problema é que a água ao redor deles está viva — e faminta. Entre o trauma do acidente e a ameaça constante vinda de baixo, cada decisão pode ser a última.",
+      "paragrafos_review": [
+        "Renny Harlin, o mesmo diretor de Cliffhanger e Die Hard 2, assina Águas Mortais com aquela pegada old school de blockbuster de sobrevivência. O filme não tenta reinventar a roda: pega a fórmula clássica de tubarão-come-gente e joga passageiros de avião no meio do Pacífico. A decisão de roteiro de mesclar o trauma imediato da queda com o horror dos ataques funciona melhor do que parece no papel. Não é filosofia, é adrenalina com propósito.",
+        "Aaron Eckhart carrega o filme nas costas com uma seriedade que o personagem Ben quase não merece — e isso é um elogio. Ben Kingsley aparece pouco, mas cada cena dele tem peso. A jovem Molly Belle Wright entrega o momento mais tenso do filme: uma sequência em que Cora precisa mergulhar para desamarrar um colega enquanto um tubarão circula abaixo dela. Harlin filma isso com câmera subaquática e cortes curtos. Funciona de verdade.",
+        "A nota 6.2 no TMDB é honesta. Águas Mortais não é filme de festival, mas cumpre o que promete sem enrolar. Alguns personagens secundários são descartáveis demais, e o roteiro tropeça em clichês de sobrevivência lá pela metade. Mesmo assim, os 106 minutos passam rápido. Para uma sessão de sexta à noite sem compromisso com obra-prima, esse aqui resolve."
+      ],
+      "vale_assistir": true,
+      "frase_final": "O tubarão você vê vindo. O roteiro te pega de surpresa — nem sempre bem.",
+      "gerado_em": "2026-07-01T11:52:39.070Z"
+    },
+    "supergirl": {
+      "tmdb_id": 1081003,
+      "titulo": "Supergirl",
+      "sinopse": "Kara Zor-El comemora seu aniversário de 21 anos viajando pela galáxia com seu cachorro Krypto. Ao longo do caminho, ela conhece a jovem Ruthye Marye Knoll e se depara com uma tragédia que a leva a uma “busca assassina por vingança\".",
+      "nota_tmdb": "6.2",
+      "duracao": 108,
+      "generos": [
+        "Ação",
+        "Aventura",
+        "Ficção científica"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/54KIfdTEzOliHDKx0OkzYGqAICx.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/qhXfLI1gDWaahzfHT0cb2CH61hO.jpg",
+      "diretor": "Craig Gillespie",
+      "elenco": [
+        {
+          "nome": "Milly Alcock",
+          "personagem": "Supergirl / Kara Zor-El",
+          "foto": "https://image.tmdb.org/t/p/w185/deSE6C5LlgBCYcIoMDcfBoubEx3.jpg"
+        },
+        {
+          "nome": "Eve Ridley",
+          "personagem": "Ruthye",
+          "foto": "https://image.tmdb.org/t/p/w185/vmEfK4PO6rUvTJnN8bbUZrSDgII.jpg"
+        },
+        {
+          "nome": "Matthias Schoenaerts",
+          "personagem": "Krem",
+          "foto": "https://image.tmdb.org/t/p/w185/9mRssCj4si6f6IF3nJ2RB5w0J7g.jpg"
+        },
+        {
+          "nome": "Jason Momoa",
+          "personagem": "Lobo",
+          "foto": "https://image.tmdb.org/t/p/w185/3troAR6QbSb6nUFMDu61YCCWLKa.jpg"
+        },
+        {
+          "nome": "David Krumholtz",
+          "personagem": "Zor-El",
+          "foto": "https://image.tmdb.org/t/p/w185/ibp6vAc8MWTAKaTI9tfpUJtqiAX.jpg"
+        },
+        {
+          "nome": "Emily Beecham",
+          "personagem": "Alura In-Ze",
+          "foto": "https://image.tmdb.org/t/p/w185/knR5avTlO4Xnxw7Nc3xxUj3rtjh.jpg"
+        },
+        {
+          "nome": "David Corenswet",
+          "personagem": "Superman",
+          "foto": "https://image.tmdb.org/t/p/w185/yoQxpUPt3le9zY4Sab3g2ANy4CE.jpg"
+        },
+        {
+          "nome": "Kadiff Kirwan",
+          "personagem": "Bomar Vran",
+          "foto": "https://image.tmdb.org/t/p/w185/dSCcuypWkQzspAQQq4AuejMzYfo.jpg"
+        }
+      ],
+      "lancamento": "2026-06-24",
+      "manchete": "Milly Alcock ergue o manto kryptoniano com força e personalidade",
+      "sinopse_pt": "Kara Zor-El completa 21 anos viajando pela galáxia ao lado do seu cachorro Krypto, sem grandes planos além de curtir a liberdade cósmica. Tudo muda quando ela cruza o caminho da jovem Ruthye e uma tragédia transforma a aventura em uma missão de vingança sem volta. É sangue kryptoniano fervendo no espaço sideral.",
+      "paragrafos_review": [
+        "A DC apostou pesado em Craig Gillespie — o mesmo de 'Cruella' e 'Eu, Tonya' — para construir uma Supergirl diferente do que o público estava acostumado. A escolha diz muito sobre a intenção: menos espetáculo de efeitos e mais personagem com camadas. O roteiro bebe na minissérie 'Woman of Tomorrow', de Tom King, o que garante um tom mais sombrio e faroeste espacial do que qualquer coisa que a DC tinha feito com heroínas até aqui. A proposta é ousada, e isso já conta ponto.",
+        "Milly Alcock carrega o filme nas costas e entrega. A cena em que Kara decide seguir Ruthye mesmo sem qualquer obrigação moral é o coração do roteiro — ali, a atriz transforma um momento simples em revelação de caráter. Jason Momoa como Lobo rouba qualquer cena em que aparece, com um carisma brutal e bem-humorado. Gillespie mantém o ritmo sem deixar o filme afundar em exposição desnecessária, e a dupla Alcock-Eve Ridley tem química genuína que sustenta a jornada.",
+        "Com 108 minutos, o filme não desperdiça tempo. O terceiro ato perde um pouco do fôlego e a nota 6.2 no TMDB reflete uma recepção morna, mas injusta. Esse aqui é filme que cresce depois que a tela apaga. Não é perfeito, mas é honesto, bem dirigido e apresenta a melhor Supergirl do cinema até hoje. Quem entrou achando que ia ver mais do mesmo, saiu com a cabeça virada."
+      ],
+      "vale_assistir": true,
+      "frase_final": "Kara Zor-El finalmente ganhou o filme que merecia — e o universo DC também.",
+      "gerado_em": "2026-07-01T11:52:56.116Z"
     }
   },
   "series": {
