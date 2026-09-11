@@ -21,7 +21,7 @@ const TT_PATH = 'M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 
 const SOCIAIS = [
   { href: 'https://instagram.com/3worlds_entertainment',    label: 'Instagram Principal', handle: '@3worlds_entertainment', icon: IG_PATH },
   { href: 'https://instagram.com/3wcomics_',                label: 'Instagram Comics',    handle: '@3wcomics_',            icon: IG_PATH },
-  { href: 'https://instagram.com/3wesports',                label: 'Instagram Esportes',  handle: '@3wesports',            icon: IG_PATH },
+  { href: 'https://www.instagram.com/3wesports_?stkn=cDJrM3NmaWNvb3Ux', label: 'Instagram Esportes', handle: '@3wesports_', icon: IG_PATH },
   { href: 'https://www.tiktok.com/@3worlds_entertainment',  label: 'TikTok',              handle: '@3worlds_entertainment', icon: TT_PATH },
 ];
 
