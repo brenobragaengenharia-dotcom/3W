@@ -152,7 +152,7 @@ export default async function FilmePage({ params }) {
         </section>
 
         {/* Review */}
-        {g?.paragrafos_review?.length > 0 && (
+        {Array.isArray(g?.paragrafos_review) && g.paragrafos_review.length > 0 && (
           <section className="mb-8">
             <h2 className="text-lg font-bold text-white mb-4">Nossa Análise</h2>
             <div className="space-y-4">
